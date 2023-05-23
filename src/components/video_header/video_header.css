@@ -1,0 +1,29 @@
+.video-header {
+    position: relative;
+    width: 100%;
+}
+
+.video-header video {
+    position: relative;
+    width: 98%;
+    border-radius: 25px;
+    height: auto;
+    max-width: 100%;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(50px); /* Startposition der Animation */
+        opacity: 0; /* Startopazität */
+    }
+    100% {
+        transform: translateY(0); /* Endposition der Animation */
+        opacity: 1; /* Endopazität */
+    }
+}
+
+.animate {
+    animation: slide-up 1.5s ease forwards;
+}
+
+

@@ -1,0 +1,394 @@
+.projects{
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.my_projects_headline_container {
+    display: inline-block;
+    width: 300px;
+    height: auto;
+    text-align: center;
+    border: 10px solid #484848;
+    border-radius: 500px;
+    padding: 15px;
+    background-color: white;
+    animation: floating 3s ease-in-out infinite, shadow-pulse 3s ease-in-out infinite;
+}
+
+.project_timeline_long {
+    position: relative;
+    text-align: center;
+    left: 50%;
+    margin-top: 20px;
+    width: 1px;
+    height: 500px;
+    background-color: lightgrey;
+    content: '';
+}
+
+.project_timeline_long::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -5px; /* Abstand vor dem ersten Strich anpassen */
+    width: 10px; /* Breite des größeren Striches anpassen */
+    height: 2px; /* Höhe des größeren Striches anpassen */
+    background-color: lightgrey; /* Farbe des größeren Striches anpassen */
+}
+
+.project_timeline_long::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -5px; /* Abstand vor dem ersten Strich anpassen */
+    width: 10px; /* Breite des größeren Striches anpassen */
+    height: 2px; /* Höhe des größeren Striches anpassen */
+    background-color: lightgrey; /* Farbe des größeren Striches anpassen */
+}
+
+
+.project_timeline_short {
+    position: relative;
+    text-align: center;
+    left: 50%;
+    margin-top: 20px;
+    width: 1px;
+    height: 10px;
+    background-color: lightgrey;
+    content: '';
+}
+
+.project_timeline_short::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -5px; /* Abstand vor dem ersten Strich anpassen */
+    width: 10px; /* Breite des größeren Striches anpassen */
+    height: 2px; /* Höhe des größeren Striches anpassen */
+    background-color: lightgrey; /* Farbe des größeren Striches anpassen */
+}
+
+
+
+.horizontal_line_right {;
+    display: inline-block;
+    position: relative;
+    width: 400px;
+    left: 210px;
+    height: 1px;
+    background-color: #fd8c3f;
+}
+
+#same_line_right{
+    top: 20px;
+    left: 450px;
+}
+
+#same_line_left{
+    top: 20px;
+    left: -450px;
+}
+
+.vs-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10px;
+    margin-left: 10px;
+    font-family: "Agency FB";
+    font-size: 50px;
+}
+
+
+.dot_right {
+    animation: pulse 1s ease-in-out infinite;
+    vertical-align: text-bottom;
+    display: inline-block;
+    margin-left: 0.2em;
+    position: absolute;
+    top: -5px; /* Anpassen, um den Punkt zu positionieren */
+    left: 395px; /* Anpassen, um den Punkt zu positionieren */
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fd8c3f;
+}
+
+.horizontal_line_left {;
+    display: inline-block;
+    position: relative;
+    width: 400px;
+    right: 210px;
+    height: 1px;
+    background-color: #fd8c3f;
+}
+
+.dot_left {
+    animation: pulse 1s ease-in-out infinite;
+    vertical-align: text-bottom;
+    display: inline-block;
+    margin-left: 0.2em;
+    position: absolute;
+    top: -5px; /* Anpassen, um den Punkt zu positionieren */
+    right: 395px; /* Anpassen, um den Punkt zu positionieren */
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fd8c3f;
+}
+
+#facial_mocap_text{
+    left: 30px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.timeline_header {
+    position: absolute;
+    top: -100px;
+    font-family: "Agency FB";
+}
+
+.timeline_text{
+    position: relative;
+    top: 280px;
+    left: -20px;
+    color: lightgrey;
+    font-size: 30px;
+    rotate: -90deg;
+}
+
+.timeline_year_left{
+    position: relative;
+    left: -550px;
+    font-size: 100px;
+    font-family: "Agency FB";
+    color: #fd8c3f;
+}
+
+.timeline_year_right{
+    position: relative;
+    left: 400px;
+    font-size: 100px;
+    font-family: "Agency FB";
+    color: #fd8c3f;
+}
+
+.square-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #fd8c3f; /* Hintergrundfarbe des Buttons */
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.arrow-down {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid white; /* Farbe des Pfeils */
+}
+
+.timeline_icon_right_one img {
+    width: auto;
+    height: 55px;
+    position: absolute;
+    top: -70px;
+    left: 475px;
+    padding: 15px;
+    border-radius: 30px;
+    animation: shadow-pulse 3s ease-in-out infinite;
+}
+
+.timeline_icon_right_two img {
+    width: auto;
+    height: 55px;
+    position: absolute;
+    top: -70px;
+    left: 615px;
+    padding: 15px;
+    border-radius: 30px;
+    animation: shadow-pulse 3s ease-in-out infinite;
+}
+
+.timeline_icon_right_three img {
+    width: auto;
+    height: 55px;
+    position: absolute;
+    top: -70px;
+    left: 755px;
+    padding: 15px;
+    border-radius: 30px;
+    animation: shadow-pulse 3s ease-in-out infinite;
+}
+
+.timeline_icon_left_one img {
+    width: auto;
+    height: 50px;
+    position: absolute;
+    top: -70px;
+    left: -175px;
+    padding: 15px;
+    border-radius: 30px;
+    animation: shadow-pulse 3s ease-in-out infinite;
+}
+
+.timeline_icon_left_two img {
+    width: auto;
+    height: 50px;
+    position: absolute;
+    top: -70px;
+    left: -300px;
+    padding: 15px;
+    border-radius: 30px;
+    animation: shadow-pulse 3s ease-in-out infinite;
+}
+
+.timeline_icon_left_three img {
+    width: auto;
+    height: 50px;
+    position: absolute;
+    top: -70px;
+    left: -425px;
+    padding: 15px;
+    border-radius: 30px;
+    animation: shadow-pulse 3s ease-in-out infinite;
+}
+
+.square-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #fd8c3f;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+    overflow: hidden;
+}
+
+.square-button.expanded {
+    width: 60%;
+    max-width: 1200px;
+    height: 500px;
+    padding: 15px;
+    background-color: transparent;
+    animation: shadow-pulse 3s ease-in-out infinite;
+}
+
+.arrow-down {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid white;
+    transition: transform 0.3s ease;
+}
+
+.arrow-down.expanded {
+    transform: translateY(50%);
+}
+
+.content {
+    width: 50%;
+    min-width: 300px;
+    height: auto;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    align-items: center;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.content.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.square-button.expanded .arrow-down {
+    border-color: #fd8c3f;
+}
+
+.centered_content {
+    text-align: center;
+    padding: 20px;
+}
+
+.max_width_text {
+    max-width: 100%;
+    word-wrap: break-word;
+    line-height: 1.5;
+    padding: 20px;
+    margin: 0;
+    color: black;
+}
+
+.source_text{
+    font-size: 12px;
+    color: grey;
+    text-align: right;
+    padding-right: 15px;
+}
+
+.project_img{
+    width: 98%;
+    border-radius: 20px;
+}
+
+.multi_pictures_container{
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.multi_pictures_container img{
+    padding: 10px;
+}
+
+.close_button_text{
+    text-align: center;
+    color: #fd8c3f;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: -5px;
+}
+
+a {
+    color: #fd8c3f;
+    text-decoration: none;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(50px); /* Startposition der Animation */
+        opacity: 0; /* Startopazität */
+    }
+    100% {
+        transform: translateY(0); /* Endposition der Animation */
+        opacity: 1; /* Endopazität */
+    }
+}
+
+.animate {
+    animation: slide-up 1.5s ease forwards;
+}

@@ -1,0 +1,32 @@
+.video-mobile {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio (change as needed) */
+}
+
+.video-mobile video {
+    position: absolute;
+    border-radius: 25px;
+    top: 0;
+    left: 40%;
+    width: 20%;
+    height: auto;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(50px); /* Startposition der Animation */
+        opacity: 0; /* Startopazität */
+    }
+    100% {
+        transform: translateY(0); /* Endposition der Animation */
+        opacity: 1; /* Endopazität */
+    }
+}
+
+
+.animate {
+    animation: slide-up 1.5s ease forwards;
+}
