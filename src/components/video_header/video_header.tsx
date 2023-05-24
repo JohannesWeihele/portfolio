@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import './video_header.css';
@@ -10,6 +10,7 @@ interface VideoHeaderProps {
 const VideoHeader: FC<VideoHeaderProps> = ({ src }) => {
     const videoRef = useRef<HTMLVideoElement>(null);
     const isMobile = useMediaQuery({ maxWidth: 767 });
+    const [isLoading, setIsLoading] = useState(true);
 
     const handleScroll = () => {
         const element = videoRef.current;
@@ -31,6 +32,9 @@ const VideoHeader: FC<VideoHeaderProps> = ({ src }) => {
         }
     };
 
+    const handleLoadedData = () => {
+        setIsLoading(false);
+    };
 
     useEffect(() => {
         const element = videoRef.current;
@@ -46,6 +50,11 @@ const VideoHeader: FC<VideoHeaderProps> = ({ src }) => {
 
     return (
         <div className="video-header">
+            {isLoading && (
+                <div className="loading-overlay">
+                    <span>Loading...</span>
+                </div>
+            )}
             <div className={'video_container'}>
                 <video
                     ref={videoRef}
@@ -53,6 +62,7 @@ const VideoHeader: FC<VideoHeaderProps> = ({ src }) => {
                     muted
                     disablePictureInPicture
                     loop
+                    onLoadedData={handleLoadedData}
                 >
                     <source src={src} type="video/mp4" />
                 </video>
