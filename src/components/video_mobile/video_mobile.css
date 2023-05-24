@@ -5,7 +5,6 @@
     height: auto;
 }
 
-
 @keyframes slide-up {
     0% {
         transform: translateY(50px); /* Startposition der Animation */
