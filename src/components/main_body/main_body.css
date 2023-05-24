@@ -215,6 +215,7 @@ p {
         height: 50px;
         line-height: 40px;
         font-size: 5vw !important;
+        font-weight: bold !important;
     }
 
     h2 {
