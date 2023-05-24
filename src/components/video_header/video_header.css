@@ -1,6 +1,8 @@
 .video-header {
     position: relative;
     width: 100%;
+    transform: scale(1);
+    transform-origin: top left;
 }
 
 .video-header video {
@@ -52,7 +54,7 @@
 
 .fullscreen-button img{
     width: 20px;
-    height: 20px;
+    height: 17px;
     opacity: 50%;
 }
 
