@@ -1,5 +1,6 @@
 import React, {FC, useEffect, useRef, useState} from 'react';
 import { useMediaQuery } from 'react-responsive';
+import "./video_mobile.css";
 
 interface VideoMobileProps {
     src: string;

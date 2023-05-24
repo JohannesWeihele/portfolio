@@ -92,7 +92,7 @@ const Projects_Timeline: React.FC = () => {
                     Bachelor
                 </p>
                 <p ref={(el) => (textRefs.current[0] = el!)} className={'timeline_year_left'}>
-                    2015
+                    2018
                 </p>
             </div>
             <div ref={horizontalLineRef} className="horizontal_line_right">

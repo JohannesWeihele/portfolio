@@ -1,5 +1,7 @@
 @media (max-width: 767px) {
     /* Styles für Smartphones */
-
+    html, body {
+        overflow-x: hidden;
+    }
 
 }

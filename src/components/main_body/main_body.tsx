@@ -1,13 +1,14 @@
-import React, {FC} from 'react'
+import React, {useEffect, useRef, useState} from 'react';
 import Portrait from "./portrait";
 import Introduction from "./introduction";
-import Skills from "./skills";
 import "./main_body.css"
 import Projects from "./projects/projects";
-import VideoHeader from "../video_header/video_header";
 
-const Main_Body: FC = () =>
-    <div className={"main_body"}>
+
+const Main_Body: React.FC = () =>{
+
+
+return <div className={"main_body"}>
         <div className={"introduction_body"}>
             <Portrait/>
             <Introduction/>
@@ -16,5 +17,5 @@ const Main_Body: FC = () =>
             <Projects/>
         </div>
     </div>
-
+}
 export default Main_Body

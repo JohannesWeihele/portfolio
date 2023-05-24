@@ -10,15 +10,6 @@
     background-color: rgba(245, 245, 245, 0.71);
 }
 
-.skills_body {
-    display: flex;
-    margin-top: 100px;
-    justify-content: center;
-    height: auto;
-    background-color: #efefef;
-    min-height: 500px;
-}
-
 .projects_body {
     display: flex;
     margin-top: 100px;

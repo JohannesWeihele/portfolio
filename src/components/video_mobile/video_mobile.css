@@ -1,19 +1,10 @@
-.video-mobile {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
+.video-mobile video{
+    width: 30vw;
+    max-width: 500px;
+    min-width: 250px;
     height: auto;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio (change as needed) */
 }
 
-.video-mobile video {
-    position: absolute;
-    border-radius: 25px;
-    top: 0;
-    left: 40%;
-    width: 20%;
-    height: auto;
-}
 
 @keyframes slide-up {
     0% {
