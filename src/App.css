@@ -1,4 +1,4 @@
-@media (max-width: 767px) {
+@media (max-width: 850px) and (orientation: landscape) or (orientation: portrait){
     /* Styles für Smartphones */
     html, body {
         overflow-x: hidden;

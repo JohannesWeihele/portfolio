@@ -60,7 +60,7 @@
     animation: slide-up 1.5s ease forwards;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 850px) and (orientation: landscape) or (orientation: portrait){
     /* Styles für Smartphones */
 
     .video-header video{
