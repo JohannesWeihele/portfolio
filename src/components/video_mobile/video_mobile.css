@@ -21,10 +21,3 @@
 .animate {
     animation: slide-up 1.5s ease forwards;
 }
-
-@media (max-width: 767px) {
-    /* Styles für Smartphones */
-
-}
-
-

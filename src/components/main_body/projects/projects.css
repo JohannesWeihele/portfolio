@@ -394,7 +394,7 @@ a {
     animation: slide-up 1.5s ease forwards;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 850px) {
     /* Styles für Smartphones */
     .projects {
         padding: 0;
@@ -418,7 +418,7 @@ a {
     }
 
     .timeline_year_left {
-        left: -30vw;
+        left: -35vw;
         font-size: 9vw;
     }
 
