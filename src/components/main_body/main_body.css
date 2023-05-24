@@ -164,7 +164,7 @@ p {
     animation: flameAnimation 1s ease-in-out infinite;
 }
 
-@media (max-width: 850px) and (orientation: landscape){
+@media (max-width: 850px){
     /* Styles für Smartphones */
 
 

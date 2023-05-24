@@ -394,7 +394,7 @@ a {
     animation: slide-up 1.5s ease forwards;
 }
 
-@media (max-width: 850px) and (orientation: landscape){
+@media (max-width: 850px){
     /* Styles für Smartphones */
     .projects {
         padding: 0;
