@@ -67,8 +67,8 @@ const Projects_Timeline: React.FC = () => {
                     </p>
                 </div>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeInRightBig"}>
-                <div className="horizontal_line_right">
+            <AnimationOnScroll delay={-1000} offset={500} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"}>
+                <div className="horizontal_line_right animate__fadeOutRi">
                     <AnimationOnScroll initiallyVisible={true} delay={-1000} offset={0} animateIn={"animate__pulse"} animateOut={"animate__pulse"}>
                         <div className="dot_right"></div>
                     </AnimationOnScroll>
@@ -89,7 +89,6 @@ const Projects_Timeline: React.FC = () => {
                         </div>
                     </div>
                 </div>
-            </AnimationOnScroll>
             <div className={'project_timeline_short'}/>
             <VideoHeader src={qt_video} />
                 <div ref={buttonData[0].divRef}>
@@ -164,6 +163,7 @@ const Projects_Timeline: React.FC = () => {
                         <span className={`arrow-down ${buttonData[0].isButtonExpanded ? 'expanded' : ''}`} />
                     </button>
                 </div>
+            </AnimationOnScroll>
             <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInLeftBig"}>
                 <div className={'project_timeline_long'}>
                     <p className={'timeline_text'}>
@@ -174,7 +174,7 @@ const Projects_Timeline: React.FC = () => {
                     </p>
                 </div>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInLeftBig"}>
+            <AnimationOnScroll delay={-1000} offset={500} animateIn={"animate__fadeInLeftBig"} animateOut={"animate__fadeOutRightBig"}>
             <div className={'horizontal_line_left'}>
                 <AnimationOnScroll animateIn={"animate__pulse"}>
                     <div className="dot_left"></div>
@@ -193,7 +193,6 @@ const Projects_Timeline: React.FC = () => {
                     </div>
                 </div>
             </div>
-            </AnimationOnScroll>
             <div className={'project_timeline_short'}/>
             <VideoHeader src={facial_mocap_video} />
                 <div ref={buttonData[1].divRef}>
@@ -212,6 +211,7 @@ const Projects_Timeline: React.FC = () => {
                         <span className={`arrow-down ${buttonData[1].isButtonExpanded ? 'expanded' : ''}`} />
                     </button>
                 </div>
+            </AnimationOnScroll>
             <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInRightBig"}>
                 <div className={'project_timeline_long'}>
                     <p className={'timeline_text'}>
@@ -222,7 +222,7 @@ const Projects_Timeline: React.FC = () => {
                     </p>
                 </div>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInRightBig"}>
+            <AnimationOnScroll delay={-1000} offset={500} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"}>
             <div className="horizontal_line_right">
                 <AnimationOnScroll animateIn={"animate__pulse"}>
                     <div className="dot_right"></div>
@@ -242,7 +242,6 @@ const Projects_Timeline: React.FC = () => {
                     <img src={require('../../../resources/icons/blender_icon.png')} alt={"Blender_Icon"}/>
                 </div>
             </div>
-            </AnimationOnScroll>
             <div className={'project_timeline_short'}/>
             <VideoMobile src={foodfill_video} />
             <div ref={buttonData[2].divRef}>
@@ -261,6 +260,7 @@ const Projects_Timeline: React.FC = () => {
                     <span className={`arrow-down ${buttonData[2].isButtonExpanded ? 'expanded' : ''}`} />
                 </button>
             </div>
+            </AnimationOnScroll>
             <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInLeftBig"}>
                 <div className={'project_timeline_long'}>
                     <p className={'timeline_text'}>
@@ -271,7 +271,7 @@ const Projects_Timeline: React.FC = () => {
                     </p>
                 </div>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInLeftBig"}>
+            <AnimationOnScroll delay={-1000} offset={500} animateIn={"animate__fadeInLeftBig"} animateOut={"animate__fadeOutRightBig"}>
                 <div className="horizontal_line_right" id={"same_line_right"}>
                     <AnimationOnScroll animateIn={"animate__pulse"}>
                         <div className="dot_right"></div>
@@ -304,7 +304,7 @@ const Projects_Timeline: React.FC = () => {
                         </div>
                     </div>
                 </div>
-            </AnimationOnScroll>
+
             <div>
                 <p className={"vs-container"}>vs.</p>
             </div>
@@ -326,7 +326,8 @@ const Projects_Timeline: React.FC = () => {
                     <span className={`arrow-down ${buttonData[3].isButtonExpanded ? 'expanded' : ''}`} />
                 </button>
             </div>
-            <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInRightBig"}>
+            </AnimationOnScroll>
+            <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInRightBig"} >
                 <div className={'project_timeline_long'}>
                     <p className={'timeline_text'}>
                         Master
@@ -336,7 +337,7 @@ const Projects_Timeline: React.FC = () => {
                     </p>
                 </div>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInRightBig"}>
+            <AnimationOnScroll delay={-1000} offset={500} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"}>
             <div className="horizontal_line_right" id={"same_line_right"}>
                 <AnimationOnScroll animateIn={"animate__pulse"}>
                     <div className="dot_right"></div>
@@ -369,7 +370,7 @@ const Projects_Timeline: React.FC = () => {
                     <img src={require('../../../resources/icons/typescript_icon.png')} alt={"TypeScript_Icon"}/>
                 </div>
             </div>
-            </AnimationOnScroll>
+
             <div>
                 <p className={"vs-container"}>vs.</p>
             </div>
@@ -391,6 +392,7 @@ const Projects_Timeline: React.FC = () => {
                     <span className={`arrow-down ${buttonData[4].isButtonExpanded ? 'expanded' : ''}`} />
                 </button>
             </div>
+            </AnimationOnScroll>
             <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInLeftBig"}>
                 <div className={'project_timeline_long'}>
                     <p className={'timeline_text'}>
@@ -401,7 +403,7 @@ const Projects_Timeline: React.FC = () => {
                     </p>
                 </div>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInLeftBig"}>
+            <AnimationOnScroll delay={-1000} offset={500} animateIn={"animate__fadeInLeftBig"} animateOut={"animate__fadeOutRightBig"}>
             <div className="horizontal_line_left">
                 <AnimationOnScroll animateIn={"animate__pulse"}>
                     <div className="dot_left"></div>
@@ -421,7 +423,7 @@ const Projects_Timeline: React.FC = () => {
                     <img src={require('../../../resources/icons/java_icon.png')} alt={"Java_Icon"}/>
                 </div>
             </div>
-            </AnimationOnScroll>
+
             <div className={'project_timeline_short'}/>
             <VideoHeader src={stateofdart_video} />
             <div ref={buttonData[5].divRef}>
@@ -440,6 +442,7 @@ const Projects_Timeline: React.FC = () => {
                     <span className={`arrow-down ${buttonData[5].isButtonExpanded ? 'expanded' : ''}`} />
                 </button>
             </div>
+            </AnimationOnScroll>
             <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInRightBig"}>
                 <div className={'project_timeline_long'}>
                     <p className={'timeline_text'}>
@@ -450,7 +453,7 @@ const Projects_Timeline: React.FC = () => {
                     </p>
                 </div>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInRightBig"}>
+            <AnimationOnScroll delay={-1000} offset={500} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"}>
             <div className="horizontal_line_right">
                 <AnimationOnScroll animateIn={"animate__pulse"}>
                     <div className="dot_right"></div>

@@ -26,10 +26,8 @@ const VideoMobile: FC<VideoMobileProps> = ({ src }) => {
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        videoElement.classList.add('animate');
                         videoElement.play();
                     } else {
-                        videoElement.classList.remove('animate');
                         videoElement.pause();
                     }
                 });

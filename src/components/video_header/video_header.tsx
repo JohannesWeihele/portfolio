@@ -27,10 +27,8 @@ const VideoHeader: FC<VideoHeaderProps> = ({ src }) => {
         const visibleArea = windowHeight - elementPosition;
 
         if (visibleArea >= videoHeight * 0.5) {
-            element.classList.add('animate');
             element.play();
         } else {
-            element.classList.remove('animate');
             element.pause();
         }
     };
