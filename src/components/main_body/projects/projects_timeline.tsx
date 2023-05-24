@@ -69,7 +69,7 @@ const Projects_Timeline: React.FC = () => {
             </AnimationOnScroll>
             <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeInRightBig"}>
                 <div className="horizontal_line_right">
-                    <AnimationOnScroll animateIn={"animate__pulse"}>
+                    <AnimationOnScroll initiallyVisible={true} delay={-1000} offset={0} animateIn={"animate__pulse"} animateOut={"animate__pulse"}>
                         <div className="dot_right"></div>
                     </AnimationOnScroll>
                     <div>
