@@ -57,7 +57,7 @@ const Projects_Timeline: React.FC = () => {
 
     return (
         <div>
-            <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInRightBig"}>
+            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"}>
                 <div className={'project_timeline_long'}>
                     <p className={'timeline_text'}>
                         Bachelor
@@ -164,7 +164,7 @@ const Projects_Timeline: React.FC = () => {
                     </button>
                 </div>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInLeftBig"}>
+            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInLeftBig"}>
                 <div className={'project_timeline_long'}>
                     <p className={'timeline_text'}>
                         Bachelor
@@ -212,7 +212,7 @@ const Projects_Timeline: React.FC = () => {
                     </button>
                 </div>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInRightBig"}>
+            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"}>
                 <div className={'project_timeline_long'}>
                     <p className={'timeline_text'}>
                         Bachelor
@@ -261,7 +261,7 @@ const Projects_Timeline: React.FC = () => {
                 </button>
             </div>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInLeftBig"}>
+            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInLeftBig"}>
                 <div className={'project_timeline_long'}>
                     <p className={'timeline_text'}>
                         Master
@@ -327,7 +327,7 @@ const Projects_Timeline: React.FC = () => {
                 </button>
             </div>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInRightBig"} >
+            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} >
                 <div className={'project_timeline_long'}>
                     <p className={'timeline_text'}>
                         Master
@@ -393,7 +393,7 @@ const Projects_Timeline: React.FC = () => {
                 </button>
             </div>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInLeftBig"}>
+            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInLeftBig"}>
                 <div className={'project_timeline_long'}>
                     <p className={'timeline_text'}>
                         Master
@@ -443,7 +443,7 @@ const Projects_Timeline: React.FC = () => {
                 </button>
             </div>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInRightBig"}>
+            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"}>
                 <div className={'project_timeline_long'}>
                     <p className={'timeline_text'}>
                         Master
