@@ -21,8 +21,6 @@ import portrait from "../portrait";
 
 
 const Projects_Timeline: React.FC = () => {
-    const [isContentVisible, setIsContentVisible] = useState(false);
-    const [isButtonExpanded, setIsButtonExpanded] = useState(false);
     const timelineLongRef = useRef<HTMLDivElement>(null);
     const timelineShortRef = useRef<HTMLDivElement>(null);
     const horizontalLineRef = useRef<HTMLDivElement>(null);
@@ -30,21 +28,32 @@ const Projects_Timeline: React.FC = () => {
     const headerRefs = useRef<HTMLHeadingElement[]>([]);
     const textRefs = useRef<HTMLParagraphElement[]>([]);
     const buttonRefs = useRef<HTMLButtonElement[]>([]);
-    const divRef = useRef<HTMLDivElement>(null);
 
-    const toggleContentVisibility = () => {
-        setIsContentVisible(!isContentVisible);
-        setIsButtonExpanded(!isButtonExpanded);
-        if(isButtonExpanded){
-            scrollToDiv();
+    const [buttonData, setButtonData] = useState([
+        { isContentVisible: false, isButtonExpanded: false, divRef: useRef<HTMLDivElement>(null) },
+        { isContentVisible: false, isButtonExpanded: false, divRef: useRef<HTMLDivElement>(null) },
+        { isContentVisible: false, isButtonExpanded: false, divRef: useRef<HTMLDivElement>(null) },
+        { isContentVisible: false, isButtonExpanded: false, divRef: useRef<HTMLDivElement>(null) },
+        { isContentVisible: false, isButtonExpanded: false, divRef: useRef<HTMLDivElement>(null) },
+        { isContentVisible: false, isButtonExpanded: false, divRef: useRef<HTMLDivElement>(null) },
+    ]);
+
+    const toggleContentVisibility = (index: number) => {
+        const updatedButtonData = [...buttonData];
+        updatedButtonData[index].isContentVisible = !updatedButtonData[index].isContentVisible;
+        updatedButtonData[index].isButtonExpanded = !updatedButtonData[index].isButtonExpanded;
+        if (!updatedButtonData[index].isButtonExpanded) {
+            scrollToDiv(updatedButtonData[index].divRef);
+        }
+        setButtonData(updatedButtonData);
+    };
+
+    const scrollToDiv = (ref: React.RefObject<HTMLDivElement>) => {
+        if (ref.current) {
+            ref.current.scrollIntoView({ behavior: 'smooth' });
         }
     };
 
-    const scrollToDiv = () => {
-        if (divRef.current) {
-            divRef.current.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
 
     const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
         event.stopPropagation();
@@ -107,14 +116,13 @@ const Projects_Timeline: React.FC = () => {
             </div>
             <div ref={timelineShortRef} className={'project_timeline_short'}/>
             <VideoHeader src={qt_video} />
-            <div ref={divRef}>
-                <button
-                    onClick={toggleContentVisibility}
-                    ref={(el) => (buttonRefs.current[0] = el!)}
-                    className={`square-button ${isButtonExpanded ? 'expanded' : ''}`}
-                    style={{ height: isButtonExpanded ? 'auto' : 'initial' }}
-                >
-                    {isButtonExpanded ? (
+                <div ref={buttonData[0].divRef}>
+                    <button
+                        onClick={() => toggleContentVisibility(0)}
+                        className={`square-button ${buttonData[0].isButtonExpanded ? 'expanded' : ''}`}
+                        style={{ height: buttonData[0].isButtonExpanded ? 'auto' : 'initial' }}
+                    >
+                        {buttonData[0].isButtonExpanded ? (
                         <div>
                             <div>
                                 <h1 style={{color: "black", fontFamily: "Agency FB"}}>Digital Cockpit</h1>
@@ -174,13 +182,12 @@ const Projects_Timeline: React.FC = () => {
                                 schließen
                             </p>
                         </div>
-                    ) : (
-                        <p>Erfahre mehr</p>
-                    )}
-                    <span className={`arrow-down ${isButtonExpanded ? 'expanded' : ''}`} />
-                </button>
-            </div>
-
+                            ) : (
+                            <p>Erfahre mehr</p>
+                        )}
+                        <span className={`arrow-down ${buttonData[0].isButtonExpanded ? 'expanded' : ''}`} />
+                    </button>
+                </div>
             <div className={'project_timeline_long'}>
                 <p ref={(el) => (textRefs.current[1] = el!)} className={'timeline_text'}>
                     Bachelor
@@ -207,12 +214,22 @@ const Projects_Timeline: React.FC = () => {
             </div>
             <div ref={timelineShortRef} className={'project_timeline_short'}/>
             <VideoHeader src={facial_mocap_video} />
-            <div>
-                <button ref={(el) => (buttonRefs.current[1] = el!)} className="square-button">
-                    <p>Erfahre mehr</p>
-                    <span className="arrow-down"/>
-                </button>
-            </div>
+                <div ref={buttonData[1].divRef}>
+                    <button
+                        onClick={() => toggleContentVisibility(1)}
+                        className={`square-button ${buttonData[1].isButtonExpanded ? 'expanded' : ''}`}
+                        style={{ height: buttonData[1].isButtonExpanded ? 'auto' : 'initial' }}
+                    >
+                        {buttonData[1].isButtonExpanded ? (
+                        <div>
+
+                        </div>
+                    ) : (
+                            <p>Erfahre mehr</p>
+                        )}
+                        <span className={`arrow-down ${buttonData[1].isButtonExpanded ? 'expanded' : ''}`} />
+                    </button>
+                </div>
             <div className={'project_timeline_long'}>
                 <p ref={(el) => (textRefs.current[2] = el!)} className={'timeline_text'}>
                     Bachelor
@@ -240,10 +257,20 @@ const Projects_Timeline: React.FC = () => {
             </div>
             <div ref={timelineShortRef} className={'project_timeline_short'}/>
             <VideoMobile src={foodfill_video} />
-            <div>
-                <button ref={(el) => (buttonRefs.current[2] = el!)} className="square-button">
-                    <p>Erfahre mehr</p>
-                    <span className="arrow-down"/>
+            <div ref={buttonData[2].divRef}>
+                <button
+                    onClick={() => toggleContentVisibility(2)}
+                    className={`square-button ${buttonData[2].isButtonExpanded ? 'expanded' : ''}`}
+                    style={{ height: buttonData[2].isButtonExpanded ? 'auto' : 'initial' }}
+                >
+                    {buttonData[2].isButtonExpanded ? (
+                        <div>
+
+                        </div>
+                    ) : (
+                        <p>Erfahre mehr</p>
+                    )}
+                    <span className={`arrow-down ${buttonData[2].isButtonExpanded ? 'expanded' : ''}`} />
                 </button>
             </div>
             <div ref={timelineLongRef} className={'project_timeline_long'}>
@@ -287,10 +314,20 @@ const Projects_Timeline: React.FC = () => {
             </div>
             <div ref={timelineShortRef} className={'project_timeline_short'}/>
             <VideoHeader src={django_vaadin_video} />
-            <div>
-                <button ref={(el) => (buttonRefs.current[3] = el!)} className="square-button">
-                    <p>Erfahre mehr</p>
-                    <span className="arrow-down"/>
+            <div ref={buttonData[3].divRef}>
+                <button
+                    onClick={() => toggleContentVisibility(3)}
+                    className={`square-button ${buttonData[3].isButtonExpanded ? 'expanded' : ''}`}
+                    style={{ height: buttonData[3].isButtonExpanded ? 'auto' : 'initial' }}
+                >
+                    {buttonData[3].isButtonExpanded ? (
+                        <div>
+
+                        </div>
+                    ) : (
+                        <p>Erfahre mehr</p>
+                    )}
+                    <span className={`arrow-down ${buttonData[3].isButtonExpanded ? 'expanded' : ''}`} />
                 </button>
             </div>
             <div ref={timelineLongRef} className={'project_timeline_long'}>
@@ -334,10 +371,20 @@ const Projects_Timeline: React.FC = () => {
             </div>
             <div ref={timelineShortRef} className={'project_timeline_short'}/>
             <VideoHeader src={angular_vuejs_video} />
-            <div>
-                <button ref={(el) => (buttonRefs.current[4] = el!)} className="square-button">
-                    <p>Erfahre mehr</p>
-                    <span className="arrow-down"/>
+            <div ref={buttonData[4].divRef}>
+                <button
+                    onClick={() => toggleContentVisibility(4)}
+                    className={`square-button ${buttonData[4].isButtonExpanded ? 'expanded' : ''}`}
+                    style={{ height: buttonData[4].isButtonExpanded ? 'auto' : 'initial' }}
+                >
+                    {buttonData[4].isButtonExpanded ? (
+                        <div>
+
+                        </div>
+                    ) : (
+                        <p>Erfahre mehr</p>
+                    )}
+                    <span className={`arrow-down ${buttonData[4].isButtonExpanded ? 'expanded' : ''}`} />
                 </button>
             </div>
             <div ref={timelineLongRef} className={'project_timeline_long'}>
@@ -367,10 +414,20 @@ const Projects_Timeline: React.FC = () => {
             </div>
             <div ref={timelineShortRef} className={'project_timeline_short'}/>
             <VideoHeader src={stateofdart_video} />
-            <div>
-                <button ref={(el) => (buttonRefs.current[5] = el!)} className="square-button">
-                    <p>Erfahre mehr</p>
-                    <span className="arrow-down"/>
+            <div ref={buttonData[5].divRef}>
+                <button
+                    onClick={() => toggleContentVisibility(5)}
+                    className={`square-button ${buttonData[5].isButtonExpanded ? 'expanded' : ''}`}
+                    style={{ height: buttonData[5].isButtonExpanded ? 'auto' : 'initial' }}
+                >
+                    {buttonData[5].isButtonExpanded ? (
+                        <div>
+
+                        </div>
+                    ) : (
+                        <p>Erfahre mehr</p>
+                    )}
+                    <span className={`arrow-down ${buttonData[5].isButtonExpanded ? 'expanded' : ''}`} />
                 </button>
             </div>
             <div ref={timelineLongRef} className={'project_timeline_long'}>
