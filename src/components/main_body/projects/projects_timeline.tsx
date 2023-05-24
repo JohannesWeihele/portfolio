@@ -1,5 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import "./projects.css";
+import "animate.css/animate.min.css"
 
 //----------------Videos------------//
 import VideoHeader from "../../video_header/video_header";
@@ -19,15 +20,10 @@ import office_image from '../../../resources/images/office.jpeg'
 import porsche_driving from '../../../resources/images/porsche_driving.png'
 import portrait from "../portrait";
 
+import { AnimationOnScroll} from "react-animation-on-scroll";
+
 
 const Projects_Timeline: React.FC = () => {
-    const timelineLongRef = useRef<HTMLDivElement>(null);
-    const timelineShortRef = useRef<HTMLDivElement>(null);
-    const horizontalLineRef = useRef<HTMLDivElement>(null);
-    const dotRef = useRef<HTMLDivElement>(null);
-    const headerRefs = useRef<HTMLHeadingElement[]>([]);
-    const textRefs = useRef<HTMLParagraphElement[]>([]);
-    const buttonRefs = useRef<HTMLButtonElement[]>([]);
 
     const [buttonData, setButtonData] = useState([
         { isContentVisible: false, isButtonExpanded: false, divRef: useRef<HTMLDivElement>(null) },
@@ -59,62 +55,42 @@ const Projects_Timeline: React.FC = () => {
         event.stopPropagation();
     };
 
-    const handleScroll = () => {
-        const elements: (HTMLElement | null)[] = [
-            timelineLongRef.current,
-            timelineShortRef.current,
-            horizontalLineRef.current,
-            dotRef.current,
-            ...headerRefs.current,
-            ...textRefs.current,
-            ...buttonRefs.current,
-        ];
-
-        elements.forEach((element) => {
-            const elementPosition = element?.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-
-            if (elementPosition && elementPosition < windowHeight) {
-                element.classList.add('animate');
-            }
-        });
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
     return (
         <div>
-            <div ref={timelineLongRef} className={'project_timeline_long'}>
-                <p ref={(el) => (textRefs.current[0] = el!)} className={'timeline_text'}>
-                    Bachelor
-                </p>
-                <p ref={(el) => (textRefs.current[0] = el!)} className={'timeline_year_left'}>
-                    2018
-                </p>
-            </div>
-            <div ref={horizontalLineRef} className="horizontal_line_right">
-                <div className="dot_right"></div>
-                <div>
-                    <div className="header-container">
-                        <h1 ref={(el) => (headerRefs.current[0] = el!)} className={'timeline_header'}>
-                            Digital Cockpit
-                        </h1>
-                    </div>
-                    <div className={"timeline_icon_right_one"}>
-                        <img src={require('../../../resources/icons/qt_icon.png')} alt={"Qt_Icon"}/>
-                    </div>
-                    <div className={"timeline_icon_right_two"}>
-                        <img src={require('../../../resources/icons/C++_Icon.png')} alt={"C++_Icon"}/>
-                    </div>
-                    <div className={"timeline_icon_right_three"}>
-                        <img src={require('../../../resources/icons/blender_icon.png')} alt={"Blender_Icon"}/>
+            <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInRightBig"}>
+                <div className={'project_timeline_long'}>
+                    <p className={'timeline_text'}>
+                        Bachelor
+                    </p>
+                    <p className={'timeline_year_left'}>
+                        2018
+                    </p>
+                </div>
+            </AnimationOnScroll>
+            <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeInRightBig"}>
+                <div className="horizontal_line_right">
+                    <AnimationOnScroll animateIn={"animate__pulse"}>
+                        <div className="dot_right"></div>
+                    </AnimationOnScroll>
+                    <div>
+                        <div className="header-container">
+                            <h1 className={'timeline_header'}>
+                                Digital Cockpit
+                            </h1>
+                        </div>
+                        <div className={"timeline_icon_right_one"}>
+                            <img src={require('../../../resources/icons/qt_icon.png')} alt={"Qt_Icon"}/>
+                        </div>
+                        <div className={"timeline_icon_right_two"}>
+                            <img src={require('../../../resources/icons/C++_Icon.png')} alt={"C++_Icon"}/>
+                        </div>
+                        <div className={"timeline_icon_right_three"}>
+                            <img src={require('../../../resources/icons/blender_icon.png')} alt={"Blender_Icon"}/>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div ref={timelineShortRef} className={'project_timeline_short'}/>
+            </AnimationOnScroll>
+            <div className={'project_timeline_short'}/>
             <VideoHeader src={qt_video} />
                 <div ref={buttonData[0].divRef}>
                     <button
@@ -188,19 +164,24 @@ const Projects_Timeline: React.FC = () => {
                         <span className={`arrow-down ${buttonData[0].isButtonExpanded ? 'expanded' : ''}`} />
                     </button>
                 </div>
-            <div className={'project_timeline_long'}>
-                <p ref={(el) => (textRefs.current[1] = el!)} className={'timeline_text'}>
-                    Bachelor
-                </p>
-                <p ref={(el) => (textRefs.current[1] = el!)} className={'timeline_year_right'}>
-                    2019
-                </p>
-            </div>
+            <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInLeftBig"}>
+                <div className={'project_timeline_long'}>
+                    <p className={'timeline_text'}>
+                        Bachelor
+                    </p>
+                    <p className={'timeline_year_left'}>
+                        2019
+                    </p>
+                </div>
+            </AnimationOnScroll>
+            <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInLeftBig"}>
             <div className={'horizontal_line_left'}>
-                <div className="dot_left"></div>
+                <AnimationOnScroll animateIn={"animate__pulse"}>
+                    <div className="dot_left"></div>
+                </AnimationOnScroll>
                 <div>
                     <div className="header-container">
-                        <h1 ref={(el) => (headerRefs.current[1] = el!)} className={'timeline_header'}>
+                        <h1 className={'timeline_header'}>
                             Facial Motion Capture
                         </h1>
                     </div>
@@ -212,7 +193,8 @@ const Projects_Timeline: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div ref={timelineShortRef} className={'project_timeline_short'}/>
+            </AnimationOnScroll>
+            <div className={'project_timeline_short'}/>
             <VideoHeader src={facial_mocap_video} />
                 <div ref={buttonData[1].divRef}>
                     <button
@@ -230,18 +212,23 @@ const Projects_Timeline: React.FC = () => {
                         <span className={`arrow-down ${buttonData[1].isButtonExpanded ? 'expanded' : ''}`} />
                     </button>
                 </div>
-            <div className={'project_timeline_long'}>
-                <p ref={(el) => (textRefs.current[2] = el!)} className={'timeline_text'}>
-                    Bachelor
-                </p>
-                <p ref={(el) => (textRefs.current[2] = el!)} className={'timeline_year_left'}>
-                    2020
-                </p>
-            </div>
-            <div ref={horizontalLineRef} className="horizontal_line_right">
-                <div className="dot_right"></div>
+            <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInRightBig"}>
+                <div className={'project_timeline_long'}>
+                    <p className={'timeline_text'}>
+                        Bachelor
+                    </p>
+                    <p className={'timeline_year_left'}>
+                        2020
+                    </p>
+                </div>
+            </AnimationOnScroll>
+            <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInRightBig"}>
+            <div className="horizontal_line_right">
+                <AnimationOnScroll animateIn={"animate__pulse"}>
+                    <div className="dot_right"></div>
+                </AnimationOnScroll>
                 <div className="header-container">
-                    <h1 ref={(el) => (headerRefs.current[2] = el!)} className={'timeline_header'}>
+                    <h1 className={'timeline_header'}>
                         FoodFill (BA)
                     </h1>
                 </div>
@@ -255,7 +242,8 @@ const Projects_Timeline: React.FC = () => {
                     <img src={require('../../../resources/icons/blender_icon.png')} alt={"Blender_Icon"}/>
                 </div>
             </div>
-            <div ref={timelineShortRef} className={'project_timeline_short'}/>
+            </AnimationOnScroll>
+            <div className={'project_timeline_short'}/>
             <VideoMobile src={foodfill_video} />
             <div ref={buttonData[2].divRef}>
                 <button
@@ -273,46 +261,54 @@ const Projects_Timeline: React.FC = () => {
                     <span className={`arrow-down ${buttonData[2].isButtonExpanded ? 'expanded' : ''}`} />
                 </button>
             </div>
-            <div ref={timelineLongRef} className={'project_timeline_long'}>
-                <p ref={(el) => (textRefs.current[3] = el!)} className={'timeline_text'}>
-                    Master
-                </p>
-                <p ref={(el) => (textRefs.current[3] = el!)} className={'timeline_year_right'}>
-                    2021
-                </p>
-            </div>
-            <div ref={horizontalLineRef} className="horizontal_line_right" id={"same_line_right"}>
-                <div className="dot_right"></div>
-                <div className="header-container">
-                    <h1 ref={(el) => (headerRefs.current[3] = el!)} className={'timeline_header'}>
-                        Vaadin
-                    </h1>
+            <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInLeftBig"}>
+                <div className={'project_timeline_long'}>
+                    <p className={'timeline_text'}>
+                        Master
+                    </p>
+                    <p className={'timeline_year_left'}>
+                        2021
+                    </p>
                 </div>
-                <div className={"timeline_icon_right_one"}>
-                    <img src={require('../../../resources/icons/vaadin_icon.png')} alt={"Vaadin_Icon"}/>
-                </div>
-                <div className={"timeline_icon_right_two"}>
-                    <img src={require('../../../resources/icons/java_icon.png')} alt={"Java_Icon"}/>
-                </div>
-            </div>
-            <div ref={horizontalLineRef} className="horizontal_line_left" id={"same_line_left"}>
-                <div className="dot_left"></div>
-                <div className="header-container">
-                    <h1 ref={(el) => (headerRefs.current[4] = el!)} className={'timeline_header'}>
-                        Django
-                    </h1>
-                    <div className={"timeline_icon_left_one"}>
-                        <img src={require('../../../resources/icons/django_icon.png')} alt={"Django_Icon"}/>
+            </AnimationOnScroll>
+            <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInLeftBig"}>
+                <div className="horizontal_line_right" id={"same_line_right"}>
+                    <AnimationOnScroll animateIn={"animate__pulse"}>
+                        <div className="dot_right"></div>
+                    </AnimationOnScroll>
+                    <div className="header-container">
+                        <h1 className={'timeline_header'}>
+                            Vaadin
+                        </h1>
                     </div>
-                    <div className={"timeline_icon_left_two"}>
-                        <img src={require('../../../resources/icons/python_icon.png')} alt={"Python_Icon"}/>
+                    <div className={"timeline_icon_right_one"}>
+                        <img src={require('../../../resources/icons/vaadin_icon.png')} alt={"Vaadin_Icon"}/>
+                    </div>
+                    <div className={"timeline_icon_right_two"}>
+                        <img src={require('../../../resources/icons/java_icon.png')} alt={"Java_Icon"}/>
                     </div>
                 </div>
-            </div>
+                <div className="horizontal_line_left" id={"same_line_left"}>
+                    <AnimationOnScroll animateIn={"animate__pulse"}>
+                        <div className="dot_left"></div>
+                    </AnimationOnScroll>
+                    <div className="header-container">
+                        <h1 className={'timeline_header'}>
+                            Django
+                        </h1>
+                        <div className={"timeline_icon_left_one"}>
+                            <img src={require('../../../resources/icons/django_icon.png')} alt={"Django_Icon"}/>
+                        </div>
+                        <div className={"timeline_icon_left_two"}>
+                            <img src={require('../../../resources/icons/python_icon.png')} alt={"Python_Icon"}/>
+                        </div>
+                    </div>
+                </div>
+            </AnimationOnScroll>
             <div>
                 <p className={"vs-container"}>vs.</p>
             </div>
-            <div ref={timelineShortRef} className={'project_timeline_short'}/>
+            <div className={'project_timeline_short'}/>
             <VideoHeader src={django_vaadin_video} />
             <div ref={buttonData[3].divRef}>
                 <button
@@ -330,18 +326,23 @@ const Projects_Timeline: React.FC = () => {
                     <span className={`arrow-down ${buttonData[3].isButtonExpanded ? 'expanded' : ''}`} />
                 </button>
             </div>
-            <div ref={timelineLongRef} className={'project_timeline_long'}>
-                <p ref={(el) => (textRefs.current[4] = el!)} className={'timeline_text'}>
-                    Master
-                </p>
-                <p ref={(el) => (textRefs.current[4] = el!)} className={'timeline_year_right'}>
-                    2022
-                </p>
-            </div>
-            <div ref={horizontalLineRef} className="horizontal_line_right" id={"same_line_right"}>
-                <div className="dot_right"></div>
+            <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInRightBig"}>
+                <div className={'project_timeline_long'}>
+                    <p className={'timeline_text'}>
+                        Master
+                    </p>
+                    <p className={'timeline_year_left'}>
+                        2022
+                    </p>
+                </div>
+            </AnimationOnScroll>
+            <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInRightBig"}>
+            <div className="horizontal_line_right" id={"same_line_right"}>
+                <AnimationOnScroll animateIn={"animate__pulse"}>
+                    <div className="dot_right"></div>
+                </AnimationOnScroll>
                 <div className="header-container">
-                    <h1 ref={(el) => (headerRefs.current[5] = el!)} className={'timeline_header'}>
+                    <h1 className={'timeline_header'}>
                         Vue.js
                     </h1>
                 </div>
@@ -352,10 +353,12 @@ const Projects_Timeline: React.FC = () => {
                     <img src={require('../../../resources/icons/typescript_icon.png')} alt={"TypeScript_Icon"}/>
                 </div>
             </div>
-            <div ref={horizontalLineRef} className="horizontal_line_left" id={"same_line_left"}>
-                <div className="dot_left"></div>
+            <div className="horizontal_line_left" id={"same_line_left"}>
+                <AnimationOnScroll animateIn={"animate__pulse"}>
+                    <div className="dot_left"></div>
+                </AnimationOnScroll>
                 <div className="header-container">
-                    <h1 ref={(el) => (headerRefs.current[6] = el!)} className={'timeline_header'}>
+                    <h1 className={'timeline_header'}>
                         Angular
                     </h1>
                 </div>
@@ -366,10 +369,11 @@ const Projects_Timeline: React.FC = () => {
                     <img src={require('../../../resources/icons/typescript_icon.png')} alt={"TypeScript_Icon"}/>
                 </div>
             </div>
+            </AnimationOnScroll>
             <div>
                 <p className={"vs-container"}>vs.</p>
             </div>
-            <div ref={timelineShortRef} className={'project_timeline_short'}/>
+            <div className={'project_timeline_short'}/>
             <VideoHeader src={angular_vuejs_video} />
             <div ref={buttonData[4].divRef}>
                 <button
@@ -387,18 +391,23 @@ const Projects_Timeline: React.FC = () => {
                     <span className={`arrow-down ${buttonData[4].isButtonExpanded ? 'expanded' : ''}`} />
                 </button>
             </div>
-            <div ref={timelineLongRef} className={'project_timeline_long'}>
-                <p ref={(el) => (textRefs.current[5] = el!)} className={'timeline_text'}>
-                    Master
-                </p>
-                <p ref={(el) => (textRefs.current[5] = el!)} className={'timeline_year_right'}>
-                    2023
-                </p>
-            </div>
-            <div ref={horizontalLineRef} className="horizontal_line_left">
-                <div className="dot_left"></div>
+            <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInLeftBig"}>
+                <div className={'project_timeline_long'}>
+                    <p className={'timeline_text'}>
+                        Master
+                    </p>
+                    <p className={'timeline_year_left'}>
+                        2023
+                    </p>
+                </div>
+            </AnimationOnScroll>
+            <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInLeftBig"}>
+            <div className="horizontal_line_left">
+                <AnimationOnScroll animateIn={"animate__pulse"}>
+                    <div className="dot_left"></div>
+                </AnimationOnScroll>
                 <div className="header-container">
-                    <h1 ref={(el) => (headerRefs.current[7] = el!)} className={'timeline_header'}>
+                    <h1 className={'timeline_header'}>
                         StateofDart
                     </h1>
                 </div>
@@ -412,7 +421,8 @@ const Projects_Timeline: React.FC = () => {
                     <img src={require('../../../resources/icons/java_icon.png')} alt={"Java_Icon"}/>
                 </div>
             </div>
-            <div ref={timelineShortRef} className={'project_timeline_short'}/>
+            </AnimationOnScroll>
+            <div className={'project_timeline_short'}/>
             <VideoHeader src={stateofdart_video} />
             <div ref={buttonData[5].divRef}>
                 <button
@@ -430,18 +440,23 @@ const Projects_Timeline: React.FC = () => {
                     <span className={`arrow-down ${buttonData[5].isButtonExpanded ? 'expanded' : ''}`} />
                 </button>
             </div>
-            <div ref={timelineLongRef} className={'project_timeline_long'}>
-                <p ref={(el) => (textRefs.current[6] = el!)} className={'timeline_text'}>
-                    Master
-                </p>
-                <p ref={(el) => (textRefs.current[6] = el!)} className={'timeline_year_right'}>
-                    2023
-                </p>
-            </div>
-            <div ref={horizontalLineRef} className="horizontal_line_right">
-                <div className="dot_right"></div>
+            <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInRightBig"}>
+                <div className={'project_timeline_long'}>
+                    <p className={'timeline_text'}>
+                        Master
+                    </p>
+                    <p className={'timeline_year_left'}>
+                        2023
+                    </p>
+                </div>
+            </AnimationOnScroll>
+            <AnimationOnScroll delay={-1000} offset={0} animateIn={"animate__fadeInRightBig"}>
+            <div className="horizontal_line_right">
+                <AnimationOnScroll animateIn={"animate__pulse"}>
+                    <div className="dot_right"></div>
+                </AnimationOnScroll>
                 <div className="header-container">
-                    <h1 ref={(el) => (headerRefs.current[8] = el!)} className={'timeline_header'}>
+                    <h1 className={'timeline_header'}>
                         Fireprotect (MA)
                     </h1>
                 </div>
@@ -455,7 +470,8 @@ const Projects_Timeline: React.FC = () => {
                     <img src={require('../../../resources/icons/wear_os_icon.png')} alt={"Wear_OS_Icon"}/>
                 </div>
             </div>
-            <div ref={timelineShortRef} className={'project_timeline_short'}/>
+            </AnimationOnScroll>
+            <div className={'project_timeline_short'}/>
         </div>
     );
 };

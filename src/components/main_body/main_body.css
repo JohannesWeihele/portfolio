@@ -84,7 +84,7 @@ h3 {
 }
 
 .invisible_writer_dot {
-    animation: pulse 1s ease-in-out infinite;
+    animation: thepulse 1s ease-in-out infinite;
     vertical-align: text-bottom;
     display: inline-block;
     width: 1px;
@@ -113,7 +113,7 @@ p {
     font-family: "Agency FB";
 }
 
-@keyframes pulse {
+@keyframes thepulse {
     0%, 50% {
         opacity: 1;
     }

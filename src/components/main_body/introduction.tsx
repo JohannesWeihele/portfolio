@@ -1,5 +1,6 @@
 import React, { FC, useEffect, useState } from 'react';
 import "./main_body.css";
+import {AnimationOnScroll} from "react-animation-on-scroll";
 
 const text1 = "Hey! Ich bin Johannes";
 const text2 = "Web- und Software-Engineer.";
@@ -62,7 +63,7 @@ const Introduction: FC = () => {
                 <h2>Willkommen zu meinem Portfolio</h2>
             </div>
             <div className={"introduction_text_container"}>
-                <h1 id={"intro_job_title"} style={{color: "black"}}>{animatedText1}</h1>
+                <h1 id={"intro_job_title "} style={{color: "black"}}>{animatedText1} </h1>
                 <h1 id={"intro_job_title"} style={{color: "#fd8c3f"}}>{animatedText2} <span className="invisible_writer_dot"></span></h1>
                 <p className={"introduction_text"}>Willkommen auf meiner Portfolio-Website, einer Plattform, auf der ich stolz eine Auswahl meiner bisherigen Projekte präsentiere. Diese Projekte sind das engagierte Ergebnis während des Studiums zum Game-Engineer, sowie meiner erworbenen Fachkenntnisse als Web- und Software-Engineer im anschließenden Masterstudium.</p>
                 <p className={"introduction_text"}>Begleite mich auf dieser spannenden Reise durch Codes und Designs, während ich dir meine Fähigkeiten und Kreativität demonstriere. Diese Timeline gewährt dir einen Einblick in die persönliche Entwicklung als Programmierer und zeigt meinen fortwährenden Wunsch, mich durch die unterschiedlichsten Technologien stetig weiterzuentwickeln. Tauche ein in diese digitale Welt und lass uns gemeinsam die unendlichen Möglichkeiten des Internets entdecken. </p>
