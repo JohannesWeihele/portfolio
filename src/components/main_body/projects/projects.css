@@ -2,6 +2,7 @@
     text-align: center;
     width: 100%;
     padding: 10px;
+    margin-left: -5px;
 }
 
 .my_projects_headline_container {
@@ -391,4 +392,79 @@ a {
 
 .animate {
     animation: slide-up 1.5s ease forwards;
+}
+
+@media (max-width: 767px) {
+    /* Styles für Smartphones */
+    .projects {
+        padding: 0;
+    }
+
+    .my_projects_headline_container {
+        width: 40%;
+        margin-left: 10px;
+        max-width: 300px;
+        min-width: 200px;
+        padding: 0;
+    }
+
+    .project_timeline_long {
+        height: 250px;
+    }
+
+    .timeline_text {
+        top: 150px;
+        font-size: 18px;
+    }
+
+    .timeline_year_left {
+        left: -30vw;
+        font-size: 9vw;
+    }
+
+    .horizontal_line_right {
+        width: 35vw;
+        left: 25vw;
+    }
+
+    .dot_right {
+        left: 34vw;
+    }
+
+    .timeline_year_right {
+        left: 20vw;
+        font-size: 9vw;
+    }
+
+    .horizontal_line_left {
+        width: 42vw;
+        left: -25vw;
+    }
+
+    .dot_left {
+        left: -2vw;
+    }
+
+
+    .timeline_header {
+        top: -14vw;
+        font-size: 5vw;
+    }
+
+    .square-button.expanded{
+        width: 95%;
+    }
+
+    .max_width_text{
+        padding: 0px;
+    }
+
+    .square-button{
+        width: 125px;
+        font-size: 12px;
+    }
+
+    .more_text{
+        text-align: center;
+    }
 }

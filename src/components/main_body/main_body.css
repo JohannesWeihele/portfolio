@@ -106,23 +106,6 @@ p {
     text-align: justify;
 }
 
-.skills {
-    border-radius: 20px;
-    color: white;
-    display: flex;
-    opacity: 80%;
-    width: 1000px;
-    height: 100%;
-    min-width: 200px;
-    max-width: 1200px;
-    text-align: center;
-    background-color: #000000;
-    justify-content: center;
-    padding: 10px 100px 100px;
-    margin-top: -60px;
-    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.8);
-}
-
 .introduction_text_container{
     width: 100%;
     margin-left: 20px;
@@ -188,4 +171,70 @@ p {
 
 .flame-emoji {
     animation: flameAnimation 1s ease-in-out infinite;
+}
+
+@media (max-width: 767px) {
+    /* Styles für Smartphones */
+
+
+
+    .introduction_body {
+        flex-direction: column; /* Ändert die Ausrichtung auf stapelnde Anordnung */
+        align-items: center; /* Zentriert den Inhalt vertikal */
+        padding: 20px 0; /* Verringert den oberen und unteren Innenabstand */
+    }
+
+    .projects_body {
+        margin-top: 60px; /* Verringert den oberen Abstand */
+    }
+
+    .portrait {
+        padding: 20px 0; /* Verringert den Innenabstand */
+        padding-top: 40px;
+    }
+
+    .portrait img {
+        width: 45%; /* Reduziert die Breite des Bildes */
+        min-width: 150px; /* Verringert die Mindestbreite des Bildes */
+        border-width: 10px; /* Verringert die Rahmenbreite */
+    }
+
+    .introduction {
+        padding: 20px 20px; /* Verringert den Innenabstand */
+        width: 100%; /* Nimmt die volle Breite ein */
+        max-width: none; /* Entfernt die maximale Breitenbegrenzung */
+    }
+
+    .introduction_text{
+        margin: 20px;
+    }
+
+    .introduction_final{
+        margin: 20px;
+    }
+
+    .introduction_text_container{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    h1 {
+        height: 50px;
+        line-height: 40px;
+        font-size: 6vw; /* Verringert die Schriftgröße */
+    }
+
+    h2 {
+        padding: 10px; /* Verringert den Innenabstand */
+        font-size: 4vw; /* Verringert die Schriftgröße */
+    }
+
+    h3 {
+        font-size: 2rem; /* Verringert die Schriftgröße */
+    }
+
+    #intro_job_title{
+        font-size: 6vw;
+    }
+
 }

@@ -183,7 +183,7 @@ const Projects_Timeline: React.FC = () => {
                             </p>
                         </div>
                             ) : (
-                            <p>Erfahre mehr</p>
+                            <p className={"more_text"}>Erfahre mehr</p>
                         )}
                         <span className={`arrow-down ${buttonData[0].isButtonExpanded ? 'expanded' : ''}`} />
                     </button>
@@ -225,7 +225,7 @@ const Projects_Timeline: React.FC = () => {
 
                         </div>
                     ) : (
-                            <p>Erfahre mehr</p>
+                            <p className={"more_text"}>Erfahre mehr</p>
                         )}
                         <span className={`arrow-down ${buttonData[1].isButtonExpanded ? 'expanded' : ''}`} />
                     </button>
@@ -268,7 +268,7 @@ const Projects_Timeline: React.FC = () => {
 
                         </div>
                     ) : (
-                        <p>Erfahre mehr</p>
+                        <p className={"more_text"}>Erfahre mehr</p>
                     )}
                     <span className={`arrow-down ${buttonData[2].isButtonExpanded ? 'expanded' : ''}`} />
                 </button>
@@ -325,7 +325,7 @@ const Projects_Timeline: React.FC = () => {
 
                         </div>
                     ) : (
-                        <p>Erfahre mehr</p>
+                        <p className={"more_text"}>Erfahre mehr</p>
                     )}
                     <span className={`arrow-down ${buttonData[3].isButtonExpanded ? 'expanded' : ''}`} />
                 </button>
@@ -382,7 +382,7 @@ const Projects_Timeline: React.FC = () => {
 
                         </div>
                     ) : (
-                        <p>Erfahre mehr</p>
+                        <p className={"more_text"}>Erfahre mehr</p>
                     )}
                     <span className={`arrow-down ${buttonData[4].isButtonExpanded ? 'expanded' : ''}`} />
                 </button>
@@ -425,7 +425,7 @@ const Projects_Timeline: React.FC = () => {
 
                         </div>
                     ) : (
-                        <p>Erfahre mehr</p>
+                        <p className={"more_text"}>Erfahre mehr</p>
                     )}
                     <span className={`arrow-down ${buttonData[5].isButtonExpanded ? 'expanded' : ''}`} />
                 </button>

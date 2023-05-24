@@ -3,7 +3,7 @@ import Logo from "./logo";
 import MenuBar from "./menubar";
 import './header.css';
 
-const Header: FC = () =>
+const Header = () =>
     <div className={"header"}>
         <Logo/>
         <MenuBar/>

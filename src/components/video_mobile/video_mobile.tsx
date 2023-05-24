@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef } from 'react';
+import React, {FC, useEffect, useRef, useState} from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 interface VideoMobileProps {
@@ -8,7 +8,12 @@ interface VideoMobileProps {
 const VideoMobile: FC<VideoMobileProps> = ({ src }) => {
     const videoRef = useRef<HTMLVideoElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
+    const [isLoading, setIsLoading] = useState(true);
     const isMobile = useMediaQuery({ maxWidth: 767 });
+
+    const handleLoadedData = () => {
+        setIsLoading(false);
+    };
 
     useEffect(() => {
         const videoElement = videoRef.current;
@@ -44,12 +49,18 @@ const VideoMobile: FC<VideoMobileProps> = ({ src }) => {
 
     return (
         <div className="video-mobile">
+            {isLoading && (
+                <div className="loading-overlay">
+                    <span>Loading...</span>
+                </div>
+            )}
             <div ref={containerRef} className={'video_container'}>
                 <video
                     ref={videoRef}
                     className={isMobile ? 'mobile' : 'desktop'}
                     muted
                     disablePictureInPicture
+                    onLoadedData={handleLoadedData}
                     loop
                 >
                     <source src={src} type="video/mp4" />
