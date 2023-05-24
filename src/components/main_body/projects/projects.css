@@ -479,3 +479,9 @@ a {
         display: inline-block;
     }
 }
+
+@font-face {
+    font-family: 'Agency FB';
+    src: url('../../../resources/fonts/agency_fb.ttf') format('truetype');
+    /* Weitere Optionen zur Schriftart wie font-weight, font-style, etc. */
+}

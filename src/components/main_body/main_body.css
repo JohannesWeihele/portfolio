@@ -81,6 +81,7 @@ h3 {
 
 #intro_job_title {
     color: #fd8c3f;
+    font-family: "Courier New";
 }
 
 .invisible_writer_dot {
@@ -110,6 +111,7 @@ p {
 
 .introduction_final {
     font-size: 22px;
+    font-family: "Agency FB";
 }
 
 @keyframes pulse {
@@ -212,20 +214,26 @@ p {
     h1 {
         height: 50px;
         line-height: 40px;
-        font-size: 6vw; /* Verringert die Schriftgröße */
+        font-size: 5vw !important;
     }
 
     h2 {
-        padding: 10px; /* Verringert den Innenabstand */
-        font-size: 4vw; /* Verringert die Schriftgröße */
+        padding: 10px;
+        font-size: 4vw;
     }
 
     h3 {
-        font-size: 2rem; /* Verringert die Schriftgröße */
+        font-size: 2rem;
     }
 
     #intro_job_title{
         font-size: 6vw;
     }
 
+}
+
+@font-face {
+    font-family: 'Agency FB';
+    src: url('../../resources/fonts/agency_fb.ttf') format('truetype');
+    /* Weitere Optionen zur Schriftart wie font-weight, font-style, etc. */
 }
