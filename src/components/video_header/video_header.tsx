@@ -46,6 +46,7 @@ const VideoHeader: FC<VideoHeaderProps> = ({ src }) => {
         } else {
             if (document.exitFullscreen) {
                 document.exitFullscreen();
+                window.scrollTo(0, 0); // Scroll to the top of the page
             }
         }
     };
