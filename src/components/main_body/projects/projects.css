@@ -395,7 +395,7 @@ a {
 }
 
 .animate {
-    animation: slide-up 1.5s ease forwards;
+    animation: slide-up 1s ease forwards;
 }
 
 @media (max-width: 850px){

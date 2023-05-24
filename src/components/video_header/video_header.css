@@ -35,9 +35,27 @@
     height: 40px;
     border-radius: 50%;
     border: 4px solid #fff;
-    border-top-color: #999;
+    border-top-color: #181818;
     animation: loading-spin 1s linear infinite;
 }
+
+.fullscreen-button{
+    position: absolute;
+    top: 10px;
+    right: 1.5vw;
+    z-index: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.fullscreen-button img{
+    width: 20px;
+    height: 20px;
+    opacity: 50%;
+}
+
 
 @keyframes loading-spin {
     to {
@@ -57,7 +75,7 @@
 }
 
 .animate {
-    animation: slide-up 1.5s ease forwards;
+    animation: slide-up 0.5s ease forwards;
 }
 
 @media (max-width: 850px){

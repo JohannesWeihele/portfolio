@@ -3,6 +3,8 @@ import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import './video_header.css';
 
+import fullscreen_icon from '../../resources/icons/fullscreen_icon.png'
+
 interface VideoHeaderProps {
     src: string;
 }
@@ -11,6 +13,7 @@ const VideoHeader: FC<VideoHeaderProps> = ({ src }) => {
     const videoRef = useRef<HTMLVideoElement>(null);
     const isMobile = useMediaQuery({ maxWidth: 767 });
     const [isLoading, setIsLoading] = useState(true);
+    const [isFullscreen, setIsFullscreen] = useState(false);
 
     const handleScroll = () => {
         const element = videoRef.current;
@@ -31,6 +34,24 @@ const VideoHeader: FC<VideoHeaderProps> = ({ src }) => {
             element.pause();
         }
     };
+
+    const toggleFullscreen = () => {
+        const element = videoRef.current;
+        if (!element) return;
+
+        if (!isFullscreen) {
+            if (element.requestFullscreen) {
+                element.requestFullscreen();
+            }
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            }
+        }
+    };
+
+
+
 
     const handleLoadedData = () => {
         setIsLoading(false);
@@ -56,16 +77,22 @@ const VideoHeader: FC<VideoHeaderProps> = ({ src }) => {
                 </div>
             )}
             <div className={'video_container'}>
-                <video
-                    ref={videoRef}
-                    className={isMobile ? 'mobile' : 'desktop'}
-                    muted
-                    disablePictureInPicture
-                    loop
-                    onLoadedData={handleLoadedData}
-                >
-                    <source src={src} type="video/mp4" />
-                </video>
+                <div>
+                    <video
+                        ref={videoRef}
+                        className={isMobile ? 'mobile' : 'desktop'}
+                        muted
+                        disablePictureInPicture
+                        loop
+                        onLoadedData={handleLoadedData}
+                    >
+                        <source src={src} type="video/mp4" />
+                    </video>
+                </div>
+                <button className="fullscreen-button" onClick={toggleFullscreen}>
+                    {isFullscreen ? 'Exit Fullscreen' : ''}
+                    <img src={fullscreen_icon}/>
+                </button>
             </div>
         </div>
     );
