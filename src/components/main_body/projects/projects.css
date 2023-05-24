@@ -379,6 +379,10 @@ a {
     text-decoration: none;
 }
 
+.mobile_newLine{
+    display: none;
+}
+
 @keyframes slide-up {
     0% {
         transform: translateY(50px); /* Startposition der Animation */
@@ -445,9 +449,8 @@ a {
         left: -2vw;
     }
 
-
     .timeline_header {
-        top: -14vw;
+        margin-top: 65px;
         font-size: 4.5vw;
     }
 
@@ -466,5 +469,13 @@ a {
 
     .more_text{
         text-align: center;
+    }
+
+    .mobile_newLine{
+        display: initial;
+    }
+
+    .multi_pictures_container{
+        display: inline-block;
     }
 }
