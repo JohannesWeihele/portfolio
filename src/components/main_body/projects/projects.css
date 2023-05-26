@@ -367,6 +367,7 @@
 
 .close_button_text{
     position: relative;
+    padding: 10px;
     text-align: center;
     color: #fd8c3f;
     font-size: 14px;

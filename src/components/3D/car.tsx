@@ -7,14 +7,17 @@ const Car: React.FC = () => {
     const carRef = useRef<THREE.Object3D>();
 
     useFrame((state, delta) => {
+        // Aktualisiere die Rotation des Autos
         if (carRef.current) {
-            carRef.current.rotation.y += delta * 0.5;
+            carRef.current.rotation.y += delta * 0.5; // Ändere die Geschwindigkeit des Drehens hier anpassen
         }
     });
     const { camera } = useThree();
+    // Setze den Zoomwert
+    if (window.innerWidth <= 768) {
 
-    if (window.innerWidth <= 1000) {
         camera.zoom = 0.4;
+
         camera.updateProjectionMatrix();
     }
 
