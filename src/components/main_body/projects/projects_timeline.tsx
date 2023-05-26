@@ -60,22 +60,6 @@ const Projects_Timeline: React.FC = () => {
         }
     };
 
-    const handleResize = () => {
-        const screenWidth = getWindowWidth();
-        if (screenWidth <= 768) {
-            setCanvasSize(800);
-        } else {
-            setCanvasSize(1000);
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener('resize', handleResize);
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
-
     const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
         event.stopPropagation();
     };
@@ -95,7 +79,7 @@ const Projects_Timeline: React.FC = () => {
                         2018
                     </p>
                 </div>
-                <div className={"horizontal_line_right"}>
+                <div className={"horizontal_line_right"} id={"same_line_right"}>
                     <AnimationOnScroll initiallyVisible={true} delay={-1000} offset={0} animateIn={"animate__pulse"} animateOut={"animate__pulse"}>
                         <div className="dot_right"></div>
                     </AnimationOnScroll>
@@ -113,6 +97,22 @@ const Projects_Timeline: React.FC = () => {
                         </div>
                         <div className={"timeline_icon_right_three"}>
                             <img src={require('../../../resources/icons/blender_icon.png')} alt={"Blender_Icon"}/>
+                        </div>
+                    </div>
+                </div>
+                <div className="horizontal_line_left" id={"same_line_left"}>
+                    <AnimationOnScroll initiallyVisible={true} delay={-1000} offset={0} animateIn={"animate__pulse"} animateOut={"animate__pulse"}>
+                        <div className="dot_left"></div>
+                    </AnimationOnScroll>
+                    <div>
+                        <div className="header-container">
+                            <h1 className={'timeline_header'}>
+                                <div className={'model_left'}>
+                                    <Canvas id={"canvas_model_left"} style={{ width: "300px", height: "300px"}}>
+                                        <Car/>
+                                    </Canvas>
+                                </div>
+                            </h1>
                         </div>
                     </div>
                 </div>
@@ -144,7 +144,7 @@ const Projects_Timeline: React.FC = () => {
                                 Mit einer 210° umfassenden 9 auf 4 Meter großen Leinwand bildet das Hochschul-Labor durch ein hochmodernes, präzises und realistisches System das indviduelle Fahrgefühl seiner Tester auf einer hochgenauen Bewegungsplattform nach.<div className={"mobile_newLine"}><br/><br/></div>
                             </p>
                             <div className={"project_video"}>
-                                <VideoHeader src={adrive_video}/>
+                                <VideoHeader src={adrive_video} showFullscreenButton={false}/>
                             </div>
                             <p className={"source_text"}>Quelle: https://www.youtube.com/watch?v=c1Wo7ZtoK2Q</p>
                             <p className={"max_width_text"}>
@@ -190,32 +190,6 @@ const Projects_Timeline: React.FC = () => {
                             <p className={"more_text"}>Erfahre mehr</p>
                         )}
                         <span className={`arrow-down ${buttonData[0].isButtonExpanded ? 'expanded' : ''}`} />
-                    </button>
-                </div>
-                <p className="button_or">
-                    <span>oder</span>
-                </p>
-                <div ref={buttonData[6].divRef}>
-                    <button
-                        onClick={() => toggleContentVisibility(6)}
-                        className={`td_square-button ${buttonData[6].isButtonExpanded ? 'expanded' : ''}`}
-                        style={{ height: buttonData[6].isButtonExpanded ? 'auto' : 'initial' }}
-                    >
-                        {buttonData[6].isButtonExpanded ? (
-                            <div className={"model_container"}>
-                                <div className={'model_left'}>
-                                    <Canvas style={{ width: "1000px", height: "900px", objectFit: "contain"}} onClick={handle3DClick}>
-                                        <Car/>
-                                    </Canvas>
-                                </div>
-                                <p className={"close_button_text"} style={{zIndex: "5"}}>
-                                    schließen
-                                </p>
-                            </div>
-                        ) : (
-                            <p className={"more_text"}>3D-Model Ansehen</p>
-                        )}
-                        <span className={`arrow-down ${buttonData[6].isButtonExpanded ? 'expanded' : ''}`} />
                     </button>
                 </div>
             </AnimationOnScroll>
@@ -264,6 +238,32 @@ const Projects_Timeline: React.FC = () => {
                             <p className={"more_text"}>Erfahre mehr</p>
                         )}
                         <span className={`arrow-down ${buttonData[1].isButtonExpanded ? 'expanded' : ''}`} />
+                    </button>
+                </div>
+                <p className="button_or">
+                    <span>oder</span>
+                </p>
+                <div ref={buttonData[6].divRef}>
+                    <button
+                        onClick={() => toggleContentVisibility(6)}
+                        className={`td_square-button ${buttonData[6].isButtonExpanded ? 'expanded' : ''}`}
+                        style={{ height: buttonData[6].isButtonExpanded ? 'auto' : 'initial' }}
+                    >
+                        {buttonData[6].isButtonExpanded ? (
+                            <div className={"model_container"}>
+                                <div className={'button_model'}>
+                                    <Canvas style={{ width: "1000px", height: "900px", objectFit: "contain"}} onClick={handle3DClick}>
+
+                                    </Canvas>
+                                </div>
+                                <p className={"close_button_text"} style={{zIndex: "5"}}>
+                                    schließen
+                                </p>
+                            </div>
+                        ) : (
+                            <p className={"more_text"}>3D-Model Ansehen</p>
+                        )}
+                        <span className={`arrow-down ${buttonData[6].isButtonExpanded ? 'expanded' : ''}`} />
                     </button>
                 </div>
             </AnimationOnScroll>

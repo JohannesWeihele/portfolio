@@ -393,6 +393,14 @@ a {
 .model_left{
     position: relative;
     width: 100%;
+    height: 100%;
+    top: -100px;
+    margin-bottom: -350px;
+}
+
+.button_model{
+    position: relative;
+    width: 100%;
     max-width: 1000px;
     height: 100%;
     display: flex;
@@ -600,8 +608,12 @@ a {
         visibility: collapse;
     }
 
-    .model_left {
+    .button_model {
         width: 100%;
+    }
+
+    .model_left{
+        top: -120px;
     }
 
 }

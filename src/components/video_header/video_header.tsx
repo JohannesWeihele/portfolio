@@ -7,9 +7,10 @@ import fullscreen_icon from '../../resources/icons/fullscreen_icon.png'
 
 interface VideoHeaderProps {
     src: string;
+    showFullscreenButton?: boolean;
 }
 
-const VideoHeader: FC<VideoHeaderProps> = ({ src }) => {
+const VideoHeader: FC<VideoHeaderProps> = ({ src , showFullscreenButton= true}) => {
     const videoRef = useRef<HTMLVideoElement>(null);
     const isMobile = useMediaQuery({ maxWidth: 767 });
     const [isLoading, setIsLoading] = useState(true);
@@ -84,10 +85,12 @@ const VideoHeader: FC<VideoHeaderProps> = ({ src }) => {
                         <source src={src} type="video/mp4" />
                     </video>
                 </div>
-                <button className="fullscreen-button" onClick={toggleFullscreen}>
-                    {isFullscreen ? 'Exit Fullscreen' : ''}
-                    <img src={fullscreen_icon}/>
-                </button>
+                {showFullscreenButton && ( // Überprüfe die Prop, um den Button anzuzeigen
+                    <button className="fullscreen-button" onClick={toggleFullscreen}>
+                        {isFullscreen ? 'Exit Fullscreen' : ''}
+                        <img src={fullscreen_icon} alt="Fullscreen" />
+                    </button>
+                    )}
             </div>
         </div>
     );
