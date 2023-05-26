@@ -41,6 +41,7 @@ const Projects_Timeline: React.FC = () => {
         { isContentVisible: false, isButtonExpanded: false, divRef: useRef<HTMLDivElement>(null) },
         { isContentVisible: false, isButtonExpanded: false, divRef: useRef<HTMLDivElement>(null) },
         { isContentVisible: false, isButtonExpanded: false, divRef: useRef<HTMLDivElement>(null) },
+        { isContentVisible: false, isButtonExpanded: false, divRef: useRef<HTMLDivElement>(null) },
     ]);
 
     const toggleContentVisibility = (index: number) => {
@@ -62,9 +63,9 @@ const Projects_Timeline: React.FC = () => {
     const handleResize = () => {
         const screenWidth = getWindowWidth();
         if (screenWidth <= 768) {
-            setCanvasSize(150);
+            setCanvasSize(800);
         } else {
-            setCanvasSize(300);
+            setCanvasSize(1000);
         }
     };
 
@@ -79,6 +80,10 @@ const Projects_Timeline: React.FC = () => {
         event.stopPropagation();
     };
 
+    const handle3DClick = (event: React.MouseEvent<HTMLDivElement>) => {
+        event.stopPropagation();
+    }
+
     return (
         <div>
             <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"}>
@@ -90,7 +95,7 @@ const Projects_Timeline: React.FC = () => {
                         2018
                     </p>
                 </div>
-                <div className={"horizontal_line_right"} id={"same_line_right"}>
+                <div className={"horizontal_line_right"}>
                     <AnimationOnScroll initiallyVisible={true} delay={-1000} offset={0} animateIn={"animate__pulse"} animateOut={"animate__pulse"}>
                         <div className="dot_right"></div>
                     </AnimationOnScroll>
@@ -111,24 +116,8 @@ const Projects_Timeline: React.FC = () => {
                         </div>
                     </div>
                 </div>
-                <div className="horizontal_line_left" id={"same_line_left"}>
-                    <AnimationOnScroll initiallyVisible={true} delay={-1000} offset={0} animateIn={"animate__pulse"} animateOut={"animate__pulse"}>
-                        <div className="dot_left"></div>
-                    </AnimationOnScroll>
-                    <div>
-                        <div className="header-container">
-                            <h1 className={'timeline_header'}>
-                                <div className={'model_left'}>
-                                    <Canvas style={{ width: `${canvasSize}px`, height: `${canvasSize}px`}}>
-                                        <Car/>
-                                    </Canvas>
-                                </div>
-                            </h1>
-                        </div>
-                    </div>
-                </div>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={500} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"}>
+            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"}>
             <div className={'project_timeline_short'}/>
             <VideoHeader src={qt_video} />
                 <div ref={buttonData[0].divRef}>
@@ -203,6 +192,32 @@ const Projects_Timeline: React.FC = () => {
                         <span className={`arrow-down ${buttonData[0].isButtonExpanded ? 'expanded' : ''}`} />
                     </button>
                 </div>
+                <p className="button_or">
+                    <span>oder</span>
+                </p>
+                <div ref={buttonData[6].divRef}>
+                    <button
+                        onClick={() => toggleContentVisibility(6)}
+                        className={`td_square-button ${buttonData[6].isButtonExpanded ? 'expanded' : ''}`}
+                        style={{ height: buttonData[6].isButtonExpanded ? 'auto' : 'initial' }}
+                    >
+                        {buttonData[6].isButtonExpanded ? (
+                            <div className={"model_container"}>
+                                <div className={'model_left'}>
+                                    <Canvas style={{ width: "1000px", height: "900px", objectFit: "contain"}} onClick={handle3DClick}>
+                                        <Car/>
+                                    </Canvas>
+                                </div>
+                                <p className={"close_button_text"} style={{zIndex: "5"}}>
+                                    schließen
+                                </p>
+                            </div>
+                        ) : (
+                            <p className={"more_text"}>3D-Model Ansehen</p>
+                        )}
+                        <span className={`arrow-down ${buttonData[6].isButtonExpanded ? 'expanded' : ''}`} />
+                    </button>
+                </div>
             </AnimationOnScroll>
             <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInLeftBig"}>
                 <div className={'project_timeline_long'}>
@@ -214,7 +229,7 @@ const Projects_Timeline: React.FC = () => {
                     </p>
                 </div>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={500} animateIn={"animate__fadeInLeftBig"} animateOut={"animate__fadeOutRightBig"}>
+            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInLeftBig"} animateOut={"animate__fadeOutRightBig"}>
             <div className={'horizontal_line_left'}>
                 <AnimationOnScroll animateIn={"animate__pulse"}>
                     <div className="dot_left"></div>
@@ -262,7 +277,7 @@ const Projects_Timeline: React.FC = () => {
                     </p>
                 </div>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={500} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"}>
+            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"}>
             <div className="horizontal_line_right">
                 <AnimationOnScroll animateIn={"animate__pulse"}>
                     <div className="dot_right"></div>
@@ -311,7 +326,7 @@ const Projects_Timeline: React.FC = () => {
                     </p>
                 </div>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={500} animateIn={"animate__fadeInLeftBig"} animateOut={"animate__fadeOutRightBig"}>
+            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInLeftBig"} animateOut={"animate__fadeOutRightBig"}>
                 <div className="horizontal_line_right" id={"same_line_right"}>
                     <AnimationOnScroll animateIn={"animate__pulse"}>
                         <div className="dot_right"></div>
@@ -377,7 +392,7 @@ const Projects_Timeline: React.FC = () => {
                     </p>
                 </div>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={500} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"}>
+            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"}>
             <div className="horizontal_line_right" id={"same_line_right"}>
                 <AnimationOnScroll animateIn={"animate__pulse"}>
                     <div className="dot_right"></div>
@@ -443,7 +458,7 @@ const Projects_Timeline: React.FC = () => {
                     </p>
                 </div>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={500} animateIn={"animate__fadeInLeftBig"} animateOut={"animate__fadeOutRightBig"}>
+            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInLeftBig"} animateOut={"animate__fadeOutRightBig"}>
             <div className="horizontal_line_left">
                 <AnimationOnScroll animateIn={"animate__pulse"}>
                     <div className="dot_left"></div>
@@ -493,7 +508,7 @@ const Projects_Timeline: React.FC = () => {
                     </p>
                 </div>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={500} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"}>
+            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"}>
             <div className="horizontal_line_right">
                 <AnimationOnScroll animateIn={"animate__pulse"}>
                     <div className="dot_right"></div>

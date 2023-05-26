@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Canvas, useFrame, useLoader } from '@react-three/fiber';
+import {Canvas, useFrame, useLoader, useThree} from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 
 const Car: React.FC = () => {
@@ -7,17 +7,22 @@ const Car: React.FC = () => {
     const carRef = useRef<THREE.Object3D>();
 
     useFrame((state, delta) => {
-        // Aktualisiere die Rotation des Autos
         if (carRef.current) {
-            carRef.current.rotation.y += delta * 0.5; // Ändere die Geschwindigkeit des Drehens hier anpassen
+            carRef.current.rotation.y += delta * 0.5;
         }
     });
+    const { camera } = useThree();
+
+    if (window.innerWidth <= 1000) {
+        camera.zoom = 0.4;
+        camera.updateProjectionMatrix();
+    }
 
     return (
         <group>
             {/* Füge den Inhalt der GLTF-Szene hinzu */}
             <ambientLight intensity={0.5} color="white" />
-            <primitive object={scene} ref={carRef} castShadow receiveShadow />
+            <primitive object={scene} ref={carRef}/>
             {/* Füge die OrbitControls hinzu, um das Modell zu steuern */}
             <OrbitControls
                 enableZoom={true}

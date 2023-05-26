@@ -266,7 +266,7 @@
 
 .square-button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 0px 100px;
     border: none;
     border-radius: 10px;
     background-color: #fd8c3f;
@@ -285,6 +285,10 @@
     padding: 15px;
     background-color: transparent;
     animation: shadow-pulse 3s ease-in-out infinite;
+}
+
+.square-button .arrow-down{
+    border-color: white;
 }
 
 .arrow-down {
@@ -362,6 +366,7 @@
 }
 
 .close_button_text{
+    position: relative;
     text-align: center;
     color: #fd8c3f;
     font-size: 14px;
@@ -378,13 +383,87 @@ a {
     display: none;
 }
 
+.model_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .model_left{
     position: relative;
     width: 100%;
+    max-width: 1000px;
     height: 100%;
-    top: -100px;
-    margin-bottom: -350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -150px;
+    margin-bottom: -300px;
 }
+
+.td_square-button {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #fd8c3f;
+    padding: 0px 80px;
+    border-radius: 10px;
+    background-color: white;
+    color: #fd8c3f;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+    overflow: hidden;
+}
+
+.td_square-button.expanded{
+    border: 1px solid #fd8c3f;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    width: 60%;
+    max-width: 1200px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+    overflow: hidden;
+}
+
+.td_square-button .arrow-down{
+    border-color: #fd8c3f;
+}
+
+.button_or {
+    position: relative;
+    text-align: center;
+    color: lightgrey;
+}
+
+.button_or::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: -120px;
+    width: 150px;
+    height: 1px;
+    background-color: lightgrey;
+}
+
+.button_or::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 120px;
+    width: 150px;
+    height: 1px;
+    background-color: lightgrey;
+}
+
 
 @keyframes slide-up {
     0% {
@@ -489,8 +568,18 @@ a {
     }
 
     .square-button{
-        width: 125px;
+        width: 95%;
         font-size: 12px;
+    }
+
+    .td_square-button{
+        width: 95%;
+        font-size: 12px;
+        padding: 0px 0px;
+    }
+
+    .td_square-button.expanded{
+        width: 100%;
     }
 
     .more_text{
@@ -510,13 +599,8 @@ a {
         visibility: collapse;
     }
 
-    Canvas{
-        width: 150px !important;
-        height: 150px !important;
-    }
-
-    .model_left{
-        top: -50px;
+    .model_left {
+        width: 100%;
     }
 
 }
