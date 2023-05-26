@@ -26,8 +26,13 @@ import { AnimationOnScroll} from "react-animation-on-scroll";
 import Car from "../../3D/car";
 import {OrbitControls} from "@react-three/drei";
 
+function getWindowWidth(): number {
+    return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+}
 
 const Projects_Timeline: React.FC = () => {
+
+    const [canvasSize, setCanvasSize] = useState<number>(300);
 
     const [buttonData, setButtonData] = useState([
         { isContentVisible: false, isButtonExpanded: false, divRef: useRef<HTMLDivElement>(null) },
@@ -54,6 +59,21 @@ const Projects_Timeline: React.FC = () => {
         }
     };
 
+    const handleResize = () => {
+        const screenWidth = getWindowWidth();
+        if (screenWidth <= 768) {
+            setCanvasSize(150);
+        } else {
+            setCanvasSize(300);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
         event.stopPropagation();
@@ -99,7 +119,7 @@ const Projects_Timeline: React.FC = () => {
                         <div className="header-container">
                             <h1 className={'timeline_header'}>
                                 <div className={'model_left'}>
-                                    <Canvas style={{ width: '300px', height: '300px'}}>
+                                    <Canvas style={{ width: `${canvasSize}px`, height: `${canvasSize}px`}}>
                                         <Car/>
                                     </Canvas>
                                 </div>

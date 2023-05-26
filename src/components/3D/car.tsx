@@ -22,7 +22,7 @@ const Car: React.FC = () => {
             <OrbitControls
                 enableZoom={true}
                 enablePan={true}
-                enableRotate={false}
+                enableRotate={true}
                 zoomSpeed={0.5}
                 target={[0, 0, 0]} // Setze den Kameraziel-Punkt auf den Ursprung der Szene
                 minDistance={13} // Minimale Zoom-Entfernung
