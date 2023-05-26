@@ -28,7 +28,7 @@ const Car: React.FC = () => {
             <primitive object={scene} ref={carRef}/>
             {/* Füge die OrbitControls hinzu, um das Modell zu steuern */}
             <OrbitControls
-                enableZoom={true}
+                enableZoom={false}
                 enablePan={true}
                 enableRotate={true}
                 zoomSpeed={0.5}
