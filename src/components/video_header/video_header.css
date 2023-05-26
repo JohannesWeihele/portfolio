@@ -9,8 +9,10 @@
     position: relative;
     width: 98%;
     border-radius: 25px;
-    height: auto;
+    height: 56.25vw; /* Festgelegte Höhe basierend auf dem Seitenverhältnis 16:9 */
+    max-height: calc(100vh - 100px);
     max-width: 100%;
+    object-fit: cover;
 }
 
 .loading-overlay {

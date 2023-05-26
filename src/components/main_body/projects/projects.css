@@ -24,8 +24,7 @@
     margin-top: 20px;
     width: 1px;
     height: 500px;
-    background-color: lightgrey;
-    content: '';
+    background: linear-gradient(to top, rgba(253, 140, 63, 1) 0%, rgba(211, 211, 211, 0.5) 50%, rgba(211, 211, 211, 0) 100%);
 }
 
 .project_timeline_long::before {
@@ -34,7 +33,8 @@
     top: 0;
     left: -5px; /* Abstand vor dem ersten Strich anpassen */
     width: 10px; /* Breite des größeren Striches anpassen */
-    height: 2px; /* Höhe des größeren Striches anpassen */
+    height: 10px; /* Höhe des größeren Striches anpassen */
+    border-radius: 100%;
     background-color: lightgrey; /* Farbe des größeren Striches anpassen */
 }
 
@@ -44,8 +44,9 @@
     bottom: 0;
     left: -5px; /* Abstand vor dem ersten Strich anpassen */
     width: 10px; /* Breite des größeren Striches anpassen */
-    height: 2px; /* Höhe des größeren Striches anpassen */
-    background-color: lightgrey; /* Farbe des größeren Striches anpassen */
+    height: 10px; /* Höhe des größeren Striches anpassen */
+    border-radius: 100%;
+    background-color: #fd8c3f; /* Farbe des größeren Striches anpassen */
 }
 
 
@@ -55,8 +56,8 @@
     left: 50%;
     margin-top: 20px;
     width: 1px;
-    height: 10px;
-    background-color: lightgrey;
+    height: 100px;
+    background: linear-gradient(to bottom, rgba(253, 140, 63, 1) 0%, rgba(211, 211, 211, 0.5) 50%, rgba(211, 211, 211, 0) 100%);
     content: '';
 }
 
@@ -66,8 +67,9 @@
     top: 0;
     left: -5px; /* Abstand vor dem ersten Strich anpassen */
     width: 10px; /* Breite des größeren Striches anpassen */
-    height: 2px; /* Höhe des größeren Striches anpassen */
-    background-color: lightgrey; /* Farbe des größeren Striches anpassen */
+    height: 10px; /* Höhe des größeren Striches anpassen */
+    border-radius: 100%;
+    background-color: #fd8c3f; /* Farbe des größeren Striches anpassen */
 }
 
 
@@ -376,6 +378,14 @@ a {
     display: none;
 }
 
+.model_left{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: -100px;
+    margin-bottom: -350px;
+}
+
 @keyframes slide-up {
     0% {
         transform: translateY(50px); /* Startposition der Animation */
@@ -421,6 +431,7 @@ a {
 
     .timeline_text {
         font-size: 18px;
+        top: 170px
     }
 
     .timeline_year_left {
@@ -498,6 +509,17 @@ a {
     .timeline_icon_right_one, .timeline_icon_right_two, .timeline_icon_right_three{
         visibility: collapse;
     }
+
+    Canvas{
+        width: 150px !important;
+        height: 150px !important;
+    }
+
+    .model_left{
+        top: -50px;
+        left: 75px;
+    }
+
 }
 
 @font-face {

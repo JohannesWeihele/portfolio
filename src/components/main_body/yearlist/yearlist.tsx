@@ -5,12 +5,13 @@ const YearList: React.FC = () => {
     return (
         <div className="year-list-container">
             <ul className="year-list">
-                <li>2018</li>
-                <li>2019</li>
-                <li>2020</li>
-                <li>2021</li>
-                <li>2022</li>
-                <li>2023</li>
+                <li>Digital Cockpit</li>
+                <li>Facial Motion Capture</li>
+                <li>FoodFill (BA)</li>
+                <li>CanYouPlayIt?</li>
+                <li>FoodSupport</li>
+                <li>StateofDart</li>
+                <li>FireProtect</li>
             </ul>
         </div>
     );

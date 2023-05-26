@@ -1,6 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import "./projects.css";
 import "animate.css/animate.min.css"
+import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 
 //----------------Videos------------//
 import VideoHeader from "../../video_header/video_header";
@@ -20,7 +21,10 @@ import office_image from '../../../resources/images/office.jpeg'
 import porsche_driving from '../../../resources/images/porsche_driving.png'
 import portrait from "../portrait";
 
+
 import { AnimationOnScroll} from "react-animation-on-scroll";
+import Car from "../../3D/car";
+import {OrbitControls} from "@react-three/drei";
 
 
 const Projects_Timeline: React.FC = () => {
@@ -62,13 +66,11 @@ const Projects_Timeline: React.FC = () => {
                     <p className={'timeline_text'}>
                         Bachelor
                     </p>
-                    <p className={'timeline_year_left'}>
+                    <p className={'timeline_year_right'}>
                         2018
                     </p>
                 </div>
-            </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={500} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"}>
-                <div className="horizontal_line_right animate__fadeOutRi">
+                <div className={"horizontal_line_right"} id={"same_line_right"}>
                     <AnimationOnScroll initiallyVisible={true} delay={-1000} offset={0} animateIn={"animate__pulse"} animateOut={"animate__pulse"}>
                         <div className="dot_right"></div>
                     </AnimationOnScroll>
@@ -89,6 +91,24 @@ const Projects_Timeline: React.FC = () => {
                         </div>
                     </div>
                 </div>
+                <div className="horizontal_line_left" id={"same_line_left"}>
+                    <AnimationOnScroll initiallyVisible={true} delay={-1000} offset={0} animateIn={"animate__pulse"} animateOut={"animate__pulse"}>
+                        <div className="dot_left"></div>
+                    </AnimationOnScroll>
+                    <div>
+                        <div className="header-container">
+                            <h1 className={'timeline_header'}>
+                                <div className={'model_left'}>
+                                    <Canvas style={{ width: '300px', height: '300px'}}>
+                                        <Car/>
+                                    </Canvas>
+                                </div>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </AnimationOnScroll>
+            <AnimationOnScroll delay={-1000} offset={500} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"}>
             <div className={'project_timeline_short'}/>
             <VideoHeader src={qt_video} />
                 <div ref={buttonData[0].divRef}>
@@ -217,7 +237,7 @@ const Projects_Timeline: React.FC = () => {
                     <p className={'timeline_text'}>
                         Bachelor
                     </p>
-                    <p className={'timeline_year_left'}>
+                    <p className={'timeline_year_right'}>
                         2020
                     </p>
                 </div>
@@ -332,7 +352,7 @@ const Projects_Timeline: React.FC = () => {
                     <p className={'timeline_text'}>
                         Master
                     </p>
-                    <p className={'timeline_year_left'}>
+                    <p className={'timeline_year_right'}>
                         2022
                     </p>
                 </div>
@@ -448,7 +468,7 @@ const Projects_Timeline: React.FC = () => {
                     <p className={'timeline_text'}>
                         Master
                     </p>
-                    <p className={'timeline_year_left'}>
+                    <p className={'timeline_year_right'}>
                         2023
                     </p>
                 </div>
