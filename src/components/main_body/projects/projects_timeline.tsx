@@ -28,6 +28,7 @@ import {OrbitControls} from "@react-three/drei";
 import Timeline_long from "../timeline_long/timeline_long";
 import HorizontalLine from "../horizontal_line/horizontal_line";
 import ExpandingButton from "../expanding_button/expanding_button";
+import Dachboden from "../../3D/dachboden";
 
 
 const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
@@ -128,8 +129,8 @@ const Projects_Timeline: React.FC = () => {
                 <ExpandingButton name={"Dachboden ansehen"} design={2}>
                     <div className={"model_container"}>
                         <div className={'button_model'}>
-                            <Canvas style={{ width: "1000px", height: "900px", objectFit: "contain"}} onClick={handle3DClick}>
-
+                            <Canvas style={{ width: "1500px", height: "1100px", objectFit: "contain"}} onClick={handle3DClick}>
+                              <Dachboden/>
                             </Canvas>
                         </div>
                         <p className={"close_button_text"} style={{zIndex: "5"}}>

@@ -43,15 +43,17 @@
     text-align: center;
     width: 60%;
     max-width: 1000px;
+    min-width: 400px;
     height: auto;
 }
+
 
 h1 {
     height: 75px;
     line-height: 75px;
     font-weight: bold;
     white-space: nowrap;
-    font-size: 3rem;
+    font-size: 2vw;
 }
 
 h2 {
@@ -163,6 +165,13 @@ p {
 
 .flame-emoji {
     animation: flameAnimation 1s ease-in-out infinite;
+}
+
+@media (min-width: 2500px){
+
+    h1{
+        font-size: 50px !important;
+    }
 }
 
 @media (max-width: 850px){

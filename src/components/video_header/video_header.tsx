@@ -65,6 +65,26 @@ const VideoHeader: FC<VideoHeaderProps> = ({ src , showFullscreenButton= true}) 
         };
     }, []);
 
+    useEffect(() => {
+        const element = videoRef.current;
+        if (!element) return;
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Überprüfe, ob der Browser Safari ist
+        const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+        if (isSafari) {
+            element.setAttribute('playsinline', 'true'); // Hinzufügen des playsinline-Attributs für Safari
+            element.setAttribute('muted', 'true'); // Hinzufügen des muted-Attributs für Safari
+            element.setAttribute('autoplay', 'true'); // Hinzufügen des autoplay-Attributs für Safari
+        }
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            element.pause();
+        };
+    }, []);
+
     return (
         <div className="video-header">
             {isLoading && (
@@ -80,6 +100,7 @@ const VideoHeader: FC<VideoHeaderProps> = ({ src , showFullscreenButton= true}) 
                         muted
                         disablePictureInPicture
                         loop
+                        playsInline
                         onLoadedData={handleLoadedData}
                     >
                         <source src={src} type="video/mp4" />
