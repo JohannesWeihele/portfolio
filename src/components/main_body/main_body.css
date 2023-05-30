@@ -1,16 +1,50 @@
 .main_body {
     background-color: white;
+    position: relative; /* Fügen Sie eine relative Position hinzu */
 }
 
 .introduction_body {
+    position: relative; /* Fügen Sie eine relative Position hinzu */
     display: flex;
     justify-content: center;
     height: auto;
     border-bottom: 1px solid lightgrey;
+    background-color: black;
+    overflow: hidden; /* Verhindern Sie das Überlaufen des Blur-Effekts */
+}
+
+.introduction_body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1.0)), url("../../resources/images/landscape.jpg");
     background-size: cover;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1.0)), url("../../resources/images/landscape.jpg");
     background-position: center;
     background-repeat: no-repeat;
+    filter: blur(2px);
+    transition: opacity 0.5s ease-in-out;
+    z-index: 0; /* Stellen Sie sicher, dass das Pseudoelement hinter dem Text liegt */
+}
+
+/*Animation zum Hintergrund pulsieren*/
+.introduction_body > * {
+    position: relative; /* Stellen Sie sicher, dass der Text über dem Pseudoelement liegt */
+    z-index: 1;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0.1;
+    }
 }
 
 .projects_body {
