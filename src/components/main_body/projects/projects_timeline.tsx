@@ -44,12 +44,12 @@ const Projects_Timeline: React.FC = () => {
 
     return (
         <div>
-            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"}>
+            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} animateOnce={true}>
                 <Timeline_long name={"Bachelor"} year={"2018"} side={"right"}/>
                 <HorizontalLine name={"Digital Cockpit"} side={"right"} sameLine={true} icon_name_one={'qt_icon'} icon_name_two={'C++_Icon'} icon_name_three={'blender_icon'}/>
                 <HorizontalLine side={"left"} sameLine={true} td_model={"car"}/>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"}>
+            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"} animateOnce={true}>
             <div className={'project_timeline_short'}/>
             <VideoHeader src={qt_video} />
                 <ExpandingButton name={"Erfahre mehr"} design={1}>
@@ -114,11 +114,11 @@ const Projects_Timeline: React.FC = () => {
                     </div>
                 </ExpandingButton>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInLeftBig"}>
+            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInLeftBig"} animateOnce={true}>
                 <Timeline_long name={"Bachelor"} year={"2019"} side={"left"}/>
                 <HorizontalLine side={"left"} sameLine={false} name={"Facial Motion Capture"} icon_name_one={"unreal_engine_icon"} icon_name_two={"blender_icon"}/>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInLeftBig"} animateOut={"animate__fadeOutRightBig"}>
+            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInLeftBig"} animateOut={"animate__fadeOutRightBig"} animateOnce={true}>
             <div className={'project_timeline_short'}/>
             <VideoHeader src={facial_mocap_video} />
                 <ExpandingButton name={"Erfahre mehr"} design={1}>
@@ -162,18 +162,18 @@ const Projects_Timeline: React.FC = () => {
                     </div>
                 </ExpandingButton>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"}>
+            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} animateOnce={true}>
                 <Timeline_long name={"Bachelor"} year={"2020"} side={"right"}/>
                 <HorizontalLine side={"right"} sameLine={false} name={"FoodFill (BA)"} icon_name_one={"android_studio_Icon"} icon_name_two={"java_icon"} icon_name_three={"blender_icon"}/>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"}>
+            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"} animateOnce={true}>
             <div className={'project_timeline_short'}/>
             <VideoMobile src={foodfill_video} />
                 <ExpandingButton name={"Erfahre mehr"} design={1}>
 
                 </ExpandingButton>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInLeftBig"}>
+            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInLeftBig"} animateOnce={true}>
                 <Timeline_long name={"Master"} year={"2021"} side={"left"}/>
                 <HorizontalLine side={"right"} sameLine={true} name={"Vaadin"} icon_name_one={"vaadin_icon"} icon_name_two={"java_icon"}/>
                 <HorizontalLine side={"left"} sameLine={true} name={"Django"} icon_name_one={"django_icon"} icon_name_two={"python_icon"}/>
@@ -181,14 +181,14 @@ const Projects_Timeline: React.FC = () => {
                     <p className={"vs-container"}>vs.</p>
                 </div>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInLeftBig"} animateOut={"animate__fadeOutRightBig"}>
+            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInLeftBig"} animateOut={"animate__fadeOutRightBig"} animateOnce={true}>
             <div className={'project_timeline_short'}/>
             <VideoHeader src={django_vaadin_video} />
                 <ExpandingButton name={"Erfahre mehr"} design={1}>
 
                 </ExpandingButton>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} >
+            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} animateOnce={true}>
                 <Timeline_long name={"Master"} year={"2022"} side={"right"}/>
                 <HorizontalLine side={"right"} sameLine={true} name={"Vue.js"} icon_name_one={"vuejs_icon"} icon_name_two={"typescript_icon"}/>
                 <HorizontalLine side={"left"} sameLine={true} name={"Angular"} icon_name_one={"angular_icon"} icon_name_two={"typescript_icon"}/>
@@ -196,29 +196,29 @@ const Projects_Timeline: React.FC = () => {
                     <p className={"vs-container"}>vs.</p>
                 </div>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"}>
+            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"} animateOnce={true}>
             <div className={'project_timeline_short'}/>
             <VideoHeader src={angular_vuejs_video} />
                 <ExpandingButton name={"Erfahre mehr"} design={1}>
 
                 </ExpandingButton>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInLeftBig"}>
+            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInLeftBig"} animateOnce={true}>
                 <Timeline_long name={"Master"} year={"2023"} side={"left"}/>
                 <HorizontalLine side={"left"} sameLine={false} name={"StateofDart"} icon_name_one={"tensorflow_icon"} icon_name_two={"android_studio_Icon"} icon_name_three={"java_icon"}/>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInLeftBig"} animateOut={"animate__fadeOutRightBig"}>
+            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInLeftBig"} animateOut={"animate__fadeOutRightBig"} animateOnce={true}>
             <div className={'project_timeline_short'}/>
             <VideoHeader src={stateofdart_video} />
                 <ExpandingButton name={"Erfahre mehr"} design={1}>
 
                 </ExpandingButton>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"}>
+            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} animateOnce={true}>
                 <Timeline_long name={"Master"} year={"2023"} side={"right"}/>
                 <HorizontalLine side={"right"} sameLine={false} name={"Fireprotect (MA)"} icon_name_one={"android_studio_Icon"} icon_name_two={"java_icon"} icon_name_three={"wear_os_icon"}/>
             </AnimationOnScroll>
-            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"}>
+            <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"} animateOnce={true}>
              <div className={'project_timeline_short'}/>
             </AnimationOnScroll>
         </div>
