@@ -57,7 +57,7 @@ const HorizontalLine: FC<HorizontalLineProps> = ({
                     {td_model && (
                         <h1 className={"timeline_header"}>
                             <div className={model_side}>
-                                <Canvas id={`canvas_model_left`} style={{ width: "300px", height: "300px"}}>
+                                <Canvas id={`canvas_model_left`} style={{ width: "300px", height: "300px", cursor: "pointer"}}>
                                     {component}
                                 </Canvas>
                             </div>

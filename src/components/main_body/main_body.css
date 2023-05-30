@@ -144,13 +144,14 @@ p {
 
 .introduction_text {
     line-height: 1.5;
-    font-size: 16px;
+    font-size: 18px;
     hyphens: auto;
     color: white;
 }
 
 .introduction_final {
-    font-size: 22px;
+    font-size: 24px;
+    white-space: nowrap;
     font-family: "Agency FB";
     color: white;
 }
