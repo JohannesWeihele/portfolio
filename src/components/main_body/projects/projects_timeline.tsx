@@ -13,6 +13,7 @@ import django_vaadin_video from '../../../resources/videos/django_vaadin/django_
 import angular_vuejs_video from '../../../resources/videos/angular_vuejs/angular_vuejs.mp4'
 import stateofdart_video from '../../../resources/videos/stateofdart/stateofdart.mp4'
 import adrive_video from '../../../resources/videos/praxissemester/adrive_video.mp4'
+import fa_mocap_emotions_video from '../../../resources/videos/facial_mocap/fa_mocap_emotions.mp4'
 
 //----------------Bilder-------------//
 import digital_cockpit_picture from '../../../resources/images/digital_cockpit_picture.png'
@@ -54,7 +55,7 @@ const Projects_Timeline: React.FC = () => {
                 <ExpandingButton name={"Erfahre mehr"} design={1}>
                     <div>
                         <div>
-                            <h1 style={{color: "black", fontFamily: "Agency FB"}}>Digital Cockpit</h1>
+                            <h1 style={{color: "black", fontFamily: "Agency FB", fontSize: "50px"}}>Digital Cockpit</h1>
                         </div>
                         <p className="max_width_text">
                             Während meines Praxissemesters des Informatik-Studiums mit Schwerpunkt Game-Engineering, unterstützte ich das
@@ -69,7 +70,7 @@ const Projects_Timeline: React.FC = () => {
                             Mit einer 210° umfassenden 9 auf 4 Meter großen Leinwand bildet das Hochschul-Labor durch ein hochmodernes, präzises und realistisches System das indviduelle Fahrgefühl seiner Tester auf einer hochgenauen Bewegungsplattform nach.<div className={"mobile_newLine"}><br/><br/></div>
                         </p>
                         <div className={"project_video"}>
-                            <VideoHeader src={adrive_video} showFullscreenButton={false}/>
+                            <VideoHeader src={adrive_video} showFullscreenButton={false} zoomed={false}/>
                         </div>
                         <p className={"source_text"}>Quelle: https://www.youtube.com/watch?v=c1Wo7ZtoK2Q</p>
                         <p className={"max_width_text"}>
@@ -121,7 +122,29 @@ const Projects_Timeline: React.FC = () => {
             <div className={'project_timeline_short'}/>
             <VideoHeader src={facial_mocap_video} />
                 <ExpandingButton name={"Erfahre mehr"} design={1}>
-
+                    <div>
+                        <div>
+                            <h1 style={{color: "black", fontFamily: "Agency FB", fontSize: "50px"}}>Facial Motion Capture</h1>
+                        </div>
+                        <p className="max_width_text">
+                            Im folgenden Semester brachen wir auf zu neuen Abenteuern in unserem DV-Projekt. Es war wie die Auswahl eines Schatzes aus einer Schatzkiste voller faszinierender Themen. Es war jedoch keine große Überraschung, dass ich mich direkt für das Projekt „Facial Motion Capture“ entschied, nachdem ich bereits einige Erfahrungen mit dem Motion Capture-System der Hochschule machen konnte und ich zudem ein großer Fan von Animationsfilmen bin.<br/><br/>
+                            Dieses Projekt hatte hierbei alles, was das Animationsherz begehrte: Wir würden unsere eigenen 3D-Charaktere mit Blender erschaffen, ihnen mit diversen Animationen Leben einhauchen und dann ein Videospiel mit der mächtigen
+                            <a onClick={handleLinkClick}
+                               href={"https://www.unrealengine.com/de"} target={"_blank"} rel={"noopener noreferrer"}><i> Unreal-Engine </i>
+                            </a>
+                             erschaffen. Dabei war sich mein Team, das aus drei Kommilitonen und mir bestand, sehr schnell einig: Wir wollten ein Storytelling-Spiel erschaffen, das an die Großartigkeit von „Life is Strange“ erinnert und so viele unterschiedliche Gesichtsanimationen wie möglich zum Strahlen bringt.<br/><br/>
+                        </p>
+                        <div className={"project_video"}>
+                            <VideoHeader src={fa_mocap_emotions_video} showFullscreenButton={false} zoomed={false}/><br/>
+                        </div>
+                        <p className={"max_width_text"}>
+                            Und so nahm die Geschichte von Tim's Attic ihren Anfang. Ein junger Vater namens Tim wurde auf den Dachboden seines Hauses gelockt, nachdem sein Sohn ein kleines Missgeschick verursacht hatte. Dort oben entdeckte er eine Schatztruhe voller alter Erinnerungen und spannender Geschichten. Um die Gesichtsanimationen umzusetzen, wurde mir ein Facial Motion Capture-System der Hochschule anvertraut. Hierzu malte ich mir zunächst einige Punkte ins Gesicht, die als Orientierungspunkte für die darauffolgende Umsetzung mittels Blender dienten. Dort konnten die dann mit den Gesichts-„Bones“ des Charakters verbunden werden, um so die Bewegungsmuster meines Gesichtes zu imitieren. Auf diese Weise konnte ich meine eigenen Gesichtszüge auf Tim übertragen und ein beeindruckendes Ergebnis erzielen.
+                        </p>
+                        <p className={"max_width_text"}>
+                            <b>Fazit:</b> <br/><br/>
+                            Am Ende dieses Projektes hatte ich wieder jede Menge gelernt. Ich hatte die Herausforderung gemeistert mit völlig unbekannter Hardware umzugehen und die Harmonie zwischen den Teammitgliedern in einem großen Projekt gefunden. Natürlich war uns allen bewusst, dass unser Werk kein Blockbuster von Ubisoft oder Rockstar Games werden würde, nachdem auch meine schauspielerischen Fähigkeiten ihre Grenzen kannten :). Aber wenn man bedenkt, dass wir zuvor noch nie Facial Motion Capture gemacht hatten und auch noch die waghalsige Aufgabe hatten, ein ganzes Spiel zu entwickeln, waren wir unglaublich zufrieden mit dem Ergebnis und hatten dabei auch noch jede Menge Spaß.
+                        </p>
+                    </div>
                 </ExpandingButton>
                 <p className="button_or">
                     <span>oder</span>

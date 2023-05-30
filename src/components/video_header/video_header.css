@@ -15,6 +15,11 @@
     object-fit: cover;
 }
 
+.no_zoomed_video{
+    object-fit: contain !important;
+    height: 100% !important;
+}
+
 .loading-overlay {
     position: absolute;
     top: 0;

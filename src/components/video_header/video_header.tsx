@@ -8,13 +8,19 @@ import fullscreen_icon from '../../resources/icons/fullscreen_icon.png'
 interface VideoHeaderProps {
     src: string;
     showFullscreenButton?: boolean;
+    zoomed?: boolean
 }
 
-const VideoHeader: FC<VideoHeaderProps> = ({ src , showFullscreenButton= true}) => {
+const VideoHeader: FC<VideoHeaderProps> = ({ src , showFullscreenButton= true, zoomed = true}) => {
     const videoRef = useRef<HTMLVideoElement>(null);
     const isMobile = useMediaQuery({ maxWidth: 767 });
     const [isLoading, setIsLoading] = useState(true);
     const [isFullscreen, setIsFullscreen] = useState(false);
+    let zoomed_class: string = '';
+
+    if(!zoomed){
+        zoomed_class = 'no_zoomed_video';
+    }
 
     const handleScroll = () => {
         const element = videoRef.current;
@@ -96,7 +102,7 @@ const VideoHeader: FC<VideoHeaderProps> = ({ src , showFullscreenButton= true}) 
                 <div>
                     <video
                         ref={videoRef}
-                        className={isMobile ? 'mobile' : 'desktop'}
+                        className={isMobile ? 'mobile' : `desktop ${zoomed_class}`}
                         muted
                         disablePictureInPicture
                         loop

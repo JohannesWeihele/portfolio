@@ -7,7 +7,10 @@
     justify-content: center;
     height: auto;
     border-bottom: 1px solid lightgrey;
-    background-color: rgba(245, 245, 245, 0.71);
+    background-size: cover;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1.0)), url("../../resources/images/landscape.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .projects_body {
@@ -21,7 +24,7 @@
 .portrait {
     display: flex;
     justify-content: center;
-    padding: 100px;
+    padding: 140px 100px 100px;
     align-items: flex-start;
 }
 
@@ -30,7 +33,7 @@
     min-width: 250px;
     height: auto;
     border-radius: 500px;
-    border: 30px solid white;
+    border: 15px solid #545454;
     animation: floating 3s ease-in-out infinite, shadow-pulse 3s ease-in-out infinite;
 }
 
@@ -62,7 +65,8 @@ h2 {
     font-weight: lighter;
     padding: 20px;
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid white;
+    color: white;
 }
 
 h3 {
@@ -75,7 +79,7 @@ h3 {
 
 #animated-text {
     overflow: hidden;
-    border-right: 0.15em solid #000; /* Animationseffekt: blinkender Cursor */
+    border-right: 0.15em solid white; /* Animationseffekt: blinkender Cursor */
     white-space: nowrap; /* Verhindert Zeilenumbrüche */
     margin: 0; /* Zur Sicherheit, um den Standardabstand zu entfernen */
     animation: typing 8s steps(40) infinite alternate;
@@ -91,7 +95,7 @@ h3 {
     display: inline-block;
     width: 1px;
     height: 1em;
-    background-color: black;
+    background-color: white;
     margin-left: 0.2em;
 }
 
@@ -102,17 +106,20 @@ p {
 .introduction_text_container{
     width: 100%;
     margin-left: 20px;
+    color: white;
 }
 
 .introduction_text {
     line-height: 1.5;
     font-size: 16px;
     hyphens: auto;
+    color: white;
 }
 
 .introduction_final {
     font-size: 22px;
     font-family: "Agency FB";
+    color: white;
 }
 
 @keyframes thepulse {
