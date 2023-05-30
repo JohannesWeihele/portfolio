@@ -20,12 +20,10 @@ import digital_cockpit_picture from '../../../resources/images/digital_cockpit_p
 import digital_cockpit_picture_td from '../../../resources/images/digital_cockpit_picture_td.png'
 import office_image from '../../../resources/images/office.jpeg'
 import porsche_driving from '../../../resources/images/porsche_driving.png'
-import portrait from "../portrait";
-
+import fa_mocap_scene_one from '../../../resources/images/fa_mocap_scene_1.jpg'
+import fa_mocap_scene_two from '../../../resources/images/fa_mocap_scene_2.jpg'
 
 import { AnimationOnScroll} from "react-animation-on-scroll";
-import Car from "../../3D/car";
-import {OrbitControls} from "@react-three/drei";
 import Timeline_long from "../timeline_long/timeline_long";
 import HorizontalLine from "../horizontal_line/horizontal_line";
 import ExpandingButton from "../expanding_button/expanding_button";
@@ -139,7 +137,9 @@ const Projects_Timeline: React.FC = () => {
                         </div>
                         <p className={"max_width_text"}>
                             Und so nahm die Geschichte von Tim's Attic ihren Anfang. Ein junger Vater namens Tim wurde auf den Dachboden seines Hauses gelockt, nachdem sein Sohn ein kleines Missgeschick verursacht hatte. Dort oben entdeckte er eine Schatztruhe voller alter Erinnerungen und spannender Geschichten. Um die Gesichtsanimationen umzusetzen, wurde mir ein Facial Motion Capture-System der Hochschule anvertraut. Hierzu malte ich mir zunächst einige Punkte ins Gesicht, die als Orientierungspunkte für die darauffolgende Umsetzung mittels Blender dienten. Dort konnten die dann mit den Gesichts-„Bones“ des Charakters verbunden werden, um so die Bewegungsmuster meines Gesichtes zu imitieren. Auf diese Weise konnte ich meine eigenen Gesichtszüge auf Tim übertragen und ein beeindruckendes Ergebnis erzielen.
-                        </p>
+                        </p><br/>
+                        <img className={"project_img"} src={fa_mocap_scene_one}/>
+                        <img className={"project_img"} src={fa_mocap_scene_two}/><br/><br/>
                         <p className={"max_width_text"}>
                             <b>Fazit:</b> <br/><br/>
                             Am Ende dieses Projektes hatte ich wieder jede Menge gelernt. Ich hatte die Herausforderung gemeistert mit völlig unbekannter Hardware umzugehen und die Harmonie zwischen den Teammitgliedern in einem großen Projekt gefunden. Natürlich war uns allen bewusst, dass unser Werk kein Blockbuster von Ubisoft oder Rockstar Games werden würde, nachdem auch meine schauspielerischen Fähigkeiten ihre Grenzen kannten :). Aber wenn man bedenkt, dass wir zuvor noch nie Facial Motion Capture gemacht hatten und auch noch die waghalsige Aufgabe hatten, ein ganzes Spiel zu entwickeln, waren wir unglaublich zufrieden mit dem Ergebnis und hatten dabei auch noch jede Menge Spaß.

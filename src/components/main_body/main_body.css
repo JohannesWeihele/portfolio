@@ -20,11 +20,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1.0)), url("../../resources/images/landscape.jpg");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1.0)), url("../../resources/images/backgrounds/landscape.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: blur(2px);
     transition: opacity 0.5s ease-in-out;
     z-index: 0; /* Stellen Sie sicher, dass das Pseudoelement hinter dem Text liegt */
 }
@@ -67,7 +66,7 @@
     min-width: 250px;
     height: auto;
     border-radius: 500px;
-    border: 15px solid #545454;
+    border: 15px solid #282828;
     animation: floating 3s ease-in-out infinite, shadow-pulse 3s ease-in-out infinite;
 }
 

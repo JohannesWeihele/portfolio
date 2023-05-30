@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import Portrait from "./portrait";
 import Introduction from "./introduction";
-import landscape_image from "../../resources/images/landscape.png"
+import landscape_image from "../../resources/images/backgrounds/landscape.png"
 import "./main_body.css"
 import Projects from "./projects/projects";
 import YearList from "./yearlist/yearlist";
