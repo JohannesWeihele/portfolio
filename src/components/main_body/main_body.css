@@ -1,7 +1,7 @@
 .main_body {
-    background-color: white;
-    position: relative; /* Fügen Sie eine relative Position hinzu */
+    position: relative;
 }
+
 
 .introduction_body {
     position: relative; /* Fügen Sie eine relative Position hinzu */

@@ -28,6 +28,7 @@ import Timeline_long from "../timeline_long/timeline_long";
 import HorizontalLine from "../horizontal_line/horizontal_line";
 import ExpandingButton from "../expanding_button/expanding_button";
 import Dachboden from "../../3D/dachboden";
+import Dachboden_Stuff from "../../3D/dachboden_stuff";
 
 
 const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
@@ -154,6 +155,7 @@ const Projects_Timeline: React.FC = () => {
                         <div className={'button_model'}>
                             <Canvas style={{ width: "1000px", height: "900px", objectFit: "contain"}} onClick={handle3DClick}>
                               <Dachboden/>
+                                <Dachboden_Stuff/>
                             </Canvas>
                         </div>
                         <p className={"close_button_text"} style={{zIndex: "5"}}>
