@@ -79,8 +79,8 @@ const ExpandingButton: FC<ExpandingButtonProps> = ({
                     <div className={"more_switch"}>
                         <div className={"more_switch_background"} >
                             <img src={more_switch_background} />
-                            <p id={"more_text"} className={"more_switch_text"}>Mehr</p>
                             <p id={"less_text"} className={"more_switch_text"}>Weniger</p>
+                            <p id={"more_text"} className={"more_switch_text"}>Mehr</p>
                         </div>
                         <img ref={imgRef} src={more_switch_button} className={"more_switch_button"} />
                     </div>
