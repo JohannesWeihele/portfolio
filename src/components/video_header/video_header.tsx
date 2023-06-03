@@ -81,13 +81,12 @@ const VideoHeader: FC<VideoHeaderProps> = ({ src , showFullscreenButton= true, z
             element.play()
             if(!initial_play){
                 initial_play = true;
-                handleMouseLeave();
             }
+            handleMouseLeave();
         } else {
             setIsPauseVideo(true);
             element.pause();
         }
-
     }
 
     const handleMouseEnter = () => {
@@ -97,12 +96,10 @@ const VideoHeader: FC<VideoHeaderProps> = ({ src , showFullscreenButton= true, z
     }
 
     const handleMouseLeave = () => {
-        if(!isPauseVideo){
+        if(!isPauseVideo || initial_play){
             const img = imgRef.current;
             if (!img) return;
             img.className ='item_gone';
-        } else{
-
         }
     }
 
