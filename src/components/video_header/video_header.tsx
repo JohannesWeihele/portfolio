@@ -79,25 +79,29 @@ const VideoHeader: FC<VideoHeaderProps> = ({ src , showFullscreenButton= true, z
         if(isPauseVideo){
             setIsPauseVideo(false);
             element.play()
+            handleMouseLeave();
             if(!initial_play){
                 initial_play = true;
             }
         } else {
             setIsPauseVideo(true);
+            handleMouseLeave();
             element.pause();
         }
-        handleMouseLeave();
+
     }
 
     const handleMouseEnter = () => {
         const img = imgRef.current;
         if (!img) return;
+        img.className ='';
         img.className ='item_visible';
     }
 
     const handleMouseLeave = () => {
         const img = imgRef.current;
         if (!img) return;
+        img.className ='';
         img.className ='item_gone';
     }
 
