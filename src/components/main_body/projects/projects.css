@@ -268,7 +268,7 @@
     display: inline-block;
     border: none;
     border-radius: 10px;
-    background-color: red;
+    background-color: transparent;
     color: white;
     text-align: center;
     font-size: 16px;
@@ -335,19 +335,43 @@
 
 .more_switch {
     position: relative;
-    transform: scale(0.5);
+    text-align: center;
+    transform: scale(0.4);
+    margin: -70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .more_switch_background {
-    position: relative;
+    position: absolute;
     z-index: 1;
 }
 
 .more_switch_button {
-    position: absolute;
+    position: relative;
     top: -10px;
     left: 0px;
+    z-index: 3;
+}
+
+.more_switch_text{
+    position: absolute;
     z-index: 2;
+}
+
+#more_text{
+    color: white;
+    top: 60px;
+    left: 100px;
+    font-size: 35px;
+}
+
+#less_text{
+    color: #ffffff;
+    top: 68px;
+    left: 268px;
+    font-size: 30px;
 }
 
 .switch_left_anim {
@@ -543,6 +567,7 @@ a {
 
 @media (max-width: 850px){
     /* Styles für Smartphones */
+
     .projects {
         padding: 0;
     }
@@ -632,6 +657,11 @@ a {
 
     .td_square-button.expanded{
         width: 100%;
+    }
+
+    .more_switch {
+        transform: scale(0.3);
+        margin: -80px;
     }
 
     .more_text{
