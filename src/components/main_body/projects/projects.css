@@ -24,18 +24,7 @@
     margin-top: 20px;
     width: 1px;
     height: 500px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(211, 211, 211, 0.5) 50%, rgba(211, 211, 211, 0) 100%);
-}
-
-.project_timeline_long::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -5px; /* Abstand vor dem ersten Strich anpassen */
-    width: 10px; /* Breite des größeren Striches anpassen */
-    height: 10px; /* Höhe des größeren Striches anpassen */
-    border-radius: 100%;
-    background-color: lightgrey; /* Farbe des größeren Striches anpassen */
+    background: linear-gradient(to top, rgba(253, 140, 63, 1) 0%, rgba(211, 211, 211, 0.5) 80%, rgba(211, 211, 211, 0) 100%);
 }
 
 .project_timeline_long::after {
@@ -46,7 +35,7 @@
     width: 10px; /* Breite des größeren Striches anpassen */
     height: 10px; /* Höhe des größeren Striches anpassen */
     border-radius: 100%;
-    background-color: black; /* Farbe des größeren Striches anpassen */
+    background-color: #fd8c3f; /* Farbe des größeren Striches anpassen */
 }
 
 
@@ -57,21 +46,9 @@
     margin-top: 20px;
     width: 1px;
     height: 100px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(211, 211, 211, 0.5) 50%, rgba(211, 211, 211, 0) 100%);
+    background: linear-gradient(to top, rgba(253, 140, 63, 1) 0%, rgba(211, 211, 211, 0.5) 50%, rgba(211, 211, 211, 0) 100%);
     content: '';
 }
-
-.project_timeline_short::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -5px; /* Abstand vor dem ersten Strich anpassen */
-    width: 10px; /* Breite des größeren Striches anpassen */
-    height: 10px; /* Höhe des größeren Striches anpassen */
-    border-radius: 100%;
-    background-color: black; /* Farbe des größeren Striches anpassen */
-}
-
 
 
 .horizontal_line_right {;
@@ -80,7 +57,7 @@
     width: 400px;
     left: 210px;
     height: 1px;
-    background: linear-gradient(to left, rgba(0, 0, 0, 1) 0%, rgba(211, 211, 211, 0.5) 80%, rgba(211, 211, 211, 0) 100%);
+    background: linear-gradient(to left, rgba(253, 140, 63, 1) 0%, rgba(211, 211, 211, 0.5) 80%, rgba(211, 211, 211, 0) 100%);
 }
 
 #same_line_right{
@@ -115,7 +92,7 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: black;
+    background-color: #fd8c3f;
 }
 
 .animate__pulse {
@@ -129,7 +106,7 @@
     width: 400px;
     right: 210px;
     height: 1px;
-    background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(211, 211, 211, 0.5) 80%, rgba(211, 211, 211, 0) 100%);
+    background: linear-gradient(to right, rgba(253, 140, 63, 1) 0%, rgba(211, 211, 211, 0.5) 80%, rgba(211, 211, 211, 0) 100%);
 }
 
 .dot_left {
@@ -143,7 +120,7 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: black;
+    background-color: #fd8c3f;
 }
 
 #facial_mocap_text{
@@ -376,10 +353,12 @@
 
 .switch_left_anim {
     animation: button-slide-left 1s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .switch_right_anim {
     animation: button-slide-right 1s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .max_width_text {
