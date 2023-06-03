@@ -75,11 +75,13 @@
     margin-top: -60px;
     border-radius: 50px;
     cursor: pointer;
+    outline: none;
 }
 
 .player_button img{
     width: 115px;
     height: 115px;
+    outline: none;
 }
 
 .item_visibile{
