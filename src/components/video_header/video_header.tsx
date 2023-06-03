@@ -86,6 +86,7 @@ const VideoHeader: FC<VideoHeaderProps> = ({ src , showFullscreenButton= true, z
         } else {
             setIsPauseVideo(true);
             element.pause();
+            handleMouseEnter();
         }
     }
 
