@@ -75,13 +75,16 @@
     margin-top: -60px;
     border-radius: 50px;
     cursor: pointer;
-    outline: none;
+
+}
+
+::selection{
+    background-color: transparent;
 }
 
 .player_button img{
     width: 115px;
     height: 115px;
-    outline: none;
 }
 
 .item_visibile{
