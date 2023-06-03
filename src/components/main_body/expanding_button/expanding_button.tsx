@@ -21,9 +21,9 @@ const ExpandingButton: FC<ExpandingButtonProps> = ({
 
     const toggleContentVisibility = () => {
         const updatedButtonData = {
-            ...buttonData,
             isContentVisible: !buttonData.isContentVisible,
             isButtonExpanded: !buttonData.isButtonExpanded,
+            divRef: buttonData.divRef
         };
 
         if (!updatedButtonData.isButtonExpanded) {
@@ -32,6 +32,7 @@ const ExpandingButton: FC<ExpandingButtonProps> = ({
 
         const element = imgRef.current;
         if (!element) {
+            setButtonData(updatedButtonData);
             return;
         } else {
             if (updatedButtonData.isButtonExpanded) {
