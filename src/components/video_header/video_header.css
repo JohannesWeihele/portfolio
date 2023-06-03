@@ -78,13 +78,17 @@
 
 }
 
-::selection{
+.player_button::selection{
     background-color: transparent;
 }
 
 .player_button img{
     width: 115px;
     height: 115px;
+}
+
+.player_button img::selection{
+    background-color: transparent;
 }
 
 .item_visibile{
