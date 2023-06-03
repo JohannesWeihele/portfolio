@@ -24,7 +24,7 @@
     margin-top: 20px;
     width: 1px;
     height: 500px;
-    background: linear-gradient(to top, rgba(253, 140, 63, 1) 0%, rgba(211, 211, 211, 0.5) 50%, rgba(211, 211, 211, 0) 100%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(211, 211, 211, 0.5) 50%, rgba(211, 211, 211, 0) 100%);
 }
 
 .project_timeline_long::before {
@@ -46,7 +46,7 @@
     width: 10px; /* Breite des größeren Striches anpassen */
     height: 10px; /* Höhe des größeren Striches anpassen */
     border-radius: 100%;
-    background-color: #fd8c3f; /* Farbe des größeren Striches anpassen */
+    background-color: black; /* Farbe des größeren Striches anpassen */
 }
 
 
@@ -57,7 +57,7 @@
     margin-top: 20px;
     width: 1px;
     height: 100px;
-    background: linear-gradient(to bottom, rgba(253, 140, 63, 1) 0%, rgba(211, 211, 211, 0.5) 50%, rgba(211, 211, 211, 0) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(211, 211, 211, 0.5) 50%, rgba(211, 211, 211, 0) 100%);
     content: '';
 }
 
@@ -69,7 +69,7 @@
     width: 10px; /* Breite des größeren Striches anpassen */
     height: 10px; /* Höhe des größeren Striches anpassen */
     border-radius: 100%;
-    background-color: #fd8c3f; /* Farbe des größeren Striches anpassen */
+    background-color: black; /* Farbe des größeren Striches anpassen */
 }
 
 
@@ -80,7 +80,7 @@
     width: 400px;
     left: 210px;
     height: 1px;
-    background-color: #fd8c3f;
+    background: linear-gradient(to left, rgba(0, 0, 0, 1) 0%, rgba(211, 211, 211, 0.5) 80%, rgba(211, 211, 211, 0) 100%);
 }
 
 #same_line_right{
@@ -115,7 +115,7 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #fd8c3f;
+    background-color: black;
 }
 
 .animate__pulse {
@@ -129,7 +129,7 @@
     width: 400px;
     right: 210px;
     height: 1px;
-    background-color: #fd8c3f;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(211, 211, 211, 0.5) 80%, rgba(211, 211, 211, 0) 100%);
 }
 
 .dot_left {
@@ -143,7 +143,7 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #fd8c3f;
+    background-color: black;
 }
 
 #facial_mocap_text{
@@ -266,10 +266,9 @@
 
 .square-button {
     display: inline-block;
-    padding: 0px 100px;
     border: none;
     border-radius: 10px;
-    background-color: #fd8c3f;
+    background-color: red;
     color: white;
     text-align: center;
     font-size: 16px;
@@ -332,6 +331,31 @@
 .centered_content {
     text-align: center;
     padding: 20px;
+}
+
+.more_switch {
+    position: relative;
+    transform: scale(0.5);
+}
+
+.more_switch_background {
+    position: relative;
+    z-index: 1;
+}
+
+.more_switch_button {
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    z-index: 2;
+}
+
+.switch_left_anim {
+    animation: button-slide-left 1s ease-in-out;
+}
+
+.switch_right_anim {
+    animation: button-slide-right 1s ease-in-out;
 }
 
 .max_width_text {
@@ -472,6 +496,25 @@ a {
     height: 1px;
     background-color: lightgrey;
 }
+
+@keyframes button-slide-left{
+    0% {
+    left: 0px;
+    }
+    100% {
+    left: -140px;
+    }
+}
+
+@keyframes button-slide-right{
+    0% {
+        left: -140px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
 
 
 @keyframes slide-up {

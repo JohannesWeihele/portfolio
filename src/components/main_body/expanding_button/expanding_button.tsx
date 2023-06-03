@@ -1,4 +1,6 @@
-import React, {FC, ReactNode, useRef, useState} from "react";
+import React, { FC, ReactNode, useRef, useState, useEffect } from "react";
+import more_switch_background from '../../../resources/images/buttons/switch_background.png'
+import more_switch_button from '../../../resources/images/buttons/switch_button.png'
 
 interface ExpandingButtonProps {
     name: string;
@@ -11,20 +13,42 @@ const ExpandingButton: FC<ExpandingButtonProps> = ({
                                                        design = 1,
                                                        children,
                                                    }) => {
+    const [buttonData, setButtonData] = useState(
+        { isContentVisible: false, isButtonExpanded: false, divRef: useRef<HTMLDivElement>(null)});
+    const imgRef =  useRef<HTMLImageElement>(null);
 
-    const [buttonData, setButtonData] = useState([
-        { isContentVisible: false, isButtonExpanded: false, divRef: useRef<HTMLDivElement>(null) },
-    ]);
+    let buttonDesign: string;
 
-    const toggleContentVisibility = (index: number) => {
-        const updatedButtonData = [...buttonData];
-        updatedButtonData[index].isContentVisible = !updatedButtonData[index].isContentVisible;
-        updatedButtonData[index].isButtonExpanded = !updatedButtonData[index].isButtonExpanded;
-        if (!updatedButtonData[index].isButtonExpanded) {
-            scrollToDiv(updatedButtonData[index].divRef);
+    const toggleContentVisibility = () => {
+        const updatedButtonData = {
+            ...buttonData,
+            isContentVisible: !buttonData.isContentVisible,
+            isButtonExpanded: !buttonData.isButtonExpanded,
+        };
+
+        if (!updatedButtonData.isButtonExpanded) {
+            scrollToDiv(updatedButtonData.divRef);
         }
-        setButtonData(updatedButtonData);
+
+        const element = imgRef.current;
+        if (!element) {
+            return;
+        } else {
+            if (updatedButtonData.isButtonExpanded) {
+                element.classList.add("switch_left_anim");
+                setTimeout(() => {
+                    element.classList.remove("switch_left_anim");
+                    setButtonData(updatedButtonData);
+                }, 1000);
+            } else {
+                setButtonData(updatedButtonData);
+                element.classList.add("switch_right_anim");
+            }
+            console.log(element);
+        }
     };
+
+
 
     const scrollToDiv = (ref: React.RefObject<HTMLDivElement>) => {
         if (ref.current) {
@@ -32,31 +56,34 @@ const ExpandingButton: FC<ExpandingButtonProps> = ({
         }
     };
 
-    let buttonDesign: string;
-    if(design === 1){
+
+    if (design === 1) {
         buttonDesign = "square-button";
-    } else if(design === 2){
+    } else if (design === 2) {
         buttonDesign = "td_square-button";
-    } else{
+    } else {
         buttonDesign = "square-button";
     }
 
-    return <div ref={buttonData[0].divRef}>
+    return (
+        <div ref={buttonData.divRef}>
             <button
-                onClick={() => toggleContentVisibility(0)}
-                className={`${buttonDesign} ${buttonData[0].isButtonExpanded ? 'expanded' : ''}`}
-                style={{ height: buttonData[0].isButtonExpanded ? 'auto' : 'initial' }}
+                onClick={() => toggleContentVisibility()}
+                className={`${buttonDesign} ${buttonData.isButtonExpanded ? 'expanded' : ''}`}
+                style={{ height: buttonData.isButtonExpanded ? 'auto' : 'initial' }}
             >
-                {buttonData[0].isButtonExpanded ? (
-                    <div>
-                        {children}
-                    </div>
+                {buttonData.isButtonExpanded ? (
+                    <div>{children}</div>
                 ) : (
-                    <p className={"more_text"}>{name}</p>
+                    <div className={"more_switch"}>
+                        <img src={more_switch_background} className={"more_switch_background"} />
+                        <img ref={imgRef} src={more_switch_button} className={"more_switch_button"} />
+                    </div>
                 )}
-                <span className={`arrow-down ${buttonData[0].isButtonExpanded ? 'expanded' : ''}`} />
+                <span className={`arrow-down ${buttonData.isButtonExpanded ? 'expanded' : ''}`} />
             </button>
         </div>
+    );
 };
 
 export default ExpandingButton;
