@@ -36,14 +36,14 @@ const ExpandingButton: FC<ExpandingButtonProps> = ({
             return;
         } else {
             if (updatedButtonData.isButtonExpanded) {
-                element.classList.add("switch_left_anim");
+                element.classList.add("switch_right_anim");
                 setTimeout(() => {
-                    element.classList.remove("switch_left_anim");
+                    element.classList.remove("switch_right_anim");
                     setButtonData(updatedButtonData);
                 }, 1000);
             } else {
                 setButtonData(updatedButtonData);
-                element.classList.add("switch_right_anim");
+                element.classList.add("switch_left_anim");
             }
             console.log(element);
         }

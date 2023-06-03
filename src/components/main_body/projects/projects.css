@@ -328,7 +328,7 @@
 .more_switch_button {
     position: relative;
     top: -10px;
-    left: 0px;
+    left: -140px;
     z-index: 3;
 }
 
