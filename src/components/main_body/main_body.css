@@ -156,6 +156,7 @@ p {
     color: white;
 }
 
+
 @keyframes thepulse {
     0%, 50% {
         opacity: 1;

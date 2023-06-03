@@ -65,6 +65,33 @@
     opacity: 50%;
 }
 
+.player_button{
+    position: absolute;
+    z-index: 1;
+    border: none;
+    top: 50%;
+    left: 50%;
+    margin-left: -60px;
+    margin-top: -60px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.player_button img{
+    width: 115px;
+    height: 115px;
+}
+
+.item_visibile{
+    opacity: 1;
+    animation: fadeIn 2s ease-in;
+}
+
+.item_gone{
+    opacity: 0;
+    animation: fadeOut 2s ease-out;
+}
+
 
 @keyframes loading-spin {
     to {
@@ -80,6 +107,26 @@
     100% {
         transform: translateY(0); /* Endposition der Animation */
         opacity: 1; /* Endopazität */
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 
