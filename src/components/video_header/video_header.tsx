@@ -10,10 +10,11 @@ import pause_icon from '../../resources/icons/pause_button.png'
 interface VideoHeaderProps {
     src: string;
     showFullscreenButton?: boolean;
+    showPlayButton?: boolean;
     zoomed?: boolean
 }
 
-const VideoHeader: FC<VideoHeaderProps> = ({ src , showFullscreenButton= true, zoomed = true}) => {
+const VideoHeader: FC<VideoHeaderProps> = ({ src , showFullscreenButton= true, showPlayButton = true, zoomed = true}) => {
     const videoRef = useRef<HTMLVideoElement>(null);
     const imgRef = useRef<HTMLImageElement>(null);
     const isMobile = useMediaQuery({ maxWidth: 767 });
@@ -167,12 +168,14 @@ const VideoHeader: FC<VideoHeaderProps> = ({ src , showFullscreenButton= true, z
                         </button>
                     )}
                 </div>
-                <div className={"player_button"} onClick={handlePlayerClick}>
-                    <img
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
-                        ref={imgRef} src={isPauseVideo ? player_icon : pause_icon}/>
-                </div>
+                {showPlayButton && (
+                    <div className={"player_button"} onClick={handlePlayerClick}>
+                        <img
+                            onMouseEnter={handleMouseEnter}
+                            onMouseLeave={handleMouseLeave}
+                            ref={imgRef} src={isPauseVideo ? player_icon : pause_icon}/>
+                    </div>
+                )}
             </div>
         </div>
     );

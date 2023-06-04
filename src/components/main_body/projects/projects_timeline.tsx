@@ -31,6 +31,8 @@ import Dachboden from "../../3D/dachboden";
 import Dachboden_Stuff from "../../3D/dachboden_stuff";
 
 
+
+
 const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.stopPropagation();
 };
@@ -51,7 +53,7 @@ const Projects_Timeline: React.FC = () => {
             <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"} animateOnce={true}>
             <div className={'project_timeline_short'}/>
             <VideoHeader src={qt_video} />
-                <ExpandingButton name={"Erfahre mehr"} design={1}>
+                <ExpandingButton>
                     <div>
                         <div>
                             <h1 style={{color: "black", fontFamily: "Agency FB", fontSize: "50px"}}>Digital Cockpit</h1>
@@ -69,7 +71,7 @@ const Projects_Timeline: React.FC = () => {
                             Mit einer 210° umfassenden 9 auf 4 Meter großen Leinwand bildet das Hochschul-Labor durch ein hochmodernes, präzises und realistisches System das indviduelle Fahrgefühl seiner Tester auf einer hochgenauen Bewegungsplattform nach.<div className={"mobile_newLine"}><br/><br/></div>
                         </p>
                         <div className={"project_video"}>
-                            <VideoHeader src={adrive_video} showFullscreenButton={false} zoomed={false}/>
+                            <VideoHeader src={adrive_video} showFullscreenButton={false} showPlayButton={false} zoomed={false}/>
                         </div>
                         <p className={"source_text"}>Quelle: https://www.youtube.com/watch?v=c1Wo7ZtoK2Q</p>
                         <p className={"max_width_text"}>
@@ -120,7 +122,7 @@ const Projects_Timeline: React.FC = () => {
             <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInLeftBig"} animateOut={"animate__fadeOutRightBig"} animateOnce={true}>
             <div className={'project_timeline_short'}/>
             <VideoHeader src={facial_mocap_video} />
-                <ExpandingButton name={"Erfahre mehr"} design={1}>
+                <ExpandingButton>
                     <div>
                         <div>
                             <h1 style={{color: "black", fontFamily: "Agency FB", fontSize: "50px"}}>Facial Motion Capture</h1>
@@ -150,7 +152,7 @@ const Projects_Timeline: React.FC = () => {
                 <p className="button_or">
                     <span>oder</span>
                 </p>
-                <ExpandingButton name={"Dachboden ansehen"} design={2}>
+                <ExpandingButton>
                     <div className={"model_container"}>
                         <div className={'button_model'}>
                             <Canvas style={{ width: "1000px", height: "900px", objectFit: "contain"}} onClick={handle3DClick}>
@@ -171,7 +173,7 @@ const Projects_Timeline: React.FC = () => {
             <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"} animateOnce={true}>
             <div className={'project_timeline_short'}/>
             <VideoMobile src={foodfill_video} />
-                <ExpandingButton name={"Erfahre mehr"} design={1}>
+                <ExpandingButton>
 
                 </ExpandingButton>
             </AnimationOnScroll>
@@ -186,7 +188,7 @@ const Projects_Timeline: React.FC = () => {
             <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInLeftBig"} animateOut={"animate__fadeOutRightBig"} animateOnce={true}>
             <div className={'project_timeline_short'}/>
             <VideoHeader src={django_vaadin_video} />
-                <ExpandingButton name={"Erfahre mehr"} design={1}>
+                <ExpandingButton>
 
                 </ExpandingButton>
             </AnimationOnScroll>
@@ -201,7 +203,7 @@ const Projects_Timeline: React.FC = () => {
             <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"} animateOnce={true}>
             <div className={'project_timeline_short'}/>
             <VideoHeader src={angular_vuejs_video} />
-                <ExpandingButton name={"Erfahre mehr"} design={1}>
+                <ExpandingButton>
 
                 </ExpandingButton>
             </AnimationOnScroll>
@@ -212,7 +214,7 @@ const Projects_Timeline: React.FC = () => {
             <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInLeftBig"} animateOut={"animate__fadeOutRightBig"} animateOnce={true}>
             <div className={'project_timeline_short'}/>
             <VideoHeader src={stateofdart_video} />
-                <ExpandingButton name={"Erfahre mehr"} design={1}>
+                <ExpandingButton>
 
                 </ExpandingButton>
             </AnimationOnScroll>

@@ -263,6 +263,10 @@
     animation: shadow-pulse 3s ease-in-out infinite;
 }
 
+.clickable{
+    cursor: pointer;
+}
+
 .square-button .arrow-down{
     border-color: white;
 }
@@ -314,6 +318,7 @@
     position: relative;
     text-align: center;
     transform: scale(0.4);
+    cursor: pointer;
     margin: -70px;
     display: flex;
     justify-content: center;
