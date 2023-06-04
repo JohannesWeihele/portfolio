@@ -27,11 +27,7 @@ import { AnimationOnScroll} from "react-animation-on-scroll";
 import Timeline_long from "../timeline_long/timeline_long";
 import HorizontalLine from "../horizontal_line/horizontal_line";
 import ExpandingButton from "../expanding_button/expanding_button";
-import Dachboden from "../../3D/dachboden";
-import Dachboden_Stuff from "../../3D/dachboden_stuff";
 import ExpandingList from "../expanding_list/expanding_list";
-
-
 
 
 const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {

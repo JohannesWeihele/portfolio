@@ -1,4 +1,5 @@
 import React, {FC} from "react";
+import { Parallax } from 'react-scroll-parallax';
 
 interface Timeline_longProps{
     name: string;
