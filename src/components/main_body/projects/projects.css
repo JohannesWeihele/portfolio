@@ -38,6 +38,39 @@
     background-color: #fd8c3f; /* Farbe des größeren Striches anpassen */
 }
 
+.Collapsible{
+    text-align: left;
+    border: 1px solid #e3e3e3;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    color: black;
+    box-shadow: 0 3px 0px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.Collapsible__trigger{
+    color: #fd8c3f;
+    padding: 15px;
+    font-size: 18px;
+    display: block;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.Collapsible__trigger.is-open{
+    border-bottom: 1px solid #d0d0d0;
+}
+
+.Collapsible__trigger:hover{
+    background: rgba(253, 140, 63, 0.29);
+}
+
+.Collapsible__contentInner {
+    text-align: center;
+    padding: 10px;
+}
 
 .project_timeline_short {
     position: relative;
@@ -166,10 +199,8 @@
 }
 
 .arrow-down {
-    display: inline-block;
     width: 0;
     height: 0;
-    vertical-align: middle;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-top: 5px solid white; /* Farbe des Pfeils */
@@ -249,7 +280,6 @@
     color: white;
     text-align: center;
     font-size: 16px;
-    cursor: pointer;
     transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
     overflow: hidden;
 }
@@ -262,15 +292,6 @@
     background-color: transparent;
     animation: shadow-pulse 3s ease-in-out infinite;
 }
-
-.clickable{
-    cursor: pointer;
-}
-
-.square-button .arrow-down{
-    border-color: white;
-}
-
 .arrow-down {
     display: inline-block;
     width: 0;
@@ -280,10 +301,6 @@
     border-right: 5px solid transparent;
     border-top: 5px solid white;
     transition: transform 0.3s ease;
-}
-
-.arrow-down.expanded {
-    transform: translateY(50%);
 }
 
 .content {
@@ -347,7 +364,6 @@
     top: 60px;
     left: 275px;
     font-size: 35px;
-
 }
 
 #less_text{
@@ -372,6 +388,7 @@
     word-wrap: break-word;
     line-height: 1.5;
     padding: 20px;
+    font-size: 16px;
     margin: 0;
     color: black;
 }
@@ -400,10 +417,11 @@
 
 .close_button_text{
     position: relative;
-    padding: 10px;
+    padding-top: 10px;
     text-align: center;
     color: #fd8c3f;
-    font-size: 14px;
+    font-size: 12px;
+    cursor: pointer;
     font-weight: bold;
     margin-bottom: -5px;
 }

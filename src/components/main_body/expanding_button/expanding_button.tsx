@@ -13,10 +13,12 @@ const ExpandingButton: FC<ExpandingButtonProps> = ({children}) => {
     const [open, setOpen] = useState(false);
     const buttonRef = useRef<HTMLImageElement>(null);
     const parentRef = useRef<HTMLDivElement>(null);
+    const scanRef = useRef<HTMLDivElement>(null);
 
     const toggleContentVisibility = () => {
         const element = buttonRef.current;
         const parentElement = parentRef.current;
+        const scanElement = scanRef.current;
         if (!element) {
             return;
         } else {
@@ -48,12 +50,16 @@ const ExpandingButton: FC<ExpandingButtonProps> = ({children}) => {
                 </div>
                 <img ref={buttonRef} src={more_switch_button} className={"more_switch_button"} />
             </div>
+            <div ref={scanRef} className={"scan_line"}/>
             <span className={"arrow-down"} />
-            <div onClick={open ? toggleContentVisibility : () => {}} className={`tester ${open ? "clickable" : ""}`}>
-                <Expand open={open} className={`square-button expanded ${open ? "clickable" : ""}`}>
+            <div>
+                <Expand open={open} duration={500} className={"square-button expanded"}>
                     {children}
+                    <p className={"close_button_text"} onClick={toggleContentVisibility}>schließen</p>
+                    <div className={"arrow-down"}/>
                 </Expand>
             </div>
+
         </div>
     );
 };
