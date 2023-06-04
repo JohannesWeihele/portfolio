@@ -39,7 +39,7 @@ const ExpandingButton: FC<ExpandingButtonProps> = ({children}) => {
     };
 
     return (
-        <div ref={parentRef} style={{background: "transparent"}}>
+        <div ref={parentRef}>
             <div className={"more_switch"} onClick={toggleContentVisibility}>
                 <div className={"more_switch_background"} >
                     <img src={more_switch_background} />
