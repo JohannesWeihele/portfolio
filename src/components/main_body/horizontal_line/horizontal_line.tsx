@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import {Canvas} from "@react-three/fiber";
 import Car from "../../3D/car";
+import Tilt from "react-parallax-tilt";
 
 interface HorizontalLineProps {
     side: string;
@@ -65,19 +66,25 @@ const HorizontalLine: FC<HorizontalLineProps> = ({
                     )}
                 </div>
                 {icon_name_one && (
-                    <div className={icon_one_id}>
-                        <img src={require(`../../../resources/icons/${icon_name_one}.png`)} />
-                    </div>
+                    <Tilt tiltMaxAngleX={2} tiltMaxAngleY={2}>
+                        <div className={icon_one_id}>
+                            <img src={require(`../../../resources/icons/${icon_name_one}.png`)} />
+                        </div>
+                    </Tilt>
                 )}
                 {icon_name_two && (
-                    <div className={icon_two_id}>
-                        <img src={require(`../../../resources/icons/${icon_name_two}.png`)} />
-                    </div>
+                    <Tilt tiltMaxAngleX={2} tiltMaxAngleY={2}>
+                        <div className={icon_two_id}>
+                            <img src={require(`../../../resources/icons/${icon_name_two}.png`)} />
+                        </div>
+                    </Tilt>
                 )}
                 {icon_name_three && (
-                    <div className={icon_three_id}>
-                        <img src={require(`../../../resources/icons/${icon_name_three}.png`)} />
-                    </div>
+                    <Tilt tiltMaxAngleX={2} tiltMaxAngleY={2}>
+                        <div className={icon_three_id}>
+                            <img src={require(`../../../resources/icons/${icon_name_three}.png`)} />
+                        </div>
+                    </Tilt>
                 )}
             </div>
         </div>

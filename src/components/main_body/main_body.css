@@ -2,14 +2,11 @@
     position: relative;
 }
 
-
 .introduction_body {
     position: relative; /* Fügen Sie eine relative Position hinzu */
     display: flex;
     justify-content: center;
     height: auto;
-    border-bottom: 1px solid lightgrey;
-    background-color: black;
     overflow: hidden; /* Verhindern Sie das Überlaufen des Blur-Effekts */
 }
 
@@ -20,11 +17,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1.0)), url("../../resources/images/backgrounds/landscape.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: opacity 0.5s ease-in-out;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1.0));
     z-index: 0; /* Stellen Sie sicher, dass das Pseudoelement hinter dem Text liegt */
 }
 
@@ -32,18 +25,7 @@
 .introduction_body > * {
     position: relative; /* Stellen Sie sicher, dass der Text über dem Pseudoelement liegt */
     z-index: 1;
-}
 
-@keyframes backgroundAnimation {
-    0% {
-        opacity: 0.1;
-    }
-    50% {
-        opacity: 0.8;
-    }
-    100% {
-        opacity: 0.1;
-    }
 }
 
 .projects_body {
@@ -150,9 +132,7 @@ p {
 }
 
 .introduction_final {
-    font-size: 24px;
-    white-space: nowrap;
-    font-family: "Agency FB";
+    font-size: 22px;
     color: white;
 }
 
@@ -224,7 +204,6 @@ p {
     .introduction_body {
         flex-direction: column; /* Ändert die Ausrichtung auf stapelnde Anordnung */
         align-items: center; /* Zentriert den Inhalt vertikal */
-        padding: 20px 0; /* Verringert den oberen und unteren Innenabstand */
     }
 
     .projects_body {
@@ -233,7 +212,7 @@ p {
 
     .portrait {
         padding: 20px 0; /* Verringert den Innenabstand */
-        padding-top: 40px;
+        padding-top: 60px;
     }
 
     .portrait img {
@@ -268,6 +247,7 @@ p {
     }
 
     h2 {
+        width: 95%;
         padding: 10px;
         font-size: 4vw;
     }

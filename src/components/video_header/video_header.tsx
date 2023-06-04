@@ -2,6 +2,7 @@ import { FC, useEffect, useRef, useState } from 'react';
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import './video_header.css';
+import Tilt from 'react-parallax-tilt'
 
 import fullscreen_icon from '../../resources/icons/fullscreen_icon.png'
 import player_icon from '../../resources/icons/player_button.png'
