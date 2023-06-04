@@ -388,7 +388,7 @@
     word-wrap: break-word;
     line-height: 1.5;
     padding: 20px;
-    font-size: 16px;
+    font-size: 18px;
     margin: 0;
     color: black;
 }
@@ -645,6 +645,7 @@ a {
 
     .max_width_text{
         padding: 0px;
+        font-size: 16px;
     }
 
     .square-button{
