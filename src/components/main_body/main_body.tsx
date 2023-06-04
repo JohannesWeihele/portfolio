@@ -15,9 +15,10 @@ const Main_Body: React.FC = () =>{
 
 
     return <div className={"main_body"}>
-        <Parallax bgImage={landscape_image} strength={700}>
+        <Parallax bgImage={landscape_image} strength={400}>
             <ParallaxBanner
                 layers={[
+                    //{image: landscape_image, speed: 10, scale: [0.9, 1.5, 'easeIn']},
                     {image: landscape_front_mirrored, speed: 0, scale: [1, 1.5, 'easeIn']},
                     {image: landscape_front_mirrored, speed: 35, scale: [1, 1.5, 'easeIn']},
                     {image: landscape_front, speed: 50, scale: [1, 1.5, 'easeIn'] },
