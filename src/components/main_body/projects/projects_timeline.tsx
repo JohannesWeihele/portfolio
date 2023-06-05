@@ -27,6 +27,7 @@ import Timeline_long from "../timeline_long/timeline_long";
 import HorizontalLine from "../horizontal_line/horizontal_line";
 import ExpandingButton from "../expanding_button/expanding_button";
 import ExpandingList from "../expanding_list/expanding_list";
+import Tilt from "react-parallax-tilt";
 
 
 

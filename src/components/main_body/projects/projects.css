@@ -64,8 +64,9 @@
 }
 
 .Collapsible__trigger:hover{
-    background: rgba(253, 140, 63, 0.29);
+    background: rgba(253, 140, 63, 0.17);
 }
+
 
 .Collapsible__contentInner {
     text-align: center;
