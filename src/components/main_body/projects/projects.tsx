@@ -9,7 +9,7 @@ const Projects: FC = () => {
 
     return (
         <div className={"projects"}>
-            {/*<Projects_Header/>*/}
+            <Projects_Header/>
             <Projects_Timeline/>
         </div>
     );

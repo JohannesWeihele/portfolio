@@ -524,6 +524,14 @@ a {
     background-color: lightgrey;
 }
 
+.touchable{
+    position: absolute;
+    font-size: 20px;
+    left: 90px;
+    top: 140px;
+    animation: pulse 1s ease-in-out infinite;
+}
+
 @keyframes button-slide-left{
     0% {
     left: 0px;

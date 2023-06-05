@@ -1,12 +1,15 @@
-import React, { FC } from "react";
+import React, {FC, useEffect, useRef, useState} from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import {Canvas} from "@react-three/fiber";
 import Car from "../../3D/car";
 import Tilt from "react-parallax-tilt";
+import Tippy from "@tippyjs/react";
+import 'tippy.js/dist/tippy.css'
 
 interface HorizontalLineProps {
     side: string;
     sameLine: boolean;
+    id?: string;
     name?: string;
     icon_name_one?: string;
     icon_name_two?: string;
@@ -18,11 +21,15 @@ const HorizontalLine: FC<HorizontalLineProps> = ({
                                                      name,
                                                      side,
                                                      sameLine = false,
+                                                     id,
                                                      icon_name_one,
                                                      icon_name_two,
                                                      icon_name_three,
                                                      td_model,
                                                  }) => {
+
+    const [visible, setVisible] = useState(true);
+
 
     let horizontal_line_side = side === "left" ? "horizontal_line_left" : "horizontal_line_right";
     let dot_side = side === "left" ? "dot_left" : "dot_right";
@@ -45,6 +52,10 @@ const HorizontalLine: FC<HorizontalLineProps> = ({
             break;
     }
 
+    const handleCanvasClick = () => {
+        setVisible(false);
+    }
+
     return (
         <div className={horizontal_line_side} id={same_line_id}>
             <AnimationOnScroll initiallyVisible={true} delay={-1000} offset={0} animateIn={"animate__pulse"} animateOut={"animate__pulse"}>
@@ -56,13 +67,15 @@ const HorizontalLine: FC<HorizontalLineProps> = ({
                         <h1 className={"timeline_header"}>{name}</h1>
                     )}
                     {td_model && (
-                        <h1 className={"timeline_header"}>
-                            <div className={model_side}>
-                                <Canvas id={`canvas_model_left`} style={{ width: "300px", height: "300px", cursor: "pointer"}}>
-                                    {component}
-                                </Canvas>
-                            </div>
-                        </h1>
+                        <Tippy content={"Beweg mich"} offset={[0,60]} interactive={true} delay={100} visible={visible} >
+                            <h1 className={"timeline_header"}>
+                                <div className={model_side} id={id} onMouseDown={handleCanvasClick}>
+                                    <Canvas id={`canvas_model_left`} style={{ width: "300px", height: "300px", cursor: "pointer"}}>
+                                        {component}
+                                    </Canvas>
+                                </div>
+                            </h1>
+                        </Tippy>
                     )}
                 </div>
                 {icon_name_one && (

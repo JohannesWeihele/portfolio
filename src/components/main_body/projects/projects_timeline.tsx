@@ -1,7 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import "./projects.css";
 import "animate.css/animate.min.css"
-import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 
 //----------------Videos------------//
 import VideoHeader from "../../video_header/video_header";
@@ -30,13 +29,10 @@ import ExpandingButton from "../expanding_button/expanding_button";
 import ExpandingList from "../expanding_list/expanding_list";
 
 
+
 const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.stopPropagation();
 };
-
-const handle3DClick = (event: React.MouseEvent<HTMLDivElement>) => {
-    event.stopPropagation();
-}
 
 const Projects_Timeline: React.FC = () => {
 

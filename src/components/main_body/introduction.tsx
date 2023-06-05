@@ -1,7 +1,6 @@
 import React, { FC, useEffect, useState } from 'react';
 import "./main_body.css";
 
-
 const text1 = "Hey! Ich bin Johannes";
 const text2 = "Web- und Software-Engineer.";
 
