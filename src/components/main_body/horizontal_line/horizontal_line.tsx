@@ -69,7 +69,7 @@ const HorizontalLine: FC<HorizontalLineProps> = ({
                     {td_model && (
                         <Tippy content={"Beweg mich"} offset={[0,60]} interactive={true} delay={100} visible={visible} >
                             <h1 className={"timeline_header"}>
-                                <div className={model_side} id={id} onMouseDown={handleCanvasClick}>
+                                <div className={model_side} id={id} onMouseDown={handleCanvasClick} onTouchStart={handleCanvasClick}>
                                     <Canvas id={`canvas_model_left`} style={{ width: "300px", height: "300px", cursor: "pointer"}}>
                                         {component}
                                     </Canvas>
@@ -79,25 +79,19 @@ const HorizontalLine: FC<HorizontalLineProps> = ({
                     )}
                 </div>
                 {icon_name_one && (
-                    <Tilt tiltMaxAngleX={2} tiltMaxAngleY={2}>
-                        <div className={icon_one_id}>
-                            <img src={require(`../../../resources/icons/${icon_name_one}.png`)} />
-                        </div>
-                    </Tilt>
+                    <div className={icon_one_id}>
+                        <img src={require(`../../../resources/icons/${icon_name_one}.png`)} />
+                    </div>
                 )}
                 {icon_name_two && (
-                    <Tilt tiltMaxAngleX={2} tiltMaxAngleY={2}>
-                        <div className={icon_two_id}>
-                            <img src={require(`../../../resources/icons/${icon_name_two}.png`)} />
-                        </div>
-                    </Tilt>
+                    <div className={icon_two_id}>
+                        <img src={require(`../../../resources/icons/${icon_name_two}.png`)} />
+                    </div>
                 )}
                 {icon_name_three && (
-                    <Tilt tiltMaxAngleX={2} tiltMaxAngleY={2}>
-                        <div className={icon_three_id}>
-                            <img src={require(`../../../resources/icons/${icon_name_three}.png`)} />
-                        </div>
-                    </Tilt>
+                    <div className={icon_three_id}>
+                        <img src={require(`../../../resources/icons/${icon_name_three}.png`)} />
+                    </div>
                 )}
             </div>
         </div>

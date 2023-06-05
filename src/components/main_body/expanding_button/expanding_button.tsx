@@ -24,9 +24,7 @@ const ExpandingButton: FC<ExpandingButtonProps> = ({children}) => {
         } else {
             if (!open) {
                 element.classList.add("switch_right_anim");
-                setTimeout(() => {
-                    setOpen(!open);
-                }, 1000);
+                setOpen(!open);
             } else {
                 setOpen(!open);
                 element.classList.remove("switch_right_anim");

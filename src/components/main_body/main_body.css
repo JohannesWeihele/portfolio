@@ -49,7 +49,6 @@
     height: auto;
     border-radius: 500px;
     border: 15px solid #282828;
-    animation: floating 3s ease-in-out infinite, shadow-pulse 3s ease-in-out infinite;
 }
 
 .portrait img:hover{
