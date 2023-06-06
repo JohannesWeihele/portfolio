@@ -7,6 +7,7 @@ import Tilt from 'react-parallax-tilt'
 import fullscreen_icon from '../../resources/icons/fullscreen_icon.png'
 import player_icon from '../../resources/icons/player_button.png'
 import pause_icon from '../../resources/icons/pause_button.png'
+import {ClimbingBoxLoader} from "react-spinners";
 
 interface VideoHeaderProps {
     src: string;
@@ -142,7 +143,8 @@ const VideoHeader: FC<VideoHeaderProps> = ({ src , showFullscreenButton= true, s
         <div className="video-header">
             {isLoading && (
                 <div className="loading-overlay">
-                    <span>Loading...</span>
+                    <ClimbingBoxLoader size={10} color={"#fd8c3f"}/>
+                    <span className={"loading_text"}>Lädt schöne Dinge...</span>
                 </div>
             )}
             <div className={'video_container'}>
