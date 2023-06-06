@@ -206,6 +206,10 @@
     border-top: 5px solid white; /* Farbe des Pfeils */
 }
 
+.clickable {
+    cursor: pointer;
+}
+
 .timeline_icon_right_one img {
     width: auto;
     height: 55px;

@@ -1,4 +1,4 @@
-import React, { FC, ReactNode, useRef } from "react";
+import React, {FC, ReactNode, useRef, useState} from "react";
 import Collapsible from "react-collapsible";
 
 interface ExpandingListProps {
@@ -8,16 +8,29 @@ interface ExpandingListProps {
 }
 
 const ExpandingList: FC<ExpandingListProps> = ({ children, name, open = false }) => {
-    const collapsibleRef = useRef<Collapsible>(null);
+    const divRef = useRef<HTMLDivElement>(null);
+    const [isOpen, setIsOpen] = useState(open);
 
+    const handleCloseClick = () => {
+        const element = divRef.current;
+        setIsOpen(false);
+        if(element){
+            element.scrollIntoView({ behavior: "smooth" });
+        }
+    };
     return (
-        <Collapsible ref={collapsibleRef} trigger={name} open={open} lazyRender={true}>
-            {children}
-            <p className={"close_button_text"}>
-                schließen
-            </p>
-            <div className={"arrow-down"} />
-        </Collapsible>
+        <div ref={divRef}>
+            <Collapsible trigger={name} open={isOpen}  onOpening={() => setIsOpen(true)}
+                         onClosing={() => setIsOpen(false)} lazyRender={true}>
+                {children}
+                <div className={"clickable"} onClick={handleCloseClick}>
+                    <p className={"close_button_text"}>
+                        schließen
+                    </p>
+                    <div className={"arrow-down"} />
+                </div>
+            </Collapsible>
+        </div>
     );
 };
 

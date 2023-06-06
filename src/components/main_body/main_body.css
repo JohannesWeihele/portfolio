@@ -103,6 +103,18 @@ h3 {
     color: #fd8c3f;
 }
 
+.loader{
+    position: absolute;
+    bottom: 0px;
+}
+
+.loader_text{
+    font-size: 10px;
+    margin-left: 20px;
+    margin-top: -30px;
+    color: #fd8c3f;
+}
+
 .invisible_writer_dot {
     animation: thepulse 1s ease-in-out infinite;
     vertical-align: text-bottom;
@@ -134,7 +146,6 @@ p {
     font-size: 22px;
     color: white;
 }
-
 
 @keyframes thepulse {
     0%, 50% {
