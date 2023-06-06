@@ -11,11 +11,10 @@ const App = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        window.onload = () => {
+        document.addEventListener('DOMContentLoaded', () => {
             setIsLoading(false);
-        };
+        });
     }, []);
-
 
   return (
       <div className="App">
