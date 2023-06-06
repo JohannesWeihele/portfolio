@@ -8,33 +8,18 @@ import Opener from "./components/main_body/opener/opener";
 
 const App = () => {
 
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect(() => {
-        document.addEventListener('DOMContentLoaded', () => {
-            setIsLoading(false);
-        });
-    }, []);
-
   return (
       <div className="App">
-          {isLoading ? (
-              <ParallaxProvider>
-                  <div>
-                      <Header/>
-                      <Opener isLoading={true}/>
-                  </div>
-             </ParallaxProvider>
-          ) : (
               <ParallaxProvider>
                   <meta name="viewport"
                         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
                   <Header/>
                   <Main_Body/>
              </ParallaxProvider>
-          )}
       </div>
   );
 }
+
+//Über Lazy Loading in Projects selbst regeln. Jede Komponente nachladen, sobald sie fertig ist.
 
 export default App;

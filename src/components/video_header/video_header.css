@@ -7,11 +7,12 @@
 
 .video-header video {
     position: relative;
-    width: 98%;
+    width: 100%;
     border-radius: 25px;
     height: 56.25vw; /* Festgelegte Höhe basierend auf dem Seitenverhältnis 16:9 */
     max-height: calc(100vh - 100px);
     max-width: 100%;
+    margin-left: 2px;
     object-fit: cover;
 }
 
