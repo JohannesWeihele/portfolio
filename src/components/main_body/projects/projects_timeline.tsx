@@ -1,6 +1,8 @@
 import React, {useEffect, useRef, useState} from 'react';
+
 import "./projects.css";
 import "animate.css/animate.min.css"
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 //----------------Videos------------//
 import VideoHeader from "../../video_header/video_header";
@@ -24,12 +26,12 @@ import fa_mocap_scene_one from '../../../resources/images/fa_mocap_scene_1.jpg'
 import fa_mocap_scene_two from '../../../resources/images/fa_mocap_scene_2.jpg'
 
 import { AnimationOnScroll} from "react-animation-on-scroll";
+import { Carousel } from 'react-responsive-carousel';
+
 import Timeline_long from "../timeline_long/timeline_long";
 import HorizontalLine from "../horizontal_line/horizontal_line";
 import ExpandingButton from "../expanding_button/expanding_button";
 import ExpandingList from "../expanding_list/expanding_list";
-
-
 
 const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.stopPropagation();
@@ -206,7 +208,14 @@ const Projects_Timeline: React.FC = () => {
             <div className={"project_wrapper"}>
                 <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInLeftBig"} animateOut={"animate__fadeOutRightBig"} animateOnce={true}>
                     <div className={'project_timeline_short'}/>
-                    <VideoHeader src={django_video} />
+                    <Carousel>
+                        <div>
+                            <VideoHeader src={django_video} />
+                        </div>
+                        <div>
+                            <VideoHeader src={vaadin_video} />
+                        </div>
+                    </Carousel>
                     <ExpandingButton>
 
                     </ExpandingButton>

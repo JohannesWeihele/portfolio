@@ -25,6 +25,7 @@
     "react-parallax": "^3.5.1",
     "react-parallax-tilt": "^1.7.143",
     "react-responsive": "^9.0.2",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.11.2",
     "react-scripts": "5.0.1",
     "react-scroll-parallax": "^3.4.2",
