@@ -8,7 +8,8 @@ import VideoMobile from "../../video_mobile/video_mobile";
 import qt_video from '../../../resources/videos/praxissemester/qt_projekt_auto.mp4'
 import facial_mocap_video from '../../../resources/videos/facial_mocap/facial_mocap.mp4'
 import foodfill_video from '../../../resources/videos/foodfill/foodfill.mp4'
-import django_vaadin_video from '../../../resources/videos/django_vaadin/django_vaadin.mp4'
+import django_video from '../../../resources/videos/django_vaadin/django.mp4'
+import vaadin_video from '../../../resources/videos/django_vaadin/vaadin.mp4'
 import angular_vuejs_video from '../../../resources/videos/angular_vuejs/angular_vuejs.mp4'
 import stateofdart_video from '../../../resources/videos/stateofdart/stateofdart.mp4'
 import adrive_video from '../../../resources/videos/praxissemester/adrive_video.mp4'
@@ -205,7 +206,7 @@ const Projects_Timeline: React.FC = () => {
             <div className={"project_wrapper"}>
                 <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInLeftBig"} animateOut={"animate__fadeOutRightBig"} animateOnce={true}>
                     <div className={'project_timeline_short'}/>
-                    <VideoHeader src={django_vaadin_video} />
+                    <VideoHeader src={django_video} />
                     <ExpandingButton>
 
                     </ExpandingButton>
