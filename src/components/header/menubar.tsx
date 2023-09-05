@@ -4,8 +4,6 @@ import './header.css';
 
 const MenuBar: FC = () => {
 
-    const projectsRef = useRef<HTMLDivElement>(null);
-
     const scrollToProjects = () => {
         const scrollPosition = 790;
         window.scrollTo({

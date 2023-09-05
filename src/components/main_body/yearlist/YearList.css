@@ -1,7 +1,7 @@
 .year-list-container {
     position: fixed;
     top: 0;
-    right: 100px;
+    right: 10px;
     bottom: 0;
     display: flex;
     justify-content: flex-end;
@@ -12,11 +12,12 @@
 
 .year-list {
     margin: 0;
+    list-style-type: none;
     background-color: black;
     text-align: left;
     border-radius: 15px;
     color: white;
-    width: 150px;
+    width: 110px;
     height: auto;
     padding: 10px;
 }

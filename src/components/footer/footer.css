@@ -2,7 +2,20 @@
     height: auto;
     width: auto;
     margin-top: 200px;
+    position: relative;
 }
+
+.footer::before {
+    content: "";
+    display: block;
+    width: 2px; /* Breite des vertikalen Strichs */
+    height: 85%; /* Höhe des vertikalen Strichs, um die gesamte .footer zu erstrecken */
+    background-color: white; /* Farbe des Strichs */
+    position: absolute;
+    left: 51%; /* Positionieren Sie den Strich in der Mitte der .footer horizontal */
+    transform: translateX(-50%); /* Zentrieren Sie den Strich horizontal */
+}
+
 
 .footer_txt_wrapper {
     width: 100%;
@@ -12,8 +25,8 @@
 
 .upper_footer_wrapper {
     height: 250px;
-    margin-top: -2px;
-    border-bottom: 3px solid white;
+    margin-top: -4px;
+    background-color: rgba(247, 153, 2, 0.03);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,12 +36,13 @@
     width: 500px;
     height: auto;
     margin-left: -200px;
-    margin-top: -40px;
+    margin-top: -140px;
     padding-top: 20px;
 }
 
 .upper_footer_txt_about_me {
     margin-left: 500px;
+    margin-top: -90px;
 }
 
 .footer_project_list {
@@ -42,7 +56,14 @@
 .footer_project_list li {
     width: 50%;
     box-sizing: border-box;
-    padding-top: 10px;
+    padding-top: 5px;
+}
+
+.footer_project_list li:before {
+    content: "•";
+    margin-right: 10px; /* Abstand zwischen Punkt und Text */
+    font-size: 30px;
+    color: white;
 }
 
 .footer_project_list li:hover {
@@ -53,6 +74,7 @@
 
 .downer_footer_wrapper {
     height: auto;
+    background-color: white;
     text-align: center;
 }
 
