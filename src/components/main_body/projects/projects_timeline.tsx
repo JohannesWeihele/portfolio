@@ -10,7 +10,7 @@ import VideoMobile from "../../video_mobile/video_mobile";
 import qt_video from '../../../resources/videos/praxissemester/qt_projekt_auto.mp4'
 import facial_mocap_video from '../../../resources/videos/facial_mocap/facial_mocap.mp4'
 import foodfill_video from '../../../resources/videos/foodfill/foodfill.mp4'
-import django_video from '../../../resources/videos/django_vaadin/django.mp4'
+import django_video from '../../../resources/videos/django_vaadin/vaadin.mp4'
 import vaadin_video from '../../../resources/videos/django_vaadin/vaadin.mp4'
 import angular_vuejs_video from '../../../resources/videos/angular_vuejs/angular_vuejs.mp4'
 import stateofdart_video from '../../../resources/videos/stateofdart/stateofdart.mp4'

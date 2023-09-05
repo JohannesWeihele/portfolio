@@ -154,7 +154,6 @@ const VideoHeader: FC<VideoHeaderProps> = ({ src , showFullscreenButton= true, s
                         onMouseLeave={handleMouseLeave}
                         ref={videoRef}
                         className={isMobile ? 'mobile' : `desktop ${zoomed_class}`}
-                        muted
                         disablePictureInPicture
                         loop
                         playsInline
