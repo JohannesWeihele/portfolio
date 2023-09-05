@@ -1,4 +1,5 @@
 import React, {FC} from "react";
+import Wave from "react-wavify";
 
 interface Timeline_longProps{
     name: string;

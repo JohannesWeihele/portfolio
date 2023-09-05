@@ -1,0 +1,97 @@
+.footer {
+    height: auto;
+    width: auto;
+    margin-top: 200px;
+}
+
+.footer_txt_wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(247, 153, 2, 0.26);
+}
+
+.upper_footer_wrapper {
+    height: 250px;
+    margin-top: -2px;
+    border-bottom: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upper_footer_txt_projects {
+    width: 500px;
+    height: auto;
+    margin-left: -200px;
+    margin-top: -40px;
+    padding-top: 20px;
+}
+
+.upper_footer_txt_about_me {
+    margin-left: 500px;
+}
+
+.footer_project_list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.footer_project_list li {
+    width: 50%;
+    box-sizing: border-box;
+    padding-top: 10px;
+}
+
+.footer_project_list li:hover {
+    color: #fd8c3f;
+    cursor: pointer;
+    animation: pulse 1s ease-in-out infinite;
+}
+
+.downer_footer_wrapper {
+    height: auto;
+    text-align: center;
+}
+
+.downer_footer_wrapper img:hover{
+    animation: pulse 1s ease-in-out infinite;
+}
+
+#footer_logo{
+    height: auto;
+    width: 120px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 250px;
+}
+
+#footer_xing{
+    height: auto;
+    width: 30px;
+    float: right;
+    margin-right: 50px;
+    margin-top: 30px;
+}
+
+#footer_linked_in{
+    height: auto;
+    width: 40px;
+    float: right;
+    margin-right: 50px;
+    margin-top: 25px;
+}
+
+#footer_about_me {
+    font-size: 25px;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+#footer_about_me:hover {
+    color: #fd8c3f;
+    cursor: pointer;
+    animation: pulse 1s ease-in-out infinite;
+}

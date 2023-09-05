@@ -3,6 +3,7 @@ import './App.css';
 import Header from "./components/header/header";
 import Main_Body from "./components/main_body/main_body";
 import { ParallaxProvider } from 'react-scroll-parallax'
+import Footer from "./components/footer/footer";
 
 const App = () => {
 
@@ -13,6 +14,7 @@ const App = () => {
                         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
                   <Header/>
                   <Main_Body/>
+                  <Footer/>
              </ParallaxProvider>
       </div>
   );

@@ -20,7 +20,6 @@ const MenuBar: FC = () => {
                 <li>Start</li>
                 <li onClick={scrollToProjects}>Projekte</li>
                 <li>Über mich</li>
-                <li>Kontaktiere mich</li>
             </ul>
         </div>
     );

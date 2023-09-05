@@ -27,6 +27,7 @@ import fa_mocap_scene_two from '../../../resources/images/fa_mocap_scene_2.jpg'
 
 import { AnimationOnScroll} from "react-animation-on-scroll";
 import { Carousel } from 'react-responsive-carousel';
+import Wave from 'react-wavify';
 
 import Timeline_long from "../timeline_long/timeline_long";
 import HorizontalLine from "../horizontal_line/horizontal_line";

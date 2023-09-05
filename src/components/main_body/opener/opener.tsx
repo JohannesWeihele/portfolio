@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Portrait from "../portrait";
 import Introduction from "../introduction";
 import landscape_background from "../../../resources/images/backgrounds/landscape.png"
@@ -7,20 +7,18 @@ import landscape_front_mirrored from "../../../resources/images/backgrounds/land
 import "../main_body.css"
 import { ParallaxBanner } from "react-scroll-parallax";
 import Tilt from "react-parallax-tilt";
-import {ClimbingBoxLoader} from "react-spinners";
 
-interface OpenerProps {
-    isLoading?: boolean;
-}
 
-const Opener: React.FC<OpenerProps> = ({isLoading= false}) => {
+interface OpenerProps {}
+
+const Opener: React.FC<OpenerProps> = () => {
     const [isMobileChecked, setIsMobileChecked] = useState(false);
     const [isMobileView, setIsMobileView] = useState(false);
 
     useEffect(() => {
         if (!isMobileChecked) {
             setIsMobileChecked(true);
-            setIsMobileView(window.innerWidth <= 768); // Set the threshold based on your design
+            setIsMobileView(window.innerWidth <= 768);
         }
     }, [isMobileChecked, isMobileView]);
 
@@ -39,12 +37,6 @@ const Opener: React.FC<OpenerProps> = ({isLoading= false}) => {
                         <Portrait />
                     </Tilt>
                     <Introduction />
-                    {isLoading && (
-                        <div className={"loader"}>
-                            <ClimbingBoxLoader color={"#fd8c3f"} size={6}/>
-                            <p className={"loader_text"}>Lädt schöne Dinge...</p>
-                        </div>
-                    )}
                 </div>
             </ParallaxBanner>
         </div>
