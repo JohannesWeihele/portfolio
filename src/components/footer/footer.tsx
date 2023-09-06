@@ -4,7 +4,7 @@ import Wave from "react-wavify";
 
 const Footer: React.FC = () => {
 
-    function scrollToProject(position: number): void {
+    function scrollToPosition(position: number): void {
         window.scrollTo({
             top: position,
             behavior: 'smooth',
@@ -25,26 +25,10 @@ const Footer: React.FC = () => {
                     </mask>
                 </defs>
             </Wave>
-            <div className={"footer_txt_wrapper"}>
-                <div className={"upper_footer_wrapper"}>
-                    <div className={"upper_footer_txt_projects"}>
-                        <p style={{fontSize: "25px", textAlign: "center", marginLeft: "-70px"}}>Projekte</p>
-                        <ul className={"footer_project_list"}>
-                            <li onClick={() => scrollToProject(1500)}>Digital Cockpit</li>
-                            <li onClick={() => scrollToProject(3200)}>Facial Motion Capture</li>
-                            <li onClick={() => scrollToProject(4900)}>FoodFill</li>
-                            <li onClick={() => scrollToProject(6600)}>Django vs. Vaadin</li>
-                            <li onClick={() => scrollToProject(8300)}>Angular vs. Vue.js</li>
-                            <li onClick={() => scrollToProject(10000)}>StateofDart</li>
-                            <li onClick={() => scrollToProject(11700)}>Fireprotect</li>
-                            <li onClick={() => scrollToProject(13400)}>Weitere Projekte</li>
-                        </ul>
-                    </div>
-                    <div className={"upper_footer_txt_about_me"}>
-                        <p id={"footer_about_me"}>Über mich</p>
-                    </div>
-                </div>
-                <div className={"downer_footer_wrapper"}>
+            <div className={"footer_back"}>
+                <h1 onClick={() => scrollToPosition(0)}>Zurück zum Anfang</h1>
+            </div>
+            <div className={"downer_footer_wrapper"}>
                     <img src={require('../../resources/logo/Logo_ohne.png')} alt={"Logo"} id={"footer_logo"}/>
                     <a href={"https://www.xing.com/profile/Johannes_Weihele2/cv"} target={"_blank"}>
                         <img src={require('../../resources/icons/xing_logo.png')} id={"footer_xing"}/>
@@ -54,7 +38,6 @@ const Footer: React.FC = () => {
                     </a>
                 </div>
             </div>
-        </div>
     );
 };
 

@@ -27,11 +27,4 @@ const EventsLoader = (props: JSX.IntrinsicAttributes & IContentLoaderProps) => (
     </ContentLoader>
 )
 
-EventsLoader.metadata = {
-    name: 'Sridhar Easwaran',
-    github: 'sridhareaswaran',
-    description: 'Events',
-    filename: 'EventsLoader',
-}
-
 export default EventsLoader

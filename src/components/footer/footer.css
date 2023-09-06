@@ -5,18 +5,6 @@
     position: relative;
 }
 
-.footer::before {
-    content: "";
-    display: block;
-    width: 2px; /* Breite des vertikalen Strichs */
-    height: 85%; /* Höhe des vertikalen Strichs, um die gesamte .footer zu erstrecken */
-    background-color: white; /* Farbe des Strichs */
-    position: absolute;
-    left: 51%; /* Positionieren Sie den Strich in der Mitte der .footer horizontal */
-    transform: translateX(-50%); /* Zentrieren Sie den Strich horizontal */
-}
-
-
 .footer_txt_wrapper {
     width: 100%;
     height: 100%;
@@ -32,50 +20,29 @@
     align-items: center;
 }
 
-.upper_footer_txt_projects {
-    width: 500px;
-    height: auto;
-    margin-left: -200px;
-    margin-top: -140px;
-    padding-top: 20px;
-}
-
-.upper_footer_txt_about_me {
-    margin-left: 500px;
-    margin-top: -90px;
-}
-
-.footer_project_list {
-    list-style-type: none;
-    padding: 0;
+.footer_back {
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: -110px;
 }
 
-.footer_project_list li {
-    width: 50%;
-    box-sizing: border-box;
-    padding-top: 5px;
-}
-
-.footer_project_list li:before {
-    content: "•";
-    margin-right: 10px; /* Abstand zwischen Punkt und Text */
-    font-size: 30px;
+.footer_back h1{
+    font-size: 20px;
     color: white;
 }
 
-.footer_project_list li:hover {
-    color: #fd8c3f;
-    cursor: pointer;
+.footer_back h1:hover {
     animation: pulse 1s ease-in-out infinite;
+    cursor: pointer;
+    color: #fd8c3f;
 }
 
 .downer_footer_wrapper {
     height: auto;
     background-color: white;
     text-align: center;
+    margin-top: 10px;
 }
 
 .downer_footer_wrapper img:hover{
@@ -84,10 +51,10 @@
 
 #footer_logo{
     height: auto;
-    width: 120px;
+    width: 140px;
     margin-top: 30px;
     margin-bottom: 30px;
-    margin-left: 250px;
+    margin-left: 180px;
 }
 
 #footer_xing{
@@ -104,16 +71,4 @@
     float: right;
     margin-right: 50px;
     margin-top: 25px;
-}
-
-#footer_about_me {
-    font-size: 25px;
-    padding: 20px;
-    border-radius: 25px;
-}
-
-#footer_about_me:hover {
-    color: #fd8c3f;
-    cursor: pointer;
-    animation: pulse 1s ease-in-out infinite;
 }
