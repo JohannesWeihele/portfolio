@@ -27,6 +27,7 @@ import fa_mocap_scene_two from '../../../resources/images/fa_mocap_scene_2.jpg'
 import life_is_strange from '../../../resources/images/life_is_strange.jpg'
 import qt_3d_studio from '../../../resources/images/qt_3d_studio.png'
 import facial_mocap_hardware from '../../../resources/images/facial_mocap_hardware.jpg'
+import foodfill_group from '../../../resources/images/foodfill_group.jpg'
 
 import { AnimationOnScroll} from "react-animation-on-scroll";
 import { Carousel } from 'react-responsive-carousel';
@@ -42,6 +43,14 @@ import Dachboden from "../../3D/dachboden";
 const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.stopPropagation();
 };
+
+function scrollToPosition(position: number): void {
+    window.scrollTo({
+        top: position,
+        behavior: 'smooth',
+    });
+};
+
 
 const Projects_Timeline: React.FC = () => {
 
@@ -116,7 +125,7 @@ const Projects_Timeline: React.FC = () => {
                                 </p><div className={"mobile_newLine"}><br/></div>
                                 <img className={"project_img"} src={digital_cockpit_picture_td}/><div className={"mobile_newLine"}><br/><br/></div>
                             </ExpandingList>
-                            <ExpandingList name={"Was ich gelernt habe"}>
+                            <ExpandingList name={"Was ich gelernt hab"}>
                                 <p className={"max_width_text"}>
                                     Das Praktikum im Adrive Living Lab bot mir eine ideale Gelegenheit eigenverantwortlich zu arbeiten und diente als wichtiger Wegweiser für meine darauffolgende Spezialisierung zur Software- und Webentwicklung. Die Kombination aus kreativer und technischer Entwicklung weckte in mir den Wunsch nach mehr wofür ich dem Hochschul-Labor sehr dankbar bin.
                                     Am Meisten beeindruckt hat mich während meines 20-wöchigen Praktikums das unglaubliche Team vom Adrive Living Lab, bestehend aus (damals) etwa 20 genialen Mitarbeitern. <br/><br/>
@@ -215,7 +224,7 @@ const Projects_Timeline: React.FC = () => {
                                     </div>
                                 </ExpandingList>
                             </ExpandingList>
-                            <ExpandingList name={"Was ich gelernt habe"}>
+                            <ExpandingList name={"Was ich gelernt hab"}>
                                 <p className={"max_width_text"}>
                                     Auch am Ende dieses Projekts hatte ich wieder jede Menge gelernt. Ich hatte die Herausforderung gemeistert mich in, mir völlig unbekannter Hardware einzuarbeiten und mit ihr möglichst professionell umzugehen. Wir haben uns in die, für uns zuvor unbekannte Entwicklungsumgebung der Unreal-Engine eingearbeitet und gelernt professionelle, digitale Welten mittels Blueprints zu erschaffen. Zudem habe ich erfahren, wie echtes Teamwork im Workflow eines größeren Projekts mit straffem Zeitplan aussehen kann.
                                 </p>
@@ -242,6 +251,42 @@ const Projects_Timeline: React.FC = () => {
                     <div className={'project_timeline_short'}/>
                     <VideoMobile src={foodfill_video} />
                     <ExpandingButton>
+                        <div>
+                            <div>
+                                <h1 style={{color: "black", fontFamily: "Agency FB", fontSize: "50px"}}>Bachelorarbeit: FoodFill</h1>
+                            </div>
+                            <ExpandingList name={"Über das Projekt"} open={true}>
+                                <p className={"max_width_text"}>
+                                    Nachdem ich bereits während des Projekts
+                                    <a onClick={() => scrollToPosition(1500)} style={{cursor: "pointer"}}> Digital Cockpit </a>
+                                     merkte, dass mir die Software-Entwicklung mehr liegt, als die Entwicklung von Videospielen, beschloss ich, dass meine Bachelorarbeit diesen Schwerpunkt in Form meiner ersten eigenen App weiter festigen sollte. Prof. Dr. Dreier der Hochschule Kempten schlug mir deshalb vor, eine Anwendung zur Steuerung und Überwachung eines 3D-gedruckten Abfüllautomaten des Projekts "FoodFill" entwickeln solle, was ich sofort dankend annahm.<br/><br/>
+                                    In Kooperation mit dem Fraunhofer Institut konstruierte das Forschungsinstitut
+                                    <a onClick={handleLinkClick}
+                                       href={"https://www.hs-kempten.de/klevertec"} target={"_blank"} rel={"noopener noreferrer"}><i> Klevertec</i>
+                                    </a> der Hochschule Kempten hier einen Automaten, der komplett aus dem 3D-Drucker erzeugt wird, um eine nachhaltige Lösung für kühlpflichtige Lebensmittel ohne den Einsatz von Verpackungsmaterial zu liefern.
+                                </p>
+                                <img className={"project_img"} src={foodfill_group} />
+                                <p className={"source_text"}>Quelle: https://www.hs-kempten.de/hochschule/aktuelles/default-bfc1402e07-127</p>
+                                <p className={"max_width_text"}>
+                                    Kunden des Automaten sollen hierzu zukünftig einfach ihre eigenen (Tupper-) Behälter in den Verkaufsmarkt mitnehmen und die individuell gewünschte Menge eines lokalen Lieferanten von Joghurt, Milchreis, Frischkäse etc. abfüllen und an der Kasse bezahlen können.
+                                </p>
+                            </ExpandingList>
+                            <ExpandingList name={"Usability-Engineering"}>
+
+                            </ExpandingList>
+                            <ExpandingList name={"Entwicklungsumgebung"}>
+
+                            </ExpandingList>
+                            <ExpandingList name={"Software-Architektur"}>
+
+                            </ExpandingList>
+                            <ExpandingList name={"Implementierung"}>
+
+                            </ExpandingList>
+                            <ExpandingList name={"Was ich gelernt hab"}>
+
+                            </ExpandingList>
+                        </div>
 
                     </ExpandingButton>
                 </AnimationOnScroll>

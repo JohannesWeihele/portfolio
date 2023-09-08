@@ -5,7 +5,7 @@ import './header.css';
 const MenuBar: FC = () => {
 
     const scrollToProjects = () => {
-        const scrollPosition = 790;
+        const scrollPosition = 1000;
         window.scrollTo({
             top: scrollPosition,
             behavior: 'smooth',

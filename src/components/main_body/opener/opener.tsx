@@ -32,7 +32,7 @@ const Opener: React.FC<OpenerProps> = () => {
                     { image: landscape_front, speed: 50, scale: [1, 1.5, 'easeIn'] },
                 ]}
             >
-                <div style={{ height: 1200 }} className={"introduction_body"}>
+                <div style={{ height: 1400 }} className={"introduction_body"}>
                     <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10}>
                         <Portrait />
                     </Tilt>

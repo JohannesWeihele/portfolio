@@ -232,7 +232,7 @@ p {
 
     .portrait {
         padding: 20px 0; /* Verringert den Innenabstand */
-        padding-top: 60px;
+        padding-top: 140px;
     }
 
     .portrait img {

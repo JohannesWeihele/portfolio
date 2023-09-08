@@ -24,7 +24,7 @@ const Introduction: FC = () => {
                     timer1 = null;
                     startAnimation2();
                 }
-            }, 75); // Geschwindigkeit der Animation (in Millisekunden)
+            }, 75);
         };
 
         const startAnimation2 = () => {
@@ -37,12 +37,16 @@ const Introduction: FC = () => {
                     setTimeout(() => {
                         index1 = 0;
                         index2 = 0;
-                        setAnimatedText1(""); // Zurücksetzen des ersten Texts
+                        setAnimatedText1("");
                         startAnimation1();
-                    }, 7500); // Nach 8 Sekunden Animation neu starten
+                    }, 7500);
                 }
-            }, 75); // Geschwindigkeit der Animation (in Millisekunden)
+            }, 75);
         };
+
+        // Willkommen auf meiner Portfolio-Website, einer Plattform, auf der ich stolz eine Auswahl meiner bisherigen Projekte präsentiere. Diese Projekte sind das engagierte Ergebnis während des Studiums zum Game-Engineer, sowie meiner erworbenen Fachkenntnisse als Web- und Software-Engineer im anschließenden Masterstudium.</p>
+        //                     <p className={"introduction_text"}>Begleite mich auf dieser spannenden Reise durch Codes und Designs, während ich dir meine Fähigkeiten und Kreativität demonstriere. Diese Timeline gewährt dir einen Einblick in die persönliche Entwicklung als Programmierer und zeigt meinen fortwährenden Wunsch, mich durch die unterschiedlichsten Technologien stetig weiterzuentwickeln. Tauche ein in diese digitale Welt und lass uns gemeinsam die unendlichen Möglichkeiten des Internets entdecken. </p>
+        //                     <p className={"introduction_final"}><b>Bist du bereit für unser nächstes Projekt? <span className="flame-emoji" role="img" aria-label="Flammen-Emote">🔥</span></b></p><br/><br/><br/><br/>
 
         startAnimation1();
 
@@ -65,8 +69,10 @@ const Introduction: FC = () => {
                 <div className={"introduction_text_container"}>
                     <h1 id={"intro_job_title "} style={{color: "white"}}>{animatedText1} </h1>
                     <h1 id={"intro_job_title"} style={{color: "#fd8c3f"}}>{animatedText2} <span className="invisible_writer_dot"></span></h1>
-                    <p className={"introduction_text"}>Willkommen auf meiner Portfolio-Website, einer Plattform, auf der ich stolz eine Auswahl meiner bisherigen Projekte präsentiere. Diese Projekte sind das engagierte Ergebnis während des Studiums zum Game-Engineer, sowie meiner erworbenen Fachkenntnisse als Web- und Software-Engineer im anschließenden Masterstudium.</p>
-                    <p className={"introduction_text"}>Begleite mich auf dieser spannenden Reise durch Codes und Designs, während ich dir meine Fähigkeiten und Kreativität demonstriere. Diese Timeline gewährt dir einen Einblick in die persönliche Entwicklung als Programmierer und zeigt meinen fortwährenden Wunsch, mich durch die unterschiedlichsten Technologien stetig weiterzuentwickeln. Tauche ein in diese digitale Welt und lass uns gemeinsam die unendlichen Möglichkeiten des Internets entdecken. </p>
+                    <p className={"introduction_text"}>
+                        Die transparente Darlegung meiner bisherigen Projekterfahrungen ist für mich von entscheidender Bedeutung, um einen authentischen Einblick in meine fachlichen Fähigkeiten zu gewähren. Auf dieser Plattform beabsichtige ich, einen detaillierten Überblick über meine bisherigen größeren Projekte zu präsentieren, die im Verlauf meines Bachelorstudiums als Game Engineer sowie meiner erworbenen Fachkenntnisse als Web- und Software Engineer im darauf folgenden Masterstudium entstanden sind.<br/><br/>
+                        Mein Ziel ist es, meine Kreativität zu demonstrieren und meine Herangehensweise zur Identifizierung und Umsetzung von Lösungen anhand von Software-Architekturen und Diagrammen zu verdeutlichen. Diese Chronologie ermöglicht es, meine kontinuierliche berufliche und persönliche Entwicklung als Programmierer zu verfolgen und zeigt meinen anhaltenden Ehrgeiz, mich kontinuierlich in unterschiedlichen Technologien weiterzuentwickeln.
+                    </p>
                     <p className={"introduction_final"}><b>Bist du bereit für unser nächstes Projekt? <span className="flame-emoji" role="img" aria-label="Flammen-Emote">🔥</span></b></p><br/><br/><br/><br/>
                 </div>
             </div>
