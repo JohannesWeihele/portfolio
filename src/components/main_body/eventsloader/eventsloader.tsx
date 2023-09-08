@@ -4,9 +4,9 @@ import {JSX} from 'react/jsx-runtime'
 
 const EventsLoader = (props: JSX.IntrinsicAttributes & IContentLoaderProps) => (
     <ContentLoader
-        width={700}
-        height={300}
-        viewBox="0 0 700 300"
+        width={2000}
+        height={1000}
+        viewBox="0 0 2000 1000"
         backgroundColor="#f5f5f5"
         foregroundColor="#dbdbdb"
         {...props}

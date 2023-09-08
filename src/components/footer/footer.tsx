@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
 
     return (
         <div className={"footer"}>
-            <Wave mask="url(#mask)" fill="#f79902" options={{height: 20}}>
+            <Wave mask="url(#mask)" fill="#f78902" options={{height: 20}}>
                 <defs>
                     <linearGradient id="gradient" gradientTransform="rotate(90)">
                         <stop offset="0" stopColor="white"/>
@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
                 </defs>
             </Wave>
             <div className={"footer_back"}>
-                <h1 onClick={() => scrollToPosition(0)}>Zurück zum Anfang</h1>
+                <p onClick={() => scrollToPosition(0)}>Zurück zum Anfang</p>
             </div>
             <div className={"downer_footer_wrapper"}>
                     <img src={require('../../resources/logo/Logo_ohne.png')} alt={"Logo"} id={"footer_logo"}/>

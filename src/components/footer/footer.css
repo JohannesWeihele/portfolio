@@ -24,15 +24,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -110px;
+    margin-top: -120px;
 }
 
-.footer_back h1{
-    font-size: 20px;
+.footer_back p{
+    font-size: 24px;
     color: white;
+    height: 75px;
+    line-height: 75px;
+    font-weight: bold;
+    white-space: nowrap;
 }
 
-.footer_back h1:hover {
+.footer_back p:hover {
     animation: pulse 1s ease-in-out infinite;
     cursor: pointer;
     color: #fd8c3f;
@@ -71,4 +75,18 @@
     float: right;
     margin-right: 50px;
     margin-top: 25px;
+}
+
+@media (max-width: 600px){
+
+    #footer_xing, #footer_linked_in{
+        position: absolute;
+        visibility: collapse;
+    }
+
+    #footer_logo{
+        margin-left: 20px;
+    }
+
+
 }
