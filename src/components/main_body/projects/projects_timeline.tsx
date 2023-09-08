@@ -3,6 +3,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import "./projects.css";
 import "animate.css/animate.min.css"
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import 'react-medium-image-zoom/dist/styles.css'
 
 //----------------Videos------------//
 import VideoHeader from "../../video_header/video_header";
@@ -28,6 +29,10 @@ import life_is_strange from '../../../resources/images/life_is_strange.jpg'
 import qt_3d_studio from '../../../resources/images/qt_3d_studio.png'
 import facial_mocap_hardware from '../../../resources/images/facial_mocap_hardware.jpg'
 import foodfill_group from '../../../resources/images/foodfill_group.jpg'
+import usability_engineering_lifecycle from '../../../resources/images/usability_engineering_lifecycle.jpg'
+import user_empathy_map from '../../../resources/images/empathy_map.jpg'
+import user_needs_table from '../../../resources/images/user_needs_table.jpg'
+import content_diagramm from '../../../resources/images/content_diagramm.jpg'
 
 import { AnimationOnScroll} from "react-animation-on-scroll";
 import { Carousel } from 'react-responsive-carousel';
@@ -39,6 +44,7 @@ import ExpandingList from "../expanding_list/expanding_list";
 import Dachboden_Stuff from "../../3D/dachboden_stuff";
 import {Canvas} from "@react-three/fiber";
 import Dachboden from "../../3D/dachboden";
+import Zoom from "react-medium-image-zoom";
 
 const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.stopPropagation();
@@ -268,11 +274,88 @@ const Projects_Timeline: React.FC = () => {
                                 <img className={"project_img"} src={foodfill_group} />
                                 <p className={"source_text"}>Quelle: https://www.hs-kempten.de/hochschule/aktuelles/default-bfc1402e07-127</p>
                                 <p className={"max_width_text"}>
-                                    Kunden des Automaten sollen hierzu zukünftig einfach ihre eigenen (Tupper-) Behälter in den Verkaufsmarkt mitnehmen und die individuell gewünschte Menge eines lokalen Lieferanten von Joghurt, Milchreis, Frischkäse etc. abfüllen und an der Kasse bezahlen können.
+                                    Die hungrigen Kunden des Automaten sollen hierzu zukünftig einfach ihre eigenen (Tupper-) Behälter in den Verkaufsmarkt mitnehmen und die individuell gewünschte Menge eines lokalen Lieferanten von Joghurt, Milchreis, Frischkäse etc. abfüllen und an der Kasse bezahlen können. Die von mir entwickelte App sollte darüber hinaus eine zusätzliche Hilfestellung der einzelnen Benutzergruppen des Systems bereitstellen, um die individuellen User-Needs der Kunden, Mitarbeiter und des Marktleiters möglichst benutzerfreundlich zu erfüllen.<br/>
+                                    Alle Produkt- sowie Herstellerinformationen sollten außerdem über einen Cloud-Speicher in Echtzeit abgerufen werden können, um so stets die aktuellen Informationen zu den jeweiligen Produkten innerhalb der App griffbereit zu halten. So ergab sich der offizielle Titel meiner Bachelorarbeit:
+                                </p>
+                                <p className={"highlighted_text"}>
+                                    "Usability-Engineering und Entwicklung eines Prototyps einer Android-App mit Cloudanbindung zur Überwachung und Steuerung eines Lebensmittel-Abfüllautomaten"
+                                </p>
+                                <p className={"max_width_text"}>
+                                    Mithilfe des Usability-Engineerings sollten hierzu innerhalb der Anforderungsanalyse explizit die einzelnen, individuellen Nutzerwünsche der respektiven Nutzergruppen herausgearbeitet werden, um diese im weiteren Verlauf genauer spezifizieren und implementieren zu können.
                                 </p>
                             </ExpandingList>
                             <ExpandingList name={"Usability-Engineering"}>
+                                <p className={"max_width_text"}>
+                                    Bei der Erarbeitung der Software mittels des Usability-Engineerings orientierte ich mich an bestehenden Praktiken des Design-Thinking Konzepts, sowie einigen gängigen Praktiken des Usability-Engineering Lifecycles.
+                                </p>
+                                <Zoom>
+                                    <img className={"project_img"} src={usability_engineering_lifecycle}/>
+                                </Zoom>
+                                <p className={"max_width_text"}>
+                                    Im Zuge meines Bachelorarbeit setzte ich mir demnach zum Ziel, einen vollständigen Iterationszyklus des Lifecycles mit den Kategorien
+                                    <ul>
+                                        <li>Analyse,</li>
+                                        <li>Modellierung,</li>
+                                        <li>Spezifikation,</li>
+                                        <li>Realisierung,</li>
+                                        <li>und Evaluation</li>
+                                    </ul>
+                                    zu durchlaufen, um so den Prototyp einer vollumfänglichen, nutzerorientierten Android-Applikation zu entwickeln. Da die Gesamtlänge meiner Bachelorarbeit am Ende stolze <b>144 Seiten </b> betrug, sollen die einzelnen Unterkategorien im Folgenden lediglich grob angeschnitten werden, um das grundlegende Konzept der Entwicklung zu verdeutlichen.
+                                </p>
+                                <ExpandingList name={"Analyse"}>
+                                    <p className={"max_width_text"}>
+                                        Während der Anforderungsanalyse gliederte ich die Benutzergruppen des FoodFill-Abfüllautomaten zunächst in Kunden, Mitarbeiter und Marktleiter eines Lebensmittel-Marktes. Im Anschluss entwarf ich für jede dieser Gruppen einen Fragebogen mit potenziellen Nutzerbedürfnissen und -wünschen, um daraus die Priorisierung der einzelnen User-Needs ermitteln zu können. Beispielsweise konnten die Probanden bei den User-Needs
+                                        <ul>
+                                            <li><i>Als <b>Kunde</b> eines Biosupermarktes möchte ich mich über den Hersteller meines gewünschten Produktes informieren können.</i></li><br/>
+                                            <li><i>Als <b>Mitarbeiter</b> eines Biosupermarktes möchte ich mich über die aktuelle Temperatur der Produkte, die eine Kühlung benötigen informieren können.</i></li><br/>
+                                            <li><i>Als <b>Marktleiter</b> eines Biosupermarktes möchte ich mich über den aktuellen Bestand/Restbestand des jeweiligen Produkts informieren können.</i></li>
+                                        </ul>
+                                        zwischen den Kategorien von <i>"Stimme überhaupt nicht zu"</i> bis <i>"Stimme voll und ganz zu"</i> die Priorisierung der einzelnen Wünsche konkretisieren, wodurch sich am Ende der Auswertung 65 positive User-Needs ergaben, die bei der weiteren Entwicklung des Systems berücksichtigt werden müssen.
+                                    </p>
+                                </ExpandingList>
+                                <ExpandingList name={"Modellierung"}>
+                                    <p className={"max_width_text"}>
+                                        Bei der Modellierung entwickelte ich anschließend zunächst <i>User-Empathy-Maps</i>, um jede Benutzergruppe aus den Perspektiven
+                                        <ul>
+                                            <li>Sees,</li>
+                                            <li>Hears,</li>
+                                            <li>Thinks & Feels</li>
+                                            <li>Says & Does</li>
+                                            <li>und Pain & Gains</li>
+                                        </ul>
+                                        zu betrachten und sich dadurch als Entwickler besser in die Person hineinversetzen zu können. Hier als Beispiel die Empathy-Map für Kunden:
+                                    </p>
+                                    <Zoom>
+                                        <img className={"project_img"} src={user_empathy_map}/>
+                                    </Zoom>
+                                    <p className={"max_width_text"}>
+                                        Die einzelnen, positiven <i>User-Needs</i> werden anschließend in Tabellen weiter spezifiziert, um so im weiteren Entwicklungsverlauf unkompliziert Systemanforderungen extrahieren zu können, die sich aus den User-Needs ergeben. <br/>
+                                        Beispielsweise:
+                                    </p>
+                                    <Zoom>
+                                        <img className={"project_img"} src={user_needs_table}/>
+                                    </Zoom>
+                                    <p className={"max_width_text"}>
+                                        Im letzten Schritt der Modellierung wurden für die herausgearbeiteten Nutzergruppen darüber hinaus individuelle <i>Personae</i> angefertigt, um jeder Gruppe ein visuelles, stereotypisches Gesicht geben zu können.
+                                    </p>
+                                </ExpandingList>
+                                <ExpandingList name={"Spezifikation"}>
+                                    <p className={"max_width_text"}>
+                                        Innerhalb der Spezifikation sollten jetzt noch <i>User-Szenarien</i> angefertigt werden, in denen die einzelnen Benutzergruppen beispielhaft zu den jeweiligen Nutzerbedürfnissen gelangen könnten und wie diese User-Needs im Anschluss durch eine Interaktion mit dem System befriedigt werden können.
+                                        Als Ergebnis erhält der Entwickler dadurch einen Einblick in einige realitätsnahe Alltagsszenarien des Anwenders und eine Auflistung aller Funktionen, die benötigt werden, um eben diese erarbeiteten Wünsche zu erfüllen. <br/><br/>
+                                        Mit den <i>Essential Use-Case-Tabellen</i> können diese Funktionen im letzten Schritt dann aufgegliedert und mit benötigten Reaktionen des Systems verknüpft werden, um so zu jeder Aktion des Nutzers eine entsprechende Verarbeitung der Software herausarbeiten zu können.
+                                    </p>
+                                </ExpandingList>
+                                <ExpandingList name={"Realisierung"}>
+                                    <p className={"max_width_text"}>
+                                        Die gesamte Vorarbeit der vergangenen Punkte des Usability-Engineerings findet innerhalb der Realisierung dann seinen Höhepunkt, wenn die eigentliche Implementierung der Software erarbeitet werden kann. Mithilfe eines detaillierten <i>Content-Diagramms</i> können die einzelnen Funktionen anschließend in passende Views gegliedert und miteinander verknüpft werden, sodass die App möglichst intuitiv und die Wege zwischen den Funktionen nach Möglichkeit minimal ausfällt.<br/><br/>
+                                        Die Views wurden im Anschluss mithilfe von <i>Adobe Xd</i> in Form eines Mockups spezifiziert, sowie Buttons, Beschriftungen etc. möglichst passend platziert, um das Nutzererlebnis der Anwender zu maximieren.
+                                    </p>
 
+                                </ExpandingList>
+                                <ExpandingList name={"Evaluation"}>
+
+                                </ExpandingList>
                             </ExpandingList>
                             <ExpandingList name={"Entwicklungsumgebung"}>
 

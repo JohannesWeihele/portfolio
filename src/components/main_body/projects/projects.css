@@ -404,6 +404,14 @@
     padding-right: 15px;
 }
 
+.highlighted_text{
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    color: #fd8c3f;
+    font-size: 20px;
+}
+
 .project_img{
     width: 98%;
     border-radius: 20px;
@@ -658,6 +666,11 @@ a {
     .max_width_text{
         padding: 0px;
         font-size: 16px;
+    }
+
+    .highlighted_text{
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     .square-button{

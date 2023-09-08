@@ -23,6 +23,7 @@
     "react-content-loader": "^6.2.1",
     "react-dom": "^18.2.0",
     "react-expand-animated": "^1.0.2",
+    "react-medium-image-zoom": "^5.1.8",
     "react-parallax": "^3.5.1",
     "react-parallax-tilt": "^1.7.143",
     "react-responsive": "^9.0.2",
