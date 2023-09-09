@@ -33,6 +33,25 @@ import usability_engineering_lifecycle from '../../../resources/images/usability
 import user_empathy_map from '../../../resources/images/empathy_map.jpg'
 import user_needs_table from '../../../resources/images/user_needs_table.jpg'
 import content_diagramm from '../../../resources/images/content_diagramm.jpg'
+import essential_use_case from '../../../resources/images/essential_use_case.jpg'
+import mockup_one from '../../../resources/images/mockup_one.jpg'
+import mockup_two from '../../../resources/images/mockup_two.jpg'
+import mockup_three from '../../../resources/images/mockup_three.jpg'
+import mockup_four from '../../../resources/images/mockup_four.jpg'
+import mockup_five from '../../../resources/images/mockup_five.jpg'
+import mockup_six from '../../../resources/images/mockup_six.jpg'
+import mockup_seven from '../../../resources/images/mockup_seven.jpg'
+import foodfill_architecture_one from '../../../resources/images/foodfill_architecture_one.jpg'
+import foodfill_architecture_two from '../../../resources/images/foodfill_architecture_two.jpg'
+import foodfill_architecture_three from '../../../resources/images/foodfill_architecture_three.jpg'
+import foodfill_architecture_four from '../../../resources/images/foodfill_architecture_four.jpg'
+import foodfill_architecture_firestore from '../../../resources/images/foodfill_architecture_firestore.jpg'
+import foodfill_logo from '../../../resources/images/foodfill_logo.png'
+
+//------------------GIFS---------------//
+import step_one from '../../../resources/gifs/step_one.gif'
+import step_two from '../../../resources/gifs/step_two.gif'
+import step_three from '../../../resources/gifs/step_three.gif'
 
 import { AnimationOnScroll} from "react-animation-on-scroll";
 import { Carousel } from 'react-responsive-carousel';
@@ -343,34 +362,133 @@ const Projects_Timeline: React.FC = () => {
                                     <p className={"max_width_text"}>
                                         Innerhalb der Spezifikation sollten jetzt noch <i>User-Szenarien</i> angefertigt werden, in denen die einzelnen Benutzergruppen beispielhaft zu den jeweiligen Nutzerbedürfnissen gelangen könnten und wie diese User-Needs im Anschluss durch eine Interaktion mit dem System befriedigt werden können.
                                         Als Ergebnis erhält der Entwickler dadurch einen Einblick in einige realitätsnahe Alltagsszenarien des Anwenders und eine Auflistung aller Funktionen, die benötigt werden, um eben diese erarbeiteten Wünsche zu erfüllen. <br/><br/>
-                                        Mit den <i>Essential Use-Case-Tabellen</i> können diese Funktionen im letzten Schritt dann aufgegliedert und mit benötigten Reaktionen des Systems verknüpft werden, um so zu jeder Aktion des Nutzers eine entsprechende Verarbeitung der Software herausarbeiten zu können.
+                                        Mit den <i>Essential Use-Case-Tabellen</i> können die Funktionen der User-Szenarien im letzten Schritt aufgegliedert und mit benötigten Reaktionen des Systems verknüpft werden, um so zu jeder Aktion des Nutzers eine entsprechende Verarbeitung der Software herausarbeiten zu können. Hier ein Beispiel:
                                     </p>
+                                    <Zoom>
+                                        <img className={"project_img"} src={essential_use_case}/>
+                                    </Zoom>
                                 </ExpandingList>
                                 <ExpandingList name={"Realisierung"}>
                                     <p className={"max_width_text"}>
-                                        Die gesamte Vorarbeit der vergangenen Punkte des Usability-Engineerings findet innerhalb der Realisierung dann seinen Höhepunkt, wenn die eigentliche Implementierung der Software erarbeitet werden kann. Mithilfe eines detaillierten <i>Content-Diagramms</i> können die einzelnen Funktionen anschließend in passende Views gegliedert und miteinander verknüpft werden, sodass die App möglichst intuitiv und die Wege zwischen den Funktionen nach Möglichkeit minimal ausfällt.<br/><br/>
-                                        Die Views wurden im Anschluss mithilfe von <i>Adobe Xd</i> in Form eines Mockups spezifiziert, sowie Buttons, Beschriftungen etc. möglichst passend platziert, um das Nutzererlebnis der Anwender zu maximieren.
+                                        Die gesamte Vorarbeit der vergangenen Kategorien eines Iterationszykluses findet innerhalb der Realisierung nun seinen Höhepunkt, wenn die eigentliche Implementierung der Software erarbeitet werden kann <i>(siehe Software-Architektur)</i>. Mithilfe eines detaillierten <i>Content-Diagramms</i> können die einzelnen Funktionen nun in passende Aktivitäten gegliedert und miteinander verknüpft werden, sodass die App möglichst intuitiv und die Wege zwischen den Funktionen nach Möglichkeit minimal ausfällt. <br/>
+                                        Hier ein Ausschnitt des Diagramms:<br/><br/>
+                                        <Zoom>
+                                            <img className={"project_img"} src={content_diagramm}/>
+                                        </Zoom><br/>
+                                        Die konkretisierten Views wurden im Anschluss mithilfe von <i>Adobe Xd</i> in Form eines Mockups spezifiziert, sowie Buttons, Beschriftungen etc. anhand eines zuvor entwickelten <i>Papier-Prototyps</i> möglichst intuitiv platziert, um das Nutzererlebnis der Anwender zu maximieren. Am Ende entstand daraus dieses finale Konzept einer UI, welches im Anschluss als Vorlage für die Programmierung des Systems verwendet werden würde:
                                     </p>
-
+                                    <Zoom>
+                                        <img className={"project_img"} src={mockup_one}/>
+                                    </Zoom><br/>
+                                    <Zoom>
+                                        <img className={"project_img"} src={mockup_two}/>
+                                    </Zoom><br/>
+                                    <Zoom>
+                                        <img className={"project_img"} src={mockup_three}/>
+                                    </Zoom><br/>
+                                    <Zoom>
+                                        <img className={"project_img"} src={mockup_four}/>
+                                    </Zoom><br/>
+                                    <Zoom>
+                                        <img className={"project_img"} src={mockup_five}/>
+                                    </Zoom><br/>
+                                    <Zoom>
+                                        <img className={"project_img"} src={mockup_six}/>
+                                    </Zoom><br/>
+                                    <Zoom>
+                                        <img className={"project_img"} src={mockup_seven}/>
+                                    </Zoom><br/>
                                 </ExpandingList>
                                 <ExpandingList name={"Evaluation"}>
-
+                                    <p className={"max_width_text"}>
+                                        Die Evaluation soll am Ende eines Iterationszykluses des Usability-Engineering Lifecyclces aufschluss darüber geben, ob die Nutzerbedürfnisse mit den daraus erarbeiteten Funktionalitäten der Software übereinstimmen.
+                                        Mithilfe zuvor angefertigter User-Szenarien konnten die einzelnen Benutzergruppen nun die verschiedenen Funktionen testen, sowie anhand des danach geführten Interviews ihre eigene Meinung und Verbesserungsvorschläge anbringen.<br/>
+                                        Die daraus ermittelten Optimierungen dienen anschließend als Entwicklungsgrundlage für den zweiten Iterationszyklus.
+                                    </p>
                                 </ExpandingList>
                             </ExpandingList>
                             <ExpandingList name={"Entwicklungsumgebung"}>
-
+                                <p className={"max_width_text"}>
+                                    <p className={"highlighted_text"}>
+                                        Android-Studio
+                                    </p>
+                                    Die Entwicklungsumgebung zur Implementierung der Android-App konnte ich selbst wählen und entschied mich nach kurzer Recherche für Android-Studio und Java. Android-Studio umfasst eine großflächige Dokumentation über die Herangehensweise zur professionellen Entwicklung einer eigenen App, zudem gab es jede Menge Youtube-Tutorials im Netz, daher empfand ich die Nutzung der IDE als recht einsteigerfreundlich.
+                                    <p className={"highlighted_text"}>
+                                        Adobe Xd
+                                    </p>
+                                    Wie bereits innerhalb <i>Usability-Engineering</i> beschrieben, nutzte ich für die Entwicklung eines Mockups der zukünftigen Android-App, Adobe Xd der
+                                    <a onClick={handleLinkClick}
+                                       href={"https://www.adobe.com/de/creativecloud.html"} target={"_blank"} rel={"noopener noreferrer"}><i> Adobe Creative Cloud. </i>
+                                    </a>
+                                    Dafür entschied ich mich weil ich gelesen hatte, dass dies eine der profesisonellsten Methoden innerhalb diverser Unternehmen ist, um Mockups zu konstruieren. Notwendige, visuelle Elemente designte ich zudem mithilfe von Adobe Illustrator und Adobe Photoshop, in welche ich mich ebenfalls einarbeitete.
+                                    <p className={"highlighted_text"}>
+                                        Google Firebase Firestore
+                                    </p>
+                                    Da die Applikation darüber hinaus einen Cloud-Speicher für Produkte, Hersteller, Mitarbeiterdaten etc. erhalten sollte, suchte ich nach passende Anbieter die eine Echtzeit-Abfrage ermöglichen würden. Neben AWS bin ich dabei auf Google Firebase gestoßen und habe mich letztendlich für Firestore entschieden, da die Integration des Services in Android-Studio Projekte recht intuitiv erschien.
+                                    <p className={"highlighted_text"}>
+                                        Blender
+                                    </p>
+                                    Wieso gehört eine 3D-Modellierungssoftware zu den Entwicklungsumgebungen einer Android-App frägst du dich? Naja, innerhalb der Android-App sollte unter anderem auch eine Anleitung zur Nutzung des FoodFill-Automaten gewährleistet werden.
+                                    Hier kam ich auf die Idee, das vorhandene 3D-Druckmodell des Abfüllautomaten dafür zu nutzen eine dreidimensionale Anleitung in Form von GIFs anzufertigen. Hier das Ergebnis:
+                                </p>
+                                <div className={"multi_pictures_container"}>
+                                    <img className={"project_img"} src={step_one}/>
+                                    <img className={"project_img"} src={step_two}/>
+                                    <img className={"project_img"} src={step_three}/>
+                                </div><br/>
                             </ExpandingList>
                             <ExpandingList name={"Software-Architektur"}>
-
-                            </ExpandingList>
-                            <ExpandingList name={"Implementierung"}>
-
+                                <p className={"max_width_text"}>
+                                    <p className={"highlighted_text"}>
+                                        Android-App
+                                    </p>
+                                    Die Software-Architektur der Android-App erstreckt sich über vier verschiedene Ebenen, die die grundlegende Struktur der Anwendung beschreiben. Die <b>Aktivitätsebene</b> definiert dabei zunächst die wesentlichen Views bzw. Activities der Software, sowie die Interaktion mit den jeweils dazugehörigen XML-Skripten:<br/><br/>
+                                    <Zoom>
+                                        <img className={"project_img"} src={foodfill_architecture_one}/>
+                                    </Zoom><br/>
+                                    In der nächsten Ebene werden die benötigten <i>RecyclerViews</i> der einzelnen Aktivitäten dargestellt. Innerhalb der RecyclerViews werden dynamische Listen generiert, die sich meistens aus den Datenabfragen des Firestore-Speichers ergeben. Jeder Recycler besteht dabei grundsätzlich aus einer Item-Klasse für die Struktur, einem XML-Skript für das Design und einer Adapter-Klasse, welche die beiden Elemente miteinander verknüpft:<br/><br/>
+                                    <Zoom>
+                                        <img className={"project_img"} src={foodfill_architecture_two}/>
+                                    </Zoom><br/>
+                                    Innerhalb der dritten Ebene werden im Anschluss alle Hilfsklassen definiert, die von den verschiedenen Aktivitäten benötigt werden, um Funktionen wie Info-Dialoge, oder aber den Verbindungsaufbau zur Firestore-Datenbank gewährleisten zu können:<br/><br/>
+                                    <Zoom>
+                                        <img className={"project_img"} src={foodfill_architecture_three}/>
+                                    </Zoom><br/>
+                                    Die letzte Ebene fügt jetzt noch alle Dialoge hinzu, die in einem neuen Fenster, jedoch innerhalb der aktuellen Aktivität aufgerufen werden:<br/><br/>
+                                    <Zoom>
+                                        <img className={"project_img"} src={foodfill_architecture_four}/>
+                                    </Zoom><br/>
+                                    So ergibt sich das vollumfängliche Abbild der Anwendung in Form eines Diagramms, welches den gesamten Funktionsumfang der Anwendung repräsentiert.
+                                    <p className={"highlighted_text"}>
+                                        Google Firestore
+                                    </p>
+                                    Die Architektur des Google Firebase Firestore-Speichers gliedert sich in insgesamt drei Unterkategorien
+                                    <ul>
+                                        <li>Events,</li>
+                                        <li>Manufacturers,</li>
+                                        <li>und Products.</li>
+                                    </ul>
+                                    Da jegliche Informationen aus der Datenbank in Echtzeit an die Applikation übertragen werden, können Änderungen an Produkten etc. sofort innerhalb der Software eingesehen werden, wodurch zu jeder Zeit eine Bereitstellung der aktuellen Informationen gewährleistet werden kann:<br/><br/>
+                                    <Zoom>
+                                        <img className={"project_img"} src={foodfill_architecture_firestore}/>
+                                    </Zoom><br/>
+                                </p>
                             </ExpandingList>
                             <ExpandingList name={"Was ich gelernt hab"}>
-
+                                <p className={"max_width_text"}>
+                                    Die Entwicklung der FoodFill-App zur Steuerung und Überwachung des FoodFill-Abfüllautomaten war mit Abstand das umfangreichste Projekt, welches ich zu dieser Zeit umgesetzt hatte. Aus 144 Seiten Bachelorarbeit, mehreren Tausend Zeilen Code, einer dreidimensionalen Bedienungsanleitung, sowie einem kompletten Iterationszykluses des Usability-Engineerings nahm ich vor allem eine Sache mit: <b>Stress- und Frustrationstoleranz.</b><br/><br/>
+                                    Ich lernte mit Android Studio und dessen Mechaniken zur Entwicklung moderner Smartphone-Applikationen umzugehen und dabei meine Java-Kenntnisse weiter zu festigen. Der wöchentliche Austausch mit den Kollegen des Klevertecs Kempten zeigte mir, wie eine nutzerorientierte Software-Entwicklung aussehen kann, die die Wünsche und Bedürfnisse der späteren Anwender zum Mittelpunkt der Entwicklung macht. Ich lernte XML kennen und darüber hinaus, wie man den externen Dienst eines Cloud-Speichers in den Workflow der Anwendung integrieren konnte.
+                                    Ich arbeitete mich grob in einige Dienste der Creative Cloud von Adobe ein und designte daraus eine professionelle Benutzeroberfläche mithilfe des, mir zuvor vollständig unbekannten Mockup-Tools <i>Adobe Xd</i>.
+                                    Zuletzt lernte ich, wie man eine wissenschaftliche Arbeit verfasst und eine fundierte Evaluation innerhalb einer Usability-Studie durchführte.<br/><br/>
+                                    Doch auch charakterlich konnte ich mich innerhalb dieses halben Jahres deutlich weiterentwickeln. Meine Bachelorarbeit im Lockdown der Corona-Hochphase anzufertigen, ohne die Möglichkeiten eines persönlichen, sozialen Austauschs genießen oder mich zum Abschalten mit Freunden treffen zu können, nagte ziemlich oft an meinen Grenzen. Jedoch ganz nach dem Motto
+                                    <p className={"highlighted_text"}>
+                                        Was dich nicht umbringt, macht dich stärker
+                                    </p>
+                                    bin ich davon überzeugt, dass diese Ausnahmesituation meine mentale Stärke weiter gefestigt hat. Darüber hinaus konnte ich dem Ganzen auch etwas positives abgewinnen, denn ich glaube nicht, dass meine Bachelorarbeit ohne Lockdown in diesem Umfang möglich gewesen wäre.<br/>
+                                    <img className={"project_img"} src={foodfill_logo}/>
+                                </p>
                             </ExpandingList>
                         </div>
-
                     </ExpandingButton>
                 </AnimationOnScroll>
             </div>
