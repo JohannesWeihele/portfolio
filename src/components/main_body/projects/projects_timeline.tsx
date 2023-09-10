@@ -47,6 +47,10 @@ import foodfill_architecture_three from '../../../resources/images/foodfill_arch
 import foodfill_architecture_four from '../../../resources/images/foodfill_architecture_four.jpg'
 import foodfill_architecture_firestore from '../../../resources/images/foodfill_architecture_firestore.jpg'
 import foodfill_logo from '../../../resources/images/foodfill_logo.png'
+import canyourunit from '../../../resources/images/canyourunit.jpg'
+import canyourunit_django_architecture from '../../../resources/images/canyourunit_django_architecture.jpg'
+import canyourunit_vaadin_architecture from '../../../resources/images/canyourunit_vaadin_architecture.jpg'
+import canyourunit_final from '../../../resources/images/canyourunit_final.jpg'
 
 //------------------GIFS---------------//
 import step_one from '../../../resources/gifs/step_one.gif'
@@ -495,7 +499,7 @@ const Projects_Timeline: React.FC = () => {
             <div className={"timeline_wrapper"}>
                 <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInLeftBig"} animateOnce={true}>
                     <Timeline_long name={"Master"} year={"2021"} side={"left"}/>
-                    <HorizontalLine side={"right"} sameLine={true} name={"Vaadin"} icon_name_one={"vaadin_icon"} icon_name_two={"java_icon"}/>
+                    <HorizontalLine side={"right"} sameLine={true} name={"Vaadin"} icon_name_one={"vaadin_icon"} icon_name_two={"java_icon"} icon_name_three={"spring_boot"}/>
                     <HorizontalLine side={"left"} sameLine={true} name={"Django"} icon_name_one={"django_icon"} icon_name_two={"python_icon"}/>
                     <div>
                         <p className={"vs-container"}>vs.</p>
@@ -514,7 +518,104 @@ const Projects_Timeline: React.FC = () => {
                         </div>
                     </Carousel>
                     <ExpandingButton>
-
+                        <div>
+                            <div>
+                                <h1 style={{color: "black", fontFamily: "Agency FB", fontSize: "50px"}}>Can You Play It?</h1>
+                                <h1 style={{color: "black", fontFamily: "Agency FB", fontSize: "30px", marginTop: "-50px"}}>Django vs. Vaadin</h1>
+                            </div>
+                            <ExpandingList name={"Über das Projekt"} open={true}>
+                                <p className={"max_width_text"}>
+                                    Nachdem ich bereits im Bachelor meine Leidenschaft für die Software-Entwicklung entdeckt hatte, wollte ich mich innerhalb meines Masterstudiums nun noch weiter auf die Entwicklung von Software fokussieren.
+                                    Hierzu wechselte ich von der Hochschule Kempten zur (nun) Technischen Hochschule in Augsburg, da dort ein Informatik-Schwerpunkt zum Software-Engineer angeboten wurde.<br/><br/>
+                                    Ein wesentlicher Bestandteil zum Software-Engineer war dabei unter anderem die Fähigkeit zur Webentwicklung. Während viele <i>normale</i> Informatik-Studiengänge bereits im Bachelorstudium einige Basics zu HTML, CSS und Java- bzw. Typescript erlernt hatten, lag der Fokus des Game-Engineers vermehrt bei der Computergrafik- und Physik-Programmierung.
+                                    Aus diesem Grund beschloss ich, mich in den kommenden Semestern vermehrt der Webentwicklung zu widmen, um einige bekannte Technologien zur Entwicklung von Websites kennenzulernen.
+                                </p>
+                                <p className={"max_width_text"}>
+                                    Mit dem Projekt <i>Can You Play It</i> konnte ich dabei mein ersten Fullstack-Erfahrungen eines Web-Projekts machen. Als Vorbild der Idee sah ich dabei das Tool
+                                    <a onClick={handleLinkClick}
+                                       href={"https://www.systemrequirementslab.com/cyri"} target={"_blank"} rel={"noopener noreferrer"}><i> Can You Run it </i>
+                                    </a>
+                                     vom SystemRequirementsLab. <br/><br/>
+                                </p>
+                                <img className={"project_img"} src={canyourunit}/>
+                                <p className={"max_width_text"}>
+                                    Die Software scannt dabei die aktuelle System-Hardware des Nutzers und vergleicht sie im Anschluss mit dem zuvor angegebenen Spiel. Sollten alle Hardware-Anforderung in Bezug auf
+                                    <ul>
+                                        <li>Grafikkarte,</li>
+                                        <li>Prozessor,</li>
+                                        <li>Arbeitsspeicher,</li>
+                                        <li>Festplattenspeicher,</li>
+                                        <li>oder aber dem Betriebssystem</li>
+                                    </ul>
+                                    mit den Mindest- sowie den empfohlenen Anforderungen des Entwicklerstudios übereinstimmen, erhält der Anwender grünes Licht und kann sich das Spiel ohne Probleme kaufen. Sollte die Hardware jedoch zu schlecht sein, erspart sich der Spieler spätere Enttäuschungen, da das Spiel nicht funktionieren würde.<br/><br/>
+                                    Nach diesem Prinzip wollte ich auch Can You Play It? im Rahmen zweier Wahlpflichtfächer entwickeln und dabei die beiden Frameworks Django und Vaadin kennenlernen, sowie meine Programmierfähigkeiten mit Python und Java weiter festigen.
+                                </p>
+                            </ExpandingList>
+                            <ExpandingList name={"Entwicklungsumgebung"}>
+                                <p className={"max_width_text"}>
+                                    <p className={"highlighted_text"}>
+                                        Django
+                                    </p>
+                                    Als Entwicklungsumgebung für das Django-Projekt wählte ich Jetbrains PyCharm, da wir hier eine kostenlose Lizenz der Hochschule erhielten. Darüber hinaus nutzte ich eine SQLite-Datenbank, um auf alle wichtigen Hardware-Informationen zugreifen zu können. Über das Object Relational Mapping (ORM) des Backend-Frameworks konnten hier direkte Abfragen auf die Datenbank erfolgen, ohne diese über einen externen Backend-Server liefern zu müssen.
+                                    <p className={"highlighted_text"}>
+                                        Vaadin
+                                    </p>
+                                    Auch für das Vaadin-Projekt nutzte ich als IDE das Java-Äquivalent zu PyCharm - IntelliJ Idea. Hier diente mir eine H2-Datenbank als Grundlage, um alle Hardwarekomponenten und Spiele abzuspeichern, die mit dem System des Anwenders verglichen werden können. Darüber hinaus wurde für als Backend für alle HTTP-Abfragen und Security-Aspekte wie Token-Überprüfungen, Spring-Boot verwendet.
+                                </p>
+                            </ExpandingList>
+                            <ExpandingList name={"Software-Architektur"}>
+                                <p className={"max_width_text"}>
+                                    Da sich die Funktionsweise der beiden Frameworks grundlegend voneinander unterscheiden, soll im Folgenden die verschiedenen Herangehensweisen der Projekte mithilfe von Diagrammen verdeutlicht werden.<br/><br/>
+                                </p>
+                                    <ExpandingList name={"Django"}>
+                                        <p className={"max_width_text"}>
+                                            Das Template-System von Django bot mir eine vielseitige Schnittstelle, um die von mir gewünschte Benutzeroberfläche in HTML und CSS umzusetzen. Hierbei entwickelte ich insgesamte 5 verschiedene Templates, für
+                                            <ul>
+                                                <li>Login,</li>
+                                                <li>Profilübersicht,</li>
+                                                <li>Registrierung,</li>
+                                                <li>Videospiel-Suche,</li>
+                                                <li>und Videospiel-Vergleich</li>
+                                            </ul>
+                                            um die verschiedenen Funktionen separieren und so eine strukturierte Website gestalten zu können. Jedes Template greift dabei auf die benötigten Datenbank-Einträge zu, welche zuvor innerhalb der SQLite-Datenbank abgespeichert worden sind. Der anschließende, (vereinfachte) System-Vergleich erfolgt dann über einen Index-Vergleich der hinterlegten Hardware-Komponenten.<br/><br/>
+                                            <Zoom>
+                                                <img className={"project_img"} src={canyourunit_django_architecture}/>
+                                            </Zoom><br/>
+                                            Während eine RTX 3080 beispielsweise auf Platz 26 angelegt worden ist, liegt eine GTX 780 auf Platz 10. Jedes in der Datenbank angelegte Videospiel erhält dadurch eine Reihe von Fremdschlüssel der Indizes zu den jeweiligen Datenbank-Einträgen der Hardware-Komponenten. Das angelegte Systemprofil des Nutzers enthält, innerhalb des Datenbank-Eintrags darüber hinaus ebenfalls eine Reihe von Indizes der hinterlegten Hardware.<br/><br/>
+                                            Sollte der Anwender nun sein hinterlegtes System mit einem Videospiel vergleichen wollen, werden lediglich die Indizes miteinander verglichen. Da die Datenbank-Einträge von <i>Sehr schlecht</i> bis <i>Sehr gut</i> angeordnet sind, muss innerhalb der Logik lediglich überprüft werden, ob
+                                            <p className={"highlighted_text"}>
+                                                Komponentenindex X {'>'}= Komponentenindex Y
+                                            </p> ist, um die Voraussetzungen für das Spiel zu erfüllen.
+                                            Hierbei wurden sowohl für die Mindest-, als auch für die empfohlenen Anforderungen der einzelnen Spiele eigene Datenbank-Einträge angelegt, um jedes hinterlegte Spiel mit der persönlichen Hardware vergleichen zu können.
+                                        </p>
+                                    </ExpandingList>
+                                    <ExpandingList name={"Vaadin"}>
+                                        <p className={"max_width_text"}>
+                                            Da ich ein Gefühl der Eigenheiten verschiedener Web-Frameworks bekommen wollte, entschloss ich, die selbe Website noch einmal zu entwickeln, diesmal jedoch mit Vaadin als Frontend- und Spring Boot als Backend-Framework. Am deutlichsten fiel mir dabei auf, dass sich Vaadin vollständig auf Java als Entwicklungsschnittstelle für's Frontend reduzierte. Auch wenn Java zu meinen persönlichen Programmier-Favoriten gehört, empfand ich die Entwicklung mit Django deutlich intuitiver als mit Vaadin.<br/><br/>
+                                            Nichtsdestotrotz adaptierte ich meine bisherige Vorgehensweise auf die eigene Funktionsweise von Vaadin und entwarf somit folgende Architektur:<br/><br/>
+                                            <Zoom>
+                                                <img src={canyourunit_vaadin_architecture} className={"project_img"}/>
+                                            </Zoom><br/>
+                                            Statt Templates hatte ich nun Views, die innerhalb von Java-Klassen die verschiedenen Seiten der Webanwendung darstellte. Die Hardware-Komponenten wurden darüber hinaus jeweils in eine Bean-Klasse, sowie einem Interface definiert, auf denen die Models
+                                            <ul>
+                                                <li>User,</li>
+                                                <li>und PC_Configuration</li>
+                                            </ul>
+                                            zugreifen, um die jeweilige Systen-Hardware aus der H2-Datenbank abzubilden. Die Logik des Hardware-Vergleichs erfolgt anschließend ebenfalls über einen Index-Vergleich der Datenbank-Einträge. So konnte ich auch hier eine vollumfängliche Version der Webanwendung <i>Can You Play It?</i> konstruieren und komplett neue Erfahrungswerte zur Webentwicklung mitnehmen.
+                                        </p>
+                                    </ExpandingList>
+                            </ExpandingList>
+                            <ExpandingList name={"Was ich gelernt hab"}>
+                                <p className={"max_width_text"}>
+                                    Das Projekt Can You Play It? bot mir die perfekte Gelegenheit, um einen ersten, jedoch umfangreichen Einblick in die Welt eines Webentwicklers zu erhalten. Ich lernte zwei beliebte Web-Frameworks zur Entwicklung professioneller Webseiten kennen und konnte mich fundiert in die individuellen Technologien einarbeiten, um daraus selbstständig meine ersten beiden Webanwendungen zu konstruieren.<br/><br/>
+                                    Auch wenn der Fokus der Entwicklung bislang hauptsächlich noch im Frontend lag, empfand ich meine ersten beiden Web-Projekte als einen wegweisenden Schritt näher zum professionellen Software- und Web-Engineer. Ich lernte HTML und CSS kennen und schaffte es, mein, zuvor in Adobe Xd entwickeltes Mockup völlig identisch mit der Markup- und Stylesheet-Sprache nachzubilden.
+                                </p>
+                                <img className={"project_img"} src={canyourunit_final}/>
+                                <p className={"max_width_text"}>
+                                    Dadurch war ich fest motiviert meine Fähigkeiten als Web- und Software-Engineer in den kommenden Semestern noch weiter auszubauen und neue Erfahrungen mit anderen Web-Frameworks zu sammeln.
+                                </p>
+                            </ExpandingList>
+                        </div>
                     </ExpandingButton>
                 </AnimationOnScroll>
             </div>
@@ -533,7 +634,34 @@ const Projects_Timeline: React.FC = () => {
                     <div className={'project_timeline_short'}/>
                     <VideoHeader src={angular_vuejs_video} />
                     <ExpandingButton>
+                        <div>
+                            <h1 style={{color: "black", fontFamily: "Agency FB", fontSize: "50px"}}>FoodSupport</h1>
+                            <h1 style={{color: "black", fontFamily: "Agency FB", fontSize: "30px", marginTop: "-50px"}}>Angular vs. Vue.js</h1>
+                        </div>
+                        <ExpandingList name={"Über das Projekt"} open={true}>
+                            <p className={"max_width_text"}>
+                                Nachdem ich im vergangenen Semester meine ersten beiden Webseiten entwickelte hatte, war ich fest entschlossen, mit den kommenden Wahlpflichtfächern weitere Erfahrungswerte innerhalb der Web-Entwicklung zu sammeln.
+                                Da die letzte Thematik aufgrund der jüngeren Zielgruppe optisch noch etwas "verspielter" war, wollte ich mich diesmal zudem in einer schlichteren Website mit einer älteren Zielgruppe versuchen.<br/><br/>
+                                Darüber hinaus entschied ich mich dazu meine Erfahrungen mit gängigen Praktiken wie
+                                <ul>
+                                    <li>Single-Page Webanwendungen,</li>
+                                    <li>Typescript oder Javascript, </li>
+                                    <li>HTTP-Anfragen, </li>
+                                    <li>Local-Storage, </li>
+                                    <li>oder einem Responsive-Design</li>
+                                </ul>
+                                weiter auszubauen, um eine moderne, flexible Website zu entwickeln. Ein eigener, professioneller Webshop wirkte dabei als die nächste, perfekte Herausforderung, um all diese Praktiken in einem neuen Projekt zu vereinen.
+                            </p>
+                        </ExpandingList>
+                        <ExpandingList name={"Entwicklungsumgebung"}>
 
+                        </ExpandingList>
+                        <ExpandingList name={"Software-Architektur"}>
+
+                        </ExpandingList>
+                        <ExpandingList name={"Was ich gelernt hab"}>
+
+                        </ExpandingList>
                     </ExpandingButton>
                 </AnimationOnScroll>
             </div>

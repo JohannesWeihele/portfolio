@@ -44,10 +44,6 @@ const Introduction: FC = () => {
             }, 75);
         };
 
-        // Willkommen auf meiner Portfolio-Website, einer Plattform, auf der ich stolz eine Auswahl meiner bisherigen Projekte präsentiere. Diese Projekte sind das engagierte Ergebnis während des Studiums zum Game-Engineer, sowie meiner erworbenen Fachkenntnisse als Web- und Software-Engineer im anschließenden Masterstudium.</p>
-        //                     <p className={"introduction_text"}>Begleite mich auf dieser spannenden Reise durch Codes und Designs, während ich dir meine Fähigkeiten und Kreativität demonstriere. Diese Timeline gewährt dir einen Einblick in die persönliche Entwicklung als Programmierer und zeigt meinen fortwährenden Wunsch, mich durch die unterschiedlichsten Technologien stetig weiterzuentwickeln. Tauche ein in diese digitale Welt und lass uns gemeinsam die unendlichen Möglichkeiten des Internets entdecken. </p>
-        //                     <p className={"introduction_final"}><b>Bist du bereit für unser nächstes Projekt? <span className="flame-emoji" role="img" aria-label="Flammen-Emote">🔥</span></b></p><br/><br/><br/><br/>
-
         startAnimation1();
 
         return () => {
@@ -70,8 +66,8 @@ const Introduction: FC = () => {
                     <h1 id={"intro_job_title "} style={{color: "white"}}>{animatedText1} </h1>
                     <h1 id={"intro_job_title"} style={{color: "#fd8c3f"}}>{animatedText2} <span className="invisible_writer_dot"></span></h1>
                     <p className={"introduction_text"}>
-                        Die transparente Darlegung der bisherigen Projekterfahrungen ist für mich von entscheidender Bedeutung, um einen authentischen Einblick in die fachlichen Fähigkeiten eines Entwicklers zu erhalten. Auf dieser Plattform beabsichtige ich, eben diesen Einblick in Form meiner bisherigen Projekte zu präsentieren, die im Verlauf meines Bachelorstudiums zum Game-Engineer, sowie meiner erworbenen Fachkenntnisse als Web- und Software-Engineer im darauf folgenden Masterstudium entstanden sind.<br/><br/>
-                        Mein Ziel ist es, meine Kreativität zu demonstrieren und meine Herangehensweise zur Identifizierung und Umsetzung von Lösungen anhand von Software-Architekturen und Diagrammen zu verdeutlichen. Diese Chronologie ermöglicht es mir außerdem, meine kontinuierliche berufliche und persönliche Entwicklung als Programmierer zu verfolgen und zeigt meinen anhaltenden Ehrgeiz, mich kontinuierlich mit neuen und unterschiedlichsten Technologien weiterzuentwickeln.
+                        Zwei bis drei intensive Bewerbungsgespräche bilden oft die einzige Möglichkeit und Entscheidungsgrundlage, um ein konkretes Urteil darüber zu fällen, ob der Bewerbende für das Unternehmen, sowie die angebotene Stelle geeignet ist oder nicht. Eine transparente Darlegung der bisherigen Projekterfahrungen ist daher von entscheidender Bedeutung, um einen authentischen Einblick in die fachlichen Fähigkeiten eines Entwicklers zu erhalten. Auf dieser Plattform beabsichtige ich, eben diesen Einblick in Form meiner bisherigen Projekte zu erleichtern, die im Verlauf meines Bachelorstudiums zum Game-Engineer, sowie meiner erworbenen Fachkenntnisse als Web- und Software-Engineer im darauf folgenden Masterstudium entstanden sind.<br/><br/>
+                        Mein Ziel ist es dir zu zeigen wer ich bin, meine Kreativität zu demonstrieren und meine Herangehensweise zur Identifizierung und Umsetzung von Lösungen anhand von Software-Architekturen und Diagrammen zu verdeutlichen. Diese Chronologie ermöglicht es mir außerdem, meine kontinuierliche berufliche und persönliche Entwicklung als Programmierer zu verfolgen und zeigt meinen anhaltenden Ehrgeiz, mich kontinuierlich mit neuen und den unterschiedlichsten Technologien weiterzuentwickeln.
                     </p>
                     <p className={"introduction_final"}><b>Bist du bereit für unser nächstes Projekt? <span className="flame-emoji" role="img" aria-label="Flammen-Emote">🔥</span></b></p><br/><br/><br/><br/>
                 </div>
