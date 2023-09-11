@@ -115,7 +115,7 @@ const Projects_Timeline: React.FC = () => {
                                     Mit einer 210° umfassenden 9 auf 4 Meter großen Leinwand bildet das Hochschul-Labor durch ein hochmodernes, präzises und realistisches System das indviduelle Fahrgefühl seiner Tester auf einer hochgenauen Bewegungsplattform nach.<div className={"mobile_newLine"}><br/><br/></div>
                                 </p>
                                 <div className={"project_video"}>
-                                    <VideoHeader src={adrive_video} showPlayButton={true} zoomed={false}/>
+                                    <VideoHeader src={adrive_video} zoomed={false}/>
                                 </div>
                                 <p className={"source_text"}>Quelle: https://www.youtube.com/watch?v=c1Wo7ZtoK2Q</p>
                             </ExpandingList>
