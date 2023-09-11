@@ -26,7 +26,6 @@ const VideoHeader: FC<VideoHeaderProps> = ({
     const imgRef = useRef<HTMLImageElement>(null);
     const progressBarRef = useRef<HTMLInputElement>(null);
     const isMobile = useMediaQuery({ maxWidth: 767 });
-    const [isLoading, setIsLoading] = useState(true);
     const [isPauseVideo, setIsPauseVideo] = useState(true);
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
@@ -66,7 +65,6 @@ const VideoHeader: FC<VideoHeaderProps> = ({
     };
 
     const handleLoadedData = () => {
-        setIsLoading(false);
         setDuration(videoRef.current?.duration || 0);
     };
 
@@ -156,12 +154,6 @@ const VideoHeader: FC<VideoHeaderProps> = ({
 
     return (
         <div className={isSmartphoneVideo ? 'video-mobile' : 'video-header'}>
-            {isLoading && (
-                <div className="loading-overlay">
-                    <ClimbingBoxLoader size={10} color={'#fd8c3f'} />
-                    <span className={'loading_text'}>Lädt schöne Dinge...</span>
-                </div>
-            )}
             <div className={'video_container'}>
                 <div>
                     <video
