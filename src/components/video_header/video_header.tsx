@@ -26,6 +26,7 @@ const VideoHeader: FC<VideoHeaderProps> = ({
     const imgRef = useRef<HTMLImageElement>(null);
     const progressBarRef = useRef<HTMLInputElement>(null);
     const isMobile = useMediaQuery({ maxWidth: 767 });
+    const [isLoading, setIsLoading] = useState(true);
     const [isPauseVideo, setIsPauseVideo] = useState(true);
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
@@ -65,6 +66,7 @@ const VideoHeader: FC<VideoHeaderProps> = ({
     };
 
     const handleLoadedData = () => {
+        setIsLoading(false);
         setDuration(videoRef.current?.duration || 0);
     };
 
@@ -152,44 +154,59 @@ const VideoHeader: FC<VideoHeaderProps> = ({
         };
     }, []);
 
+    useEffect(() => {
+        const element = videoRef.current;
+        if (!element) return;
+
+        element.addEventListener('canplaythrough', handleLoadedData);
+
+        return () => {
+            element.removeEventListener('canplaythrough', handleLoadedData);
+        };
+    }, []);
+
     return (
         <div className={isSmartphoneVideo ? 'video-mobile' : 'video-header'}>
-            <div className={'video_container'}>
-                <div>
-                    <video
+            {isLoading && (
+                <div className="loading-overlay">
+                    <ClimbingBoxLoader size={10} color={'#fd8c3f'} />
+                    <span className={'loading_text'}>Lädt schöne Dinge...</span>
+                </div>
+            )}
+            <div>
+                <video
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                    ref={videoRef}
+                    className={isMobile ? 'mobile' : `desktop ${zoomed_class}`}
+                    disablePictureInPicture
+                    loop
+                    playsInline
+                    onLoadedData={handleLoadedData}
+                >
+                    <source src={src} type="video/mp4" />
+                </video>
+                <input
+                    className={"video-progress-bar"}
+                    type="range"
+                    min={0}
+                    max={duration}
+                    value={currentTime}
+                    step={0.1}
+                    onChange={handleProgressBarChange}
+                    ref={progressBarRef}
+                />
+            </div>
+            {showPlayButton && (
+                <div className={'player_button'} onClick={handlePlayerClick}>
+                    <img
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
-                        ref={videoRef}
-                        className={isMobile ? 'mobile' : `desktop ${zoomed_class}`}
-                        disablePictureInPicture
-                        loop
-                        playsInline
-                        onLoadedData={handleLoadedData}
-                    >
-                        <source src={src} type="video/mp4" />
-                    </video>
-                    <input
-                        className={"video-progress-bar"}
-                        type="range"
-                        min={0}
-                        max={duration}
-                        value={currentTime}
-                        step={0.1}
-                        onChange={handleProgressBarChange}
-                        ref={progressBarRef}
+                        ref={imgRef}
+                        src={isPauseVideo ? player_icon : pause_icon}
                     />
                 </div>
-                {showPlayButton && (
-                    <div className={'player_button'} onClick={handlePlayerClick}>
-                        <img
-                            onMouseEnter={handleMouseEnter}
-                            onMouseLeave={handleMouseLeave}
-                            ref={imgRef}
-                            src={isPauseVideo ? player_icon : pause_icon}
-                        />
-                    </div>
-                )}
-            </div>
+            )}
         </div>
     );
 };
