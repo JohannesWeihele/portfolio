@@ -7,7 +7,6 @@ import 'react-medium-image-zoom/dist/styles.css'
 
 //----------------Videos------------//
 import VideoHeader from "../../video_header/video_header";
-import VideoMobile from "../../video_mobile/video_mobile";
 import qt_video from '../../../resources/videos/praxissemester/qt_projekt_auto.mp4'
 import facial_mocap_video from '../../../resources/videos/facial_mocap/facial_mocap_neu.mp4'
 import foodfill_video from '../../../resources/videos/foodfill/foodfill.mp4'
@@ -51,6 +50,7 @@ import canyourunit from '../../../resources/images/canyourunit.jpg'
 import canyourunit_django_architecture from '../../../resources/images/canyourunit_django_architecture.jpg'
 import canyourunit_vaadin_architecture from '../../../resources/images/canyourunit_vaadin_architecture.jpg'
 import canyourunit_final from '../../../resources/images/canyourunit_final.jpg'
+import bringmeister_img from '../../../resources/images/bringmeister.jpg'
 
 //------------------GIFS---------------//
 import step_one from '../../../resources/gifs/step_one.gif'
@@ -115,7 +115,7 @@ const Projects_Timeline: React.FC = () => {
                                     Mit einer 210° umfassenden 9 auf 4 Meter großen Leinwand bildet das Hochschul-Labor durch ein hochmodernes, präzises und realistisches System das indviduelle Fahrgefühl seiner Tester auf einer hochgenauen Bewegungsplattform nach.<div className={"mobile_newLine"}><br/><br/></div>
                                 </p>
                                 <div className={"project_video"}>
-                                    <VideoHeader src={adrive_video} showFullscreenButton={false} showPlayButton={true} zoomed={false}/>
+                                    <VideoHeader src={adrive_video} showPlayButton={true} zoomed={false}/>
                                 </div>
                                 <p className={"source_text"}>Quelle: https://www.youtube.com/watch?v=c1Wo7ZtoK2Q</p>
                             </ExpandingList>
@@ -207,7 +207,7 @@ const Projects_Timeline: React.FC = () => {
                                    Um die Gesichtsanimationen umzusetzen, wurde mir dazu ein professionelles Facial Motion Capture-System der Hochschule anvertraut. Hierzu malte ich mir zunächst einige Punkte ins Gesicht, die als Orientierungspunkte für die darauffolgende Umsetzung mittels Blender dienten. Dort konnten die Markierungen dann mit den Gesichts-„Bones“ des Charakters verbunden werden, um so die Bewegungsmuster meines Gesichtes zu imitieren. Auf diese Weise konnte ich meine eigenen Gesichtszüge auf Tim übertragen und die entsprechenden Animationen innerhalb der Engine unter bestimmten Spiel-Bedingungen aktivieren.
                                 </p><br/>
                                 <div className={"project_video"}>
-                                    <VideoHeader src={fa_mocap_emotions_video} showFullscreenButton={false} zoomed={false}/><br/>
+                                    <VideoHeader src={fa_mocap_emotions_video} zoomed={false}/><br/>
                                 </div>
                             </ExpandingList>
                             <ExpandingList name={"Entwicklung Szenerie & Dachboden"}>
@@ -278,7 +278,7 @@ const Projects_Timeline: React.FC = () => {
             <div className={"project_wrapper"}>
                 <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"} animateOnce={true}>
                     <div className={'project_timeline_short'}/>
-                    <VideoMobile src={foodfill_video} />
+                    <VideoHeader src={foodfill_video} isSmartphoneVideo={true} />
                     <ExpandingButton>
                         <div>
                             <div>
@@ -622,8 +622,8 @@ const Projects_Timeline: React.FC = () => {
             <div className={"timeline_wrapper"}>
                 <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} animateOnce={true}>
                     <Timeline_long name={"Master"} year={"2022"} side={"right"}/>
-                    <HorizontalLine side={"right"} sameLine={true} name={"Vue.js"} icon_name_one={"vuejs_icon"} icon_name_two={"typescript_icon"}/>
-                    <HorizontalLine side={"left"} sameLine={true} name={"Angular"} icon_name_one={"angular_icon"} icon_name_two={"typescript_icon"}/>
+                    <HorizontalLine side={"right"} sameLine={true} name={"Vue.js"} icon_name_one={"vuejs_icon"} icon_name_two={"typescript_icon"} icon_name_three={"fast_api"}/>
+                    <HorizontalLine side={"left"} sameLine={true} name={"Angular"} icon_name_one={"angular_icon"} icon_name_two={"typescript_icon"} icon_name_three={"express_js"}/>
                     <div>
                         <p className={"vs-container"}>vs.</p>
                     </div>
@@ -641,7 +641,7 @@ const Projects_Timeline: React.FC = () => {
                         <ExpandingList name={"Über das Projekt"} open={true}>
                             <p className={"max_width_text"}>
                                 Nachdem ich im vergangenen Semester meine ersten beiden Webseiten entwickelte hatte, war ich fest entschlossen, mit den kommenden Wahlpflichtfächern weitere Erfahrungswerte innerhalb der Web-Entwicklung zu sammeln.
-                                Da die letzte Thematik aufgrund der jüngeren Zielgruppe optisch noch etwas "verspielter" war, wollte ich mich diesmal zudem in einer schlichteren Website mit einer älteren Zielgruppe versuchen.<br/><br/>
+                                Da die letzte Thematik eines Hardware-Vergleichs, aufgrund der jüngeren Zielgruppe optisch noch etwas "verspielter" war, wollte ich mich diesmal in einer schlichteren Website mit einer älteren Zielgruppe versuchen.<br/><br/>
                                 Darüber hinaus entschied ich mich dazu meine Erfahrungen mit gängigen Praktiken wie
                                 <ul>
                                     <li>Single-Page Webanwendungen,</li>
@@ -650,11 +650,21 @@ const Projects_Timeline: React.FC = () => {
                                     <li>Local-Storage, </li>
                                     <li>oder einem Responsive-Design</li>
                                 </ul>
-                                weiter auszubauen, um eine moderne, flexible Website zu entwickeln. Ein eigener, professioneller Webshop wirkte dabei als die nächste, perfekte Herausforderung, um all diese Praktiken in einem neuen Projekt zu vereinen.
+                                weiter auszubauen, um eine moderne, flexible Website zu entwickeln. Ein eigener, professioneller Webshop wirkte dabei als die nächste, perfekte Herausforderung, um all diese Praktiken in einem neuen Projekt zu vereinen. Hierbei entschied ich mich für einen Lebensmittel-Lieferservice ganz nach dem Vorbild von
+                                <a onClick={handleLinkClick}
+                                   href={"https://www.bringmeister.de/"} target={"_blank"} rel={"noopener noreferrer"}><i> Bringmeister.de. </i>
+                                </a><br/><br/>
+                                <img className={"project_img"} src={bringmeister_img}/>
+                                <p className={"source_text"}>
+                                    Quelle: https://www.bringmeister.de/ueber-uns/muenchen
+                                </p>
+                                Die Lebensmittel können dort einfach im Warenkorb hinzugefügt, ein entsprechender Lieferzeitraum der Lebensmittel angegeben und die Bestellung anschließend abgeschlossen werden. Der eigene Lieferservice von Bringmeister liefert im Anschluss die Lebensmittel innerhalb des angegebenen Zeitfensters. Ganz nach diesem Prinzip war die Idee von <i>FoodSupport</i> geboren.
                             </p>
                         </ExpandingList>
                         <ExpandingList name={"Entwicklungsumgebung"}>
+                            <p className={"max_width_text"}>
 
+                            </p>
                         </ExpandingList>
                         <ExpandingList name={"Software-Architektur"}>
 
