@@ -40,10 +40,11 @@ const VideoHeader: FC<VideoHeaderProps> = ({
             <div>
                 <video
                     controls
-                    preload={'metadata'}
+                    preload={'auto'}
                     ref={videoRef}
                     className={isMobile ? 'mobile' : `desktop ${zoomed_class}`}
                     loop
+                    disablePictureInPicture
                     onError={handleVideoError}
                     playsInline
                 >

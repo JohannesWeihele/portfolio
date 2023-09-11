@@ -93,7 +93,7 @@ const Projects_Timeline: React.FC = () => {
                 </AnimationOnScroll>
             </div>
             <div className={"project_wrapper"}>
-                <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"} animateOnce={true}>
+                <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"} animateOnce={true} >
                     <div className={'project_timeline_short'}/>
                     <VideoHeader src={qt_video} />
                     <ExpandingButton>
