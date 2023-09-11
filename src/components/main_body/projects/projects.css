@@ -425,6 +425,9 @@
 
 .multi_pictures_container img{
     padding: 10px;
+    max-width: 50%;
+    height: auto;
+    max-height: 450px;
 }
 
 .close_button_text{
