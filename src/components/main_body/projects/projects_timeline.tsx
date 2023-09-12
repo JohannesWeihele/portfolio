@@ -16,6 +16,7 @@ import angular_vuejs_video from '../../../resources/videos/angular_vuejs/angular
 import stateofdart_video from '../../../resources/videos/stateofdart/stateofdart.mp4'
 import adrive_video from '../../../resources/videos/praxissemester/adrive_video.mp4'
 import fa_mocap_emotions_video from '../../../resources/videos/facial_mocap/fa_mocap_emotions.mp4'
+import stateofdart_ad from '../../../resources/videos/stateofdart/stateofdart_ad.mp4'
 
 //----------------Bilder-------------//
 import digital_cockpit_picture from '../../../resources/images/digital_cockpit_picture.png'
@@ -51,6 +52,16 @@ import canyourunit_django_architecture from '../../../resources/images/canyourun
 import canyourunit_vaadin_architecture from '../../../resources/images/canyourunit_vaadin_architecture.jpg'
 import canyourunit_final from '../../../resources/images/canyourunit_final.jpg'
 import bringmeister_img from '../../../resources/images/bringmeister.jpg'
+import foodsupport_architecture_angular from '../../../resources/images/foodsupport_architecture_angular.jpg'
+import foodsupport_architecture_vuejs from '../../../resources/images/foodsupport_architecture_vuejs.jpg'
+import foodsupport_architecture_fastapi from '../../../resources/images/foodsupport_architecture_fastapi.jpg'
+import foodsupport_architecture_product from '../../../resources/images/foodsupport_architecture_product.jpg'
+import foodsupport_architecture_user from '../../../resources/images/foodsupport_architecture_user.jpg'
+import foodsupport_architectur_express from '../../../resources/images/foodsupport_architecture_express.jpg'
+import foodsupport_final from '../../../resources/images/foodsupport_final.jpg'
+import stateofdart_architecture from '../../../resources/images/stateofdart_architecture.jpg'
+import stateofdart_prototype from '../../../resources/images/stateofdart_prototype.jpg'
+import stateofdart_app_prototype from '../../../resources/images/stateofdart_app_prototype.jpg'
 
 //------------------GIFS---------------//
 import step_one from '../../../resources/gifs/step_one.gif'
@@ -375,7 +386,7 @@ const Projects_Timeline: React.FC = () => {
                                 <ExpandingList name={"Realisierung"}>
                                     <p className={"max_width_text"}>
                                         Die gesamte Vorarbeit der vergangenen Kategorien eines Iterationszykluses findet innerhalb der Realisierung nun seinen Höhepunkt, wenn die eigentliche Implementierung der Software erarbeitet werden kann <i>(siehe Software-Architektur)</i>. Mithilfe eines detaillierten <i>Content-Diagramms</i> können die einzelnen Funktionen nun in passende Aktivitäten gegliedert und miteinander verknüpft werden, sodass die App möglichst intuitiv und die Wege zwischen den Funktionen nach Möglichkeit minimal ausfällt. <br/>
-                                        Hier ein Ausschnitt des Diagramms:<br/><br/>
+                                        Hier eine Übersicht des gesamte Content-Diagramms:<br/><br/>
                                         <Zoom>
                                             <img className={"project_img"} src={content_diagramm}/>
                                         </Zoom><br/>
@@ -488,7 +499,7 @@ const Projects_Timeline: React.FC = () => {
                                     <p className={"highlighted_text"}>
                                         Was dich nicht umbringt, macht dich stärker
                                     </p>
-                                    bin ich davon überzeugt, dass diese Ausnahmesituation meine mentale Stärke weiter gefestigt hat. Darüber hinaus konnte ich dem Ganzen auch etwas positives abgewinnen, denn ich glaube nicht, dass meine Bachelorarbeit ohne Lockdown in diesem Umfang möglich gewesen wäre.<br/>
+                                    bin ich davon überzeugt, dass diese Ausnahmesituation meine mentale Stärke weiter gefestigt hat. Darüber hinaus konnte ich dem Lockdown auch etwas positives abgewinnen, denn ich glaube nicht, dass meine Bachelorarbeit ohne Lockdown in diesem Umfang möglich gewesen wäre.<br/>
                                     <img className={"project_img"} src={foodfill_logo}/>
                                 </p>
                             </ExpandingList>
@@ -527,7 +538,7 @@ const Projects_Timeline: React.FC = () => {
                                 <p className={"max_width_text"}>
                                     Nachdem ich bereits im Bachelor meine Leidenschaft für die Software-Entwicklung entdeckt hatte, wollte ich mich innerhalb meines Masterstudiums nun noch weiter auf die Entwicklung von Software fokussieren.
                                     Hierzu wechselte ich von der Hochschule Kempten zur (nun) Technischen Hochschule in Augsburg, da dort ein Informatik-Schwerpunkt zum Software-Engineer angeboten wurde.<br/><br/>
-                                    Ein wesentlicher Bestandteil zum Software-Engineer war dabei unter anderem die Fähigkeit zur Webentwicklung. Während viele <i>normale</i> Informatik-Studiengänge bereits im Bachelorstudium einige Basics zu HTML, CSS und Java- bzw. Typescript erlernt hatten, lag der Fokus des Game-Engineers vermehrt bei der Computergrafik- und Physik-Programmierung.
+                                    Ein wesentlicher Bestandteil zum Software-Engineer war dabei unter anderem die Fähigkeit zur Webentwicklung. Während viele <i>normale</i> Informatik-Studiengänge bereits im Bachelorstudium einige Basics zu HTML, CSS und Java- bzw. TypeScript erlernt hatten, lag der Fokus des Game-Engineers vermehrt bei der Computergrafik- und Physik-Programmierung.
                                     Aus diesem Grund beschloss ich, mich in den kommenden Semestern vermehrt der Webentwicklung zu widmen, um einige bekannte Technologien zur Entwicklung von Websites kennenzulernen.
                                 </p>
                                 <p className={"max_width_text"}>
@@ -645,7 +656,7 @@ const Projects_Timeline: React.FC = () => {
                                 Darüber hinaus entschied ich mich dazu meine Erfahrungen mit gängigen Praktiken wie
                                 <ul>
                                     <li>Single-Page Webanwendungen,</li>
-                                    <li>Typescript oder Javascript, </li>
+                                    <li>TypeScript oder JavaScript, </li>
                                     <li>HTTP-Anfragen, </li>
                                     <li>Local-Storage, </li>
                                     <li>oder einem Responsive-Design</li>
@@ -658,19 +669,118 @@ const Projects_Timeline: React.FC = () => {
                                 <p className={"source_text"}>
                                     Quelle: https://www.bringmeister.de/ueber-uns/muenchen
                                 </p>
-                                Die Lebensmittel können dort einfach im Warenkorb hinzugefügt, ein entsprechender Lieferzeitraum der Lebensmittel angegeben und die Bestellung anschließend abgeschlossen werden. Der eigene Lieferservice von Bringmeister liefert im Anschluss die Lebensmittel innerhalb des angegebenen Zeitfensters. Ganz nach diesem Prinzip war die Idee von <i>FoodSupport</i> geboren.
+                                Die Lebensmittel können dort einfach im Warenkorb hinzugefügt, ein entsprechender Lieferzeitraum der Lebensmittel angegeben und die Bestellung anschließend abgeschlossen werden. Der eigene Lieferservice von Bringmeister liefert im Anschluss die Lebensmittel innerhalb des angegebenen Zeitfensters. Ganz nach diesem Prinzip war auch die Idee von <i>FoodSupport</i> geboren.
                             </p>
                         </ExpandingList>
                         <ExpandingList name={"Entwicklungsumgebung"}>
                             <p className={"max_width_text"}>
-
+                                Da der Fokus der Entwicklung von FoodSupport, beim Entwurf einer Single-Page Webanwendung lag, nutzte ich einmal
+                                <a onClick={handleLinkClick}
+                                   href={"https://angular.io/"} target={"_blank"} rel={"noopener noreferrer"}><i> Angular </i>
+                                </a>
+                                und einmal
+                                <a onClick={handleLinkClick}
+                                   href={"https://vuejs.org/"} target={"_blank"} rel={"noopener noreferrer"}><i> Vue.js </i>
+                                </a>
+                                um jeweils das gewünschte Ziel zu erreichen und mir darüber hinaus einen umfangreichen Ersteindruck der beiden Frontend-Frameworks machen zu können.
+                                Als Backend-Frameworks wollte ich zudem für Angular
+                                <a onClick={handleLinkClick}
+                                   href={"https://expressjs.com/de/"} target={"_blank"} rel={"noopener noreferrer"}><i> Express.js </i>
+                                </a>
+                                kennenlernen, während ich
+                                <a onClick={handleLinkClick}
+                                   href={"https://fastapi.tiangolo.com/"} target={"_blank"} rel={"noopener noreferrer"}><i> FastAPI </i>
+                                </a>
+                                 als Backend-Technologie für das Vue.js-Projekt nutzte. Da ich außerdem ein Freund von Typisierung bin, würde ich für beide Frameworks TypeScript statt JavaScript als Programmiersprache verwenden.<br/>
+                                Zuletzt verwendete ich diesmal eine MySQL-Datenbank für Angular und eine SQLite-Datenbank, in Kombination mit SQLAlchemy für's Vue.js-Projekt.
                             </p>
                         </ExpandingList>
                         <ExpandingList name={"Software-Architektur"}>
-
+                            <p className={"max_width_text"}>
+                                Im Rahmen des Projekts FoodSupport, sollten sowohl für Angular, als auch für das Vue.js-Projekt
+                                <ul>
+                                    <li>eine Startseite mit Produktübersicht,</li>
+                                    <li>eine Login- bzw. Registrierungsseite,</li>
+                                    <li>eine Produktseite zur Darstellung der jeweiligen Produktinformationen,</li>
+                                    <li>eine Warenkorbseite zur Rekapitulation der hinzugefügten Produkte,</li>
+                                    <li>eine Bestellübersichtsseite, die alle Bestellinformationen nochmal zusammenfasst,</li>
+                                    <li>und eine Profilseite, die das persönliche Konto des eingeloggten Nutzers widerspiegelt,</li>
+                                </ul>
+                                umgesetzt werden. Dabei sollte jede Seite Responsive designt werden, sodass sich die Website dynamisch an die jeweilige Bildschirmgröße des Nutzers anpasst.
+                                Im Folgenden soll hierzu sowohl die Frontend-Architektur, als auch die Backend-Architektur der jeweiligen Technologien erklärt und anhand von Diagrammen veranschaulicht werden.<br/><br/>
+                                <ExpandingList name={"Frontend-Architektur"}>
+                                    <p className={"max_width_text"}>
+                                        Aufgrund der grundsätzlich ähnlichen Programmierstruktur von Vue.js und Angular, wodurch sich die jeweilige Seite in einzelne Komponenten unterteilt lässt, unterscheidet sich die Architektur der erzielten Ergebnisse nicht wesentlich voneinander.
+                                        <p className={"highlighted_text"}>
+                                            Angular
+                                        </p>
+                                    </p>
+                                    <Zoom>
+                                        <img className={"project_img"} src={foodsupport_architecture_angular}/>
+                                    </Zoom>
+                                    <p className={"max_width_text"}>
+                                        Jede der beschriebenen Seiten wurde dabei zunächst als eigene Komponente angelegt. Da sich die meisten Seiten, sowie deren Funktionalitäten grundlegend voneinander unterscheiden, wurde innerhalb des jeweiligen "Screen"-Ordners ein eigener Komponenten-Ordner angelegt, in welchem die, für die Seite benötigten Unterkomponenten implementiert werden konnten.<br/><br/>
+                                        Alle weiteren Komponenten, die in mehr als einer Seite benötigt werden (wie bspw. der Warenkorb), wurden als "Container-Component" angelegt. Neben dem Routing zwischen den einzelnen Seiten, dienten außerdem die Service-Klassen als weiteres, wichtiges Werkzeug, um die Schnittstellen-Kommunikation mit dem Backend und den dort, innerhalb der Datenbank hinterlegten Daten zu gewährleisten.<br/><br/>
+                                        <p className={"highlighted_text"}>
+                                            Vue.js
+                                        </p>
+                                    </p>
+                                    <Zoom>
+                                        <img className={"project_img"} src={foodsupport_architecture_vuejs}/>
+                                    </Zoom>
+                                    <p className={"max_width_text"}>
+                                        Hier erhielten die einzelnen Seiten-Komponenten einen eigenen Ordner "Views", um sie von den restlichen Komponenten zu separieren. Ansonsten ist die Struktur der Implementierung sehr ähnlich zu der von Angular - Services kümmern sich um die Schnittstellen-Kommunikation zum Backend, sowie um die Bereitstellung der benötigten Daten, Container-Components werden als Basis-Komponenten für eine muliple Anzahl von Seiten verwendet und "Single-Use"-Components sind für die individuellen Funktionen der Seiten zuständig.<br/><br/>
+                                        Damit der Warenkorb auch beim Schließen der Website weiterhin erhalten bleibt, wurden die Daten sowohl in Angular, als auch in Vue.js innerhalb eines Local-Storages abgespeichert. Die Produkte wurden außerdem mit "Tags" versehen, sodass sie über die gewünschten Produktkategorien gefiltert werden können, sowie einen "Verkaufscounter", um die Beliebtheit der Produkte für die Sortieroption "Beliebtheit" messen zu können.
+                                        Da zuletzt sowohl die Filter-, als auch die Sortieroptionen innerhalb der URL hinterlegt und eingelesen wurden, konnten die Produkte auch beim Seitenstart entsprechend sortiert und kategorisiert werden.
+                                    </p>
+                                </ExpandingList>
+                                <ExpandingList name={"Backend-Architektur"}>
+                                    <p className={"max_width_text"}>
+                                        Die Backend-Architektur für das Projekt FoodSupport hatte die Aufgabe, die Datenkommunikation zwischen Frontend und Datenbank zu gewährleisten, um so neue Dateneinträge anzulegen, oder aber die bestehenden Produkt- oder Usereinträge abrufen zu können, sowie eine sichere Zugriffsauthorisierung mithilfe von JSON Web-Token und Passwort-Hashing bereitzustellen.
+                                        <p className={"highlighted_text"}>
+                                            FastAPI
+                                        </p>
+                                    </p>
+                                    <Zoom>
+                                        <img className={"project_img"} src={foodsupport_architecture_fastapi}/>
+                                    </Zoom>
+                                    <p className={"max_width_text"}>
+                                        Alle benötigten Funktionen, die für das Projekt benötigt wurden, konnten innerhalb der beiden Service-Klassen User-Service und Product-Service definiert werden. Für die Produktsuche des Nutzers wurden hierfür im Product-Service die GET-Methoden
+                                    </p>
+                                    <Zoom>
+                                        <img className={"project_img"} src={foodsupport_architecture_product}/>
+                                    </Zoom>
+                                    <p className={"max_width_text"}>
+                                        in Abhängigkeit der jeweils benötigten Funktionalitäten umgesetzt und über die entsprechende Backend-URL bereitgestellt. Für den User-Service hingegen wurden die POST- und GET-Methoden
+                                    </p>
+                                    <Zoom>
+                                        <img className={"project_img"} src={foodsupport_architecture_user}/>
+                                    </Zoom>
+                                    <p className={"max_width_text"}>
+                                        implementiert, um jegliche Interaktionen des individuellen Nutzers mit dem System, in Abhängigkeit des dafür generierten JWT gewährleisten zu können. Die Informationen der Datenbank werden dafür zunächst in die dafür vorgesehenen Models der models.py abgelegt und anschließend innerhalb der entsprechenden Schnittstellen abgerufen.
+                                        <p className={"highlighted_text"}>
+                                            Express.js
+                                        </p>
+                                        Nach dem selben Prinzip wurden auch die benötigten Daten des Express-Backends für das Angular-Projekt, über die entsprechende Backend-URL bereigestellt.
+                                    </p>
+                                    <Zoom>
+                                        <img className={"project_img"} src={foodsupport_architectur_express}/>
+                                    </Zoom>
+                                    <p className={"max_width_text"}>
+                                        so konnten die Produkt- und Nutzerinformationen zu jederzeit dynamisch und unter Berücksichtigung einiger Sicherheitsaspekte aus dem Backend zur Verfügung gestellt werden.
+                                    </p>
+                                </ExpandingList>
+                            </p>
                         </ExpandingList>
                         <ExpandingList name={"Was ich gelernt hab"}>
-
+                            <p className={"max_width_text"}>
+                                Selbstverständlich habe ich aus diesen beiden Web-Projekten für meinen weiteren "Werdegang" zum Web- und Software-Engineer wieder einiges mitnehmen können, um meine Erfahrungen im späteren Berufsfeld zu erweitern. Ich hatte meine erste moderne Website erstellt, die sich dynamisch an jegliche Bildschirmgröße anpassen konnte. Ich hatte meine ersten beiden Single-Page Webanwendungen entwickelt, die selbst nach dem Schließen der Website dank Local-Storage weiterhin alle Produkte des Warenkorbs beibehalten.
+                            </p>
+                            <img className={"project_img"} src={foodsupport_final}/>
+                            <p className={"max_width_text"}>
+                                Ich hatte meine Fullstack-Komponenzen mithilfe der genannten Technologien ausgebaut und meine ersten Erfahrungen mit der Bereitstellung von Sicherheitsaspekten wie Passwort-Hashing und Token-Authentifizierung gemacht. Mithilfe der Filter- und Sortierfunktion für Produkte, konnte ich das bisher recht statische Routing durch dynamische Variablen erweitern, wodurch sich die Website anhand der URL entsprechend anpasste.<br/>
+                                Zuletzt hatte ich das Komponentensystem der Frontend-Frameworks Angular und Vue.js kennen und lieben gelernt und würde meine zukünftige Web-Entwicklung klar mit einem dieser beiden Frameworks favorisieren.
+                            </p>
                         </ExpandingList>
                     </ExpandingButton>
                 </AnimationOnScroll>
@@ -686,7 +796,57 @@ const Projects_Timeline: React.FC = () => {
                     <div className={'project_timeline_short'}/>
                     <VideoHeader src={stateofdart_video} />
                     <ExpandingButton>
+                        <div>
+                            <div>
+                                <ExpandingList name={"Über das Projekt"}>
+                                    <p className={"max_width_text"}>
+                                        Jeder Masterstudent der Technischen Hochschule Augsburg darf über zwei Semester an einem Masterprojekt seiner Wahl teilnehmen, um das Masterstudium erfolgreich beenden zu können. Das Funkenwerk der Hochschule Augsburg, welches bundesweit Platz 1 beim Gründungsradar des Stiferverbands für Deutsche Wissenschaft einnimmt, bietet hierzu jedes Jahr unter dem Stichwort
+                                        <p className={"highlighted_text"}>
+                                            Mach Dein digitales Ding
+                                        </p>
+                                        eine Reihe von Plätzen zur Entwicklung einer eigenen, digitalen Idee an. Hierzu steht jedem Team ein Budget von 50 € pro Person und pro Semester zur Verfügung, um eben diese Idee im Rahmen der Projektarbeit umzusetzen.
+                                        Dabei arbeitet das, vom Betreuer des Funkenwerk vorgelegte Projektmanagement stets systematisch darauf hin, dass sich aus dem erarbeiteten Projekt später, unter Umständen auch ein eigenes StartUp entwickeln könnte. So werden neben dem "üblichen" Workflow des Software-Entwicklungsprozesses, auch weitere Schwerpunkte der Wirtschaftlichkeit in Form eines Lean-Canvas Businessmodels gelegt.<br/><br/>
+                                        Hierzu schloss ich mich einem kleinen Team von zwei Kommilitonen an, um gemeinsam unsere Projektidee von "StateofDart" umzusetzen.
+                                        Worum es sich bei StateofDart jedoch genau handelt, soll im Folgenden ein kleines, humorvolles Werbevideo erklären, welches wir ebenfalls im Rahmen unserer Projektarbeit entwarfen ;):<br/><br/>
+                                        <VideoHeader src={stateofdart_ad}/>
+                                        <p className={"source_text"}>
+                                            Quelle: https://www.hs-augsburg.de/HSA-funkenwerk/stateofDart.html
+                                        </p>
+                                        Wie hier bereits beschrieben, zielt das Projekt darauf ab, eine Lösung für Steeldart-Spieler bereitzustellen, die nicht jedes Zwischenergebnis beim Dartspiel manuell im Kopf berechnen wollen. Mithilfe von zwei Kameras erkannte das Bild die geworfene Punktzahl in Echtzeit, um sie anschließend an die entwickelte Android-App zu übertragen, von woaus das gesammte Spiel getrackt und visualisiert wurde.
+                                    </p>
+                                </ExpandingList>
+                                <ExpandingList name={"Entwicklungsumgebung"}>
+                                    <p className={"max_width_text"}>
+                                        Für die App-Entwicklung nutzten wir hierfür Android-Studio und Java. Für die Entwicklung der Dart-Erkennung hingegen, implementierten wir mithilfe von TensorFlow und Python eine Bild-Erkennungssoftware, die nach jedem erfolgreichen Wurf den ermittelten Wert über einen (Python) Web-Server an den (Java) App-Client senden sollte.
+                                    </p>
+                                </ExpandingList>
+                                <ExpandingList name={"System-Architektur"}>
+                                    <p className={"max_width_text"}>
+                                        Im Gegensatz zu den bisherigen Projekten beinhaltete das Projekt StateofDart sowohl einen technischen, als auch einen physischen Prototyp. Wir mussten eine Lösung entwickeln, die mit dem uns zur Verfügung stehenden Budget von 300 € (zwei Semester á 3 Personen) das gewünschte Ziel der Steeldart-Erkennung erreicht. Nach einiger Recherche von bestehenden Lösungen und Möglichkeiten zur Positions- und Objekterkennung mittels KI, entschlossen wir uns dazu ein Model mithilfe einer großen Menge Bilder von gesteckten Dartpfeilen zu trainieren, um anschließend anhand zweier Kameras ein neues Eingabebild definieren und die Prediction berechnen zu können.<br/><br/>
+                                    </p>
+                                    <Zoom>
+                                        <img className={"project_img"} src={stateofdart_architecture}/>
+                                    </Zoom>
+                                    <p className={"max_width_text"}>
+                                        Die Bilder wurden dabei innerhalb der Bildverarbeitung zu einem Bild konkateniert und mit Farbfiltern & Histogram Equalization normalisiert, um fehlerhafte Ergebnisse aufgrund veränderter Lichteinflüsse zu minimieren. Hierzu konstruierten wir aus möglichst konstengünstigen Materialien eine Vorrichtung, die es ermöglichte, die Kameras aus verschiedenen Perspektiven provisorisch zu installieren und mit einem Raspberry-PI auf der Rückseite des Prototyps zu verbinden.<br/><br/>
+                                        <img className={"project_img"} src={stateofdart_prototype}/><br/><br/>
+                                        Innerhalb der Android-Anwendung kann der Spieler dann eine Verbindung zum Raspberry-PI zum Server aufbauen, die gewünschte Spielelogik auswähle und alle weiteren Mitspieler eintragen. Der erzielte Punktwert wird dann vom Restwert abgezogen, bis ein Spieler am Ende  den Wert 0 erreicht und damit als Gewinner hervorgeht.<br/><br/>
+                                        <Zoom>
+                                            <img className={"project_img"} src={stateofdart_app_prototype}/>
+                                        </Zoom><br/><br/>
+                                        Hierzu erhielten wir von der Technischen Hochschule Augsburg einen Hochleistungsrechner, der uns beim Training des KI-Models mit insgesamt knapp 10.000 zuvor manuell aufgenommen Validierungs- und Trainingsbildern, per Hand gesteckter Dartwürfe (aus 64 verschiedenen Kategorien) unterstützte.
+                                    </p>
+                                </ExpandingList>
+                                <ExpandingList name={"Lean-Canvas"}>
+                                    <p className={"max_width_text"}>
+                                        Wie bereits erwähnt, umfasste das Projekt StateofDart im Rahmen unseres Masterprojekts jedoch nicht nur die softwareseitige und physische Entwicklung eines Produktes, sondern auch die wirtschaftliche. Hierzu lernten wir im Austausch mit unseren Betreuern das Business-Model Lean-Canvas kennen, wodurch wir das Projekt auch aus der Sicht eines Unternehmers betrachten konnten, um eine eventuelle, langfristig finanzielle Rentabilität eines zukünftigen StartUps gewährleisten zu können.
+                                    </p>
+                                </ExpandingList>
+                                <ExpandingList name={"Was ich gelernt hab"}>
 
+                                </ExpandingList>
+                            </div>
+                        </div>
                     </ExpandingButton>
                 </AnimationOnScroll>
             </div>
