@@ -62,6 +62,10 @@ import foodsupport_final from '../../../resources/images/foodsupport_final.jpg'
 import stateofdart_architecture from '../../../resources/images/stateofdart_architecture.jpg'
 import stateofdart_prototype from '../../../resources/images/stateofdart_prototype.jpg'
 import stateofdart_app_prototype from '../../../resources/images/stateofdart_app_prototype.jpg'
+import stateofdart_community_meetup from '../../../resources/images/stateofdart_community_meetup.jpeg'
+import stateofdart_rocketteer from '../../../resources/images/stateofdart_rocketteer_festival.jpg'
+import stateofdart_graffiti from '../../../resources/images/stateofdart_graffiti.jpeg'
+import stateofdart_projektvorstellung from '../../../resources/images/stateofdart_projektvorstellung.jpeg'
 
 //------------------GIFS---------------//
 import step_one from '../../../resources/gifs/step_one.gif'
@@ -800,7 +804,7 @@ const Projects_Timeline: React.FC = () => {
                             <div>
                                 <ExpandingList name={"Über das Projekt"}>
                                     <p className={"max_width_text"}>
-                                        Jeder Masterstudent der Technischen Hochschule Augsburg darf über zwei Semester an einem Masterprojekt seiner Wahl teilnehmen, um das Masterstudium erfolgreich beenden zu können. Das Funkenwerk der Hochschule Augsburg, welches bundesweit Platz 1 beim Gründungsradar des Stiferverbands für Deutsche Wissenschaft einnimmt, bietet hierzu jedes Jahr unter dem Stichwort
+                                        Jeder Masterstudent der Technischen Hochschule Augsburg darf über zwei Semester an einem Masterprojekt seiner Wahl teilnehmen, um das Masterstudium erfolgreich beenden zu können. Das Funkenwerk der Hochschule Augsburg, welches bundesweit Platz 1 beim Gründungsradar des Stifterverbands für Deutsche Wissenschaft einnimmt, bietet hierzu jedes Jahr unter dem Stichwort
                                         <p className={"highlighted_text"}>
                                             Mach Dein digitales Ding
                                         </p>
@@ -830,7 +834,7 @@ const Projects_Timeline: React.FC = () => {
                                     <p className={"max_width_text"}>
                                         Die Bilder wurden dabei innerhalb der Bildverarbeitung zu einem Bild konkateniert und mit Farbfiltern & Histogram Equalization normalisiert, um fehlerhafte Ergebnisse aufgrund veränderter Lichteinflüsse zu minimieren. Hierzu konstruierten wir aus möglichst konstengünstigen Materialien eine Vorrichtung, die es ermöglichte, die Kameras aus verschiedenen Perspektiven provisorisch zu installieren und mit einem Raspberry-PI auf der Rückseite des Prototyps zu verbinden.<br/><br/>
                                         <img className={"project_img"} src={stateofdart_prototype}/><br/><br/>
-                                        Innerhalb der Android-Anwendung kann der Spieler dann eine Verbindung zum Raspberry-PI zum Server aufbauen, die gewünschte Spielelogik auswähle und alle weiteren Mitspieler eintragen. Der erzielte Punktwert wird dann vom Restwert abgezogen, bis ein Spieler am Ende  den Wert 0 erreicht und damit als Gewinner hervorgeht.<br/><br/>
+                                        Innerhalb der Android-Anwendung kann der Spieler dann eine Verbindung zum Raspberry-PI zum Server aufbauen, die gewünschte Spiele-Logik auswählen und alle weiteren Mitspieler eintragen. Der erzielte Punktwert wird dann vom Restwert abgezogen, bis ein Spieler am Ende den Wert 0 erreicht und damit als Gewinner hervorgeht.<br/><br/>
                                         <Zoom>
                                             <img className={"project_img"} src={stateofdart_app_prototype}/>
                                         </Zoom><br/><br/>
@@ -839,11 +843,42 @@ const Projects_Timeline: React.FC = () => {
                                 </ExpandingList>
                                 <ExpandingList name={"Lean-Canvas"}>
                                     <p className={"max_width_text"}>
-                                        Wie bereits erwähnt, umfasste das Projekt StateofDart im Rahmen unseres Masterprojekts jedoch nicht nur die softwareseitige und physische Entwicklung eines Produktes, sondern auch die wirtschaftliche. Hierzu lernten wir im Austausch mit unseren Betreuern das Business-Model Lean-Canvas kennen, wodurch wir das Projekt auch aus der Sicht eines Unternehmers betrachten konnten, um eine eventuelle, langfristig finanzielle Rentabilität eines zukünftigen StartUps gewährleisten zu können.
+                                        Wie bereits erwähnt, umfasste das Projekt StateofDart im Rahmen unseres Masterprojekts jedoch nicht nur die softwareseitige und physische Entwicklung eines Produkts, sondern auch die wirtschaftliche. Hierzu lernten wir im Austausch mit unseren Betreuern das Business-Model Lean-Canvas kennen, wodurch wir das Projekt auch aus der Sicht eines Unternehmers betrachten konnten, um eine eventuelle, langfristig finanzielle Rentabilität eines zukünftigen StartUps gewährleisten zu können.<br/><br/>
+                                        Die dabei verwendeten Schlüsselfaktoren
+                                        <ul>
+                                            <li>Problem,</li>
+                                            <li>Solution,</li>
+                                            <li>Unique Value Proposition,</li>
+                                            <li>Unfair Advantage,</li>
+                                            <li>Customer Segments,</li>
+                                            <li>Existing Alternatives,</li>
+                                            <li>Key Metrics,</li>
+                                            <li>High Level Concept,</li>
+                                            <li>Channels,</li>
+                                            <li>Early Adopters,</li>
+                                            <li>Cost Structure,</li>
+                                            <li>Risk-Management,</li>
+                                            <li>und Revenue Streams</li>
+                                        </ul>
+                                        wurden dazu analyisiert und am zukünftigen Produkt von StateofDart angewandt. Dadurch konnten wir die ersten Konzepte unseres Marktsegments konstruieren, um im Falle einer zukünftigen Weiterführung des Projekts die Chance von negativen Überraschungen innerhalb der Unternehmensstruktur zu minimieren.
                                     </p>
                                 </ExpandingList>
                                 <ExpandingList name={"Was ich gelernt hab"}>
-
+                                    <p className={"max_width_text"}>
+                                        Die Entwicklung eines eigenen Systems zur Erkennung von Steelsdarts stellte uns vor einige Hürden und Probleme, an die denen wir gemeinsam als Team wachsen konnten. Ich hatte gelernt ein eigenes Produkt nicht nur aus Sicht eines Software-Entwicklers, sondern auch aus der eines angehenden Unternehmers zu betrachten.
+                                        Dazu gehörten die Kostenkalkulation unter Berücksichtigung des vorhandenen Budgets, einer detaillierten Risikoanalyse mit der Ausarbeitung von "Notfallplänen" im Falle des Eintritts eben dieser Risiken, sowie einer umfangreichen Marktanalyse bisheriger Lösungen der Konkurrenz.<br/><br/>
+                                        Das Gefühl mit einem motivierten, humorvollen Team auf ein gemeinsames Ziel hinzuarbeiten, zeigte mir darüber hinaus einmal mehr, wie unglaublich schön Teamwork sein kann und aus gegenseitiger Unterstützung und dem gemeinsamen Durchleben von diversen Hochs und Tiefs nach und nach eine Freundschaft resultierte.<br/><br/>
+                                        Ein besonders großer Dank gilt dabei vor allem dem Funkenwerk, das uns zu jederzeit mit professionellem und erfahrenem Input in unserem Projekt unterstützte. Aber auch meinen Team-Kollegen Jonas und Michael bin ich sehr dankbar dafür, dass ich Teil dieser wilden Achterbahnfahrt aus Teamevents und Projektentwicklung sein durfte.<br/><br/>
+                                        Egal ob beim Funkenwerk Community-Meetup für StartUps...<br/><br/>
+                                        <img className={"project_img"} src={stateofdart_community_meetup}/><br/><br/>
+                                        ...bei unseren ersten Erfahrungen mit Farbsprühdosen...<br/><br/>
+                                        <img className={"project_img"} src={stateofdart_graffiti}/><br/><br/>
+                                        ...beim gemeinsamen Besuch des Funkenwerks am Rocketeer-Festival in Augsburg...<br/><br/>
+                                        <img className={"project_img"} src={stateofdart_rocketteer}/><br/><br/>
+                                        ...oder aber bei unserer Projektvorstellung am Projekttag der Informatik-Fakultät, in der die Gewinner einer Dart-Partie mit einem Bier belohnt wurden...<br/><br/>
+                                        <img className={"max_width_text"} src={stateofdart_projektvorstellung}/><br/><br/>
+                                        ...oder einfach nur bei einer Dartpartie nach getaner Arbeit - ich hab den humorvollen, aber dennoch respektvollen Umgang innerhalb des Teams StateofDart zu jeder Zeit genossen. So konnten sogar die zahllosen Stunden der manuellen Aufnahme von Trainingsbildern durch das gemeinsame Mitsingen von alten Disney-Songs und einer Menge guter Laune mehr als erträglich gemacht werden ;).
+                                    </p>
                                 </ExpandingList>
                             </div>
                         </div>
