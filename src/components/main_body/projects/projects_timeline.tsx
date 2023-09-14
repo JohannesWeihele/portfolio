@@ -18,6 +18,8 @@ import adrive_video from '../../../resources/videos/praxissemester/adrive_video.
 import fa_mocap_emotions_video from '../../../resources/videos/facial_mocap/fa_mocap_emotions.mp4'
 import stateofdart_ad from '../../../resources/videos/stateofdart/stateofdart_ad.mp4'
 import fireprotect from '../../../resources/videos/fireprotect/fireprotect.mp4'
+import fireprotect_communication from '../../../resources/videos/fireprotect/fireprotect_communication.mp4'
+import fireprotect_vitals from '../../../resources/videos/fireprotect/fireprotect_vitals.mp4'
 
 //----------------Bilder-------------//
 import digital_cockpit_picture from '../../../resources/images/digital_cockpit_picture.png'
@@ -71,6 +73,11 @@ import more_projects_frozen_carrot from '../../../resources/images/more_projects
 import more_projects_motion_capture from '../../../resources/images/more_projects_motion_capture.jpg'
 import more_projects_vhdl from '../../../resources/images/more_projects_vhdl.jpg'
 import more_projects_modeling from '../../../resources/images/more_projects_modelling.jpg'
+import fireprotect_research from '../../../resources/images/fireprotect_research.jpg'
+import fireprotect_wearables from '../../../resources/images/fireprotect_wearables.jpg'
+import fireprotect_architecture_one from '../../../resources/images/fireprotect_architecture_one.jpg'
+import fireprotect_architecture_two from '../../../resources/images/fireprotect_architecture_two.jpg'
+import fireprotect_architecture_three from '../../../resources/images/fireprotect_architecture_three.jpg'
 
 //------------------GIFS---------------//
 import step_one from '../../../resources/gifs/step_one.gif'
@@ -503,13 +510,13 @@ const Projects_Timeline: React.FC = () => {
                                     Die Entwicklung der FoodFill-App zur Steuerung und Überwachung des FoodFill-Abfüllautomaten war mit Abstand das umfangreichste Projekt, welches ich zu dieser Zeit umgesetzt hatte. Aus 144 Seiten Bachelorarbeit, mehreren Tausend Zeilen Code, einer dreidimensionalen Bedienungsanleitung, sowie einem kompletten Iterationszykluses des Usability-Engineerings nahm ich vor allem eine Sache mit: <b>Stress- und Frustrationstoleranz.</b><br/><br/>
                                     Ich lernte mit Android Studio und dessen Mechaniken zur Entwicklung moderner Smartphone-Applikationen umzugehen und dabei meine Java-Kenntnisse weiter zu festigen. Der wöchentliche Austausch mit den Kollegen des Klevertecs Kempten zeigte mir, wie eine nutzerorientierte Software-Entwicklung aussehen kann, die die Wünsche und Bedürfnisse der späteren Anwender zum Mittelpunkt der Entwicklung macht. Ich lernte XML kennen und darüber hinaus, wie man den externen Dienst eines Cloud-Speichers in den Workflow der Anwendung integrieren konnte.
                                     Ich arbeitete mich grob in einige Dienste der Creative Cloud von Adobe ein und designte daraus eine professionelle Benutzeroberfläche mithilfe des, mir zuvor vollständig unbekannten Mockup-Tools <i>Adobe Xd</i>.
-                                    Zuletzt lernte ich, wie man eine wissenschaftliche Arbeit verfasst und eine fundierte Evaluation innerhalb einer Usability-Studie durchführte.<br/><br/>
+                                    Zuletzt lernte ich, wie man eine wissenschaftliche Arbeit verfasst und eine fundierte Evaluation innerhalb einer Usability-Studie durchführte.
+                                    <img className={"project_img"} src={foodfill_logo}/><br/><br/>
                                     Doch auch charakterlich konnte ich mich innerhalb dieses halben Jahres deutlich weiterentwickeln. Meine Bachelorarbeit im Lockdown der Corona-Hochphase anzufertigen, ohne die Möglichkeiten eines persönlichen, sozialen Austauschs genießen oder mich zum Abschalten mit Freunden treffen zu können, nagte ziemlich oft an meinen Grenzen. Jedoch ganz nach dem Motto
                                     <p className={"highlighted_text"}>
                                         Was dich nicht umbringt, macht dich stärker
                                     </p>
                                     bin ich davon überzeugt, dass diese Ausnahmesituation meine mentale Stärke weiter gefestigt hat. Darüber hinaus konnte ich dem Lockdown auch etwas positives abgewinnen, denn ich glaube nicht, dass meine Bachelorarbeit ohne Lockdown in diesem Umfang möglich gewesen wäre.<br/>
-                                    <img className={"project_img"} src={foodfill_logo}/>
                                 </p>
                             </ExpandingList>
                         </div>
@@ -555,10 +562,8 @@ const Projects_Timeline: React.FC = () => {
                                     <a onClick={handleLinkClick}
                                        href={"https://www.systemrequirementslab.com/cyri"} target={"_blank"} rel={"noopener noreferrer"}><i> Can You Run it </i>
                                     </a>
-                                     vom SystemRequirementsLab. <br/><br/>
-                                </p>
-                                <img className={"project_img"} src={canyourunit}/>
-                                <p className={"max_width_text"}>
+                                     des SystemRequirementsLab. <br/><br/>
+                                    <img className={"project_img"} src={canyourunit}/><br/><br/>
                                     Die Software scannt dabei die aktuelle System-Hardware des Nutzers und vergleicht sie im Anschluss mit dem zuvor angegebenen Spiel. Sollten alle Hardware-Anforderung in Bezug auf
                                     <ul>
                                         <li>Grafikkarte,</li>
@@ -806,87 +811,86 @@ const Projects_Timeline: React.FC = () => {
                     <VideoHeader src={stateofdart_video} />
                     <ExpandingButton>
                         <div>
-                            <div>
-                                <ExpandingList name={"Über das Projekt"} open={true}>
-                                    <p className={"max_width_text"}>
-                                        Jeder Masterstudent der Technischen Hochschule Augsburg darf über zwei Semester an einem Masterprojekt seiner Wahl teilnehmen, um das Masterstudium erfolgreich beenden zu können. Das Funkenwerk der Hochschule Augsburg, welches bundesweit Platz 1 beim Gründungsradar des Stifterverbands für Deutsche Wissenschaft einnimmt, bietet hierzu jedes Jahr unter dem Stichwort
-                                        <p className={"highlighted_text"}>
-                                            Mach Dein digitales Ding
-                                        </p>
-                                        eine Reihe von Plätzen zur Entwicklung einer eigenen, digitalen Idee an. Hierzu steht jedem Team ein Budget von 50 € pro Person und pro Semester zur Verfügung, um eben diese Idee im Rahmen der Projektarbeit umzusetzen.
-                                        Dabei arbeitet das, vom Betreuer des Funkenwerk vorgelegte Projektmanagement stets systematisch darauf hin, dass sich aus dem erarbeiteten Projekt später, unter Umständen auch ein eigenes StartUp entwickeln könnte. So werden neben dem "üblichen" Workflow des Software-Entwicklungsprozesses, auch weitere Schwerpunkte der Wirtschaftlichkeit in Form eines Lean-Canvas Businessmodels gelegt.<br/><br/>
-                                        Hierzu schloss ich mich einem kleinen Team von zwei Kommilitonen an, um gemeinsam unsere Projektidee von "StateofDart" umzusetzen.
-                                        Worum es sich bei StateofDart jedoch genau handelt, soll im Folgenden ein kleines, humorvolles Werbevideo erklären, welches wir ebenfalls im Rahmen unserer Projektarbeit entwarfen ;):<br/><br/>
-                                        <VideoHeader src={stateofdart_ad}/>
-                                        <p className={"source_text"}>
-                                            Quelle: https://www.hs-augsburg.de/HSA-funkenwerk/stateofDart.html
-                                        </p>
-                                        Wie hier bereits beschrieben, zielt das Projekt darauf ab, eine Lösung für Steeldart-Spieler bereitzustellen, die nicht jedes Zwischenergebnis beim Dartspiel manuell im Kopf berechnen wollen. Mithilfe von zwei Kameras erkannte das Bild die geworfene Punktzahl in Echtzeit, um sie anschließend an die entwickelte Android-App zu übertragen, von woaus das gesammte Spiel getrackt und visualisiert wurde.
-                                    </p>
-                                </ExpandingList>
-                                <ExpandingList name={"Entwicklungsumgebung"}>
-                                    <p className={"max_width_text"}>
-                                        Für die App-Entwicklung nutzten wir hierfür Android-Studio und Java. Für die Entwicklung der Dart-Erkennung hingegen, implementierten wir mithilfe von TensorFlow und Python eine Bild-Erkennungssoftware, die nach jedem erfolgreichen Wurf den ermittelten Wert über einen (Python) Web-Server an den (Java) App-Client senden sollte.
-                                    </p>
-                                </ExpandingList>
-                                <ExpandingList name={"System-Architektur"}>
-                                    <p className={"max_width_text"}>
-                                        Im Gegensatz zu den bisherigen Projekten beinhaltete das Projekt StateofDart sowohl einen technischen, als auch einen physischen Prototyp. Wir mussten eine Lösung entwickeln, die mit dem uns zur Verfügung stehenden Budget von 300 € (zwei Semester á 3 Personen) das gewünschte Ziel der Steeldart-Erkennung erreicht. Nach einiger Recherche von bestehenden Lösungen und Möglichkeiten zur Positions- und Objekterkennung mittels KI, entschlossen wir uns dazu ein Model mithilfe einer großen Menge Bilder von gesteckten Dartpfeilen zu trainieren, um anschließend anhand zweier Kameras ein neues Eingabebild definieren und die Prediction berechnen zu können.<br/><br/>
-                                    </p>
-                                    <Zoom>
-                                        <img className={"project_img"} src={stateofdart_architecture}/>
-                                    </Zoom>
-                                    <p className={"max_width_text"}>
-                                        Die Bilder wurden dabei innerhalb der Bildverarbeitung zu einem Bild konkateniert und mit Farbfiltern & Histogram Equalization normalisiert, um fehlerhafte Ergebnisse aufgrund veränderter Lichteinflüsse zu minimieren. Hierzu konstruierten wir aus möglichst konstengünstigen Materialien eine Vorrichtung, die es ermöglichte, die Kameras aus verschiedenen Perspektiven provisorisch zu installieren und mit einem Raspberry-PI auf der Rückseite des Prototyps zu verbinden.<br/><br/>
-                                        <img className={"project_img"} src={stateofdart_prototype}/><br/><br/>
-                                        Innerhalb der Android-Anwendung kann der Spieler dann eine Verbindung zum Raspberry-PI zum Server aufbauen, die gewünschte Spiele-Logik auswählen und alle weiteren Mitspieler eintragen. Der erzielte Punktwert wird dann vom Restwert abgezogen, bis ein Spieler am Ende den Wert 0 erreicht und damit als Gewinner hervorgeht.<br/><br/>
-                                        <Zoom>
-                                            <img className={"project_img"} src={stateofdart_app_prototype}/>
-                                        </Zoom><br/><br/>
-                                        Hierzu erhielten wir von der Technischen Hochschule Augsburg einen Hochleistungsrechner, der uns beim Training des KI-Models mit insgesamt knapp 10.000 zuvor manuell aufgenommen Validierungs- und Trainingsbildern, per Hand gesteckter Dartwürfe (aus 64 verschiedenen Kategorien) unterstützte.
-                                    </p>
-                                </ExpandingList>
-                                <ExpandingList name={"Lean-Canvas"}>
-                                    <p className={"max_width_text"}>
-                                        Wie bereits erwähnt, umfasste das Projekt StateofDart im Rahmen unseres Masterprojekts jedoch nicht nur die softwareseitige und physische Entwicklung eines Produkts, sondern auch die wirtschaftliche. Hierzu lernten wir im Austausch mit unseren Betreuern das Business-Model Lean-Canvas kennen, wodurch wir das Projekt auch aus der Sicht eines Unternehmers betrachten konnten, um eine eventuelle, langfristig finanzielle Rentabilität eines zukünftigen StartUps gewährleisten zu können.<br/><br/>
-                                        Die dabei verwendeten Schlüsselfaktoren
-                                        <ul>
-                                            <li>Problem,</li>
-                                            <li>Solution,</li>
-                                            <li>Unique Value Proposition,</li>
-                                            <li>Unfair Advantage,</li>
-                                            <li>Customer Segments,</li>
-                                            <li>Existing Alternatives,</li>
-                                            <li>Key Metrics,</li>
-                                            <li>High Level Concept,</li>
-                                            <li>Channels,</li>
-                                            <li>Early Adopters,</li>
-                                            <li>Cost Structure,</li>
-                                            <li>Risk-Management,</li>
-                                            <li>und Revenue Streams</li>
-                                        </ul>
-                                        wurden dazu analyisiert und am zukünftigen Produkt von StateofDart angewandt. Dadurch konnten wir die ersten Konzepte unseres Marktsegments konstruieren, um im Falle einer zukünftigen Weiterführung des Projekts die Chance von negativen Überraschungen innerhalb der Unternehmensstruktur zu minimieren.
-                                    </p>
-                                </ExpandingList>
-                                <ExpandingList name={"Was ich gelernt hab"}>
-                                    <p className={"max_width_text"}>
-                                        Die Entwicklung eines eigenen Systems zur Erkennung von Steelsdarts stellte uns vor einige Hürden und Probleme, an die denen wir gemeinsam als Team wachsen konnten. Ich hatte gelernt ein eigenes Produkt nicht nur aus Sicht eines Software-Entwicklers, sondern auch aus der eines angehenden Unternehmers zu betrachten.
-                                        Dazu gehörten die Kostenkalkulation unter Berücksichtigung des vorhandenen Budgets, einer detaillierten Risikoanalyse mit der Ausarbeitung von "Notfallplänen" im Falle des Eintritts eben dieser Risiken, sowie einer umfangreichen Marktanalyse bisheriger Lösungen der Konkurrenz.<br/><br/>
-                                        Das Gefühl mit einem motivierten, humorvollen Team auf ein gemeinsames Ziel hinzuarbeiten, zeigte mir darüber hinaus einmal mehr, wie unglaublich schön Teamwork sein kann und aus gegenseitiger Unterstützung und dem gemeinsamen Durchleben von diversen Hochs und Tiefs nach und nach eine Freundschaft resultierte.<br/><br/>
-                                        Ein besonders großer Dank gilt dabei vor allem dem Funkenwerk, das uns zu jederzeit mit professionellem und erfahrenem Input in unserem Projekt unterstützte. Aber auch meinen Team-Kollegen Jonas und Michael bin ich sehr dankbar dafür, dass ich Teil dieser wilden Achterbahnfahrt aus Teamevents und Projektentwicklung sein durfte.<br/><br/>
-                                        Egal ob beim Funkenwerk Community-Meetup für StartUps...<br/><br/>
-                                        <img className={"project_img"} src={stateofdart_community_meetup}/><br/><br/>
-                                        ...bei unseren ersten Erfahrungen mit Farbsprühdosen...<br/><br/>
-                                        <img className={"project_img"} src={stateofdart_graffiti}/><br/><br/>
-                                        ...beim gemeinsamen Besuch des Funkenwerks am Rocketeer-Festival in Augsburg...<br/><br/>
-                                        <img className={"project_img"} src={stateofdart_rocketteer}/><br/><br/>
-                                        ...bei unserer Projektvorstellung am Projekttag der Informatik-Fakultät, in der die Gewinner einer Dart-Partie mit einem Bier belohnt wurden...<br/><br/>
-                                        <img className={"max_width_text"} src={stateofdart_projektvorstellung}/><br/><br/>
-                                        ...oder einfach nur bei einer Dartpartie nach getaner Arbeit - ich hab den humorvollen, aber dennoch respektvollen Umgang innerhalb des Teams StateofDart zu jeder Zeit genossen. So konnten sogar die zahllosen Stunden der manuellen Aufnahme von Trainingsbildern durch das gemeinsame Mitsingen von alten Disney-Songs und einer Menge guter Laune mehr als erträglich gemacht werden ;).
-                                    </p>
-                                </ExpandingList>
-                            </div>
+                            <h1 style={{color: "black", fontFamily: "Agency FB", fontSize: "50px"}}>StateofDart</h1>
                         </div>
+                        <ExpandingList name={"Über das Projekt"} open={true}>
+                            <p className={"max_width_text"}>
+                                Jeder Masterstudent der Technischen Hochschule Augsburg darf über zwei Semester an einem Masterprojekt seiner Wahl teilnehmen, um das Masterstudium erfolgreich beenden zu können. Das Funkenwerk der Hochschule Augsburg, welches bundesweit Platz 1 beim Gründungsradar des Stifterverbands für Deutsche Wissenschaft einnimmt, bietet hierzu jedes Jahr unter dem Stichwort
+                                <p className={"highlighted_text"}>
+                                    Mach Dein digitales Ding
+                                </p>
+                                eine Reihe von Plätzen zur Entwicklung einer eigenen, digitalen Idee an. Hierzu steht jedem Team ein Budget von 50 € pro Person und pro Semester zur Verfügung, um eben diese Idee im Rahmen der Projektarbeit umzusetzen.
+                                Dabei arbeitet das, vom Betreuer des Funkenwerk vorgelegte Projektmanagement stets systematisch darauf hin, dass sich aus dem erarbeiteten Projekt später, unter Umständen auch ein eigenes StartUp entwickeln könnte. So werden neben dem "üblichen" Workflow des Software-Entwicklungsprozesses, auch weitere Schwerpunkte der Wirtschaftlichkeit in Form eines Lean-Canvas Businessmodels gelegt.<br/><br/>
+                                Hierzu schloss ich mich einem kleinen Team von zwei Kommilitonen an, um gemeinsam unsere Projektidee von "StateofDart" umzusetzen.
+                                Worum es sich bei StateofDart jedoch genau handelt, soll im Folgenden ein kleines, humorvolles Werbevideo erklären, welches wir ebenfalls im Rahmen unserer Projektarbeit entwarfen ;):<br/><br/>
+                                <VideoHeader src={stateofdart_ad}/>
+                                <p className={"source_text"}>
+                                    Quelle: https://www.hs-augsburg.de/HSA-funkenwerk/stateofDart.html
+                                </p>
+                                Wie hier bereits beschrieben, zielt das Projekt darauf ab, eine Lösung für Steeldart-Spieler bereitzustellen, die nicht jedes Zwischenergebnis beim Dartspiel manuell im Kopf berechnen wollen. Mithilfe von zwei Kameras erkannte das Bild die geworfene Punktzahl in Echtzeit, um sie anschließend an die entwickelte Android-App zu übertragen, von woaus das gesammte Spiel getrackt und visualisiert wurde.
+                            </p>
+                        </ExpandingList>
+                        <ExpandingList name={"Entwicklungsumgebung"}>
+                            <p className={"max_width_text"}>
+                                Für die App-Entwicklung nutzten wir hierfür Android-Studio und Java. Für die Entwicklung der Dart-Erkennung hingegen, implementierten wir mithilfe von TensorFlow und Python eine Bild-Erkennungssoftware, die nach jedem erfolgreichen Wurf den ermittelten Wert über einen (Python) Web-Server an den (Java) App-Client senden sollte.
+                            </p>
+                        </ExpandingList>
+                        <ExpandingList name={"System-Architektur"}>
+                            <p className={"max_width_text"}>
+                                Im Gegensatz zu den bisherigen Projekten beinhaltete das Projekt StateofDart sowohl einen technischen, als auch einen physischen Prototyp. Wir mussten eine Lösung entwickeln, die mit dem uns zur Verfügung stehenden Budget von 300 € (zwei Semester á 3 Personen) das gewünschte Ziel der Steeldart-Erkennung erreicht. Nach einiger Recherche von bestehenden Lösungen und Möglichkeiten zur Positions- und Objekterkennung mittels KI, entschlossen wir uns dazu ein Model mithilfe einer großen Menge Bilder von gesteckten Dartpfeilen zu trainieren, um anschließend anhand zweier Kameras ein neues Eingabebild definieren und die Prediction berechnen zu können.<br/><br/>
+                            </p>
+                            <Zoom>
+                                <img className={"project_img"} src={stateofdart_architecture}/>
+                            </Zoom>
+                            <p className={"max_width_text"}>
+                                Die Bilder wurden dabei innerhalb der Bildverarbeitung zu einem Bild konkateniert und mit Farbfiltern & Histogram Equalization normalisiert, um fehlerhafte Ergebnisse aufgrund veränderter Lichteinflüsse zu minimieren. Hierzu konstruierten wir aus möglichst konstengünstigen Materialien eine Vorrichtung, die es ermöglichte, die Kameras aus verschiedenen Perspektiven provisorisch zu installieren und mit einem Raspberry-PI auf der Rückseite des Prototyps zu verbinden.<br/><br/>
+                                <img className={"project_img"} src={stateofdart_prototype}/><br/><br/>
+                                Innerhalb der Android-Anwendung kann der Spieler dann eine Verbindung zum Raspberry-PI zum Server aufbauen, die gewünschte Spiele-Logik auswählen und alle weiteren Mitspieler eintragen. Der erzielte Punktwert wird dann vom Restwert abgezogen, bis ein Spieler am Ende den Wert 0 erreicht und damit als Gewinner hervorgeht.<br/><br/>
+                                <Zoom>
+                                    <img className={"project_img"} src={stateofdart_app_prototype}/>
+                                </Zoom><br/><br/>
+                                Hierzu erhielten wir von der Technischen Hochschule Augsburg einen Hochleistungsrechner, der uns beim Training des KI-Models mit insgesamt knapp 10.000 zuvor manuell aufgenommen Validierungs- und Trainingsbildern, per Hand gesteckter Dartwürfe (aus 64 verschiedenen Kategorien) unterstützte.
+                            </p>
+                        </ExpandingList>
+                        <ExpandingList name={"Lean-Canvas"}>
+                            <p className={"max_width_text"}>
+                                Wie bereits erwähnt, umfasste das Projekt StateofDart im Rahmen unseres Masterprojekts jedoch nicht nur die softwareseitige und physische Entwicklung eines Produkts, sondern auch die wirtschaftliche. Hierzu lernten wir im Austausch mit unseren Betreuern das Business-Model Lean-Canvas kennen, wodurch wir das Projekt auch aus der Sicht eines Unternehmers betrachten konnten, um eine eventuelle, langfristig finanzielle Rentabilität eines zukünftigen StartUps gewährleisten zu können.<br/><br/>
+                                Die dabei verwendeten Schlüsselfaktoren
+                                <ul>
+                                    <li>Problem,</li>
+                                    <li>Solution,</li>
+                                    <li>Unique Value Proposition,</li>
+                                    <li>Unfair Advantage,</li>
+                                    <li>Customer Segments,</li>
+                                    <li>Existing Alternatives,</li>
+                                    <li>Key Metrics,</li>
+                                    <li>High Level Concept,</li>
+                                    <li>Channels,</li>
+                                    <li>Early Adopters,</li>
+                                    <li>Cost Structure,</li>
+                                    <li>Risk-Management,</li>
+                                    <li>und Revenue Streams</li>
+                                </ul>
+                                wurden dazu analyisiert und am zukünftigen Produkt von StateofDart angewandt. Dadurch konnten wir die ersten Konzepte unseres Marktsegments konstruieren, um im Falle einer zukünftigen Weiterführung des Projekts die Chance von negativen Überraschungen innerhalb der Unternehmensstruktur zu minimieren.
+                            </p>
+                        </ExpandingList>
+                        <ExpandingList name={"Was ich gelernt hab"}>
+                            <p className={"max_width_text"}>
+                                Die Entwicklung eines eigenen Systems zur Erkennung von Steelsdarts stellte uns vor einige Hürden und Probleme, an die denen wir gemeinsam als Team wachsen konnten. Ich hatte gelernt ein eigenes Produkt nicht nur aus Sicht eines Software-Entwicklers, sondern auch aus der eines angehenden Unternehmers zu betrachten.
+                                Dazu gehörten die Kostenkalkulation unter Berücksichtigung des vorhandenen Budgets, einer detaillierten Risikoanalyse mit der Ausarbeitung von "Notfallplänen" im Falle des Eintritts eben dieser Risiken, sowie einer umfangreichen Marktanalyse bisheriger Lösungen der Konkurrenz.<br/><br/>
+                                Das Gefühl mit einem motivierten, humorvollen Team auf ein gemeinsames Ziel hinzuarbeiten, zeigte mir darüber hinaus einmal mehr, wie unglaublich schön Teamwork sein kann und aus gegenseitiger Unterstützung und dem gemeinsamen Durchleben von diversen Hochs und Tiefs nach und nach eine Freundschaft resultierte.<br/><br/>
+                                Ein besonders großer Dank gilt dabei vor allem dem Funkenwerk, das uns zu jederzeit mit professionellem und erfahrenem Input in unserem Projekt unterstützte. Aber auch meinen Team-Kollegen Jonas und Michael bin ich sehr dankbar dafür, dass ich Teil dieser wilden Achterbahnfahrt aus Teamevents und Projektentwicklung sein durfte.<br/><br/>
+                                Egal ob beim Funkenwerk Community-Meetup für StartUps...<br/><br/>
+                                <img className={"project_img"} src={stateofdart_community_meetup}/><br/><br/>
+                                ...bei unseren ersten Erfahrungen mit Farbsprühdosen...<br/><br/>
+                                <img className={"project_img"} src={stateofdart_graffiti}/><br/><br/>
+                                ...beim gemeinsamen Besuch des Funkenwerks am Rocketeer-Festival in Augsburg...<br/><br/>
+                                <img className={"project_img"} src={stateofdart_rocketteer}/><br/><br/>
+                                ...bei unserer Projektvorstellung am Projekttag der Informatik-Fakultät, in der die Gewinner einer Dart-Partie mit einem Bier belohnt wurden...<br/><br/>
+                                <img className={"project_img"} src={stateofdart_projektvorstellung}/><br/><br/>
+                                ...oder einfach nur bei einer Dartpartie nach getaner Arbeit - ich hab den humorvollen, aber dennoch respektvollen Umgang innerhalb des Teams StateofDart zu jeder Zeit genossen. So konnten sogar die zahllosen Stunden der manuellen Aufnahme von Trainingsbildern durch das gemeinsame Mitsingen von alten Disney-Songs und einer Menge guter Laune mehr als erträglich gemacht werden ;).
+                            </p>
+                        </ExpandingList>
                     </ExpandingButton>
                 </AnimationOnScroll>
             </div>
@@ -902,21 +906,113 @@ const Projects_Timeline: React.FC = () => {
                     <VideoHeader src={fireprotect} isSmartphoneVideo={true}/>
                     <ExpandingButton>
                         <div>
-                            <div>
-                                <ExpandingList name={"Über das Projekt"}>
-
-                                </ExpandingList>
-                                <ExpandingList name={"Verwendete Hardware"}>
-
-                                </ExpandingList>
-                                <ExpandingList name={"Software-Architektur"}>
-
-                                </ExpandingList>
-                                <ExpandingList name={"Was ich gelernt hab"}>
-
-                                </ExpandingList>
-                            </div>
+                            <h1 style={{color: "black", fontFamily: "Agency FB", fontSize: "50px"}}>Masterarbeit: Fireprotect</h1>
                         </div>
+                        <ExpandingList name={"Über das Projekt"} open={true}>
+                            <p className={"max_width_text"}>
+                                Den Abschluss meiner bisherigen Projekte bildet meine Masterarbeit, die ich an der Technischen Hochschule Augsburg entwickelte. Auch hier entschloss ich mich dazu, meine Erfahrungen innerhalb der Entwicklung von Web- und Software-Projekten anhand einer mir unbekannten Technologie zu erweitern.<br/><br/>
+                                Nach Rücksprache mit meinem Professor entstand so das Projekt Fireprotect. Mit dem offiziellen Titel der Arbeit
+                                <p className={"highlighted_text"}>
+                                    Prototyp einer Wearable-Anwendung zur Unterstützung von Rettungskräften bei der Waldbrandbekämpfung mittels Usability-Engineering
+                                </p>
+                                versuchte ich weiter auf meine bisherigen Erfahrungen der nutzerzentrierten Entwicklung aufzubauen, um gesundheitlichen Risiken von Einsatzkräften der Feuerwehr zu minimieren. Als Motivation dienten mir dafür die bisherige Forschungsergebnisse der kurz-, sowie langfristig Folgen, die vor allem beim schwierigen und großflächigen Einsatzgebiet eines Waldbrands für die Kräfte der Feuerwehr resultieren können. Die Anzahl und Schwere der internationalen Waldbrände zunehmend steigt, empfand ich es darüber hinaus als wichtiger denn je, einen eigenen Beitrag zur Lösung dieser bestehenden Gefahren zu leisten.<br/><br/>
+                                <Zoom>
+                                    <img className={"project_img"} src={fireprotect_research}/>
+                                </Zoom>
+                                <p className={"source_text"}>
+                                    Quelle: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1191.pdf
+                                </p>
+                                Als Ergebnis der bisherigen Forschungen konnten bereits einige Prototypen für eine erweiterte Schutzausrüstung der Feuerwehr konstruiert werden. Da jedoch bislang viele Feuerwehrleute dazu neigten die Schutzausrüstung aufgrund von persönlichen Moral- und Identitätsvorstellungen abzulehnen (das Leben der zu rettenden Menschen sei Ihnen wichtiger als die Gesundheit ihres eigenen Lebens), sollte sich der von mir entwickelte Prototyp explizit an den Nutzerbedürfnissen der Anwender orientieren, um so eine erhöhte Nutzbarkeit zu gewährleisten, ohne dass das System sie bei der Ausführung ihrer Arbeit behindern würde.
+                            </p>
+                        </ExpandingList>
+                        <ExpandingList name={"Hardware-Analyse"}>
+                            <p className={"max_width_text"}>
+                                Um eine möglichst umfangreiche Unterstützung für die Einsatzkräfte der Feuerwehr bereitstellen zu können, die jedoch nicht die Bewegungsfreiheit der Kräfte einschränkt, geschweigedenn sie von ihrer Tätigkeit der Waldbrandbekämpfung ablenkt, wurde eine kompakte Hardware mit einer möglichst breiten Funktionspalette benötigt. <br/><br/>
+                                Moderne Smartwatches verfügen bereits heute über eine Vielzahl von Sensoren, die ein präzise Erfassung und Überwachung von Vitalparametern ermöglichen. Ob Herzfrequenz, Körpertemperatur oder Blutsauerstoffwerte - die biometrische Körperanalyse, die über das Handgelenk des Nutzers erfasst wird, ist durch die kontinuierliche Bereitstellung der Daten ein hervorragender Indikator zur Prävention potenzieller Gesundheitsprobleme.
+                                Darüber hinaus bieten neuartige Smartwatches ein breites Spektrum an Umwelt-Sensorik, beispielsweise zur Bestimmung von Temperatur und Luftfeuchtigkeit, sowie eine GPS-Funkionalität zur Ortung der individuellen Position des Nutzers. Die zusätzliche Möglichkeit der Echtzeit-Kommunikation mittels eingebauten Mikrofons und Lautsprechers bildeten dabei eine solide Grundlage, um das Projekt Fireprotect umzusetzen.<br/><br/>
+                                Nach einer umfangreichen Recherche bestehender, auf dem Markt etablierter Geräte, wägte ich anhand einer Priorisierungsliste bestehender Funktionen die einzelnen Smartwatch-Optionen ab und entschied mich letztendlich für die
+                                <a onClick={handleLinkClick}
+                                   href={"https://www.samsung.com/de/watches/galaxy-watch/galaxy-watch4-classic-black-bluetooth-sm-r890nzkadbt/"} target={"_blank"} rel={"noopener noreferrer"}><i> Samsung Galaxy Watch 4 Classic. </i>
+                                </a>
+                            </p>
+                            <Zoom>
+                                <img className={"project_img"} src={fireprotect_wearables}/>
+                            </Zoom>
+                            <p className={"max_width_text"}>
+                                Die Galaxy 4 Classic vereinte dabei die wichtigsten Funktionen einer Anwendung für die Einsatzkräfte der Feuerwehr. Die drehbare Lünette der Smartwatch bietet darüber hinaus eine weitere, physische Hilfestellung, um die Bedienbarkeit einer Rettungskraft bei der Navigation mit Handschuhen gewährleisten zu können. So stellte die Hardware von Samsung einen optimalen Kompromiss zwischen Haltbarkeit, Funktionsumfang und Preis dar, um den weiteren, erfolgreichen Entwicklungsfortschritt hardwareseitig garantieren zu können.
+                            </p>
+                        </ExpandingList>
+                        <ExpandingList name={"Externe APIs"}>
+                            <p className={"max_width_text"}>
+                                Nach einer detaillierten Anforderungsanalyse der Nutzerbedürfnisse von Feuerwehr-Einsatzkräften, sollte die Wearable-Anwendung eine Vielzahl von externen Schnittstellen zur Bereitstellung aller Funktionalitäten beinhalten. Darunter
+                                <ul>
+                                    <li>eine Kommunikationsschnittstelle zur schnellen Informationsübertragung zwischen Einsatzkräfte und Einsatzleiter,</li>
+                                    <li>eine Navigationsschnittstelle zur Unterstützung bei der Orientierung und Navigation,</li>
+                                    <li>eine Schnittstellung für Umgebungsvariablen wie Temperatur, Wetter und Windgeschwindigkeit</li>
+                                    <li>und eine Sensorik-Schnittstelle zum Überwachen, Messen und Übertragen diverser Vitalparameter.</li>
+                                </ul>
+                                <p className={"highlighted_text"}>
+                                    Kommunikationsschnittstelle: Agora API
+                                </p>
+                                Für die Kommunikation zwischen den einzelnen Parteien der Feuerwehr nutzte ich hierfür das umfangreiche Funktionspakete der Agora-API. So ermöglichte ich für jeden angemeldeten Nutzer der Anwendung einen eigenen Channel anzulegen, worauf sich anschließend alle anderen Nutzer über die Wearable hinzuschalten und miteinander kommunizieren konnten.
+                            </p>
+                            <div className={"project_video"}>
+                                <VideoHeader src={fireprotect_communication} zoomed={false}/>
+                            </div>
+                            <p className={"max_width_text"}>
+                                <p className={"highlighted_text"}>
+                                    Navigationsschnittstelle: Google Maps API
+                                </p>
+                                Zur Bereitstellung einer Navigations- und Orientierungsfunktion, sowie der Positionsdarstellung umliegender Einsatzkräfte nutzte ich die Google Maps API. So sollten zukünftig alle Positionen der Einsatzkräfte, sowie die einzelnen Löschbereiche über den Einsatz-Server verfügbar gemacht und innerhalb der Smartwatch-Anwendung visualisiert werden, um so strategische Vorteile bei der Bekämpfung von Waldbränden zu erhalten. Durch das Markieren von Wegzielen erhält der Anwender darüber hinaus Informationen über die Entfernung zum nächsten Befehl, der nächsten Einsatzkraft oder aber zu den nächstgelegenen Sicherheitsbereichen.
+                                <p className={"highlighted_text"}>
+                                    Umgebungsschnittstelle: Open Weather Map API
+                                </p>
+                                Auch Informationen über die Umgebungstemperatur, der Windgeschwindigkeit oder aber der Luftfeuchtigkeit können einen erheblichen Einfluss auf die weitere, strategische Vorgehensweise der Feuerwehr nehmen. Aus diesem Grund suchte ich nach einer passenden Schnittstelle, um alle benötigten Informationen abgreifen und sie visuell innerhalb der Smartwatch darstellen zu können. Die Open Weather Map API bot mir hierzu eine umfangreiche, kostenfreie Lösung, um eben genau die benötigten Daten mithilfe eines simplen Clients abzurufen.
+                                <p className={"highlighted_text"}>
+                                    Sensorik-Schnittstelle: Samsung Health API
+                                </p>
+                                Zuletzt bildet die Überwachung von Vitalparametern, wie der Atem- und Herzfrequenz oder des Blutdrucks eine weitere wichtige Notwendigkeit zur Gewährleistung der Sicherheit von Feuerwehrkräften. Samsung bietet hierzu über die Health API eine Schnittstelle, um auf die diverse Sensorik der Samsung Galaxy Watch 4 Classic zuzugreifen und deren ermittelten Messwerte zu nutzen.
+                                So konnte eine Überwachung von kritischen Vitalparametern implementiert werden, die die aktuellen Messwerte der Sensoren alle 30 Sekunden überprüft und im Falle einer kritischen Über- oder Unterschreitung, ein Notfallsignal auslöst, welches umliegende Einsatzkräfte, sowie den Einsatzleiter selbst über die Situation informiert.
+                            </p>
+                            <div className={"project_video"}>
+                                <VideoHeader src={fireprotect_vitals} zoomed={false}/>
+                            </div>
+                            <p className={"max_width_text"}>
+                                Auf diese Weise können die Einsatzkräfte im Falle eines Sturzes, einer Verletzung, oder aber beim Eintritt der Bewusstlosigkeit eines Kollegen über ihre Smartwatch, per Push-Nachricht informiert werden. Die jeweilige Einsatzkraft wird dann innerhalb von Google Maps farblich hervorgehoben, wodurch schnell die Position des Kollegen bestimmt werden und die Rettung erfolgen kann.
+                            </p>
+                        </ExpandingList>
+                        <ExpandingList name={"Software-Architektur"}>
+                            <p className={"max_width_text"}>
+                                Die Architektur der Wearable-Anwendung zur Überwachung und Unterstützung von Rettungskräften der Feuerwehr, lässt sich grundsätzlich in drei Ebenen gliedern. Innerhalb der ersten Ebene werden alle Aktivitäten mit den dazugehörigen XML-Skripten implementiert, die für die visuelle und funktionelle Darstellung der Views benötigt werden.
+                            </p>
+                            <Zoom>
+                                <img className={"project_img"} src={fireprotect_architecture_one}/>
+                            </Zoom>
+                            <p className={"max_width_text"}>
+                                    Innerhalb der zweiten Ebene wird die Architektur dann um entsprechende RecyclerViews erweitert, die als dynamische Listen innerhalb des Projekts implementiert werden mussten.
+                            </p>
+                            <Zoom>
+                                <img className={"project_img"} src={fireprotect_architecture_two}/>
+                            </Zoom>
+                            <p className={"max_width_text"}>
+                                Innerhalb der letzten Ebene muss die Software-Architektur des Projekts Fireprotect jetzt noch um weitere Klassen wie Serivces, Basisklassen und benötigte Klassen zum Abrufen der Wetterdaten erweitert werden.
+                            </p>
+                            <Zoom>
+                                <img className={"project_img"} src={fireprotect_architecture_three}/>
+                            </Zoom>
+                            <p className={"max_width_text"}>
+                                Während die Service-Klassen benötigt werden, um eine dauerhafte Überwachung- und Übertragungsschnittstelle von Vitalwerten und Kommunikation bereitstellen zu können, helfen Basisklassen wie bspw. die SharedPreferencesVals-Klasse dabei, den Inhalt der lokal gespeicherten Daten zu verwalten, um so Informationen über die aktuelle Sitzung hinaus ablegen und abrufen zu können.
+                            </p>
+                        </ExpandingList>
+                        <ExpandingList name={"Was ich gelernt hab"}>
+                            <p className={"max_width_text"}>
+                                In meinem letzten Projekt habe ich hauptsächlich gelernt anhand bestehender Systemanforderungen, eine Hardware-Analyse durchzuführen, um daraus die optimale Technologie für die zu erarbeitende Lösung identifizieren zu können. Die vielen verschiedener APIs einarbeiten müssen, um daraus die für mich essentiellen Software-Funktionen implementieren zu können.
+
+
+                                Da ich meine Arbeit innerhalb von 4, statt den eigentlich 6 Monaten geschrieben habe, um sie meinem Vater zum 70. Geburtstag schenken zu können, habe ich einmal mehr meine Frustrationstoleranz und Disziplin, bei 12-14 stündigen Arbeitstagen auf die Probe stellen müssen.<br/><br/>
+                                Nichtsdestotrotz hatte es sich mehr als gelohnt, als ich nach all der Arbeit die Reaktion meines Vaters sehen konnte, sobald ich ihm die Arbeit zu seinem Geburtstag in ausgedruckter Form präsentieren konnte.
+                            </p>
+                        </ExpandingList>
                     </ExpandingButton>
                 </AnimationOnScroll>
             </div>
@@ -930,7 +1026,7 @@ const Projects_Timeline: React.FC = () => {
                     <div className={"more_projects_wrapper"}>
                         <Carousel infiniteLoop={true}
                                   stopOnHover={true}
-                                  autoPlay={true} interval={5000}
+                                  autoPlay={true} interval={4500}
                                   dynamicHeight={true}
                                   width={"100%"}
                                   centerSlidePercentage={50}

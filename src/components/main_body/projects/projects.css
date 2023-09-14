@@ -415,6 +415,7 @@
 .project_img{
     width: 98%;
     border-radius: 20px;
+    border: 1px solid #fd8c3f;
 }
 
 .multi_pictures_container{
