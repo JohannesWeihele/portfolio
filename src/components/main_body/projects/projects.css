@@ -547,6 +547,25 @@ a {
     animation: pulse 1s ease-in-out infinite;
 }
 
+.more_projects_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.more_projects_container{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+ul li {
+    list-style: circle inside;
+}
+
+.more_projects_wrapper li{
+    list-style: none;
+}
+
 @keyframes button-slide-left{
     0% {
     left: 0px;

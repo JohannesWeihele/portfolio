@@ -17,6 +17,7 @@ import stateofdart_video from '../../../resources/videos/stateofdart/stateofdart
 import adrive_video from '../../../resources/videos/praxissemester/adrive_video.mp4'
 import fa_mocap_emotions_video from '../../../resources/videos/facial_mocap/fa_mocap_emotions.mp4'
 import stateofdart_ad from '../../../resources/videos/stateofdart/stateofdart_ad.mp4'
+import fireprotect from '../../../resources/videos/fireprotect/fireprotect.mp4'
 
 //----------------Bilder-------------//
 import digital_cockpit_picture from '../../../resources/images/digital_cockpit_picture.png'
@@ -66,6 +67,10 @@ import stateofdart_community_meetup from '../../../resources/images/stateofdart_
 import stateofdart_rocketteer from '../../../resources/images/stateofdart_rocketteer_festival.jpg'
 import stateofdart_graffiti from '../../../resources/images/stateofdart_graffiti.jpeg'
 import stateofdart_projektvorstellung from '../../../resources/images/stateofdart_projektvorstellung.jpeg'
+import more_projects_frozen_carrot from '../../../resources/images/more_projects_frozen_carrot.jpg'
+import more_projects_motion_capture from '../../../resources/images/more_projects_motion_capture.jpg'
+import more_projects_vhdl from '../../../resources/images/more_projects_vhdl.jpg'
+import more_projects_modeling from '../../../resources/images/more_projects_modelling.jpg'
 
 //------------------GIFS---------------//
 import step_one from '../../../resources/gifs/step_one.gif'
@@ -524,7 +529,7 @@ const Projects_Timeline: React.FC = () => {
             <div className={"project_wrapper"}>
                 <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInLeftBig"} animateOut={"animate__fadeOutRightBig"} animateOnce={true}>
                     <div className={'project_timeline_short'}/>
-                    <Carousel>
+                    <Carousel infiniteLoop={true}>
                         <div>
                             <VideoHeader src={django_video} />
                         </div>
@@ -541,7 +546,7 @@ const Projects_Timeline: React.FC = () => {
                             <ExpandingList name={"Über das Projekt"} open={true}>
                                 <p className={"max_width_text"}>
                                     Nachdem ich bereits im Bachelor meine Leidenschaft für die Software-Entwicklung entdeckt hatte, wollte ich mich innerhalb meines Masterstudiums nun noch weiter auf die Entwicklung von Software fokussieren.
-                                    Hierzu wechselte ich von der Hochschule Kempten zur (nun) Technischen Hochschule in Augsburg, da dort ein Informatik-Schwerpunkt zum Software-Engineer angeboten wurde.<br/><br/>
+                                    Hierzu wechselte ich von der Hochschule Kempten zur Technischen Hochschule in Augsburg, da dort ein Informatik-Schwerpunkt zum Software-Engineer angeboten wurde.<br/><br/>
                                     Ein wesentlicher Bestandteil zum Software-Engineer war dabei unter anderem die Fähigkeit zur Webentwicklung. Während viele <i>normale</i> Informatik-Studiengänge bereits im Bachelorstudium einige Basics zu HTML, CSS und Java- bzw. TypeScript erlernt hatten, lag der Fokus des Game-Engineers vermehrt bei der Computergrafik- und Physik-Programmierung.
                                     Aus diesem Grund beschloss ich, mich in den kommenden Semestern vermehrt der Webentwicklung zu widmen, um einige bekannte Technologien zur Entwicklung von Websites kennenzulernen.
                                 </p>
@@ -802,7 +807,7 @@ const Projects_Timeline: React.FC = () => {
                     <ExpandingButton>
                         <div>
                             <div>
-                                <ExpandingList name={"Über das Projekt"}>
+                                <ExpandingList name={"Über das Projekt"} open={true}>
                                     <p className={"max_width_text"}>
                                         Jeder Masterstudent der Technischen Hochschule Augsburg darf über zwei Semester an einem Masterprojekt seiner Wahl teilnehmen, um das Masterstudium erfolgreich beenden zu können. Das Funkenwerk der Hochschule Augsburg, welches bundesweit Platz 1 beim Gründungsradar des Stifterverbands für Deutsche Wissenschaft einnimmt, bietet hierzu jedes Jahr unter dem Stichwort
                                         <p className={"highlighted_text"}>
@@ -875,7 +880,7 @@ const Projects_Timeline: React.FC = () => {
                                         <img className={"project_img"} src={stateofdart_graffiti}/><br/><br/>
                                         ...beim gemeinsamen Besuch des Funkenwerks am Rocketeer-Festival in Augsburg...<br/><br/>
                                         <img className={"project_img"} src={stateofdart_rocketteer}/><br/><br/>
-                                        ...oder aber bei unserer Projektvorstellung am Projekttag der Informatik-Fakultät, in der die Gewinner einer Dart-Partie mit einem Bier belohnt wurden...<br/><br/>
+                                        ...bei unserer Projektvorstellung am Projekttag der Informatik-Fakultät, in der die Gewinner einer Dart-Partie mit einem Bier belohnt wurden...<br/><br/>
                                         <img className={"max_width_text"} src={stateofdart_projektvorstellung}/><br/><br/>
                                         ...oder einfach nur bei einer Dartpartie nach getaner Arbeit - ich hab den humorvollen, aber dennoch respektvollen Umgang innerhalb des Teams StateofDart zu jeder Zeit genossen. So konnten sogar die zahllosen Stunden der manuellen Aufnahme von Trainingsbildern durch das gemeinsame Mitsingen von alten Disney-Songs und einer Menge guter Laune mehr als erträglich gemacht werden ;).
                                     </p>
@@ -894,10 +899,72 @@ const Projects_Timeline: React.FC = () => {
             <div className={"project_wrapper"}>
                 <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"} animateOnce={true}>
                     <div className={'project_timeline_short'}/>
+                    <VideoHeader src={fireprotect} isSmartphoneVideo={true}/>
+                    <ExpandingButton>
+                        <div>
+                            <div>
+                                <ExpandingList name={"Über das Projekt"}>
+
+                                </ExpandingList>
+                                <ExpandingList name={"Verwendete Hardware"}>
+
+                                </ExpandingList>
+                                <ExpandingList name={"Software-Architektur"}>
+
+                                </ExpandingList>
+                                <ExpandingList name={"Was ich gelernt hab"}>
+
+                                </ExpandingList>
+                            </div>
+                        </div>
+                    </ExpandingButton>
+                </AnimationOnScroll>
+            </div>
+            <div className={"project_wrapper"}>
+                <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"} animateOnce={true}>
+                    <Timeline_long name={"Sonstiges"} year={""} side={"right"}/>
+                    <div className={"timeline_wrapper"}>
+                        <HorizontalLine side={"left"} sameLine={false} name={"Weitere Projekte"}/>
+                    </div>
+                    <div className={'project_timeline_short'}/>
+                    <div className={"more_projects_wrapper"}>
+                        <Carousel infiniteLoop={true}
+                                  stopOnHover={true}
+                                  autoPlay={true} interval={5000}
+                                  dynamicHeight={true}
+                                  width={"100%"}
+                                  centerSlidePercentage={50}
+                                  centerMode={true}>
+                            <div className={"more_projects_container"}>
+                                <p className={"highlighted_text"}>
+                                    3D-Kurzfilm
+                                </p>
+                                <img className={"project_img"} src={more_projects_frozen_carrot}/>
+                            </div>
+                            <div className={"more_projects_container"}>
+                                <p className={"highlighted_text"}>
+                                    Virtueller Prozessor mit VHDL
+                                </p>
+                                <img className={"project_img"} src={more_projects_vhdl}/>
+                            </div>
+                            <div className={"more_projects_container"}>
+                                <p className={"highlighted_text"}>
+                                    Motion Capture Stealth-Spiel
+                                </p>
+                                <img className={"project_img"} src={more_projects_motion_capture}/>
+                            </div>
+                            <div className={"more_projects_container"}>
+                                <p className={"highlighted_text"}>
+                                    Realistische 3D-Modellierung
+                                </p>
+                                <img className={"project_img"} src={more_projects_modeling}/>
+                            </div>
+                        </Carousel>
+                    </div>
                 </AnimationOnScroll>
             </div>
         </div>
     );
 };
-//DAAAAAAAAAAAAAARAN DENKEN IN DER ERKLÄRUNG NOCH EIN VIDEO VON VUE.JS REINZUBRINGEN DASS DAS RESPONSIVE DESIGN ZEIGT!
+
 export default Projects_Timeline;
