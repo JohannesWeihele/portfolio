@@ -21,6 +21,7 @@ import fireprotect from '../../../resources/videos/fireprotect/fireprotect.mp4'
 import fireprotect_communication from '../../../resources/videos/fireprotect/fireprotect_communication.mp4'
 import fireprotect_vitals from '../../../resources/videos/fireprotect/fireprotect_vitals.mp4'
 
+
 //----------------Bilder-------------//
 import digital_cockpit_picture from '../../../resources/images/digital_cockpit_picture.png'
 import digital_cockpit_picture_td from '../../../resources/images/digital_cockpit_picture_td.png'
@@ -78,6 +79,7 @@ import fireprotect_wearables from '../../../resources/images/fireprotect_wearabl
 import fireprotect_architecture_one from '../../../resources/images/fireprotect_architecture_one.jpg'
 import fireprotect_architecture_two from '../../../resources/images/fireprotect_architecture_two.jpg'
 import fireprotect_architecture_three from '../../../resources/images/fireprotect_architecture_three.jpg'
+import fireprotect_master from '../../../resources/images/fireprotect_master.jpg'
 
 //------------------GIFS---------------//
 import step_one from '../../../resources/gifs/step_one.gif'
@@ -181,7 +183,7 @@ const Projects_Timeline: React.FC = () => {
                                 </p><div className={"mobile_newLine"}><br/></div>
                                 <img className={"project_img"} src={digital_cockpit_picture_td}/><div className={"mobile_newLine"}><br/><br/></div>
                             </ExpandingList>
-                            <ExpandingList name={"Was ich gelernt hab"}>
+                            <ExpandingList name={"Kompetenzen und Fähigkeiten"}>
                                 <p className={"max_width_text"}>
                                     Das Praktikum im Adrive Living Lab bot mir eine ideale Gelegenheit eigenverantwortlich zu arbeiten und diente als wichtiger Wegweiser für meine darauffolgende Spezialisierung zur Software- und Webentwicklung. Die Kombination aus kreativer und technischer Entwicklung weckte in mir den Wunsch nach mehr wofür ich dem Hochschul-Labor sehr dankbar bin.
                                     Am Meisten beeindruckt hat mich während meines 20-wöchigen Praktikums das unglaubliche Team vom Adrive Living Lab, bestehend aus (damals) etwa 20 genialen Mitarbeitern. <br/><br/>
@@ -280,7 +282,7 @@ const Projects_Timeline: React.FC = () => {
                                     </div>
                                 </ExpandingList>
                             </ExpandingList>
-                            <ExpandingList name={"Was ich gelernt hab"}>
+                            <ExpandingList name={"Kompetenzen und Fähigkeiten"}>
                                 <p className={"max_width_text"}>
                                     Auch am Ende dieses Projekts hatte ich wieder jede Menge gelernt. Ich hatte die Herausforderung gemeistert mich in, mir völlig unbekannter Hardware einzuarbeiten und mit ihr möglichst professionell umzugehen. Wir haben uns in die, für uns zuvor unbekannte Entwicklungsumgebung der Unreal-Engine eingearbeitet und gelernt professionelle, digitale Welten mittels Blueprints zu erschaffen. Zudem habe ich erfahren, wie echtes Teamwork im Workflow eines größeren Projekts mit straffem Zeitplan aussehen kann.
                                 </p>
@@ -505,7 +507,7 @@ const Projects_Timeline: React.FC = () => {
                                     </Zoom><br/>
                                 </p>
                             </ExpandingList>
-                            <ExpandingList name={"Was ich gelernt hab"}>
+                            <ExpandingList name={"Kompetenzen und Fähigkeiten"}>
                                 <p className={"max_width_text"}>
                                     Die Entwicklung der FoodFill-App zur Steuerung und Überwachung des FoodFill-Abfüllautomaten war mit Abstand das umfangreichste Projekt, welches ich zu dieser Zeit umgesetzt hatte. Aus 144 Seiten Bachelorarbeit, mehreren Tausend Zeilen Code, einer dreidimensionalen Bedienungsanleitung, sowie einem kompletten Iterationszykluses des Usability-Engineerings nahm ich vor allem eine Sache mit: <b>Stress- und Frustrationstoleranz.</b><br/><br/>
                                     Ich lernte mit Android Studio und dessen Mechaniken zur Entwicklung moderner Smartphone-Applikationen umzugehen und dabei meine Java-Kenntnisse weiter zu festigen. Der wöchentliche Austausch mit den Kollegen des Klevertecs Kempten zeigte mir, wie eine nutzerorientierte Software-Entwicklung aussehen kann, die die Wünsche und Bedürfnisse der späteren Anwender zum Mittelpunkt der Entwicklung macht. Ich lernte XML kennen und darüber hinaus, wie man den externen Dienst eines Cloud-Speichers in den Workflow der Anwendung integrieren konnte.
@@ -630,7 +632,7 @@ const Projects_Timeline: React.FC = () => {
                                         </p>
                                     </ExpandingList>
                             </ExpandingList>
-                            <ExpandingList name={"Was ich gelernt hab"}>
+                            <ExpandingList name={"Kompetenzen und Fähigkeiten"}>
                                 <p className={"max_width_text"}>
                                     Das Projekt Can You Play It? bot mir die perfekte Gelegenheit, um einen ersten, jedoch umfangreichen Einblick in die Welt eines Webentwicklers zu erhalten. Ich lernte zwei beliebte Web-Frameworks zur Entwicklung professioneller Webseiten kennen und konnte mich fundiert in die individuellen Technologien einarbeiten, um daraus selbstständig meine ersten beiden Webanwendungen zu konstruieren.<br/><br/>
                                     Auch wenn der Fokus der Entwicklung bislang hauptsächlich noch im Frontend lag, empfand ich meine ersten beiden Web-Projekte als einen wegweisenden Schritt näher zum professionellen Software- und Web-Engineer. Ich lernte HTML und CSS kennen und schaffte es, mein, zuvor in Adobe Xd entwickeltes Mockup völlig identisch mit der Markup- und Stylesheet-Sprache nachzubilden.
@@ -786,7 +788,7 @@ const Projects_Timeline: React.FC = () => {
                                 </ExpandingList>
                             </p>
                         </ExpandingList>
-                        <ExpandingList name={"Was ich gelernt hab"}>
+                        <ExpandingList name={"Kompetenzen und Fähigkeiten"}>
                             <p className={"max_width_text"}>
                                 Selbstverständlich habe ich aus diesen beiden Web-Projekten für meinen weiteren "Werdegang" zum Web- und Software-Engineer wieder einiges mitnehmen können, um meine Erfahrungen im späteren Berufsfeld zu erweitern. Ich hatte meine erste moderne Website erstellt, die sich dynamisch an jegliche Bildschirmgröße anpassen konnte. Ich hatte meine ersten beiden Single-Page Webanwendungen entwickelt, die selbst nach dem Schließen der Website dank Local-Storage weiterhin alle Produkte des Warenkorbs beibehalten.
                             </p>
@@ -874,7 +876,7 @@ const Projects_Timeline: React.FC = () => {
                                 wurden dazu analyisiert und am zukünftigen Produkt von StateofDart angewandt. Dadurch konnten wir die ersten Konzepte unseres Marktsegments konstruieren, um im Falle einer zukünftigen Weiterführung des Projekts die Chance von negativen Überraschungen innerhalb der Unternehmensstruktur zu minimieren.
                             </p>
                         </ExpandingList>
-                        <ExpandingList name={"Was ich gelernt hab"}>
+                        <ExpandingList name={"Kompetenzen und Fähigkeiten"}>
                             <p className={"max_width_text"}>
                                 Die Entwicklung eines eigenen Systems zur Erkennung von Steelsdarts stellte uns vor einige Hürden und Probleme, an die denen wir gemeinsam als Team wachsen konnten. Ich hatte gelernt ein eigenes Produkt nicht nur aus Sicht eines Software-Entwicklers, sondern auch aus der eines angehenden Unternehmers zu betrachten.
                                 Dazu gehörten die Kostenkalkulation unter Berücksichtigung des vorhandenen Budgets, einer detaillierten Risikoanalyse mit der Ausarbeitung von "Notfallplänen" im Falle des Eintritts eben dieser Risiken, sowie einer umfangreichen Marktanalyse bisheriger Lösungen der Konkurrenz.<br/><br/>
@@ -1004,13 +1006,13 @@ const Projects_Timeline: React.FC = () => {
                                 Während die Service-Klassen benötigt werden, um eine dauerhafte Überwachung- und Übertragungsschnittstelle von Vitalwerten und Kommunikation bereitstellen zu können, helfen Basisklassen wie bspw. die SharedPreferencesVals-Klasse dabei, den Inhalt der lokal gespeicherten Daten zu verwalten, um so Informationen über die aktuelle Sitzung hinaus ablegen und abrufen zu können.
                             </p>
                         </ExpandingList>
-                        <ExpandingList name={"Was ich gelernt hab"}>
+                        <ExpandingList name={"Kompetenzen und Fähigkeiten"}>
                             <p className={"max_width_text"}>
-                                In meinem letzten Projekt habe ich hauptsächlich gelernt anhand bestehender Systemanforderungen, eine Hardware-Analyse durchzuführen, um daraus die optimale Technologie für die zu erarbeitende Lösung identifizieren zu können. Die vielen verschiedener APIs einarbeiten müssen, um daraus die für mich essentiellen Software-Funktionen implementieren zu können.
-
-
-                                Da ich meine Arbeit innerhalb von 4, statt den eigentlich 6 Monaten geschrieben habe, um sie meinem Vater zum 70. Geburtstag schenken zu können, habe ich einmal mehr meine Frustrationstoleranz und Disziplin, bei 12-14 stündigen Arbeitstagen auf die Probe stellen müssen.<br/><br/>
-                                Nichtsdestotrotz hatte es sich mehr als gelohnt, als ich nach all der Arbeit die Reaktion meines Vaters sehen konnte, sobald ich ihm die Arbeit zu seinem Geburtstag in ausgedruckter Form präsentieren konnte.
+                                Während meiner Masterarbeit erwarb ich umfassende Fähigkeiten in der Analyse bestehender Systemanforderungen und der Identifizierung optimaler Technologien zur Lösungsentwicklung. Die umfangreiche Integration verschiedener APIs zur Bereitstellung wesentlicher Softwarefunktionen, ermöglichte mir zudem ein vertieftes Verständnis für die nahtlose Integration externer Dienste.
+                                Die teilweise eingeschränkte Schnittstellenerfahrung im WearOS-Betriebssystem erforderte von mir die Entwicklung alternativer Problemlösungsstrategien, wodurch ich meine Fähigkeiten zur Anpassung und Flexibilität in herausfordernden Situationen weiter ausbauen konnte.<br/><br/>
+                                <img className={"project_img"} src={fireprotect_master}/><br/><br/>
+                                Trotz des Zeitdrucks, den ich mir selbst auferlegt hatte, indem ich meine Masterarbeit in vier Monaten statt der üblichen sechs Monate abschloss, konnte ich die Arbeit durch ein gut strukturiertes Zeit-Management erfolgreich und in vollem Umfang bewältigen.
+                                Und obwohl daraus eine Menge Stress und Arbeitstage, von nicht selten 12-14 Stunden resultierten, hatte es sich jedoch mehr als gelohnt, als ich nach all der Arbeit die Reaktion meines Vaters sehen konnte, sobald ich ihm die Arbeit zu seinem 70. Geburtstag in ausgedruckter Form präsentieren konnte.
                             </p>
                         </ExpandingList>
                     </ExpandingButton>
