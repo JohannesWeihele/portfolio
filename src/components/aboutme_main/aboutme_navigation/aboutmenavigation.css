@@ -1,0 +1,44 @@
+.navigation_wrapper{
+    border-radius: 10px;
+    width: 100px;
+    height: auto;
+    background-color: white;
+    animation: shadow-pulse 3s ease-in-out infinite;
+}
+
+.navigation_bar li{
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    list-style-type: none;
+    animation: puls;
+}
+
+.navigation_bar_element{
+    height: fit-content;
+    border: 1px solid transparent;
+    margin-left: -40px;
+}
+
+.navigation_bar_element:hover{
+    border: 1px solid #fd8c3f;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.navigation_bar li p{
+    text-align: center;
+}
+
+.navigation_img{
+    width: 25px;
+    margin-bottom: -15px;
+    height: auto;
+}
+
+
+
+@media (max-width: 600px){
+
+}

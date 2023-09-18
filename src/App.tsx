@@ -1,22 +1,19 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
-import Header from "./components/header/header";
-import Main_Body from "./components/main_body/main_body";
-import { ParallaxProvider } from 'react-scroll-parallax'
-import Footer from "./components/footer/footer";
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import ProjectPage from "../src/pages/project_page/project_page";
+import AboutMePage from "./pages/aboutme_page/aboutme_page";
 
 const App = () => {
 
   return (
-      <div className="App">
-              <ParallaxProvider>
-                  <meta name="viewport"
-                        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
-                  <Header/>
-                  <Main_Body/>
-                  <Footer/>
-             </ParallaxProvider>
-      </div>
+      <Router>
+          <Routes>
+              <Route path="/" Component={ProjectPage}/>
+              <Route path="*" element={<Navigate to="/" />} />
+              <Route path={"/aboutme"} Component={AboutMePage}/>
+          </Routes>
+      </Router>
   );
 }
 

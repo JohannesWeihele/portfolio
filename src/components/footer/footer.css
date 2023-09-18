@@ -1,7 +1,6 @@
 .footer {
     height: auto;
     width: auto;
-    margin-top: 200px;
     position: relative;
 }
 
@@ -24,12 +23,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -120px;
+    margin-top: 100px;
 }
 
 .footer_back p{
     font-size: 24px;
-    color: white;
+    color: #fd8c3f;
     height: 75px;
     line-height: 75px;
     font-weight: bold;
@@ -39,14 +38,21 @@
 .footer_back p:hover {
     animation: pulse 1s ease-in-out infinite;
     cursor: pointer;
-    color: #fd8c3f;
+    color: lightgrey;
 }
 
 .downer_footer_wrapper {
     height: auto;
-    background-color: white;
     text-align: center;
+    border-top: 1px solid lightgrey;
     margin-top: 10px;
+    background-color: rgba(239, 239, 239, 0.6);
+}
+
+.footer_rights{
+    text-align: center;
+    margin-top: -15px;
+    color: #9a9a9a;
 }
 
 .downer_footer_wrapper img:hover{

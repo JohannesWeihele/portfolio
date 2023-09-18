@@ -1,5 +1,6 @@
 import React, {useRef} from 'react';
 import {FC} from 'react';
+import { Link } from 'react-router-dom';
 import './header.css';
 
 const MenuBar: FC = () => {
@@ -15,9 +16,12 @@ const MenuBar: FC = () => {
     return (
         <div>
             <ul className="menu-bar">
-                <li>Start</li>
-                <li onClick={scrollToProjects}>Projekte</li>
-                <li>Über mich</li>
+                <Link to="/">
+                    <li onClick={scrollToProjects}>Projekte</li>
+                </Link>
+                <Link to="/aboutme">
+                    <li>Über mich</li>
+                </Link>
             </ul>
         </div>
     );
