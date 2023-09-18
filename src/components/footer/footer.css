@@ -42,11 +42,14 @@
 }
 
 .downer_footer_wrapper {
-    height: auto;
+    height: 200px;
     text-align: center;
-    border-top: 1px solid lightgrey;
+    border-top: 1px solid #eeeeee;
     margin-top: 10px;
-    background-color: rgba(239, 239, 239, 0.6);
+    background-image: url('../../resources/images/backgrounds/footer_background.png');
+    background-repeat: no-repeat; /* Verhindert die Wiederholung des Bildes */
+    background-position: 0px -100px;
+    background-size: cover;
 }
 
 .footer_rights{

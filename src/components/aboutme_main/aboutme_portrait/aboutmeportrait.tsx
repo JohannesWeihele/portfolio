@@ -7,6 +7,7 @@ import huettenbild from "../../../resources/portrait/huette.jpeg"
 import office from "../../../resources/portrait/office.jpeg"
 import linkedin from "../../../resources/icons/linked_in_logo.png"
 import xing from "../../../resources/icons/xing_logo.png"
+import background from "../../../resources/images/backgrounds/aboutme_background.png"
 
 const AboutmePortrait: React.FC = () => {
 
@@ -19,12 +20,8 @@ const AboutmePortrait: React.FC = () => {
             </div>
             <div className={"portrait_container_input"}>
                 <p className={"portrait_name"}>Johannes Weihele</p>
-                <p className={"portrait_title"}>Web- und Software-Engineer </p>
-                <div className={"portrait_icon_container"}>
-                    <img src={linkedin}/>
-                    <img src={xing}/>
-                </div>
                 <p className={"portrait_position"}>- M.Sc. Informatik - Software-Engineering -</p>
+                <p className={"portrait_title"}>Web- und Software-Engineer </p>
             </div>
         </div>
     );

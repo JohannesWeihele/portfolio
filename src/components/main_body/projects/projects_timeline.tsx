@@ -516,7 +516,7 @@ const Projects_Timeline: React.FC = () => {
                                     <img className={"project_img"} src={foodfill_logo}/><br/><br/>
                                     Doch auch charakterlich konnte ich mich innerhalb dieses halben Jahres deutlich weiterentwickeln. Meine Bachelorarbeit im Lockdown der Corona-Hochphase anzufertigen, ohne die Möglichkeiten eines persönlichen, sozialen Austauschs genießen oder mich zum Abschalten mit Freunden treffen zu können, nagte ziemlich oft an meinen Grenzen. Jedoch ganz nach dem Motto
                                     <p className={"highlighted_text"}>
-                                        Was dich nicht umbringt, macht dich stärker
+                                        "A smooth sea never made a skilled sailor." - Franklin D. Roosevelt
                                     </p>
                                     bin ich davon überzeugt, dass diese Ausnahmesituation meine mentale Stärke weiter gefestigt hat. Darüber hinaus konnte ich dem Lockdown auch etwas positives abgewinnen, denn ich glaube nicht, dass meine Bachelorarbeit ohne Lockdown in diesem Umfang möglich gewesen wäre.<br/>
                                 </p>
@@ -1019,7 +1019,7 @@ const Projects_Timeline: React.FC = () => {
                 </AnimationOnScroll>
             </div>
             <div className={"project_wrapper"}>
-                <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"} animateOnce={true}>
+                <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInLeftBig"} animateOut={"animate__fadeOutRightBig"} animateOnce={true}>
                     <Timeline_long name={"Sonstiges"} year={""} side={"right"}/>
                     <div className={"timeline_wrapper"}>
                         <HorizontalLine side={"left"} sameLine={false} name={"Weitere Projekte"}/>
