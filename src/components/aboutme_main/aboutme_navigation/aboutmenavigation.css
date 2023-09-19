@@ -4,26 +4,32 @@
     height: auto;
     background-color: white;
     animation: shadow-pulse 3s ease-in-out infinite;
+    background-image: url('../../../resources/images/backgrounds/aboutme_background.jpg');
+    background-size: cover;
+    background-position: -300px;
 }
 
 .navigation_bar li{
-    width: 100%;
+    width: 100px;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
     list-style-type: none;
-    animation: puls;
 }
 
 .navigation_bar_element{
     height: fit-content;
+    width: 100px;
     border: 1px solid transparent;
     margin-left: -40px;
 }
 
+.selected{
+    background-color: rgba(255, 236, 200, 0.5);
+}
+
 .navigation_bar_element:hover{
     border: 1px solid #fd8c3f;
-    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -36,7 +42,6 @@
     margin-bottom: -15px;
     height: auto;
 }
-
 
 
 @media (max-width: 600px){

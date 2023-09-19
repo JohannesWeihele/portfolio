@@ -1,11 +1,15 @@
 .aboutme_container{
     width: 100%;
-    height: auto;
+    height: 40vw;
+    min-height: 850px;
+    max-height: 1000px;
     display: flex;
     align-items: center;
     justify-content: center;
     vertical-align: center;
-    margin-top: -20px;
+    margin-bottom: -10px;
+    background-image: url('../../resources/images/backgrounds/aboutme_background.jpg');
+    background-size: cover;
 }
 
 .aboutme_wrapper{

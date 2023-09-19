@@ -2,8 +2,141 @@
     width: 100%;
     border-radius: 5px;
     margin-left: 5px;
-    height: 600px;
-    border: 1px solid #eeeeee;
-    background-color: white;
+    height: 40vw;
+    max-height: 900px;
+    border: 5px solid #eeeeee;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    background-size: cover;
+    background: rgba(236, 236, 236, 0.5);
 }
+
+.scrollable_content{
+    width: 100%;
+    height: 36vw;
+    max-height: 850px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.aboutme_input{
+    margin: 40px;
+}
+
+h4 {
+    font-size: 26px;
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 30px;
+}
+
+.about_introduction_flexbox{
+    display: flex;
+}
+
+.about_wrapper_left{
+    text-align: left;
+    line-height: 0.7cm;
+    font-weight: lighter;
+    width: 400px;
+    margin-left: 30px;
+}
+
+.about_wrapper_right{
+    text-align: left;
+    line-height: 0.7cm;
+    font-weight: lighter;
+    width: 400px;
+    margin-left: 100px;
+}
+
+.introduction_highlight_text{
+    width: fit-content;
+    background-color: rgba(255, 236, 200, 0.73);
+    line-height: 1.0cm;
+}
+
+.introduction_normal_text{
+    width: fit-content;
+    line-height: 1.0cm;
+    text-align: right;
+}
+
+.completed_img{
+    width: 200px;
+    height: auto;
+    opacity: 0.8;
+    margin-left: 80px;
+}
+
+.aboutme_quali_one{
+    text-align: center;
+    margin-left: 70px;
+    font-size: 18px;
+}
+
+.aboutme_quali_two{
+    text-align: center;
+    margin-left: 80px;
+}
+
+.aboutme_skills_icon{
+    width: 100px;
+    height: auto;
+    margin-left: 185px;
+}
+
+.aboutme_hobbies_icon{
+    width: 350px;
+    height: auto;
+    margin-left: 60px;
+    min-height: 225px;
+}
+
+.line_graph{
+    width: 10cm;
+    height: 0.5cm;
+    background-color: white;
+    position: relative;
+}
+
+.line_graph::before {
+    content: "";
+    display: block;
+    height: 100%;
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#graph_web::before {
+    width: 50%;
+}
+
+#graph_software::before {
+    width: 40%;
+}
+
+#graph_game::before {
+    width: 30%;
+}
+
+#graph_usability::before {
+    width: 65%;
+}
+
+#graph_creative::before {
+    width: 40%;
+}
+
+#graph_blender::before{
+    width: 30%;
+}
+
+#graph_german::before{
+    width: 95%;
+}
+
+#graph_english::before{
+    width: 70%;
+}
+

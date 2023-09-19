@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './aboutmemain.css';
 import {Carousel} from "react-responsive-carousel";
 import one from "../../resources/portrait/portrait.png"
@@ -8,12 +8,18 @@ import AboutmeInput from "./aboutme_input/aboutmeinput";
 
 const AboutmeMain: React.FC = () => {
 
+    const [dataFromChild, setDataFromChild] = useState('About');
+
+    function handleDataFromChild(data: any): void{
+        setDataFromChild(data);
+    };
+
     return (
         <div className={"aboutme_container"}>
             <div className={"aboutme_wrapper"}>
-                <AboutmeNavigation/>
-                <AboutmePortrait/>
-                <AboutmeInput/>
+                <AboutmeNavigation sendDataToParent={handleDataFromChild}/>
+                <AboutmePortrait dataFromChild={dataFromChild}/>
+                <AboutmeInput dataFromChild={dataFromChild}/>
             </div>
         </div>
     );

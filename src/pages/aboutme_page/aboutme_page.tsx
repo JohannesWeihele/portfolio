@@ -7,7 +7,7 @@ import AboutmeMain from "../../components/aboutme_main/aboutmemain";
 const AboutMePage = () => {
 
     return (
-        <div>
+        <div className={"aboutme_page_container"}>
             <Header/>
             <AboutmeMain/>
             <Footer/>
