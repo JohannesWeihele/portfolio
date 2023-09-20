@@ -63,7 +63,7 @@ const Introduction: FC = () => {
                     <h2>Willkommen zu meinem Portfolio</h2>
                 </div>
                 <div className={"introduction_text_container"}>
-                    <h1 id={"intro_job_title "} style={{color: "white"}}>{animatedText1} </h1>
+                    <h1 id={"intro_job_title "} style={{color: "black"}}>{animatedText1} </h1>
                     <h1 id={"intro_job_title"} style={{color: "#fd8c3f"}}>{animatedText2} <span className="invisible_writer_dot"></span></h1>
                     <p className={"introduction_text"}>
                         Zwei bis drei intensive Bewerbungsgespräche bilden oft die einzige Möglichkeit und Entscheidungsgrundlage, um ein konkretes Urteil darüber zu fällen, ob der Bewerbende für das Unternehmen, sowie die angebotene Stelle geeignet ist oder nicht. Eine transparente Darlegung der bisherigen Projekterfahrungen ist daher von entscheidender Bedeutung, um einen authentischen Einblick in die fachlichen Fähigkeiten eines Entwicklers zu erhalten. Auf dieser Plattform beabsichtige ich, eben diesen Einblick in Form meiner bisherigen Projekte zu erleichtern, die im Verlauf meines Bachelorstudiums zum Game-Engineer, sowie meiner erworbenen Fachkenntnisse als Web- und Software-Engineer im darauf folgenden Masterstudium entstanden sind.<br/><br/>
