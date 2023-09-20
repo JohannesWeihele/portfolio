@@ -68,3 +68,42 @@
     height: auto;
     margin-left: 50px;
 }
+
+@media (max-width: 1800px){
+    .aboutme_portrait_container{
+        width: 450px;
+    }
+}
+
+@media (max-width: 1400px){
+
+    .aboutme_portrait_container{
+        margin: 0 auto;
+        height: 400px;
+        width: 30%;
+        min-width: 350px;
+        margin-bottom: 50px;
+    }
+
+    .img-container{
+        height: 270px;
+    }
+
+    .portrait_name{
+        font-size: 30px;
+    }
+
+    .portrait_title{
+        font-size: 20px;
+    }
+
+    .portrait_position{
+        margin-top: -35px;
+    }
+
+    .portrait_container_input{
+        margin-top: -20px;
+    }
+
+}
+

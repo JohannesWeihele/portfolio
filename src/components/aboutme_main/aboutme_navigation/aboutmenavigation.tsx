@@ -23,7 +23,7 @@ const AboutmeNavigation: React.FC<AboutmeNavigationProps> = ({ sendDataToParent 
                 <ul className="navigation_bar">
                     <li
                         onClick={() => handleItemClick("About")}
-                        className={`navigation_bar_element ${selectedItem === "About" ? "selected" : ""}`}
+                        className={`navigation_bar_element ${selectedItem === "About" ? "selected_navigation" : ""}`}
                     >
                         <div>
                             <img className="navigation_img" src={about} alt="About" />
@@ -32,7 +32,7 @@ const AboutmeNavigation: React.FC<AboutmeNavigationProps> = ({ sendDataToParent 
                     </li>
                     <li
                         onClick={() => handleItemClick("Skills")}
-                        className={`navigation_bar_element ${selectedItem === "Skills" ? "selected" : ""}`}
+                        className={`navigation_bar_element ${selectedItem === "Skills" ? "selected_navigation" : ""}`}
                     >
                         <div>
                             <img className="navigation_img" src={skills} alt="Skills" />
@@ -41,7 +41,7 @@ const AboutmeNavigation: React.FC<AboutmeNavigationProps> = ({ sendDataToParent 
                     </li>
                     <li
                         onClick={() => handleItemClick("Freizeit")}
-                        className={`navigation_bar_element ${selectedItem === "Freizeit" ? "selected" : ""}`}
+                        className={`navigation_bar_element ${selectedItem === "Freizeit" ? "selected_navigation" : ""}`}
                     >
                         <div>
                             <img className="navigation_img" src={freetime} alt="Freizeit" />

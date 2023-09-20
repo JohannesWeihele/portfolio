@@ -24,7 +24,7 @@
     margin-left: -40px;
 }
 
-.selected{
+.selected_navigation{
     background-color: rgba(255, 236, 200, 0.5);
 }
 
@@ -44,6 +44,36 @@
 }
 
 
-@media (max-width: 600px){
+@media (max-width: 1800px){
 
+    .navigation_wrapper ul{
+        display: flex;
+        align-items: center;
+        margin-left: -40px;
+        justify-content: center;
+    }
+
+    .navigation_container{
+        margin: 0 auto;
+    }
+
+    .navigation_wrapper {
+        width: 100%;
+        background-size: auto;
+        margin-top: -10vw;
+    }
+
+    .navigation_bar li{
+        width: 100%;
+    }
+
+    .navigation_bar_element{
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 1400px){
+    .navigation_wrapper{
+        margin-top: -200px;
+    }
 }

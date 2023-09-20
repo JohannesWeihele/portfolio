@@ -2,6 +2,7 @@
     position: relative;
     width: 100%;
     transform: scale(1);
+
     transform-origin: top left;
 }
 
