@@ -1,4 +1,4 @@
-import {FC} from 'react'
+import React, {FC} from 'react'
 import Logo from "./logo";
 import MenuBar from "./menubar";
 import './header.css';

@@ -330,7 +330,7 @@ const Projects_Timeline: React.FC = () => {
                                     Alle Produkt- sowie Herstellerinformationen sollten außerdem über einen Cloud-Speicher in Echtzeit abgerufen werden können, um so stets die aktuellen Informationen zu den jeweiligen Produkten innerhalb der App griffbereit zu halten. So ergab sich der offizielle Titel meiner Bachelorarbeit:
                                 </p>
                                 <p className={"highlighted_text"}>
-                                    "Usability-Engineering und Entwicklung eines Prototyps einer Android-App mit Cloudanbindung zur Überwachung und Steuerung eines Lebensmittel-Abfüllautomaten"
+                                    Usability-Engineering und Entwicklung eines Prototyps einer Android-App mit Cloudanbindung zur Überwachung und Steuerung eines Lebensmittel-Abfüllautomaten
                                 </p>
                                 <p className={"max_width_text"}>
                                     Mithilfe des Usability-Engineerings sollten hierzu innerhalb der Anforderungsanalyse explizit die einzelnen, individuellen Nutzerwünsche der respektiven Nutzergruppen herausgearbeitet werden, um diese im weiteren Verlauf genauer spezifizieren und implementieren zu können.

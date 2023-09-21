@@ -23,6 +23,15 @@ const MenuBar: FC = () => {
                     <li>Über mich</li>
                 </Link>
             </ul>
+            <ul className={"native_menuebar"}>
+                <Link to="/" style={{width: "50%"}}>
+                    <li onClick={scrollToProjects}>Projekte</li>
+                </Link>
+                <Link to="/aboutme" style={{width: "50%"}}>
+                    <li>Über mich</li>
+                </Link>
+            </ul>
+
         </div>
     );
 };
