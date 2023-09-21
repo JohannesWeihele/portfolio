@@ -187,7 +187,7 @@ const Projects_Timeline: React.FC = () => {
                                 <p className={"max_width_text"}>
                                     Das Praktikum im Adrive Living Lab bot mir eine ideale Gelegenheit eigenverantwortlich zu arbeiten und diente als wichtiger Wegweiser für meine darauffolgende Spezialisierung zur Software- und Webentwicklung. Die Kombination aus kreativer und technischer Entwicklung weckte in mir den Wunsch nach mehr wofür ich dem Hochschul-Labor sehr dankbar bin.
                                     Am Meisten beeindruckt hat mich während meines 20-wöchigen Praktikums das unglaubliche Team vom Adrive Living Lab, bestehend aus (damals) etwa 20 genialen Mitarbeitern. <br/><br/>
-                                    <div className={"multi_pictures_container"}>
+                                    <div className={"multi_pictures_container_two"}>
                                         <img className={"project_img"} src={porsche_driving}/>
                                         <img className={"project_img"} src={office_image}/>
                                     </div><br/>

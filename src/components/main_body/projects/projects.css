@@ -423,9 +423,21 @@
     height: auto;
 }
 
+.multi_pictures_container_two{
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
 .multi_pictures_container img{
     padding: 10px;
     max-width: 50%;
+    height: auto;
+    max-height: 450px;
+}
+
+.multi_pictures_container_two img{
+    padding: 10px;
     height: auto;
     max-height: 450px;
 }
@@ -726,6 +738,11 @@ ul li {
     .multi_pictures_container{
         display: inline-block;
     }
+
+    .multi_pictures_container_two{
+        display: inline-block;
+    }
+
 
     .timeline_icon_left_one, .timeline_icon_left_two, .timeline_icon_left_three,
     .timeline_icon_right_one, .timeline_icon_right_two, .timeline_icon_right_three{
