@@ -27,7 +27,7 @@ const Opener: React.FC<OpenerProps> = () => {
         <div>
             <ParallaxBanner
                 layers={[
-                    { image: background, speed: 0, expanded: false, disabled: isMobileView},
+                    { image: background, speed: 0, translateY: [-35, 35], expanded: false, disabled: isMobileView},
                 ]}
             >
                 <div style={{ height: 1400 }} className={"introduction_body"}>
