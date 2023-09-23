@@ -1,16 +1,22 @@
 import React, {useRef} from 'react';
 import {FC} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Location, useLocation } from 'react-router-dom';
 import './header.css';
 
 const MenuBar: FC = () => {
 
+    let location: Location = useLocation();
+
     const scrollToProjects = () => {
-        const scrollPosition = 1000;
-        window.scrollTo({
-            top: scrollPosition,
-            behavior: 'smooth',
-        });
+        const scrollPosition = 1500;
+
+        if(location.pathname !== '/aboutme'){
+            window.scrollTo({
+                top: scrollPosition,
+                behavior: 'smooth',
+            });
+        }
+
     };
 
     return (
