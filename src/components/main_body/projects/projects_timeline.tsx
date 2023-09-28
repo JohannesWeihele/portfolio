@@ -587,7 +587,7 @@ const Projects_Timeline: React.FC = () => {
                                     <p className={"highlighted_text"}>
                                         Vaadin
                                     </p>
-                                    Auch für das Vaadin-Projekt nutzte ich als IDE das Java-Äquivalent zu PyCharm - IntelliJ Idea. Hier diente mir eine H2-Datenbank als Grundlage, um alle Hardwarekomponenten und Spiele abzuspeichern, die mit dem System des Anwenders verglichen werden können. Darüber hinaus wurde für als Backend für alle HTTP-Abfragen und Security-Aspekte wie Token-Überprüfungen, Spring-Boot verwendet.
+                                    Auch für das Vaadin-Projekt nutzte ich als IDE das Java-Äquivalent zu PyCharm - IntelliJ Idea. Hier diente mir eine H2-Datenbank als Grundlage, um alle Hardwarekomponenten und Spiele abzuspeichern, die mit dem System des Anwenders verglichen werden können. Darüber hinaus wurde als Backend für alle HTTP-Abfragen und Security-Aspekte wie Token-Überprüfungen, Spring-Boot verwendet.
                                 </p>
                             </ExpandingList>
                             <ExpandingList name={"Software-Architektur"}>
