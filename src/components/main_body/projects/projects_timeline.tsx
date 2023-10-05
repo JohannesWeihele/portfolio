@@ -317,7 +317,7 @@ const Projects_Timeline: React.FC = () => {
                                 <p className={"max_width_text"}>
                                     Nachdem ich bereits während des Projekts
                                     <a onClick={() => scrollToPosition(1500)} style={{cursor: "pointer"}}> Digital Cockpit </a>
-                                     merkte, dass mir die Software-Entwicklung mehr liegt, als die Entwicklung von Videospielen, beschloss ich, dass meine Bachelorarbeit diesen Schwerpunkt in Form meiner ersten eigenen App weiter festigen sollte. Prof. Dr. Dreier der Hochschule Kempten schlug mir deshalb vor, eine Anwendung zur Steuerung und Überwachung eines 3D-gedruckten Abfüllautomaten des Projekts "FoodFill" entwickeln solle, was ich sofort dankend annahm.<br/><br/>
+                                     merkte, dass mir die Software-Entwicklung mehr liegt, als die Entwicklung von Videospielen, beschloss ich, dass meine Bachelorarbeit diesen Schwerpunkt in Form meiner ersten eigenen App weiter festigen sollte. Prof. Dr. Dreier der Hochschule Kempten schlug mir deshalb vor, eine Anwendung zur Steuerung und Überwachung eines 3D-gedruckten Abfüllautomaten des Projekts "FoodFill" zu entwickeln, was ich sofort dankend annahm.<br/><br/>
                                     In Kooperation mit dem Fraunhofer Institut konstruierte das Forschungsinstitut
                                     <a onClick={handleLinkClick}
                                        href={"https://www.hs-kempten.de/klevertec"} target={"_blank"} rel={"noopener noreferrer"}><i> Klevertec</i>
