@@ -344,7 +344,7 @@ const Projects_Timeline: React.FC = () => {
                                     <img className={"project_img"} src={usability_engineering_lifecycle}/>
                                 </Zoom>
                                 <p className={"max_width_text"}>
-                                    Im Zuge meines Bachelorarbeit setzte ich mir demnach zum Ziel, einen vollständigen Iterationszyklus des Lifecycles mit den Kategorien
+                                    Im Zuge meiner Bachelorarbeit setzte ich mir demnach zum Ziel, einen vollständigen Iterationszyklus des Lifecycles mit den Kategorien
                                     <ul>
                                         <li>Analyse,</li>
                                         <li>Modellierung,</li>
@@ -375,7 +375,7 @@ const Projects_Timeline: React.FC = () => {
                                             <li>Says & Does</li>
                                             <li>und Pain & Gains</li>
                                         </ul>
-                                        zu betrachten und sich dadurch als Entwickler besser in die Person hineinversetzen zu können. Hier als Beispiel die Empathy-Map für Kunden:
+                                        zu betrachten und sich dadurch als Entwickler besser in die späteren Anwender hineinversetzen zu können. Hier als Beispiel die Empathy-Map für Kunden:
                                     </p>
                                     <Zoom>
                                         <img className={"project_img"} src={user_empathy_map}/>
@@ -393,7 +393,7 @@ const Projects_Timeline: React.FC = () => {
                                 </ExpandingList>
                                 <ExpandingList name={"Spezifikation"}>
                                     <p className={"max_width_text"}>
-                                        Innerhalb der Spezifikation sollten jetzt noch <i>User-Szenarien</i> angefertigt werden, in denen die einzelnen Benutzergruppen beispielhaft zu den jeweiligen Nutzerbedürfnissen gelangen könnten und wie diese User-Needs im Anschluss durch eine Interaktion mit dem System befriedigt werden können.
+                                        Innerhalb der Spezifikation sollten jetzt noch <i>User-Szenarien</i> angefertigt werden, in denen die einzelnen Benutzergruppen beispielhaft zu den jeweiligen Nutzerbedürfnissen gelangen könnten, gefolgt von einer anschließenden Beschreibung der Bedürfnis-Erfüllung.
                                         Als Ergebnis erhält der Entwickler dadurch einen Einblick in einige realitätsnahe Alltagsszenarien des Anwenders und eine Auflistung aller Funktionen, die benötigt werden, um eben diese erarbeiteten Wünsche zu erfüllen. <br/><br/>
                                         Mit den <i>Essential Use-Case-Tabellen</i> können die Funktionen der User-Szenarien im letzten Schritt aufgegliedert und mit benötigten Reaktionen des Systems verknüpft werden, um so zu jeder Aktion des Nutzers eine entsprechende Verarbeitung der Software herausarbeiten zu können. Hier ein Beispiel:
                                     </p>
@@ -554,19 +554,19 @@ const Projects_Timeline: React.FC = () => {
                             </div>
                             <ExpandingList name={"Über das Projekt"} open={true}>
                                 <p className={"max_width_text"}>
-                                    Nachdem ich bereits im Bachelor meine Leidenschaft für die Software-Entwicklung entdeckt hatte, wollte ich mich innerhalb meines Masterstudiums nun noch weiter auf die Entwicklung von Software fokussieren.
+                                    Nachdem ich bereits im Bachelor meine Leidenschaft für die Software-Entwicklung entdeckt hatte, wollte ich mich innerhalb meines Masterstudiums nun noch weiter auf die Entwicklung professioneller Software fokussieren.
                                     Hierzu wechselte ich von der Hochschule Kempten zur Technischen Hochschule in Augsburg, da dort ein Informatik-Schwerpunkt zum Software-Engineer angeboten wurde.<br/><br/>
-                                    Ein wesentlicher Bestandteil zum Software-Engineer war dabei unter anderem die Fähigkeit zur Webentwicklung. Während viele <i>normale</i> Informatik-Studiengänge bereits im Bachelorstudium einige Basics zu HTML, CSS und Java- bzw. TypeScript erlernt hatten, lag der Fokus des Game-Engineers vermehrt bei der Computergrafik- und Physik-Programmierung.
+                                    Ein wesentlicher Bestandteil zum Software-Engineer ist dabei unter anderem die Fähigkeit zur Webentwicklung. Während viele <i>normale</i> Informatik-Studiengänge bereits im Bachelorstudium einige Basics zu HTML, CSS und Java- bzw. TypeScript erlernt hatten, lag der Fokus des Game-Engineers vermehrt bei der Computergrafik- und Physik-Programmierung.
                                     Aus diesem Grund beschloss ich, mich in den kommenden Semestern vermehrt der Webentwicklung zu widmen, um einige bekannte Technologien zur Entwicklung von Websites kennenzulernen.
                                 </p>
                                 <p className={"max_width_text"}>
-                                    Mit dem Projekt <i>Can You Play It</i> konnte ich dabei mein ersten Fullstack-Erfahrungen eines Web-Projekts machen. Als Vorbild der Idee sah ich dabei das Tool
+                                    Mit dem Projekt <i>Can You Play It</i> konnte ich dabei meine ersten Fullstack-Erfahrungen eines Web-Projekts machen. Als Vorbild der Idee sah ich dabei das Tool
                                     <a onClick={handleLinkClick}
                                        href={"https://www.systemrequirementslab.com/cyri"} target={"_blank"} rel={"noopener noreferrer"}><i> Can You Run it </i>
                                     </a>
                                      des SystemRequirementsLab. <br/><br/>
                                     <img className={"project_img"} src={canyourunit}/><br/><br/>
-                                    Die Software scannt dabei die aktuelle System-Hardware des Nutzers und vergleicht sie im Anschluss mit dem zuvor angegebenen Spiel. Sollten alle Hardware-Anforderung in Bezug auf
+                                    Die Software scannt die aktuelle System-Hardware des Nutzers und vergleicht sie im Anschluss mit dem zuvor angegebenen Spiel. Sollten alle Hardware-Anforderung in Bezug auf
                                     <ul>
                                         <li>Grafikkarte,</li>
                                         <li>Prozessor,</li>
@@ -690,7 +690,7 @@ const Projects_Timeline: React.FC = () => {
                         </ExpandingList>
                         <ExpandingList name={"Entwicklungsumgebung"}>
                             <p className={"max_width_text"}>
-                                Da der Fokus der Entwicklung von FoodSupport, beim Entwurf einer Single-Page Webanwendung lag, nutzte ich einmal
+                                Da der Fokus der Entwicklung von FoodSupport beim Entwurf einer Single-Page Webanwendung lag, nutzte ich einmal
                                 <a onClick={handleLinkClick}
                                    href={"https://angular.io/"} target={"_blank"} rel={"noopener noreferrer"}><i> Angular </i>
                                 </a>
@@ -745,7 +745,7 @@ const Projects_Timeline: React.FC = () => {
                                         <img className={"project_img"} src={foodsupport_architecture_vuejs}/>
                                     </Zoom>
                                     <p className={"max_width_text"}>
-                                        Hier erhielten die einzelnen Seiten-Komponenten einen eigenen Ordner "Views", um sie von den restlichen Komponenten zu separieren. Ansonsten ist die Struktur der Implementierung sehr ähnlich zu der von Angular - Services kümmern sich um die Schnittstellen-Kommunikation zum Backend, sowie um die Bereitstellung der benötigten Daten, Container-Components werden als Basis-Komponenten für eine muliple Anzahl von Seiten verwendet und "Single-Use"-Components sind für die individuellen Funktionen der Seiten zuständig.<br/><br/>
+                                        Hier erhielten die einzelnen Seiten-Komponenten einen eigenen Ordner "Views", um sie von den restlichen Komponenten zu separieren. Ansonsten ist die Struktur der Implementierung sehr ähnlich zu der von Angular: Services kümmern sich um die Schnittstellen-Kommunikation zum Backend, sowie um die Bereitstellung der benötigten Daten, Container-Components werden als Basis-Komponenten für eine muliple Anzahl von Seiten verwendet und "Single-Use"-Components sind für die individuellen Funktionen der Seiten zuständig.<br/><br/>
                                         Damit der Warenkorb auch beim Schließen der Website weiterhin erhalten bleibt, wurden die Daten sowohl in Angular, als auch in Vue.js innerhalb eines Local-Storages abgespeichert. Die Produkte wurden außerdem mit "Tags" versehen, sodass sie über die gewünschten Produktkategorien gefiltert werden können, sowie einen "Verkaufscounter", um die Beliebtheit der Produkte für die Sortieroption "Beliebtheit" messen zu können.
                                         Da zuletzt sowohl die Filter-, als auch die Sortieroptionen innerhalb der URL hinterlegt und eingelesen wurden, konnten die Produkte auch beim Seitenstart entsprechend sortiert und kategorisiert werden.
                                     </p>
