@@ -221,7 +221,7 @@ const Projects_Timeline: React.FC = () => {
                                 <a onClick={handleLinkClick}
                                    href={"https://www.unrealengine.com/de"} target={"_blank"} rel={"noopener noreferrer"}><i> Unreal-Engine </i>
                                 </a>
-                                erschaffen. Dabei war sich mein Team, das aus drei Kommilitonen und mir bestand, sehr schnell einig: Wir wollten ein Storytelling-Spiel erschaffen, das an die Großartigkeit von „Life is Strange“ erinnert und so viele unterschiedliche Gesichtsanimationen wie möglich visualisiert.
+                                entwickeln. Dabei war sich mein Team, das aus drei Kommilitonen und mir bestand, sehr schnell einig: Wir wollten ein Storytelling-Spiel gestalten, das an die Großartigkeit von „Life is Strange“ erinnert und so viele unterschiedliche Gesichtsanimationen wie möglich visualisiert.
                             </p>
                                 <div className={"mobile_newLine"}><br/></div>
                                 <img className={"project_img"} src={life_is_strange}/>
