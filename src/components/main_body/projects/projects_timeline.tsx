@@ -794,7 +794,7 @@ const Projects_Timeline: React.FC = () => {
                             </p>
                             <img className={"project_img"} src={foodsupport_final}/>
                             <p className={"max_width_text"}>
-                                Ich hatte meine Fullstack-Komponenzen mithilfe der genannten Technologien ausgebaut und meine ersten Erfahrungen mit der Bereitstellung von Sicherheitsaspekten wie Passwort-Hashing und Token-Authentifizierung gemacht. Mithilfe der Filter- und Sortierfunktion für Produkte, konnte ich das bisher recht statische Routing durch dynamische Variablen erweitern, wodurch sich die Website anhand der URL entsprechend anpasste.<br/>
+                                Ich hatte meine Fullstack-Kompetenz mithilfe der genannten Technologien ausgebaut und meine ersten Erfahrungen mit der Bereitstellung von Sicherheitsaspekten wie Passwort-Hashing und Token-Authentifizierung gemacht. Mithilfe der Filter- und Sortierfunktion für Produkte, konnte ich das bisher recht statische Routing durch dynamische Variablen erweitern, wodurch sich die Website anhand der URL entsprechend anpasste.<br/>
                                 Zuletzt hatte ich das Komponentensystem der Frontend-Frameworks Angular und Vue.js kennen und lieben gelernt und würde meine zukünftige Web-Entwicklung klar mit einem dieser beiden Frameworks favorisieren.
                             </p>
                         </ExpandingList>
