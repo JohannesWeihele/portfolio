@@ -6,20 +6,6 @@ import AboutMePage from "./pages/aboutme_page/aboutme_page";
 
 const App = () => {
 
-    useEffect(() => {
-
-        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-
-        if (mediaQuery.matches) {
-            document.body.classList.add('light-mode');
-        }
-
-        return () => {
-            document.body.classList.remove('light-mode');
-        };
-    }, []);
-
-
     return (
       <Router>
           <Routes>

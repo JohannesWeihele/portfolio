@@ -2,10 +2,3 @@
     html, body {
         overflow-x: hidden;
     }
-
-    body.light-mode {
-        background-color: white;
-        color: black;
-    }
-
-
