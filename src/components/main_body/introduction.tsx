@@ -39,7 +39,7 @@ const Introduction: FC = () => {
                         index2 = 0;
                         setAnimatedText1("");
                         startAnimation1();
-                    }, 3000);
+                    }, 5000);
                 }
             }, 75);
         };
