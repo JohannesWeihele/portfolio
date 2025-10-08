@@ -32,7 +32,6 @@ const VideoHeader: FC<VideoHeaderProps> = ({
         }
     };
 
-    // 👉 Lazy Loading (lädt erst, wenn sichtbar)
     useEffect(() => {
         const observer = new IntersectionObserver(
             entries => {
@@ -60,7 +59,7 @@ const VideoHeader: FC<VideoHeaderProps> = ({
             style={{ minHeight: '200px', position: 'relative' }}
         >
             {!isVisible ? (
-                // Placeholder/Loader
+
                 <div
                     style={{
                         width: '100%',
@@ -83,7 +82,6 @@ const VideoHeader: FC<VideoHeaderProps> = ({
                     preload="metadata"
                     ref={videoRef}
                     className={isMobile ? 'mobile' : `desktop ${zoomed_class}`}
-                    loop
                     disablePictureInPicture
                     onError={handleVideoError}
                     playsInline
