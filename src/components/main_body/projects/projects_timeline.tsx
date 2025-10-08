@@ -1038,17 +1038,17 @@ const Projects_Timeline: React.FC = () => {
                                 TEAM23 ist eine der führenden Digitalagenturen für anspruchsvolle Digitalprojekte in Deutschland. Seit über 20 Jahren begleitet die Firma progressive Branchenexperten bei ihrer digitalen Transformation auf dem nationalen und internationalen Markt und unterstützt sie mit durchdachten UX-Strategien, wegweisenden Softwareentwicklungen, einzigartigen Webprojekten, mobilen Apps und komplexen E-Commerce-Lösungen.
                             </p>
                         </ExpandingList>
-                        <ExpandingList name={"Meine Aufgaben"} open={true}>
+                        <ExpandingList name={"Meine Aufgaben"} open={false}>
                             <p className={"max_width_text"}>
                                 In Progress...
                             </p>
                         </ExpandingList>
-                        <ExpandingList name={"Speaker @ Sparkscon 2025"} open={true}>
+                        <ExpandingList name={"Speaker @ Sparkscon 2025"} open={false}>
                             <p className={"max_width_text"}>
                                 In Progress...
                             </p>
                         </ExpandingList>
-                        <ExpandingList name={"Kompetenzen und Fähigkeiten"} open={true}>
+                        <ExpandingList name={"Kompetenzen und Fähigkeiten"} open={false}>
                             <p className={"max_width_text"}>
                                 In Progress...
                             </p>
