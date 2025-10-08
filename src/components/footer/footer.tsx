@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
                 <a href={"https://www.linkedin.com/in/johannes-weihele-52b326153/"} target={"_blank"}>
                     <img src={require('../../resources/icons/linked_in_logo.png')} id={"footer_linked_in"}/>
                 </a>
-                <p className={"footer_rights"}>© 2023 Johannes Weihele. All rights reserved</p>
+                <p className={"footer_rights"}>© 2025 Johannes Weihele. All rights reserved</p>
                 </div>
             </div>
     );
