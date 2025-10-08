@@ -97,6 +97,7 @@ import Dachboden_Stuff from "../../3D/dachboden_stuff";
 import {Canvas} from "@react-three/fiber";
 import Dachboden from "../../3D/dachboden";
 import Zoom from "react-medium-image-zoom";
+import YoutubeEmbed from "../../youtube_embed/youtube_embed";
 
 const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.stopPropagation();
@@ -144,7 +145,7 @@ const Projects_Timeline: React.FC = () => {
                                     Mit einer 210° umfassenden 9 auf 4 Meter großen Leinwand bildet das Hochschul-Labor durch ein hochmodernes, präzises und realistisches System das indviduelle Fahrgefühl seiner Tester auf einer hochgenauen Bewegungsplattform nach.<div className={"mobile_newLine"}><br/><br/></div>
                                 </p>
                                 <div className={"project_video"}>
-                                    <VideoHeader src={adrive_video} zoomed={false}/>
+                                    <YoutubeEmbed videoId={"c1Wo7ZtoK2Q"}/>
                                 </div>
                                 <p className={"source_text"}>Quelle: https://www.youtube.com/watch?v=c1Wo7ZtoK2Q</p>
                             </ExpandingList>
@@ -1018,11 +1019,48 @@ const Projects_Timeline: React.FC = () => {
                     </ExpandingButton>
                 </AnimationOnScroll>
             </div>
+            <div className={"timeline_wrapper"}>
+                <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} animateOnce={true}>
+                    <Timeline_long name={"Berufserfahrung"} year={"2024-2025"} side={"left"}/>
+                    <HorizontalLine side={"left"} sameLine={false} name={"Digitalagentur TEAM23 GmbH"} icon_name_one={"django_icon"} icon_name_two={"fast_api"} icon_name_three={"python_icon"}/>
+                </AnimationOnScroll>
+            </div>
             <div className={"project_wrapper"}>
-                <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInLeftBig"} animateOut={"animate__fadeOutRightBig"} animateOnce={true}>
+                <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInLefttBig"} animateOut={"animate__fadeOutRightBig"} animateOnce={true}>
+                    <div className={'project_timeline_short'}/>
+                    <YoutubeEmbed videoId={"qLmAK-E54gU"} />
+                    <ExpandingButton>
+                        <div>
+                            <h1 style={{color: "black", fontFamily: "Agency FB", fontSize: "50px"}}>Backend-Entwicklung</h1>
+                        </div>
+                        <ExpandingList name={"Über TEAM23 GmbH"} open={true}>
+                            <p className={"max_width_text"}>
+                                TEAM23 ist eine der führenden Digitalagenturen für anspruchsvolle Digitalprojekte in Deutschland. Seit über 20 Jahren begleitet die Firma progressive Branchenexperten bei ihrer digitalen Transformation auf dem nationalen und internationalen Markt und unterstützt sie mit durchdachten UX-Strategien, wegweisenden Softwareentwicklungen, einzigartigen Webprojekten, mobilen Apps und komplexen E-Commerce-Lösungen.
+                            </p>
+                        </ExpandingList>
+                        <ExpandingList name={"Meine Aufgaben"} open={true}>
+                            <p className={"max_width_text"}>
+                                In Progress...
+                            </p>
+                        </ExpandingList>
+                        <ExpandingList name={"Speaker @ Sparkscon 2025"} open={true}>
+                            <p className={"max_width_text"}>
+                                In Progress...
+                            </p>
+                        </ExpandingList>
+                        <ExpandingList name={"Kompetenzen und Fähigkeiten"} open={true}>
+                            <p className={"max_width_text"}>
+                                In Progress...
+                            </p>
+                        </ExpandingList>
+                    </ExpandingButton>
+                </AnimationOnScroll>
+            </div>
+            <div className={"project_wrapper"}>
+                <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} animateOut={"animate__fadeOutLeftBig"} animateOnce={true}>
                     <Timeline_long name={"Sonstiges"} year={""} side={"right"}/>
                     <div className={"timeline_wrapper"}>
-                        <HorizontalLine side={"left"} sameLine={false} name={"Weitere Projekte"}/>
+                        <HorizontalLine side={"right"} sameLine={false} name={"Weitere Projekte"}/>
                     </div>
                     <div className={'project_timeline_short'}/>
                     <div className={"more_projects_wrapper"}>
