@@ -1021,8 +1021,8 @@ const Projects_Timeline: React.FC = () => {
             </div>
             <div className={"timeline_wrapper"}>
                 <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInRightBig"} animateOnce={true}>
-                    <Timeline_long name={"Berufserfahrung"} year={"2024-2025"} side={"left"}/>
-                    <HorizontalLine side={"left"} sameLine={false} name={"Digitalagentur TEAM23 GmbH"} icon_name_one={"django_icon"} icon_name_two={"fast_api"} icon_name_three={"python_icon"}/>
+                    <Timeline_long name={"Berufserfahrung"} year={"2024"} side={"left"}/>
+                    <HorizontalLine side={"left"} sameLine={false} name={"TEAM23 GmbH"} icon_name_one={"django_icon"} icon_name_two={"fast_api"} icon_name_three={"python_icon"}/>
                 </AnimationOnScroll>
             </div>
             <div className={"project_wrapper"}>
