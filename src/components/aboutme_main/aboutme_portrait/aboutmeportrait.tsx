@@ -1,10 +1,10 @@
 import React from 'react'
 import './aboutmeportrait.css';
 import {Carousel} from "react-responsive-carousel";
-import bewerbungsbild from "../../../resources/portrait/bewerbungsbild.png"
+import bewerbungsbild from "../../../resources/portrait/bewerbungsbild.jpg"
 import portrait_two from "../../../resources/portrait/portrait_two.png"
 import huettenbild from "../../../resources/portrait/huette.jpeg"
-import office from "../../../resources/portrait/office.jpeg"
+import office from "../../../resources/portrait/freizeit.jpeg"
 
 interface AboutmePortraitProps {
     dataFromChild: any;

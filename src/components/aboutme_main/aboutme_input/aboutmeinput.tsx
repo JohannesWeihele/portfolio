@@ -36,7 +36,7 @@ const AboutmeInput: React.FC<AboutmeInputProps> = ({ dataFromChild }) => {
                             <div className={"about_wrapper_right"}>
                                 <div className={"about_introduction_flexbox"}>
                                     <p className={"introduction_highlight_text"}>Alter:</p>
-                                    <p className={"introduction_normal_text"} style={{marginLeft: "250px"}}><b>28 Jahre</b></p>
+                                    <p className={"introduction_normal_text"} style={{marginLeft: "250px"}}><b>30 Jahre</b></p>
                                 </div>
                                 <div className={"about_introduction_flexbox"}>
                                     <p className={"introduction_highlight_text"}>Aktueller Wohnort:</p>
