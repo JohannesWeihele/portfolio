@@ -539,7 +539,7 @@ const Projects_Timeline: React.FC = () => {
             <div className={"project_wrapper"}>
                 <AnimationOnScroll delay={-1000} offset={100} animateIn={"animate__fadeInLeftBig"} animateOut={"animate__fadeOutRightBig"} animateOnce={true}>
                     <div className={'project_timeline_short'}/>
-                    <Carousel infiniteLoop={true}>
+                    <Carousel infiniteLoop={true} showIndicators={false}>
                         <div>
                             <VideoHeader src={django_video} />
                         </div>
