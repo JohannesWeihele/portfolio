@@ -109,11 +109,11 @@ h4 {
 }
 
 #graph_web::before {
-    width: 50%;
+    width: 70%;
 }
 
 #graph_software::before {
-    width: 40%;
+    width: 60%;
 }
 
 #graph_game::before {
