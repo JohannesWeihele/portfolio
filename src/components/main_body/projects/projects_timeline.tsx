@@ -20,6 +20,7 @@ import stateofdart_ad from '../../../resources/videos/stateofdart/stateofdart_ad
 import fireprotect from '../../../resources/videos/fireprotect/fireprotect.mp4'
 import fireprotect_communication from '../../../resources/videos/fireprotect/fireprotect_communication.mp4'
 import fireprotect_vitals from '../../../resources/videos/fireprotect/fireprotect_vitals.mp4'
+import sparkscon_video from '../../../resources/videos/team23/sparkscon_video.mp4'
 
 
 //----------------Bilder-------------//
@@ -80,6 +81,12 @@ import fireprotect_architecture_one from '../../../resources/images/fireprotect_
 import fireprotect_architecture_two from '../../../resources/images/fireprotect_architecture_two.jpg'
 import fireprotect_architecture_three from '../../../resources/images/fireprotect_architecture_three.jpg'
 import fireprotect_master from '../../../resources/images/fireprotect_master.jpg'
+import team23_logo from '../../../resources/images/team23_logo.jpg'
+import team23_1 from '../../../resources/images/team23_1.jpeg'
+import team23_2 from '../../../resources/images/team23_2.jpeg'
+import team23_profil from '../../../resources/images/team23_profil.jpeg'
+import sparkscon_1 from '../../../resources/images/sparkscon_1.jpeg'
+import sparkscon_2 from '../../../resources/images/sparkscon_2.jpeg'
 
 //------------------GIFS---------------//
 import step_one from '../../../resources/gifs/step_one.gif'
@@ -1028,22 +1035,112 @@ const Projects_Timeline: React.FC = () => {
                         </div>
                         <ExpandingList name={"Über TEAM23 GmbH"} open={true}>
                             <p className={"max_width_text"}>
-                                TEAM23 ist eine der führenden Digitalagenturen für anspruchsvolle Digitalprojekte in Deutschland. Seit über 20 Jahren begleitet die Firma progressive Branchenexperten bei ihrer digitalen Transformation auf dem nationalen und internationalen Markt und unterstützt sie mit durchdachten UX-Strategien, wegweisenden Softwareentwicklungen, einzigartigen Webprojekten, mobilen Apps und komplexen E-Commerce-Lösungen.
+                                TEAM23 ist eine der führenden Digitalagenturen für anspruchsvolle Digitalprojekte in Deutschland. Seit über 20 Jahren begleitet die Firma progressive Branchenexperten bei ihrer digitalen Transformation auf dem nationalen und internationalen Markt und unterstützt sie mit durchdachten UX-Strategien, wegweisenden Softwareentwicklungen, einzigartigen Webprojekten, mobilen Apps und komplexen E-Commerce-Lösungen. <br/><br/>
+                                <img className={"project_img"} src={team23_logo}/>
                             </p>
                         </ExpandingList>
                         <ExpandingList name={"Meine Aufgaben"} open={false}>
                             <p className={"max_width_text"}>
-                                In Progress...
+                                Nach meinem Master in Informatik wollte ich einen Job finden, der nicht nur „passt“, sondern sich richtig gut anfühlt. Kein Konzern mit steifen Strukturen, sondern ein Ort mit flachen Hierarchien, kreativer Energie und ein bisschen Startup-Vibe. Eine Firma, in der man morgens gern ankommt – und abends mit einem guten Gefühl rausgeht.
+                                TEAM23 war genau das: <br/>
+                                Hüttenwochenende in den Bergen, gemeinsame Events, offene Kommunikation, junge Teams – und ein Büro, das einfach gute Laune macht. Da wusste ich: Hier könnte ich mich wirklich wohlfühlen. <br/><br/>
+                                Ursprünglich hatte ich mich dabei als Frontend-Entwickler beworben. Doch da gerade mehr Backend-Unterstützung gebraucht wurde, bekam ich das Angebot, dort einzusteigen. Und ehrlich gesagt: Ich liebe solche Herausforderungen. Ich bin überzeugt, dass man in jedem Bereich wachsen kann, wenn man genug Neugier, Energie und Lernfreude mitbringt – also sagte ich zu.<br/><br/>
+                                <div style={{ textAlign: "center" }}>
+                                    <img
+                                        style={{ width: "50%" }}
+                                        className="project_img"
+                                        src={team23_profil}
+                                        alt="Team23 Profil"
+                                    />
+                                </div><br/>
+                                Nach ein paar Wochen Einarbeitung ging’s dann auch schon direkt in die Praxis: Kundenmeetings, reale Projekte, neue Technologien. Ich durfte an vielen spannenden Themen mitarbeiten – von Queue- und Logging-Systemen über REST-APIs bis hin zu CI/CD-Pipelines.
+                                Kurz gesagt: jede Menge Learning by Doing, aber genau das hat’s so spannend gemacht.<br/><br/>
+                                Ein weiteres Highlight war dabei für mich die Accessibility-Audit-Arbeit. Ich half dabei, Websites nach WCAG-Richtlinien zu prüfen, Barrieren zu dokumentieren und mit dem UI/UX-Team Lösungen zu entwickeln. Das gab mir das Gefühl, wirklich etwas Sinnvolles beizutragen – digitale Produkte zugänglicher zu machen für alle.<br/><br/>
+                                Und das Beste: Ich hatte großartige Mentoren an meiner Seite, die mich nie allein ließen, wenn ich mal festhing. So wurde Team23 für mich nicht nur ein Arbeitsplatz, sondern ein Ort, an dem ich fachlich und menschlich gewachsen bin.
                             </p>
                         </ExpandingList>
                         <ExpandingList name={"Speaker @ Sparkscon 2025"} open={false}>
                             <p className={"max_width_text"}>
-                                In Progress...
+                                Als mich ein Arbeitskollege fragte, ob ich Lust hätte, gemeinsam mit ihm einen Vortrag auf der Sparkscon 2025 – der größten Digitalmesse Süddeutschlands – zu halten, musste ich nicht lange überlegen. Ich war auf der Suche nach einer neuen Herausforderung, an der ich wachsen kann – und genau das war sie.<br/>
+                                Unser Thema lautete:
+                                <p className={"highlighted_text"}>
+                                    "Wissen wollen statt alles wissen - wie Neugier der Schlüssel zu erfolgreicher Teamarbeit ist."
+                                </p>
+                                In unserem Vortrag ging es darum, wie wichtig es ist, in Teams eine Kultur der Neugier zu fördern – also Räume zu schaffen, in denen man Fragen stellen darf, ohne Angst, verurteilt zu werden. Denn wirkliche Zusammenarbeit entsteht nicht durch Perfektion, sondern durch Offenheit, gegenseitiges Lernen und die Bereitschaft, Wissen zu teilen.<br/><br/>
+                                Je näher der Vortrag rückte, desto nervöser wurde ich. Vor einem vollen Saal mit über 120 Menschen zu sprechen – alles Fachleute, Führungskräfte, Entwickler, Designer – war eine völlig neue Erfahrung. <br/><br/>
+                                <VideoHeader src={sparkscon_video}/><br/>
+                                Doch genau diese Aufregung machte den Moment so lebendig. Und als ich schließlich auf der Bühne stand, war all die Nervosität wie weggeblasen. Zu sehen, wie Menschen im Publikum aufmerksam zuhören, nicken, lächeln oder sich Notizen und Bilder machen – das war unglaublich motivierend.<br/><br/>
+                                <div className={"multi_pictures_container_two"}>
+                                    <img className={"project_img"} src={sparkscon_1}/>
+                                    <img className={"project_img"} src={sparkscon_2}/>
+                                </div><br/>
+                                Nach dem Vortrag kamen zahlreiche Menschen auf uns zu, um sich zu bedanken oder Eindrücke zu teilen. Besonders spannend: Auch online wurde unser Vortrag wahrgenommen – unter anderem neben namenhaften Referenten wie Ralf Kleber (ehemaliger Amazon Deutschland CEO), die ebenfalls auf der Messe präsent waren. <br/>
+                                <div style={{ maxWidth: "600px", margin: "2rem auto" }}>
+                                    <iframe
+                                        src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7353665170931408897"
+                                        height="650"
+                                        width="100%"
+                                        frameBorder="0"
+                                        title="LinkedIn Post – Tanja Auernhamer"
+                                        style={{ borderRadius: "12px" }}
+                                    />
+                                </div>
+                                Ein Satz ist mir dabei besonders im Kopf geblieben:
+                                <p className={"highlighted_text"}>
+                                    "Euer Vortrag hat mich inspiriert."
+                                </p>
+                                Das war wohl das schönste Feedback, das ich bekommen konnte. Zu wissen, dass meine Worte etwas bewegt haben – das war ein Moment, der mir lange in Erinnerung bleiben wird. <br/><br/>
+                                <div style={{ maxWidth: "600px", margin: "0 auto" }}>
+                                    <iframe
+                                        src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7351962951655862273"
+                                        height="650"
+                                        width="100%"
+                                        frameBorder="0"
+                                        title="LinkedIn Post"
+                                        style={{ borderRadius: "12px" }}
+                                    />
+                                </div>
                             </p>
                         </ExpandingList>
                         <ExpandingList name={"Kompetenzen und Fähigkeiten"} open={false}>
                             <p className={"max_width_text"}>
-                                In Progress...
+                                In den letzten Jahren durfte ich viele Stationen durchlaufen – jede davon hat mir nicht nur neues Wissen vermittelt, sondern auch meinen Blick auf Teamarbeit, Lernen und persönliche Entwicklung geprägt.<br/>
+
+                                <p className={"highlighted_text"}>
+                                    Softwareentwicklung
+                                </p>
+
+                                Von der Webentwicklung bis hin zu komplexen Backend-Systemen – ich liebe es, Ideen in funktionierenden Code zu verwandeln. Dabei habe ich gelernt, dass gute Software weit mehr ist als saubere Architektur und klare Schnittstellen: Sie entsteht durch Kommunikation, gegenseitiges Verständnis und den Willen, voneinander zu lernen.
+
+                                <p className={"highlighted_text"}>
+                                    Teamarbeit & Mentoring
+                                </p>
+
+                                Ob in interdisziplinären Teams oder in der Zusammenarbeit mit erfahrenen Mentoren – ich habe gelernt, wie viel Kraft in echter Zusammenarbeit steckt. Fragen zu stellen, Feedback zu geben und Verantwortung zu übernehmen, sind für mich heute zentrale Bestandteile professionellen Arbeitens.
+
+
+                                <p className={"highlighted_text"}>
+                                    Neugier & lebenslanges Lernen
+                                </p>
+
+                                Neugier ist und bleibt mein Antrieb. Ich probiere gern Neues aus, eigne mir Wissen eigenständig an und wachse an Herausforderungen. Ob neue Technologien, Frameworks oder ganz neue Denkweisen – für mich zählt nicht, alles zu wissen, sondern wissen zu wollen.
+
+                                <p className={"highlighted_text"}>
+                                    Kommunikation & Präsentation
+                                </p>
+
+                                Durch meinen Vortrag auf der Sparkscon 2025 habe ich erlebt, wie erfüllend es ist, Wissen zu teilen und Menschen zu inspirieren. Das hat mir gezeigt, dass technische Expertise erst dann richtig Wirkung entfaltet, wenn sie verständlich und mit Begeisterung vermittelt wird.
+
+                                <p className={"highlighted_text"}>
+                                    Persönliche Entwicklung
+                                </p>
+
+                                Jede Station – ob Studium, Beruf oder Bühne – hat mir auf ihre Weise gezeigt, dass Kompetenz nicht angeboren ist, sondern wächst. Durch Neugier, Mut und den Glauben daran, dass man alles lernen kann, wenn man bereit ist, Energie zu investieren.
+                                <br/><br/>
+                                <div className={"multi_pictures_container_two"}>
+                                    <img className={"project_img"} src={team23_1}/>
+                                    <img className={"project_img"} src={team23_2}/>
+                                </div><br/>
                             </p>
                         </ExpandingList>
                     </ExpandingButton>
