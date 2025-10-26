@@ -54,9 +54,6 @@ const Introduction: FC = () => {
 
     return (
         <div className="introduction">
-            <div>
-                <h2>Willkommen zu meinem Portfolio</h2>
-            </div>
             <div className="introduction_text_container">
                 <h1 id="intro_job_title" style={{ color: "black" }}>{animatedText1}</h1>
                 <h1 id="intro_job_title" style={{ color: "#fd8c3f" }}>{animatedText2} <span className="invisible_writer_dot"></span></h1>
